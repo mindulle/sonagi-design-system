@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd packages/tokens && node scripts/build.js && cd ../.. && pnpm --filter storybook build-storybook",
+  "buildCommand": "node packages/tokens/scripts/build.js && pnpm --filter storybook build-storybook",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "framework": null,
   "outputDirectory": "apps/storybook/storybook-static"
