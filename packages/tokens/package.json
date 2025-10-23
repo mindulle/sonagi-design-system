@@ -1,0 +1,28 @@
+{
+  "name": "@sonagi/tokens",
+  "version": "0.1.0",
+  "description": "소나기 디자인 시스템 - 디자인 토큰",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./css": "./dist/tokens.css",
+    "./json": "./src/tokens.json"
+  },
+  "files": [
+    "dist",
+    "src/tokens.json"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js && tsc",
+    "dev": "node scripts/build.js --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

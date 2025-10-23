@@ -1,0 +1,40 @@
+{
+  "name": "sonagi-design-system",
+  "version": "0.0.0",
+  "private": true,
+  "description": "소나기 - 청량하고 시원한 느낌의 디자인 시스템",
+  "keywords": [
+    "design-system",
+    "ui",
+    "react",
+    "components",
+    "sonagi"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter @sonagi/react dev",
+    "build": "pnpm --recursive --filter './packages/*' build",
+    "build:tokens": "pnpm --filter @sonagi/tokens build",
+    "build:react": "pnpm --filter @sonagi/react build",
+    "storybook": "pnpm --filter storybook storybook",
+    "build-storybook": "pnpm --filter storybook build-storybook",
+    "lint": "eslint . --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "clean": "pnpm --recursive exec rm -rf dist node_modules .turbo"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
