@@ -26,10 +26,6 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Setup npm auth
-        if: secrets.NPM_TOKEN
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
