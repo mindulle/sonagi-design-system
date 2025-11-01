@@ -1,22 +1,31 @@
-<!-- Please describe the change and link the related issue -->
+<!--
+PR 제목은 Conventional Commit 형식으로 작성해주세요.
+ex) feat(react): Button 컴포넌트 구현
+-->
 
-## Related issue
+### 🔗 관련 이슈
 
-- Closes: # (issue number)
+<!--
+이 PR과 관련된 이슈 번호를 작성해주세요.
+ex) Closes #1
+-->
 
-## Description
+### 📝 작업 내용
 
-- What changed and why?
+<!--
+이번 PR에서 작업한 내용을 간략히 설명해주세요.
+- Button 컴포넌트의 기본 구조를 구현했습니다.
+- `variant`, `size` prop을 추가했습니다.
+- Storybook 문서를 작성했습니다.
+-->
 
-## Notion / MCP
+### 📸 스크린샷 (선택 사항)
 
-- Notion page link:
-- MCP JSON attached (if relevant): location / path
+<!-- UI 변경이 포함된 경우, 변경 전/후를 비교할 수 있는 스크린샷을 첨부해주세요. -->
 
-## Checklist
+### ✅ 리뷰어 체크리스트
 
-- [ ] I have linked the related issue
-- [ ] CI checks pass (build, lint, type-check, tests)
-- [ ] Token/design changes include `build:tokens` output in PR or explanation of migration
-- [ ] Screenshots added for visual changes
-- [ ] Reviewers assigned
+- [ ] `variant` prop이 디자인과 일치하는가?
+- [ ] `size` prop이 의도대로 동작하는가?
+- [ ] Storybook에서 모든 컨트롤이 정상적으로 작동하는가?
+- [ ] 반응형 디자인은 고려되었는가?

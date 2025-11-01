@@ -1,7 +1,3 @@
-
-> sonagi-design-system@0.0.0 notion-to-mcp /mnt/d/_develop-projects/projects/sonagi-design-system
-> node scripts/notion-to-mcp.js -- 2124abe3a8af80d98b2bd62ffa403c96
-
 {
   "source": "notion",
   "page_id": "2124abe3a8af80d98b2bd62ffa403c96",
