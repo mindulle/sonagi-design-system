@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "description": "소나기 - 청량하고 시원한 느낌의 디자인 시스템",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mindulle/sonagi-design-system.git"
+  },
+  "author": "mindulle",
+  "license": "MIT",
   "keywords": [
     "design-system",
     "ui",
@@ -13,13 +19,18 @@
   "scripts": {
     "dev": "pnpm --filter @sonagi/react dev",
     "build": "pnpm --recursive --filter './packages/*' build",
+    "prepare": "husky install",
+    "release": "semantic-release",
+    "set-branch-protection": "node scripts/set-branch-protection.js",
     "build:tokens": "pnpm --filter @sonagi/tokens build",
     "build:react": "pnpm --filter @sonagi/react build",
     "storybook": "pnpm --filter storybook storybook",
     "build-storybook": "pnpm --filter storybook build-storybook",
     "lint": "eslint . --ext .ts,.tsx",
     "type-check": "tsc --noEmit",
+    "check:ci": "pnpm run lint && pnpm run type-check && pnpm test",
     "test": "vitest",
+    "notion-to-mcp": "node scripts/notion-to-mcp.js",
     "clean": "pnpm --recursive exec rm -rf dist node_modules .turbo"
   },
   "devDependencies": {
@@ -30,11 +41,35 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.2.4",
+    "@commitlint/config-conventional": "^17.6.0",
+    "@commitlint/cli": "^17.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0",
+    "semantic-release": "^19.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^9.0.0",
+    "@semantic-release/commit-analyzer": "^10.0.0",
+    "@semantic-release/release-notes-generator": "^10.0.0",
+    "@semantic-release/npm": "^9.0.0",
+    "@octokit/rest": "^20.0.0",
     "typescript": "^5.3.3",
-    "vitest": "^1.2.0"
+    "vitest": "^1.2.0",
+    "@notionhq/client": "^5.3.0",
+    "node-fetch": "^3.3.2"
   },
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
+  },
+  "dependencies": {},
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "**/*.{css,md,json}": [
+      "prettier --write"
+    ]
   }
 }

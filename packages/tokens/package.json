@@ -18,6 +18,9 @@
     "dist",
     "src/tokens.json"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "node scripts/build.js && tsc",
     "dev": "node scripts/build.js --watch"
