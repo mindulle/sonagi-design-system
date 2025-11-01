@@ -1,6 +1,6 @@
 {
   "name": "@sonagi/tokens",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "소나기 디자인 시스템 - 디자인 토큰",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
