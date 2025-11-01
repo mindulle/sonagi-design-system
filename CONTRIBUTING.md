@@ -7,7 +7,7 @@
 기여를 시작하기 전에 다음 문서들을 꼭 확인해주세요.
 
 - **피그마 디자인 시스템**: [Figma 바로가기](https://www.figma.com/design/KN6Bl6Pb4aW2KJXpBhS7rZ/%EC%86%8C%EB%82%98%EA%B8%B0-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=0-1&t=I8yo3kPvT0Xm4Ot7-1)
-- **노션 프로젝트 관리**: [Notion 바로가기](https://www.notion.so/https://mindulle.notion.site/design-sonagi-space-2124abe3a8af80d98b2bd62ffa403c96?source=copy_link)
+- **노션 프로젝트 관리**: [Notion 바로가기](https://mindulle.notion.site/design-sonagi-space-2124abe3a8af80d98b2bd62ffa403c96?source=copy_link)
 
 > 💡 **Tip**: 피그마에서는 각 컴포넌트의 디자인 명세, 사용 예시, 디자인 토큰 값을 확인할 수 있습니다. 노션에서는 프로젝트 로드맵, 회의록, 주요 의사결정 사항을 관리합니다.
 
