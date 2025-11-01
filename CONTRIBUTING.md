@@ -16,7 +16,7 @@
 1.  **저장소 복제(Clone)**
 
     ```bash
-    git clone https://github.com/your-org/sonagi-design-system.git
+    git clone https://github.com/mindulle/sonagi-design-system.git
     cd sonagi-design-system
     ```
 
