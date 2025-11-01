@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/mindulle/sonagi-design-system/compare/v1.0.0...v1.0.1) (2025-11-01)
+
+
+### Bug Fixes
+
+* **ci:** zip release assets to avoid name collision ([aaa017f](https://github.com/mindulle/sonagi-design-system/commit/aaa017f5454b7bbfd95ff62db9530b23575e2ab2))
+
 # 1.0.0 (2025-11-01)
 
 
