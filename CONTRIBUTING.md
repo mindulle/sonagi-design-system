@@ -39,8 +39,8 @@
 저희는 `main` 브랜치를 중심으로 `feature` 브랜치를 활용하는 전략을 사용합니다.
 
 - **main**: 항상 배포 가능한 상태를 유지합니다. 직접적인 푸시는 금지됩니다.
-- **feature**: 새로운 기능 개발 및 버그 수정을 위한 브랜치입니다.
-  - 브랜치 이름은 `feature/issue-number-brief-description` 형식을 따릅니다. (예: `feature/12-button-loading-state`)
+- **작업 브랜치**: 새로운 기능 개발 및 버그 수정을 위한 브랜치입니다.
+  - 브랜치 이름은 `<type>/<issue-number>-<brief-description>` 형식을 따릅니다. `type`은 `feature`, `fix` 등이 될 수 있습니다. (예: `feature/12-button-loading-state`)
 
 ```bash
 # 새로운 기능 브랜치 생성
