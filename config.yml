@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 질문하기
+    url: https://github.com/mindulle/sonagi-design-system/discussions/new?category=q-a
+    about: 질문이나 궁금한 점이 있다면 Discussion을 이용해주세요.
+  - name: 💡 아이디어 제안
+    url: https://github.com/mindulle/sonagi-design-system/discussions/new?category=ideas
+    about: 새로운 아이디어가 있다면 이곳에서 논의할 수 있습니다.

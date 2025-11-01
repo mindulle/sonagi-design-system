@@ -1,0 +1,32 @@
+[
+  {
+    "name": "infra",
+    "color": "0e8a16",
+    "description": "Infrastructure / repo configuration changes"
+  },
+  {
+    "name": "ci",
+    "color": "fbca04",
+    "description": "Continuous Integration, build and pipeline work"
+  },
+  {
+    "name": "chore",
+    "color": "7057ff",
+    "description": "Chores: maintenance, non-feature tasks"
+  },
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something isn't working"
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "New feature or request"
+  },
+  {
+    "name": "docs",
+    "color": "0075ca",
+    "description": "Documentation only changes"
+  }
+]

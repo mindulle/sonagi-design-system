@@ -1,0 +1,44 @@
+name: 'Apply branch protection'
+
+on:
+  workflow_dispatch:
+    inputs:
+      owner:
+        description: 'Repository owner (optional)'
+        required: false
+      repo:
+        description: 'Repository name (optional)'
+        required: false
+      branch:
+        description: 'Branch to protect (default: main)'
+        required: false
+
+jobs:
+  apply-protection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Apply branch protection
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_ADMIN_TOKEN }}
+        run: |
+          node scripts/set-branch-protection.js \
+            "${{ github.event.inputs.owner || github.repository_owner }}" \
+            "${{ github.event.inputs.repo || github.event.repository.name }}" \
+            "${{ github.event.inputs.branch || 'main' }}"
+
+      - name: Done
+        run: echo "Branch protection applied (if token and permissions were valid)"
