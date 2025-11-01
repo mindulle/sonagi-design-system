@@ -9,6 +9,9 @@
   },
   "author": "mindulle",
   "license": "MIT",
+  "files": [
+    "PUBLISHING.md"
+  ],
   "keywords": [
     "design-system",
     "ui",
@@ -19,6 +22,7 @@
   "scripts": {
     "dev": "pnpm --filter @sonagi/react dev",
     "build": "pnpm --recursive --filter './packages/*' build",
+    "package:artifacts": "cd packages/react && zip -r react-dist.zip dist && cd ../.. && cd packages/tokens && zip -r tokens-dist.zip dist && cd ../..",
     "prepare": "husky install",
     "release": "semantic-release",
     "set-branch-protection": "node scripts/set-branch-protection.js",

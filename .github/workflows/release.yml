@@ -30,6 +30,9 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Package artifacts
+        run: pnpm run package:artifacts
+
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

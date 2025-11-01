@@ -24,7 +24,16 @@ module.exports = {
       {
         // Attach built artifacts from packages/*/dist when available
         assets: [
-          { path: 'packages/**/dist/**', label: 'build-artifacts' },
+          {
+            path: 'packages/react/react-dist.zip',
+            name: 'sonagi-react-dist.zip',
+            label: 'React build artifacts',
+          },
+          {
+            path: 'packages/tokens/tokens-dist.zip',
+            name: 'sonagi-tokens-dist.zip',
+            label: 'Tokens build artifacts',
+          },
           'CHANGELOG.md',
         ],
       },
