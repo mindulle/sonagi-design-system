@@ -1,0 +1,25 @@
+{
+  "name": "@sonagi/tokens",
+  "version": "1.1.0",
+  "description": "Sonagi Design System — CSS Custom Properties & Design Tokens",
+  "license": "MIT",
+  "main": "tokens/variables.css",
+  "exports": {
+    ".": "./tokens/variables.css",
+    "./css": "./tokens/variables.css",
+    "./json": "./tokens/design-tokens.json"
+  },
+  "files": [
+    "tokens/"
+  ],
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "css-variables",
+    "sonagi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonagi/sonagi-tokens"
+  }
+}
