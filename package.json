@@ -3,15 +3,30 @@
   "version": "1.1.0",
   "description": "Sonagi Design System — CSS Custom Properties & Design Tokens",
   "license": "MIT",
-  "main": "tokens/variables.css",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./tokens/variables.css",
-    "./css": "./tokens/variables.css",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./css": "./dist/variables.css",
     "./json": "./tokens/design-tokens.json"
   },
   "files": [
+    "dist/",
     "tokens/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "prepare": "husky",
+    "prepack": "npm run build"
+  },
   "keywords": [
     "design-system",
     "design-tokens",
@@ -20,6 +35,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sonagi/sonagi-tokens"
+    "url": "https://github.com/mindulle/sonagi-design-system.git"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0"
+  },
+  "lint-staged": {
+    "tokens/design-tokens.json": [
+      "node scripts/build.js"
+    ],
+    "**/*.{css,json,md}": [
+      "prettier --write"
+    ]
   }
 }
