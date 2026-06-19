@@ -24,6 +24,7 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
+    "test": "vitest run",
     "prepare": "husky",
     "prepack": "npm run build"
   },
@@ -47,7 +48,8 @@
     "husky": "^9.0.0",
     "lint-staged": "^15.0.0",
     "prettier": "^3.8.4",
-    "semantic-release": "^25.0.5"
+    "semantic-release": "^25.0.5",
+    "vitest": "^4.1.9"
   },
   "lint-staged": {
     "tokens/design-tokens.json": [
