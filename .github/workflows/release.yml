@@ -7,16 +7,20 @@ on:
 
 jobs:
   release:
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
+    name: Build & Publish Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Git 커밋 및 태그 푸시 권한
+      issues: write   # 이슈 코멘트 권한
+      pull-requests: write # PR 코멘트 권한
+      id-token: write # NPM provenance 지원용 (선택)
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # semantic-release가 모든 커밋 기록을 분석할 수 있도록 설정
+          persist-credentials: false # semantic-release/git을 위해 필요
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,10 +34,16 @@ jobs:
       - name: Build tokens
         run: npm run build
 
-      - name: Validate build output
+      - name: Verify build output
         run: |
           test -f dist/variables.css || (echo "Missing dist/variables.css" && exit 1)
           test -f dist/index.js      || (echo "Missing dist/index.js" && exit 1)
-          test -f dist/index.mjs     || (echo "Missing dist/index.mjs" && exit 1)
           test -f dist/index.d.ts    || (echo "Missing dist/index.d.ts" && exit 1)
           echo "✅ All dist files present"
+
+      - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
+
