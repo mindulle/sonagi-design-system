@@ -29,22 +29,25 @@ module.exports = {
     ],
     
     // 5. 변경된 package.json과 CHANGELOG.md를 Git 저장소에 커밋
+    // pnpm 모노레포에서는 package-lock.json이 없으므로 제거
     [
       '@semantic-release/git',
       {
-        assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
-        message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+        assets: ['CHANGELOG.md', 'package.json'],
+        message: 'chore(release): @sonagi/tokens ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
-    
+
     // 6. GitHub Releases에 새 릴리스 생성 (압축된 빌드 산출물 첨부)
     [
       '@semantic-release/github',
       {
         assets: [
-          { path: 'dist/variables.css', label: 'CSS Variables' },
-          { path: 'dist/index.js', label: 'JS Tokens' },
+          { path: 'packages/tokens/dist/variables.css', label: 'CSS Variables' },
+          { path: 'packages/tokens/dist/index.js', label: 'JS Tokens' },
         ]
+      }
+    ]
       }
     ]
   ],

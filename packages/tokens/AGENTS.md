@@ -50,6 +50,7 @@ AI가 이 저장소를 수정할 때 반드시 따라야 할 규칙입니다.
 ### 5. 버전 관리
 
 토큰 변경 시 `package.json`의 버전을 올립니다:
+
 - 토큰 **추가** → patch (1.1.0 → 1.1.1)
 - 토큰 **이름 변경 / 삭제** → minor (1.1.0 → 1.2.0) + README 변경 이력 업데이트
 - 구조 변경 → major (1.1.0 → 2.0.0)
@@ -58,7 +59,7 @@ AI가 이 저장소를 수정할 때 반드시 따라야 할 규칙입니다.
 
 ## 소비자 저장소 목록
 
-| 저장소 | 프레임워크 | import 방식 |
-|---|---|---|
-| `blog-sonagi-space` | Next.js (React) | `@import '@sonagi/tokens'` in globals.css |
-| BI 대시보드 | Evidence (Svelte) | `@import '@sonagi/tokens'` in app.css |
+| 저장소              | 프레임워크        | import 방식                               |
+| ------------------- | ----------------- | ----------------------------------------- |
+| `blog-sonagi-space` | Next.js (React)   | `@import '@sonagi/tokens'` in globals.css |
+| BI 대시보드         | Evidence (Svelte) | `@import '@sonagi/tokens'` in app.css     |
