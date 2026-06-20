@@ -2,8 +2,8 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "meta": {
     "name": "Sonagi Design System",
-    "version": "1.1.0",
-    "updated": "2026-06-19",
+    "version": "3.1.0",
+    "updated": "2026-06-20",
     "description": "소나기 디자인 시스템 공식 토큰. Primitive → Semantic 2-레이어 구조. 라이트/다크 모드 모두 지원."
   },
 
@@ -11,16 +11,30 @@
     "$description": "원시 색상값. 직접 사용 금지 — Semantic 토큰을 통해 참조할 것",
 
     "blue": {
-      "900": { "$value": "#051520", "$type": "color" },
+      "900": { "$value": "#0a1128", "$type": "color" },
       "800": { "$value": "#083A64", "$type": "color" },
       "700": { "$value": "#0d5a94", "$type": "color" },
       "600": { "$value": "#1275b5", "$type": "color" },
-      "500": { "$value": "#1991B9", "$type": "color" },
+      "500": { "$value": "#1c2c4d", "$type": "color", "$description": "Wild & Thin Indigo" },
       "400": { "$value": "#3aadd1", "$type": "color" },
       "300": { "$value": "#6cc6e0", "$type": "color" },
       "200": { "$value": "#a8dcee", "$type": "color" },
-      "100": { "$value": "#d9f0f7", "$type": "color" },
-      "50": { "$value": "#eef8fb", "$type": "color" }
+      "100": { "$value": "#d1d9e6", "$type": "color" },
+      "50": { "$value": "#f0f4f8", "$type": "color" }
+    },
+
+    "accent": {
+      "rain": {
+        "$value": "#4A90E2",
+        "$type": "color",
+        "$description": "Wordmark dot, links, highlights"
+      },
+      "rain-dark": { "$value": "#2a6bbf", "$type": "color" }
+    },
+
+    "wordmark": {
+      "bg": { "$value": "#030508", "$type": "color" },
+      "dot": { "$value": "#4A90E2", "$type": "color" }
     },
 
     "neutral": {
@@ -64,10 +78,18 @@
       "$description": "다크모드 시맨틱 매핑",
       "color": {
         "brand": {
-          "primary": { "$value": "#1991B9", "$type": "color" },
-          "primary-dark": { "$value": "#083A64", "$type": "color" },
-          "primary-hover": { "$value": "#3aadd1", "$type": "color" },
+          "primary": { "$value": "#1c2c4d", "$type": "color" },
+          "primary-dark": { "$value": "#0a1128", "$type": "color" },
+          "primary-hover": { "$value": "#1275b5", "$type": "color" },
           "logo": { "$value": "#00ffcc", "$type": "color" }
+        },
+        "accent": {
+          "default": { "$value": "#4A90E2", "$type": "color" },
+          "hover": { "$value": "#2a6bbf", "$type": "color" }
+        },
+        "wordmark": {
+          "bg": { "$value": "#030508", "$type": "color" },
+          "dot": { "$value": "#4A90E2", "$type": "color" }
         },
         "bg": {
           "base": { "$value": "#010609", "$type": "color" },
@@ -85,13 +107,13 @@
         "border": {
           "default": { "$value": "#30363d", "$type": "color" },
           "subtle": { "$value": "#1c2128", "$type": "color" },
-          "strong": { "$value": "#1991B9", "$type": "color" }
+          "strong": { "$value": "#1c2c4d", "$type": "color" }
         },
         "state": {
           "success": { "$value": "#2ea043", "$type": "color" },
           "warning": { "$value": "#d29922", "$type": "color" },
           "error": { "$value": "#f85149", "$type": "color" },
-          "info": { "$value": "#1991B9", "$type": "color" }
+          "info": { "$value": "#4A90E2", "$type": "color" }
         }
       }
     },
@@ -100,10 +122,18 @@
       "$description": "라이트모드 시맨틱 매핑",
       "color": {
         "brand": {
-          "primary": { "$value": "#1275b5", "$type": "color" },
-          "primary-dark": { "$value": "#083A64", "$type": "color" },
-          "primary-hover": { "$value": "#0d5a94", "$type": "color" },
+          "primary": { "$value": "#1c2c4d", "$type": "color" },
+          "primary-dark": { "$value": "#0a1128", "$type": "color" },
+          "primary-hover": { "$value": "#1275b5", "$type": "color" },
           "logo": { "$value": "#00ffcc", "$type": "color" }
+        },
+        "accent": {
+          "default": { "$value": "#4A90E2", "$type": "color" },
+          "hover": { "$value": "#2a6bbf", "$type": "color" }
+        },
+        "wordmark": {
+          "bg": { "$value": "#030508", "$type": "color" },
+          "dot": { "$value": "#4A90E2", "$type": "color" }
         },
         "bg": {
           "base": { "$value": "#faf9f7", "$type": "color" },
@@ -121,13 +151,13 @@
         "border": {
           "default": { "$value": "#e6eaef", "$type": "color" },
           "subtle": { "$value": "#f0ede8", "$type": "color" },
-          "strong": { "$value": "#1275b5", "$type": "color" }
+          "strong": { "$value": "#1c2c4d", "$type": "color" }
         },
         "state": {
           "success": { "$value": "#2ea043", "$type": "color" },
           "warning": { "$value": "#d29922", "$type": "color" },
           "error": { "$value": "#f85149", "$type": "color" },
-          "info": { "$value": "#1275b5", "$type": "color" }
+          "info": { "$value": "#4A90E2", "$type": "color" }
         }
       }
     }
@@ -142,6 +172,14 @@
       },
       "mono": {
         "$value": "'JetBrains Mono', 'Fira Code', 'Consolas', monospace",
+        "$type": "fontFamily"
+      },
+      "wordmark-en": {
+        "$value": "'Jura Light', sans-serif",
+        "$type": "fontFamily"
+      },
+      "wordmark-ko": {
+        "$value": "'Designhouse Light', sans-serif",
         "$type": "fontFamily"
       }
     },

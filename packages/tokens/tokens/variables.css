@@ -1,7 +1,7 @@
 /**
  * Sonagi Design System — CSS Custom Properties
- * Generated from: design-tokens.json v1.1.0
- * Updated: 2026-06-19
+ * Generated from: design-tokens.json v3.1.0
+ * Updated: 2026-06-20
  *
  * 구조:
  *   :root           → 공통 토큰 (타이포, 간격, 반경 등)
@@ -26,11 +26,17 @@
 :root {
   /* Brand (고정값) */
   --color-brand-logo: #00ffcc; /* Neon Cyan — 로고/에셋 전용 */
+  --color-wordmark-bg: #030508;
+  --color-wordmark-dot: #4a90e2;
+  --color-accent-default: #4a90e2;
+  --color-accent-hover: #2a6bbf;
 
   /* Typography */
   --font-sans: 'Pretendard', 'Inter', system-ui, sans-serif;
   --font-serif: 'Noto Serif KR', 'Merriweather', Georgia, serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-wordmark-en: 'Jura Light', sans-serif;
+  --font-wordmark-ko: 'Designhouse Light', sans-serif;
 
   --font-size-xs: 12px;
   --font-size-sm: 14px;
@@ -114,9 +120,9 @@
   color-scheme: dark;
 
   /* Brand */
-  --color-brand-primary: #1991b9;
-  --color-brand-primary-dark: #083a64;
-  --color-brand-primary-hover: #3aadd1;
+  --color-brand-primary: #1c2c4d;
+  --color-brand-primary-dark: #0a1128;
+  --color-brand-primary-hover: #1275b5;
 
   /* Background */
   --color-bg-base: #010609;
@@ -134,13 +140,13 @@
   /* Border */
   --color-border-default: #30363d;
   --color-border-subtle: #1c2128;
-  --color-border-strong: #1991b9;
+  --color-border-strong: #1c2c4d;
 
   /* State */
   --color-state-success: #2ea043;
   --color-state-warning: #d29922;
   --color-state-error: #f85149;
-  --color-state-info: #1991b9;
+  --color-state-info: #4a90e2;
 
   /* Shadow */
   --shadow-sm: 0 1px 3px rgba(1, 6, 9, 0.4);
@@ -191,9 +197,9 @@
   color-scheme: light;
 
   /* Brand */
-  --color-brand-primary: #1275b5;
-  --color-brand-primary-dark: #083a64;
-  --color-brand-primary-hover: #0d5a94;
+  --color-brand-primary: #1c2c4d;
+  --color-brand-primary-dark: #0a1128;
+  --color-brand-primary-hover: #1275b5;
 
   /* Background (웜 화이트 계열) */
   --color-bg-base: #faf9f7;
@@ -211,13 +217,13 @@
   /* Border */
   --color-border-default: #e6eaef;
   --color-border-subtle: #f0ede8;
-  --color-border-strong: #1275b5;
+  --color-border-strong: #1c2c4d;
 
   /* State */
   --color-state-success: #2ea043;
   --color-state-warning: #d29922;
   --color-state-error: #f85149;
-  --color-state-info: #1275b5;
+  --color-state-info: #4a90e2;
 
   /* Shadow */
   --shadow-sm: 0 1px 3px rgba(8, 58, 100, 0.1);
