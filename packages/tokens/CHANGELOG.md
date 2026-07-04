@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.0...tokens-v1.0.1) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** correct syntax error in build script ([a669250](https://github.com/mindulle/sonagi-design-system/commit/a6692500b5fb5c75c3dc19077f72a5d3930528ce))
+* **ci:** relax token version validation to allow semantic-release bump ([3793417](https://github.com/mindulle/sonagi-design-system/commit/3793417886ba9df2464cf77c45b84da17f469ba9))
+* **ci:** remove process.exit from warning to fix semantic-release build ([8158ca3](https://github.com/mindulle/sonagi-design-system/commit/8158ca3339eabdf0788ea927f8a98ebe02e3a1f1))
+
 # 1.0.0 (2026-07-04)
 
 
