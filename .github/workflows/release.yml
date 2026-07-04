@@ -45,6 +45,7 @@ jobs:
         working-directory: packages/tokens
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
         run: HUSKY=0 npx semantic-release
 
   release-ui:
@@ -86,4 +87,5 @@ jobs:
         working-directory: packages/ui
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
         run: HUSKY=0 npx semantic-release
