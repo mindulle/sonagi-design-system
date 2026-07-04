@@ -13,10 +13,6 @@ module.exports = {
       { changelogFile: 'CHANGELOG.md' },
     ],
     [
-      '@semantic-release/npm',
-      { npmPublish: true },
-    ],
-    [
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json'],

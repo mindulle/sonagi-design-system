@@ -13,7 +13,7 @@ jobs:
       contents: write        # Git 커밋 및 태그 푸시 권한
       issues: write          # 이슈 코멘트 권한
       pull-requests: write   # PR 코멘트 권한
-      id-token: write
+      id-token: write        # NPM provenance 지원용 (선택)
 
     steps:
       - name: Checkout repository
@@ -29,6 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          registry-url: 'https://registry.npmjs.org/'
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -40,15 +41,17 @@ jobs:
       - name: Test build outputs
         run: pnpm --filter @sonagi/tokens test
 
-      - name: Patch semantic-release for OIDC provenance
-        run: sed -i 's/"--registry", registry/"--registry", registry, "--provenance"/g' $(find node_modules -name publish.js | grep "@semantic-release/npm")
-
       - name: Run Semantic Release
         working-directory: packages/tokens
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: HUSKY=0 npx semantic-release
+
+      - name: Publish to NPM via OIDC Provenance
+        working-directory: packages/tokens
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ''
 
   release-ui:
     name: Release @sonagi/ui
@@ -73,6 +76,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          registry-url: 'https://registry.npmjs.org/'
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -84,12 +88,14 @@ jobs:
       - name: Test ui
         run: pnpm --filter @sonagi/ui test
 
-      - name: Patch semantic-release for OIDC provenance
-        run: sed -i 's/"--registry", registry/"--registry", registry, "--provenance"/g' $(find node_modules -name publish.js | grep "@semantic-release/npm")
-
       - name: Run Semantic Release
         working-directory: packages/ui
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: HUSKY=0 npx semantic-release
+
+      - name: Publish to NPM via OIDC Provenance
+        working-directory: packages/ui
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ''
