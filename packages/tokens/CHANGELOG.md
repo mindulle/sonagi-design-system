@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.13...tokens-v1.0.14) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** remove registry-url from setup-node to prevent empty npmrc breaking native NPM OIDC publish ([1c6af7d](https://github.com/mindulle/sonagi-design-system/commit/1c6af7db8da0dc5fc5d605e7cc1c5a0f707fce9d))
+
 ## [1.0.13](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.12...tokens-v1.0.13) (2026-07-04)
 
 
