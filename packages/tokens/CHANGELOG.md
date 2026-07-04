@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.14...tokens-v1.0.15) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** restore registry-url for npm publish OIDC now that semantic-release npm plugin is removed ([affb81e](https://github.com/mindulle/sonagi-design-system/commit/affb81e3566cb4b892aa7502cbca6c6fe85b30c3))
+
 ## [1.0.14](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.13...tokens-v1.0.14) (2026-07-04)
 
 
