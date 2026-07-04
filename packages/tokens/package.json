@@ -20,8 +20,7 @@
     "tokens/"
   ],
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
+    "access": "public"
   },
   "scripts": {
     "build": "node scripts/build.js",
