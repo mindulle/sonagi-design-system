@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.5...tokens-v1.0.6) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** ensure publishConfig.registry has trailing slash to fix semantic-release OIDC check ([555100c](https://github.com/mindulle/sonagi-design-system/commit/555100cc4e1f4bf094504d493080f504ba99228d))
+
 ## [1.0.5](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.4...tokens-v1.0.5) (2026-07-04)
 
 
