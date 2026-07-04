@@ -1,0 +1,25 @@
+name: Debug OIDC
+on:
+  push:
+    branches: [main]
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Fetch OIDC Token and Exchange with NPM
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const idToken = await core.getIDToken('npm:registry.npmjs.org');
+            console.log("Got ID Token length:", idToken.length);
+            const res = await fetch('https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/%40sonagi%2Ftokens', {
+              method: 'POST',
+              headers: { Authorization: `Bearer ${idToken}` }
+            });
+            console.log("Status:", res.status);
+            const text = await res.text();
+            console.log("Response:", text);
+            if (!res.ok) core.setFailed("OIDC exchange failed");
