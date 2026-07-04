@@ -41,7 +41,7 @@ jobs:
         run: pnpm --filter @sonagi/tokens test
 
       - name: Patch semantic-release for OIDC provenance
-        run: sed -i 's/"--registry", registry/"--registry", registry, "--provenance"/g' node_modules/@semantic-release/npm/lib/publish.js
+        run: sed -i 's/"--registry", registry/"--registry", registry, "--provenance"/g' $(find node_modules -name publish.js | grep "@semantic-release/npm")
 
       - name: Run Semantic Release
         working-directory: packages/tokens
@@ -85,7 +85,7 @@ jobs:
         run: pnpm --filter @sonagi/ui test
 
       - name: Patch semantic-release for OIDC provenance
-        run: sed -i 's/"--registry", registry/"--registry", registry, "--provenance"/g' node_modules/@semantic-release/npm/lib/publish.js
+        run: sed -i 's/"--registry", registry/"--registry", registry, "--provenance"/g' $(find node_modules -name publish.js | grep "@semantic-release/npm")
 
       - name: Run Semantic Release
         working-directory: packages/ui
