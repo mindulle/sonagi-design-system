@@ -1,3 +1,11 @@
+## [1.0.13](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.12...tokens-v1.0.13) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** deduplicate registry-url ([bab3dfe](https://github.com/mindulle/sonagi-design-system/commit/bab3dfe9b6eaf374e1cb52438f6ba62b5fa65868))
+* **ci:** restore registry-url to setup-node for NPM OIDC ([fbec8ee](https://github.com/mindulle/sonagi-design-system/commit/fbec8eed8d75b11f3fd976ad06ddd26d29d37421))
+
 ## [1.0.12](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.11...tokens-v1.0.12) (2026-07-04)
 
 
