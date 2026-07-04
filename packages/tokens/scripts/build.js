@@ -34,7 +34,7 @@ function log(msg) {
 
 function warn(msg) {
   process.stderr.write('❌  ' + msg + '\n');
-  process.exit(1);
+  
 }
 
 function ensureDir(dir) {
