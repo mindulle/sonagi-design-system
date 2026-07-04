@@ -51,12 +51,12 @@ jobs:
         working-directory: packages/tokens
         node -e "
           const core = require('@actions/core');
-          const idToken = await core.getIDToken('npm:registry.npmjs.org');
+          (async () => { const idToken = await core.getIDToken('npm:registry.npmjs.org');
           const res = await fetch('https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/%40sonagi%2Ftokens', {
             method: 'POST',
             headers: { Authorization: `Bearer ${idToken}` }
           });
-          console.log('OIDC Response:', await res.text());
+          console.log('OIDC Response:', await res.text()); })();
         " || true
         run: npm publish --provenance --access public
         env:
@@ -107,12 +107,12 @@ jobs:
         working-directory: packages/ui
         node -e "
           const core = require('@actions/core');
-          const idToken = await core.getIDToken('npm:registry.npmjs.org');
+          (async () => { const idToken = await core.getIDToken('npm:registry.npmjs.org');
           const res = await fetch('https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/%40sonagi%2Ftokens', {
             method: 'POST',
             headers: { Authorization: `Bearer ${idToken}` }
           });
-          console.log('OIDC Response:', await res.text());
+          console.log('OIDC Response:', await res.text()); })();
         " || true
         run: npm publish --provenance --access public
         env:
