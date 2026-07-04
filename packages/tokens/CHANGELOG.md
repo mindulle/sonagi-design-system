@@ -1,3 +1,11 @@
+## [1.0.18](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.17...tokens-v1.0.18) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** fix invalid plugins configuration in releaserc ([1585d81](https://github.com/mindulle/sonagi-design-system/commit/1585d81f86d32970439a8cc48dd0beaa4501dea8))
+* **ci:** restore npm plugin to semantic-release to actually publish to npm registry ([a994d0d](https://github.com/mindulle/sonagi-design-system/commit/a994d0db2b4d36bb177191ff6b0e4b20b4a21168))
+
 ## [1.0.17](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.16...tokens-v1.0.17) (2026-07-04)
 
 
