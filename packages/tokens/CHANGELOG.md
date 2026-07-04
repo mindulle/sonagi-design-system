@@ -1,3 +1,11 @@
+## [1.0.11](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.10...tokens-v1.0.11) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** fix path to publish.js for pnpm in semantic-release patch ([ab15ffc](https://github.com/mindulle/sonagi-design-system/commit/ab15ffc5f3e50812276a3c5791ee1361785f7625))
+* **ci:** patch semantic-release to pass --provenance and restore id-token for OIDC ([f6f923e](https://github.com/mindulle/sonagi-design-system/commit/f6f923e8eff210c294b00955cb31a7d265fa0a01))
+
 ## [1.0.10](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.9...tokens-v1.0.10) (2026-07-04)
 
 
