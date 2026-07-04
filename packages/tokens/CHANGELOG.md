@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.4...tokens-v1.0.5) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** restore registry-url for setup-node to enable NPM OIDC auth flow ([d8b8c99](https://github.com/mindulle/sonagi-design-system/commit/d8b8c9940fb941a5288025da3e9d05313dbd5975))
+
 ## [1.0.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.3...tokens-v1.0.4) (2026-07-04)
 
 
