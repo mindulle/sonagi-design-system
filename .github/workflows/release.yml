@@ -18,6 +18,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
           fetch-depth: 0              # semantic-release가 모든 커밋 기록을 분석할 수 있도록 설정
           persist-credentials: false  # semantic-release/git을 위해 필요
 
@@ -26,6 +27,7 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
+        with:
           node-version: '20'
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
@@ -59,6 +61,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
           fetch-depth: 0
           persist-credentials: false
 
@@ -67,6 +70,7 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
+        with:
           node-version: '20'
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
