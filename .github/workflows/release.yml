@@ -45,24 +45,9 @@ jobs:
         working-directory: packages/tokens
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: HUSKY=0 npx semantic-release
-
-      - name: Publish to NPM via OIDC Provenance
-        working-directory: packages/tokens
-        run: | 
-          npm i @actions/core
-          node -e "
-          const core = require('@actions/core');
-          (async () => { const idToken = await core.getIDToken('npm:registry.npmjs.org');
-          const res = await fetch('https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/%40sonagi%2Ftokens', {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${idToken}` }
-          });
-          console.log('OIDC Response:', await res.text()); })();
-        " || true
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ''
 
   release-ui:
     name: Release @sonagi/ui
@@ -103,21 +88,6 @@ jobs:
         working-directory: packages/ui
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: HUSKY=0 npx semantic-release
-
-      - name: Publish to NPM via OIDC Provenance
-        working-directory: packages/ui
-        run: | 
-          npm i @actions/core
-          node -e "
-          const core = require('@actions/core');
-          (async () => { const idToken = await core.getIDToken('npm:registry.npmjs.org');
-          const res = await fetch('https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/%40sonagi%2Ftokens', {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${idToken}` }
-          });
-          console.log('OIDC Response:', await res.text()); })();
-        " || true
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ''
