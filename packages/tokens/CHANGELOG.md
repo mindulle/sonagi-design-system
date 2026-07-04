@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.11...tokens-v1.0.12) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** decouple npm publish from semantic-release for OIDC ([6517246](https://github.com/mindulle/sonagi-design-system/commit/65172467eddf5fe009e02706c438745344c058c9))
+
 ## [1.0.11](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.10...tokens-v1.0.11) (2026-07-04)
 
 
