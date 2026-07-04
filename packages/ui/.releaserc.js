@@ -26,8 +26,8 @@ module.exports = {
       '@semantic-release/github',
       {
         assets: [
-          { path: 'packages/ui/dist/index.js', label: 'UI Components (ESM)' },
-          { path: 'packages/ui/dist/index.cjs', label: 'UI Components (CJS)' },
+          { path: 'dist/index.js', label: 'UI Components (ESM)' },
+          { path: 'dist/index.cjs', label: 'UI Components (CJS)' },
         ],
       },
     ],

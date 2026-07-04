@@ -43,11 +43,9 @@ module.exports = {
       '@semantic-release/github',
       {
         assets: [
-          { path: 'packages/tokens/dist/variables.css', label: 'CSS Variables' },
-          { path: 'packages/tokens/dist/index.js', label: 'JS Tokens' },
+          { path: 'dist/variables.css', label: 'CSS Variables' },
+          { path: 'dist/index.js', label: 'JS Tokens' },
         ]
-      }
-    ]
       }
     ]
   ],
