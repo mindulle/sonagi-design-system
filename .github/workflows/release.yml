@@ -49,7 +49,9 @@ jobs:
 
       - name: Publish to NPM via OIDC Provenance
         working-directory: packages/tokens
-        node -e "
+        run: | 
+          npm i @actions/core
+          node -e "
           const core = require('@actions/core');
           (async () => { const idToken = await core.getIDToken('npm:registry.npmjs.org');
           const res = await fetch('https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/%40sonagi%2Ftokens', {
@@ -105,7 +107,9 @@ jobs:
 
       - name: Publish to NPM via OIDC Provenance
         working-directory: packages/ui
-        node -e "
+        run: | 
+          npm i @actions/core
+          node -e "
           const core = require('@actions/core');
           (async () => { const idToken = await core.getIDToken('npm:registry.npmjs.org');
           const res = await fetch('https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/%40sonagi%2Ftokens', {
