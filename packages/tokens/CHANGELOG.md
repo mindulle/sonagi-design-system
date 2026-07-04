@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.9...tokens-v1.0.10) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** completely remove NPM_CONFIG_PROVENANCE to disable OIDC signing ([773590e](https://github.com/mindulle/sonagi-design-system/commit/773590e9910a6a6018a091053b05a01eb2715427))
+
 ## [1.0.9](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.8...tokens-v1.0.9) (2026-07-04)
 
 
