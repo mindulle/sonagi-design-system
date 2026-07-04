@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.3...tokens-v1.0.4) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** add provenance true to package.json publishConfig to enforce OIDC publishing ([29e189c](https://github.com/mindulle/sonagi-design-system/commit/29e189c221eeb9c85da4c6cb93553ba98dd8c6d7))
+
 ## [1.0.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.2...tokens-v1.0.3) (2026-07-04)
 
 
