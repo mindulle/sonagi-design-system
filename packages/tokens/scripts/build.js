@@ -32,7 +32,7 @@ function log(msg) {
   process.stdout.write(msg + '\n');
 }
 
-function console.warn(msg) {
+function warn(msg) {
   process.stderr.write('❌  ' + msg + '\n');
   process.exit(1);
 }
@@ -45,8 +45,8 @@ function ensureDir(dir) {
 
 log('🔨 Building @sonagi/tokens…\n');
 
-if (!fs.existsSync(JSON_SRC)) console.warn(`Missing source: ${JSON_SRC}`);
-if (!fs.existsSync(CSS_SRC)) console.warn(`Missing source: ${CSS_SRC}`);
+if (!fs.existsSync(JSON_SRC)) warn(`Missing source: ${JSON_SRC}`);
+if (!fs.existsSync(CSS_SRC)) warn(`Missing source: ${CSS_SRC}`);
 
 const tokens = JSON.parse(fs.readFileSync(JSON_SRC, 'utf8'));
 const cssContent = fs.readFileSync(CSS_SRC, 'utf8');
@@ -62,14 +62,14 @@ const cssVersionMatch = cssContent.match(/design-tokens\.json\s+v([\d.]+)/);
 const cssVersion = cssVersionMatch ? cssVersionMatch[1] : '(none)';
 
 if (jsonVersion !== pkgVersion) {
-  console.warn(
+  warn(
     `Version mismatch: design-tokens.json says v${jsonVersion} but package.json says v${pkgVersion}\n` +
     `  → Update package.json or design-tokens.json meta.version`
   );
 }
 
 if (cssVersion !== jsonVersion) {
-  console.warn(
+  warn(
     `⚠️  CSS comment version (v${cssVersion}) differs from design-tokens.json (v${jsonVersion})\n` +
     `  → Update the comment in variables.css if you have updated the tokens.`
   );
