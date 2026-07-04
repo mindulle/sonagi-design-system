@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.1...tokens-v1.0.2) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** remove registry-url from setup-node to prevent empty npmrc generation breaking OIDC publish ([b4d850a](https://github.com/mindulle/sonagi-design-system/commit/b4d850a8dea43e8f75fc445a46761ed043a84548))
+* **ci:** restore NPM_TOKEN to pass semantic-release verifyConditions while using OIDC for publish ([fcd2573](https://github.com/mindulle/sonagi-design-system/commit/fcd2573a336be11989c841b91f4ed100171c5d82))
+* **ci:** trigger release using NPM Trusted Publishing (OIDC) ([e97eb06](https://github.com/mindulle/sonagi-design-system/commit/e97eb064c158b3986c4ed7f9df703cf3cd2f337a))
+
 ## [1.0.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.0...tokens-v1.0.1) (2026-07-04)
 
 
