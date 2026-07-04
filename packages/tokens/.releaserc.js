@@ -4,6 +4,7 @@
  */
 module.exports = {
   branches: ['main'],
+  tagFormat: "tokens-v${version}",
   plugins: [
     // 1. 커밋 메시지 분석 (@commitlint/config-conventional 기준)
     '@semantic-release/commit-analyzer',
