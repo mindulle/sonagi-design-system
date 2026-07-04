@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.2...tokens-v1.0.3) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** remove registry from publishConfig to fix OIDC registry URL mismatch ([29378a9](https://github.com/mindulle/sonagi-design-system/commit/29378a98ad0db5d30dc813eefecae30a1c162563))
+
 ## [1.0.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.1...tokens-v1.0.2) (2026-07-04)
 
 
