@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.8...tokens-v1.0.9) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** remove provenance to publish using standard NPM_TOKEN with bypass 2FA ([a5908ed](https://github.com/mindulle/sonagi-design-system/commit/a5908ed2fa7096e6fe74d9f50063b179a2e35a40))
+
 ## [1.0.8](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.7...tokens-v1.0.8) (2026-07-04)
 
 
