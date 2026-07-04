@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.6...tokens-v1.0.7) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** completely remove registry-url from setup-node to prevent empty auth token breaking OIDC ([ce4a6bb](https://github.com/mindulle/sonagi-design-system/commit/ce4a6bbe5118714a89c4e0fc301743647209b4c4))
+
 ## [1.0.6](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.5...tokens-v1.0.6) (2026-07-04)
 
 
