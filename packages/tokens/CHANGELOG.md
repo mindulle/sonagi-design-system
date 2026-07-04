@@ -1,3 +1,13 @@
+## [1.0.16](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.15...tokens-v1.0.16) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** debug OIDC token exchange in release.yml ([a734d3f](https://github.com/mindulle/sonagi-design-system/commit/a734d3f3279d83374047e42ed5b1106d1cb33844))
+* **ci:** fix top-level await in debug script ([d13a092](https://github.com/mindulle/sonagi-design-system/commit/d13a0926c1dc068419166b4e566efb635a1c039c))
+* **ci:** fix yaml syntax for debug script ([de0b122](https://github.com/mindulle/sonagi-design-system/commit/de0b122d933c0c75259679e864a4603b62d1661d))
+* **ci:** restore simple NPM_TOKEN publish workflow ([6fa96fa](https://github.com/mindulle/sonagi-design-system/commit/6fa96fa974b81490e24518763c1d2ef418acc860))
+
 ## [1.0.15](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.14...tokens-v1.0.15) (2026-07-04)
 
 
