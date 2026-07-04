@@ -1,3 +1,11 @@
+## [1.0.17](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.16...tokens-v1.0.17) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** rename .releaserc.js to .releaserc.cjs for ES module compatibility ([09fb8c8](https://github.com/mindulle/sonagi-design-system/commit/09fb8c81ab5a96aac4d66e83c4ac330e0e7c2aa3))
+* **ci:** trigger fresh release to actually publish v1.0.12 to npm ([58a965d](https://github.com/mindulle/sonagi-design-system/commit/58a965d64d0d90e517f9cdf6a1337a145abe35ec))
+
 ## [1.0.16](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.15...tokens-v1.0.16) (2026-07-04)
 
 
