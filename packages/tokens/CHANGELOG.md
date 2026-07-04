@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.7...tokens-v1.0.8) (2026-07-04)
+
+
+### Bug Fixes
+
+* **ci:** remove id-token permission to disable broken OIDC path and fallback to valid NPM_TOKEN ([bb0497f](https://github.com/mindulle/sonagi-design-system/commit/bb0497f7296cd4d48193d83aa49a49dcc6eded5a))
+
 ## [1.0.7](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.6...tokens-v1.0.7) (2026-07-04)
 
 
