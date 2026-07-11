@@ -28,7 +28,7 @@
     "lint": "tsc --noEmit",
     "prepack": "pnpm build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build && cp ../tokens/dist/variables.css storybook-static/variables.css"
   },
   "keywords": [
     "design-system",
