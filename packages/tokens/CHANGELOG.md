@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.2.0...tokens-v1.3.0) (2026-07-11)
+
+
+### Features
+
+* 디자인 토큰 개편 후속 정렬 및 UI 컴포넌트 구현 ([#7](https://github.com/mindulle/sonagi-design-system/issues/7)) ([ae69f09](https://github.com/mindulle/sonagi-design-system/commit/ae69f094ff4a7b91bc87b638ca2c4785c0ea6a83))
+
 # [1.2.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.1.1...tokens-v1.2.0) (2026-07-11)
 
 
