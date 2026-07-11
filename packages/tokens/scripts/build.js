@@ -15,6 +15,14 @@ function ensureDir(dir) {
 
 function getCssVarName(pathArray) {
   let parts = [...pathArray];
+  if (parts[0] === 'tokens') {
+     parts = parts.slice(1);
+  }
+  
+  if (['fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'letterSpacing'].includes(parts[0])) {
+     parts = ['typography', ...parts];
+  }
+  
   if (parts[0] === 'primitive') {
      parts[0] = 'color'; 
   } else if (parts[0] === 'semantic') {
@@ -36,8 +44,6 @@ function getCssVarName(pathArray) {
      else if (parts[1] === 'easing') parts = ['ease', parts[2]];
   } else if (parts[0] === 'zIndex') {
      parts = ['z', parts[1]];
-  } else if (parts[0] === 'tokens') {
-     parts = parts.slice(1);
   }
   return `--sng-${parts.join('-')}`;
 }
@@ -146,15 +152,15 @@ function build() {
   <title>Sonagi Design System - v${version}</title>
   <link rel="stylesheet" href="variables.css">
   <style>
-    body { font-family: var(--font-sans); background: var(--color-bg-base); color: var(--color-text-primary); margin: 0; padding: 2rem; transition: background 0.3s, color 0.3s; }
-    h1, h2 { border-bottom: 1px solid var(--color-border-default); padding-bottom: 0.5rem; }
+    body { font-family: var(--sng-font-sans); background: var(--sng-color-bg-base); color: var(--sng-color-text-primary); margin: 0; padding: 2rem; transition: background 0.3s, color 0.3s; }
+    h1, h2 { border-bottom: 1px solid var(--sng-color-border-default); padding-bottom: 0.5rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-    .card { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-    .swatch { width: 48px; height: 48px; border-radius: var(--radius-md); border: 1px solid var(--color-border-default); flex-shrink: 0; }
+    .card { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--sng-color-bg-surface); border: 1px solid var(--sng-color-border-subtle); border-radius: var(--sng-radius-lg); box-shadow: var(--sng-shadow-sm); }
+    .swatch { width: 48px; height: 48px; border-radius: var(--sng-radius-md); border: 1px solid var(--sng-color-border-default); flex-shrink: 0; }
     .info { display: flex; flex-direction: column; gap: 0.25rem; }
-    code { font-family: var(--font-mono); font-size: var(--font-size-sm); color: var(--color-text-muted); }
-    .theme-selector { margin-bottom: 2rem; padding: 1rem; background: var(--color-bg-elevated); border-radius: var(--radius-md); border: 1px solid var(--color-border-default); }
-    select { padding: 0.5rem; font-family: var(--font-sans); border-radius: var(--radius-sm); border: 1px solid var(--color-border-strong); }
+    code { font-family: var(--sng-font-mono); font-size: var(--sng-font-size-sm); color: var(--sng-color-text-muted); }
+    .theme-selector { margin-bottom: 2rem; padding: 1rem; background: var(--sng-color-bg-elevated); border-radius: var(--sng-radius-md); border: 1px solid var(--sng-color-border-default); }
+    select { padding: 0.5rem; font-family: var(--sng-font-sans); border-radius: var(--sng-radius-sm); border: 1px solid var(--sng-color-border-strong); }
   </style>
 </head>
 <body data-theme="light">

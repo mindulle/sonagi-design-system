@@ -61,7 +61,7 @@ export function HoverPreview({
     >
       <a
         href={href ?? `/notes/${slug}`}
-        className="wikilink"
+        className="sng-wikilink"
         data-slug={slug}
       >
         {children}
@@ -70,22 +70,14 @@ export function HoverPreview({
       {visible && (
         <span
           role="tooltip"
-          style={{
-            position: 'absolute',
-            bottom: 'calc(100% + 8px)',
-            left: 0,
-            zIndex: 50,
-            minWidth: '240px',
-            maxWidth: '320px',
-          }}
-          className="wikilink-preview"
+          className="sng-wikilink-preview"
         >
           {loading ? (
-            <span className="wikilink-preview__loading">불러오는 중...</span>
+            <span className="sng-wikilink-preview__loading">불러오는 중...</span>
           ) : preview ? (
             <>
-              <span className="wikilink-preview__title">{preview.title}</span>
-              <span className="wikilink-preview__excerpt">{preview.excerpt}</span>
+              <span className="sng-wikilink-preview__title">{preview.title}</span>
+              <span className="sng-wikilink-preview__excerpt">{preview.excerpt}</span>
             </>
           ) : null}
         </span>

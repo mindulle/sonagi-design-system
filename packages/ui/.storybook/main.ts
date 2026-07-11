@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/html-vite';
+import type { StorybookConfig } from '@storybook/react-vite';
 
 import { dirname } from "path"
 
@@ -22,6 +22,6 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-docs')
   ],
-  "framework": getAbsolutePath('@storybook/html-vite')
+  "framework": getAbsolutePath('@storybook/react-vite')
 };
 export default config;
