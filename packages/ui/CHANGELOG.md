@@ -1,3 +1,19 @@
+# [1.1.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.0.0...ui-v1.1.0) (2026-07-11)
+
+
+### Bug Fixes
+
+* **ci:** fix invalid plugins configuration in releaserc ([1585d81](https://github.com/mindulle/sonagi-design-system/commit/1585d81f86d32970439a8cc48dd0beaa4501dea8))
+* **ci:** install playwright chromium before ui tests ([54ca79f](https://github.com/mindulle/sonagi-design-system/commit/54ca79f7bb441ea02cbc70956f5d25b0bc32b128))
+* **ci:** restore npm plugin to semantic-release to actually publish to npm registry ([a994d0d](https://github.com/mindulle/sonagi-design-system/commit/a994d0db2b4d36bb177191ff6b0e4b20b4a21168))
+* **ci:** trigger fresh release to actually publish v1.0.12 to npm ([58a965d](https://github.com/mindulle/sonagi-design-system/commit/58a965d64d0d90e517f9cdf6a1337a145abe35ec))
+
+
+### Features
+
+* **ui:** copy variables.css into storybook-static after build ([d48de4d](https://github.com/mindulle/sonagi-design-system/commit/d48de4d6818206de19c41ad4d39f0b3a741396a4))
+* 디자인 토큰 개편 및 UI Storybook 테스트 환경 구축 (CEO-339) ([#6](https://github.com/mindulle/sonagi-design-system/issues/6)) ([5540835](https://github.com/mindulle/sonagi-design-system/commit/55408357492bdff799dff9f3c89c5014e4d5c2c7))
+
 # 1.0.0 (2026-07-04)
 
 
