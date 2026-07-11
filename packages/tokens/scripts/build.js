@@ -176,10 +176,12 @@ function build() {
     ${generateColorSwatches(lightTokens)}
   </div>
 
-  <h2>Theme Overrides (desk-analyst)</h2>
+  ${Object.entries(themesTokens).map(([themeName, themeDict]) => `
+  <h2>Theme Overrides (${themeName})</h2>
   <div class="grid">
-    ${themesTokens['desk-analyst'] ? generateColorSwatches(themesTokens['desk-analyst']) : '<p>No overrides found</p>'}
+    ${generateColorSwatches(themeDict)}
   </div>
+  `).join('')}
 </body>
 </html>`;
 
