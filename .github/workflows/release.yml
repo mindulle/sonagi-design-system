@@ -78,6 +78,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install Playwright browsers
+        run: pnpm --filter @sonagi/ui exec playwright install chromium --with-deps
+
       - name: Build ui
         run: pnpm --filter @sonagi/ui build
 
