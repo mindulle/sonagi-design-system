@@ -1,0 +1,57 @@
+/**
+ * Sonagi Design System - Core CSS
+ * Framework-Agnostic (React, Vanilla, 등 어디서든 사용 가능)
+ */
+
+:root {
+  /* 향후 packages/tokens 폴더에서 자동 생성되어 주입될 예정인 임시 토큰들 */
+  --sng-color-primary: #0066ff;
+  --sng-color-primary-hover: #0052cc;
+  --sng-color-white: #ffffff;
+  --sng-color-text: #333333;
+
+  --sng-space-sm: 8px;
+  --sng-space-md: 16px;
+
+  --sng-radius-md: 6px;
+  --sng-font-family: 'Pretendard', sans-serif;
+}
+
+/* Base Body (Storybook 환경을 위함) */
+body {
+  font-family: var(--sng-font-family);
+  color: var(--sng-color-text);
+}
+
+/* 
+ * UI Components 
+ * 모든 클래스는 .sng- 접두사를 사용하여 다른 프레임워크와의 충돌 방지
+ */
+.sng-btn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--sng-radius-md);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sng-space-sm) var(--sng-space-md);
+  transition:
+    background-color 0.2s ease-in-out,
+    transform 0.1s;
+}
+
+.sng-btn:active {
+  transform: scale(0.98);
+}
+
+.sng-btn--primary {
+  color: var(--sng-color-white);
+  background-color: var(--sng-color-primary);
+}
+
+.sng-btn--primary:hover {
+  background-color: var(--sng-color-primary-hover);
+}
