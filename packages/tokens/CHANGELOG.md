@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.18...tokens-v1.1.0) (2026-07-11)
+
+
+### Features
+
+* 디자인 토큰 개편 및 UI Storybook 테스트 환경 구축 (CEO-339) ([#6](https://github.com/mindulle/sonagi-design-system/issues/6)) ([5540835](https://github.com/mindulle/sonagi-design-system/commit/55408357492bdff799dff9f3c89c5014e4d5c2c7))
+
 ## [1.0.18](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.17...tokens-v1.0.18) (2026-07-04)
 
 
