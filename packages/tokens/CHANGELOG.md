@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.1.1...tokens-v1.2.0) (2026-07-11)
+
+
+### Features
+
+* **ui:** copy variables.css into storybook-static after build ([d48de4d](https://github.com/mindulle/sonagi-design-system/commit/d48de4d6818206de19c41ad4d39f0b3a741396a4))
+
 ## [1.1.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.1.0...tokens-v1.1.1) (2026-07-11)
 
 
