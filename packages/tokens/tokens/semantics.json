@@ -2,7 +2,7 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "meta": {
     "name": "Sonagi Design System",
-    "version": "3.1.0",
+    "version": "1.2.0",
     "updated": "2026-06-20",
     "description": "Semantic tokens (Light/Dark themes)"
   },
@@ -108,16 +108,32 @@
             "$value": "#2ea043",
             "$type": "color"
           },
+          "success-bg": {
+            "$value": "rgba(46, 160, 67, 0.15)",
+            "$type": "color"
+          },
           "warning": {
             "$value": "#d29922",
+            "$type": "color"
+          },
+          "warning-bg": {
+            "$value": "rgba(210, 153, 34, 0.15)",
             "$type": "color"
           },
           "error": {
             "$value": "#f85149",
             "$type": "color"
           },
+          "error-bg": {
+            "$value": "rgba(248, 81, 73, 0.15)",
+            "$type": "color"
+          },
           "info": {
             "$value": "#4A90E2",
+            "$type": "color"
+          },
+          "info-bg": {
+            "$value": "rgba(74, 144, 226, 0.15)",
             "$type": "color"
           }
         }
@@ -223,16 +239,32 @@
             "$value": "#2ea043",
             "$type": "color"
           },
+          "success-bg": {
+            "$value": "#d4edda",
+            "$type": "color"
+          },
           "warning": {
             "$value": "#d29922",
+            "$type": "color"
+          },
+          "warning-bg": {
+            "$value": "#fff3cd",
             "$type": "color"
           },
           "error": {
             "$value": "#f85149",
             "$type": "color"
           },
+          "error-bg": {
+            "$value": "#fde8e8",
+            "$type": "color"
+          },
           "info": {
             "$value": "#4A90E2",
+            "$type": "color"
+          },
+          "info-bg": {
+            "$value": "#e8f4fd",
             "$type": "color"
           }
         }
