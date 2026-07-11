@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = '/home/mindulle/projects/sonagi-design-system/packages/tokens';
+const ROOT = path.resolve(__dirname, '..');
 const TOKENS_DIR = path.join(ROOT, 'tokens');
 const THEMES_DIR = path.join(TOKENS_DIR, 'themes');
 const DIST_DIR = path.join(ROOT, 'dist');
@@ -39,7 +39,7 @@ function getCssVarName(pathArray) {
   } else if (parts[0] === 'tokens') {
      parts = parts.slice(1);
   }
-  return `--${parts.join('-')}`;
+  return `--sng-${parts.join('-')}`;
 }
 
 function extractTokens(node, pathArray = [], result = {}) {
