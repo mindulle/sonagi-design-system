@@ -1,0 +1,280 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "Sonagi Design System",
+    "version": "3.1.0",
+    "updated": "2026-06-20",
+    "description": "Semantic tokens (Light/Dark themes)"
+  },
+  "semantic": {
+    "$description": "용도별 시맨틱 토큰. 컴포넌트에서 이 값만 참조할 것.",
+    "dark": {
+      "$description": "다크모드 시맨틱 매핑",
+      "color": {
+        "brand": {
+          "primary": {
+            "$value": "#1c2c4d",
+            "$type": "color"
+          },
+          "primary-dark": {
+            "$value": "#0a1128",
+            "$type": "color"
+          },
+          "primary-hover": {
+            "$value": "#1275b5",
+            "$type": "color"
+          },
+          "logo": {
+            "$value": "#00ffcc",
+            "$type": "color"
+          }
+        },
+        "accent": {
+          "default": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "#2a6bbf",
+            "$type": "color"
+          }
+        },
+        "wordmark": {
+          "bg": {
+            "$value": "#030508",
+            "$type": "color"
+          },
+          "dot": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          }
+        },
+        "bg": {
+          "base": {
+            "$value": "#010609",
+            "$type": "color"
+          },
+          "surface": {
+            "$value": "#0d1117",
+            "$type": "color"
+          },
+          "elevated": {
+            "$value": "#161b22",
+            "$type": "color"
+          },
+          "overlay": {
+            "$value": "#1c2128",
+            "$type": "color"
+          }
+        },
+        "text": {
+          "primary": {
+            "$value": "#f0f6fc",
+            "$type": "color"
+          },
+          "secondary": {
+            "$value": "#c9d1d9",
+            "$type": "color"
+          },
+          "muted": {
+            "$value": "#8b949e",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "#484f58",
+            "$type": "color"
+          },
+          "inverse": {
+            "$value": "#010609",
+            "$type": "color"
+          }
+        },
+        "border": {
+          "default": {
+            "$value": "#30363d",
+            "$type": "color"
+          },
+          "subtle": {
+            "$value": "#1c2128",
+            "$type": "color"
+          },
+          "strong": {
+            "$value": "#1c2c4d",
+            "$type": "color"
+          }
+        },
+        "state": {
+          "success": {
+            "$value": "#2ea043",
+            "$type": "color"
+          },
+          "warning": {
+            "$value": "#d29922",
+            "$type": "color"
+          },
+          "error": {
+            "$value": "#f85149",
+            "$type": "color"
+          },
+          "info": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "light": {
+      "$description": "라이트모드 시맨틱 매핑",
+      "color": {
+        "brand": {
+          "primary": {
+            "$value": "#1c2c4d",
+            "$type": "color"
+          },
+          "primary-dark": {
+            "$value": "#0a1128",
+            "$type": "color"
+          },
+          "primary-hover": {
+            "$value": "#1275b5",
+            "$type": "color"
+          },
+          "logo": {
+            "$value": "#00ffcc",
+            "$type": "color"
+          }
+        },
+        "accent": {
+          "default": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "#2a6bbf",
+            "$type": "color"
+          }
+        },
+        "wordmark": {
+          "bg": {
+            "$value": "#030508",
+            "$type": "color"
+          },
+          "dot": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          }
+        },
+        "bg": {
+          "base": {
+            "$value": "#faf9f7",
+            "$type": "color"
+          },
+          "surface": {
+            "$value": "#fff8f2",
+            "$type": "color"
+          },
+          "elevated": {
+            "$value": "#ffffff",
+            "$type": "color"
+          },
+          "overlay": {
+            "$value": "#f0ede8",
+            "$type": "color"
+          }
+        },
+        "text": {
+          "primary": {
+            "$value": "#0d1117",
+            "$type": "color"
+          },
+          "secondary": {
+            "$value": "#30363d",
+            "$type": "color"
+          },
+          "muted": {
+            "$value": "#8b949e",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "#c9d1d9",
+            "$type": "color"
+          },
+          "inverse": {
+            "$value": "#faf9f7",
+            "$type": "color"
+          }
+        },
+        "border": {
+          "default": {
+            "$value": "#e6eaef",
+            "$type": "color"
+          },
+          "subtle": {
+            "$value": "#f0ede8",
+            "$type": "color"
+          },
+          "strong": {
+            "$value": "#1c2c4d",
+            "$type": "color"
+          }
+        },
+        "state": {
+          "success": {
+            "$value": "#2ea043",
+            "$type": "color"
+          },
+          "warning": {
+            "$value": "#d29922",
+            "$type": "color"
+          },
+          "error": {
+            "$value": "#f85149",
+            "$type": "color"
+          },
+          "info": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          }
+        }
+      }
+    }
+  },
+  "shadow": {
+    "dark": {
+      "sm": {
+        "$value": "0 1px 3px rgba(1,6,9,0.4)",
+        "$type": "shadow"
+      },
+      "md": {
+        "$value": "0 4px 12px rgba(1,6,9,0.5)",
+        "$type": "shadow"
+      },
+      "lg": {
+        "$value": "0 8px 24px rgba(1,6,9,0.6)",
+        "$type": "shadow"
+      },
+      "focus": {
+        "$value": "0 0 0 3px rgba(25,145,185,0.4)",
+        "$type": "shadow"
+      }
+    },
+    "light": {
+      "sm": {
+        "$value": "0 1px 3px rgba(8,58,100,0.1)",
+        "$type": "shadow"
+      },
+      "md": {
+        "$value": "0 4px 12px rgba(8,58,100,0.12)",
+        "$type": "shadow"
+      },
+      "lg": {
+        "$value": "0 8px 24px rgba(8,58,100,0.15)",
+        "$type": "shadow"
+      },
+      "focus": {
+        "$value": "0 0 0 3px rgba(18,117,181,0.3)",
+        "$type": "shadow"
+      }
+    }
+  }
+}

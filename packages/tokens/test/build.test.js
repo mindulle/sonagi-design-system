@@ -17,9 +17,9 @@ describe('Token Build Output Verification', () => {
     expect(cssContent).toContain('[data-theme="light"]');
 
     // 필수 토큰 존재 여부
-    expect(cssContent).toContain('--color-brand-primary');
-    expect(cssContent).toContain('--font-sans');
-    expect(cssContent).toContain('--spacing-4');
+    expect(cssContent).toContain('--sng-color-brand-primary');
+    expect(cssContent).toContain('--sng-font-sans');
+    expect(cssContent).toContain('--sng-spacing-4');
   });
 
   it('should generate a valid CJS export (index.js)', async () => {
@@ -29,8 +29,8 @@ describe('Token Build Output Verification', () => {
     const { tokens } = await import(cjsPath);
     expect(tokens).toBeDefined();
     expect(typeof tokens).toBe('object');
-    expect(tokens['--primitive-blue-500']).toBeDefined();
-    expect(tokens['--semantic-light-color-text-primary']).toBeDefined();
+    expect(tokens['--sng-color-blue-500']).toBeDefined();
+    expect(tokens['--sng-color-text-primary']).toBeDefined();
   });
 
   it('should generate a valid ESM export (index.mjs)', () => {

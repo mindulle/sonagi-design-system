@@ -22,7 +22,7 @@
     "turbo": "^2.5.4"
   },
   "lint-staged": {
-    "packages/tokens/tokens/design-tokens.json": [
+    "packages/tokens/tokens/**/*.json": [
       "pnpm --filter @sonagi/tokens build"
     ],
     "**/*.{css,json,md}": [
