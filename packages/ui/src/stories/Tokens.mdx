@@ -1,0 +1,142 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Tokens/Showcase" />
+
+# 🎨 Sonagi Design System Tokens
+
+Sonagi 디자인 시스템의 모든 디자인 토큰 명세입니다. 이 토큰들은 `@sonagi/tokens` 패키지에서 빌드되어 CSS Custom Properties로 주입됩니다.
+
+---
+
+## 1. Colors (색상)
+
+### Brand Colors (브랜드 컬러)
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-primary)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-brand-primary</strong>
+    <code style={{ fontSize: '12px', color: 'var(--sng-color-text-muted)' }}>#1c2c4d</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-primary-dark)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-brand-primary-dark</strong>
+    <code style={{ fontSize: '12px', color: 'var(--sng-color-text-muted)' }}>#0a1128</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-primary-hover)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-brand-primary-hover</strong>
+    <code style={{ fontSize: '12px', color: 'var(--sng-color-text-muted)' }}>#1275b5</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-logo)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-brand-logo</strong>
+    <code style={{ fontSize: '12px', color: 'var(--sng-color-text-muted)' }}>#00ffcc</code>
+  </div>
+</div>
+
+### Interactive Accent Colors (인터랙티브 악센트)
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-accent-default)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-accent-default</strong>
+    <code style={{ fontSize: '12px', color: 'var(--sng-color-text-muted)' }}>#4A90E2</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-accent-hover)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-accent-hover</strong>
+    <code style={{ fontSize: '12px', color: 'var(--sng-color-text-muted)' }}>#2a6bbf</code>
+  </div>
+</div>
+
+### Semantic Backgrounds & Surfaces (배경 및 서페이스)
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-base)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-bg-base</strong>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-surface)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-bg-surface</strong>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-elevated)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-bg-elevated</strong>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-overlay)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
+    <strong style={{ display: 'block', fontSize: '14px' }}>--sng-color-bg-overlay</strong>
+  </div>
+</div>
+
+---
+
+## 2. Typography (타이포그래피)
+
+### Font Families
+- **Sans-serif (Body & UI):** `var(--sng-font-sans)`
+  - <span style={{ fontFamily: 'var(--sng-font-sans)', fontSize: '16px' }}>가나다라마바사 아자차카타파하 (Pretendard, Inter, system-ui)</span>
+- **Serif (Editorial):** `var(--sng-font-serif)`
+  - <span style={{ fontFamily: 'var(--sng-font-serif)', fontSize: '16px' }}>가나다라마바사 아자차카타파하 (Noto Serif KR, Merriweather)</span>
+- **Monospace (Code & Numbers):** `var(--sng-font-mono)`
+  - <span style={{ fontFamily: 'var(--sng-font-mono)', fontSize: '16px' }}>const sonagi = 12345; (JetBrains Mono, Fira Code)</span>
+
+### Font Size Scale
+- `var(--sng-font-size-xs)` (12px): <span style={{ fontSize: 'var(--sng-font-size-xs)' }}>동해물과 백두산이 마르고 닳도록 (Caption, Details)</span>
+- `var(--sng-font-size-sm)` (14px): <span style={{ fontSize: 'var(--sng-font-size-sm)' }}>동해물과 백두산이 마르고 닳도록 (Small copy, UI copy)</span>
+- `var(--sng-font-size-base)` (16px): <span style={{ fontSize: 'var(--sng-font-size-base)' }}>동해물과 백두산이 마르고 닳도록 (Default body)</span>
+- `var(--sng-font-size-lg)` (18px): <span style={{ fontSize: 'var(--sng-font-size-lg)' }}>동해물과 백두산이 마르고 닳도록 (Large body, Subheading)</span>
+- `var(--sng-font-size-xl)` (20px): <span style={{ fontSize: 'var(--sng-font-size-xl)' }}>동해물과 백두산이 마르고 닳도록</span>
+- `var(--sng-font-size-2xl)` (24px): <span style={{ fontSize: 'var(--sng-font-size-2xl)', fontWeight: 'bold' }}>동해물과 백두산이 마르고 닳도록 (H3)</span>
+- `var(--sng-font-size-3xl)` (30px): <span style={{ fontSize: 'var(--sng-font-size-3xl)', fontWeight: 'bold' }}>동해물과 백두산이 마르고 닳도록 (H2)</span>
+- `var(--sng-font-size-4xl)` (36px): <span style={{ fontSize: 'var(--sng-font-size-4xl)', fontWeight: 'bold' }}>동해물과 백두산이 마르고 (H1)</span>
+
+---
+
+## 3. Spacing & Radius (간격 및 라운딩)
+
+### Spacing Scale
+- `var(--sng-spacing-1)` (4px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-1)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+- `var(--sng-spacing-2)` (8px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-2)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+- `var(--sng-spacing-3)` (12px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-3)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+- `var(--sng-spacing-4)` (16px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-4)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+- `var(--sng-spacing-5)` (20px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-5)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+- `var(--sng-spacing-6)` (24px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-6)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+- `var(--sng-spacing-8)` (32px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-8)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+
+### Border Radius
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '16px', margin: '16px 0' }}>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-sm)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <code>sm: 4px</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-base)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <code>base: 6px</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-md)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <code>md: 8px</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-lg)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <code>lg: 12px</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-full)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
+    <code>full</code>
+  </div>
+</div>
+
+---
+
+## 4. Depth & Z-Index (그림자 및 심도)
+
+### Shadows
+- **Focus Ring (`var(--sng-shadow-focus)`):** 포커스 링 표시 전용 외곽 테두리
+- **Raised (`var(--sng-shadow-sm)`):** 카트, 패널 등 기본 띄움
+- **Floating (`var(--sng-shadow-md)`):** 드롭다운, 모달, 토스트
+- **Elevated (`var(--sng-shadow-lg)`):** 컨텍스트 메뉴, 모달 팝업 등 강한 띄움
+
+### Z-Index Ladder
+- **Default:** `0`
+- **Raised:** `10` (`var(--sng-z-raised)`)
+- **Dropdown:** `100` (`var(--sng-z-dropdown)`)
+- **Sticky Header:** `200` (`var(--sng-z-sticky)`)
+- **Modal:** `300` (`var(--sng-z-modal)`)
+- **Toast:** `400` (`var(--sng-z-toast)`)
+- **Tooltip:** `500` (`var(--sng-z-tooltip)`)
