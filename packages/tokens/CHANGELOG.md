@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.1.0...tokens-v1.1.1) (2026-07-11)
+
+
+### Bug Fixes
+
+* **ci:** install playwright chromium before ui tests ([54ca79f](https://github.com/mindulle/sonagi-design-system/commit/54ca79f7bb441ea02cbc70956f5d25b0bc32b128))
+
 # [1.1.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.0.18...tokens-v1.1.0) (2026-07-11)
 
 
