@@ -29,8 +29,8 @@ describe('Token Build Output Verification', () => {
     const { tokens } = await import(cjsPath);
     expect(tokens).toBeDefined();
     expect(typeof tokens).toBe('object');
-    expect(tokens['--primitive-blue-500']).toBeDefined();
-    expect(tokens['--semantic-light-color-text-primary']).toBeDefined();
+    expect(tokens['--color-blue-500']).toBeDefined();
+    expect(tokens['--color-text-primary']).toBeDefined();
   });
 
   it('should generate a valid ESM export (index.mjs)', () => {

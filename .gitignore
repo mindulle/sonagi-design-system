@@ -4,3 +4,6 @@ dist/
 .DS_Store
 .npmrc
 .turbo/
+
+*storybook.log
+storybook-static
