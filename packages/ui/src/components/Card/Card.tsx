@@ -26,7 +26,12 @@ export function Card({
   ].filter(Boolean).join(' ');
 
   return (
-    <div className={cardClass} {...props}>
+    <div
+      className={cardClass}
+      role={clickable ? 'button' : undefined}
+      tabIndex={clickable ? 0 : undefined}
+      {...props}
+    >
       {children}
     </div>
   );

@@ -24,6 +24,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
         disabled={disabled}
         className={inputClass}
+        aria-invalid={error ? true : undefined}
         {...props}
       />
     );

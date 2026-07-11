@@ -19,6 +19,10 @@ function getCssVarName(pathArray) {
      parts = parts.slice(1);
   }
   
+  if (['fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'letterSpacing'].includes(parts[0])) {
+     parts = ['typography', ...parts];
+  }
+  
   if (parts[0] === 'primitive') {
      parts[0] = 'color'; 
   } else if (parts[0] === 'semantic') {
