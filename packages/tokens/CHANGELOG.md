@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.3.0...tokens-v1.3.1) (2026-07-12)
+
+
+### Bug Fixes
+
+* **tokens:** build 스크립트 및 variables.css 다크모드 prefers-color-scheme 불일치 해결 ([ea9eae9](https://github.com/mindulle/sonagi-design-system/commit/ea9eae995fa7716283277b65fa098164f0466e4a))
+* **ui:** mdx meta 컴포넌트 임포트 경로를 addon-docs/blocks로 변경 ([91a7d54](https://github.com/mindulle/sonagi-design-system/commit/91a7d54669c72d3b93b1e368362f6c644e8b9f6d))
+* **ui:** storybook blocks 의존성 추가 및 mdx meta 컴포넌트 임포트 ([b9db32e](https://github.com/mindulle/sonagi-design-system/commit/b9db32edbc12c970e5ce06bd9831ac5801eee43e))
+
 # [1.3.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.2.0...tokens-v1.3.0) (2026-07-11)
 
 
