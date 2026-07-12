@@ -125,7 +125,8 @@ function build() {
   }
   
   fs.writeFileSync(path.join(DIST_DIR, 'variables.css'), cssOutput);
-  console.log(`✅  Generated variables.css`);
+  fs.writeFileSync(path.join(TOKENS_DIR, 'variables.css'), cssOutput);
+  console.log(`✅  Generated variables.css in both dist/ and tokens/`);
   
   // ---------------------------------------------------------
   // Generate Lightweight HTML Showcase
