@@ -3,55 +3,372 @@
  * Framework-Agnostic (React, Vanilla, 등 어디서든 사용 가능)
  */
 
-:root {
-  /* 향후 packages/tokens 폴더에서 자동 생성되어 주입될 예정인 임시 토큰들 */
-  --sng-color-primary: #0066ff;
-  --sng-color-primary-hover: #0052cc;
-  --sng-color-white: #ffffff;
-  --sng-color-text: #333333;
-
-  --sng-space-sm: 8px;
-  --sng-space-md: 16px;
-
-  --sng-radius-md: 6px;
-  --sng-font-family: 'Pretendard', sans-serif;
-}
+@import '@sonagi/tokens/css';
 
 /* Base Body (Storybook 환경을 위함) */
 body {
-  font-family: var(--sng-font-family);
-  color: var(--sng-color-text);
+  font-family: var(--sng-font-sans);
+  color: var(--sng-color-text-primary);
+  background-color: var(--sng-color-bg-base);
 }
 
 /* 
  * UI Components 
  * 모든 클래스는 .sng- 접두사를 사용하여 다른 프레임워크와의 충돌 방지
  */
+
+/* Button */
 .sng-btn {
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  border-radius: var(--sng-radius-md);
+  font-family: var(--sng-font-sans);
+  font-size: var(--sng-font-size-sm);
+  font-weight: var(--sng-font-weight-semibold);
+  border: 1px solid transparent;
+  border-radius: var(--sng-radius-base);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--sng-space-sm) var(--sng-space-md);
+  padding: 10px var(--sng-spacing-4);
   transition:
-    background-color 0.2s ease-in-out,
+    background-color var(--sng-duration-base) var(--sng-ease-default),
+    border-color var(--sng-duration-base) var(--sng-ease-default),
+    color var(--sng-duration-base) var(--sng-ease-default),
     transform 0.1s;
 }
 
-.sng-btn:active {
+.sng-btn--sm {
+  font-size: var(--sng-font-size-xs);
+  padding: 6px var(--sng-spacing-3);
+  border-radius: var(--sng-radius-sm);
+}
+
+.sng-btn--md {
+  font-size: var(--sng-font-size-sm);
+  padding: 10px var(--sng-spacing-4);
+  border-radius: var(--sng-radius-base);
+}
+
+.sng-btn--lg {
+  font-size: var(--sng-font-size-base);
+  padding: 12px var(--sng-spacing-5);
+  border-radius: var(--sng-radius-md);
+}
+
+/* Spinner for loading state */
+.sng-btn__spinner {
+  width: 1em;
+  height: 1em;
+  margin-right: var(--sng-spacing-2);
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--sng-radius-full);
+  animation: sng-spin var(--sng-duration-slow) linear infinite;
+}
+
+@keyframes sng-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sng-btn:active:not(:disabled) {
   transform: scale(0.98);
 }
 
-.sng-btn--primary {
-  color: var(--sng-color-white);
-  background-color: var(--sng-color-primary);
+.sng-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--sng-shadow-focus);
 }
 
-.sng-btn--primary:hover {
-  background-color: var(--sng-color-primary-hover);
+.sng-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.sng-btn--primary {
+  color: var(--sng-color-text-inverse);
+  background-color: var(--sng-color-brand-primary);
+}
+
+.sng-btn--primary:hover:not(:disabled) {
+  background-color: var(--sng-color-brand-primary-hover);
+}
+
+.sng-btn--secondary {
+  color: var(--sng-color-text-primary);
+  background-color: transparent;
+  border-color: var(--sng-color-border-default);
+}
+
+.sng-btn--secondary:hover:not(:disabled) {
+  background-color: var(--sng-color-bg-overlay);
+}
+
+.sng-btn--danger {
+  color: var(--sng-color-text-inverse);
+  background-color: var(--sng-color-state-error);
+}
+
+.sng-btn--danger:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* HoverPreview */
+.sng-wikilink {
+  color: var(--sng-color-accent-default);
+  text-decoration: none;
+  transition: color var(--sng-duration-base) var(--sng-ease-default);
+}
+
+.sng-wikilink:hover {
+  color: var(--sng-color-accent-hover);
+  text-decoration: underline;
+}
+
+.sng-wikilink-preview {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  z-index: var(--sng-z-tooltip);
+  min-width: 240px;
+  max-width: 320px;
+  padding: var(--sng-spacing-3);
+  background-color: var(--sng-color-bg-elevated);
+  border: 1px solid var(--sng-color-border-default);
+  border-radius: var(--sng-radius-md);
+  box-shadow: var(--sng-shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sng-spacing-1);
+  text-align: left;
+}
+
+.sng-wikilink-preview__loading {
+  color: var(--sng-color-text-muted);
+  font-size: var(--sng-font-size-sm);
+  font-family: var(--sng-font-sans);
+}
+
+.sng-wikilink-preview__title {
+  color: var(--sng-color-text-primary);
+  font-size: var(--sng-font-size-sm);
+  font-weight: var(--sng-font-weight-semibold);
+  font-family: var(--sng-font-sans);
+}
+
+.sng-wikilink-preview__excerpt {
+  color: var(--sng-color-text-secondary);
+  font-size: var(--sng-font-size-xs);
+  font-family: var(--sng-font-sans);
+  line-height: var(--sng-line-height-normal);
+}
+
+/* Card */
+.sng-card {
+  background-color: var(--sng-color-bg-surface);
+  border: 1px solid var(--sng-color-border-default);
+  border-radius: var(--sng-radius-lg);
+  box-shadow: var(--sng-shadow-sm);
+  padding: var(--sng-spacing-5);
+  box-sizing: border-box;
+}
+
+.sng-card--clickable {
+  cursor: pointer;
+  transition:
+    transform var(--sng-duration-base) var(--sng-ease-default),
+    box-shadow var(--sng-duration-base) var(--sng-ease-default);
+}
+
+.sng-card--clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sng-shadow-md);
+}
+
+.sng-card--clickable:active {
+  transform: translateY(0);
+}
+
+/* Input */
+.sng-input {
+  font-family: var(--sng-font-sans);
+  font-size: var(--sng-font-size-sm);
+  color: var(--sng-color-text-primary);
+  background-color: var(--sng-color-bg-elevated);
+  border: 1px solid var(--sng-color-border-default);
+  border-radius: var(--sng-radius-md);
+  height: 40px;
+  padding: 0 var(--sng-spacing-3);
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  transition:
+    border-color var(--sng-duration-base) var(--sng-ease-default),
+    box-shadow var(--sng-duration-base) var(--sng-ease-default);
+}
+
+.sng-input:focus {
+  outline: none;
+  border-color: var(--sng-color-accent-default);
+  box-shadow: var(--sng-shadow-focus);
+}
+
+.sng-input:disabled {
+  background-color: var(--sng-color-bg-base);
+  color: var(--sng-color-text-disabled);
+  border-color: var(--sng-color-border-subtle);
+  cursor: not-allowed;
+}
+
+.sng-input--error {
+  border-color: var(--sng-color-state-error);
+}
+
+.sng-input--error:focus {
+  border-color: var(--sng-color-state-error);
+  box-shadow: 0 0 0 3px rgba(248, 81, 73, 0.3);
+}
+
+/* Badge */
+.sng-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sng-font-sans);
+  font-size: var(--sng-font-size-xs);
+  font-weight: var(--sng-font-weight-medium);
+  line-height: 1;
+  padding: 4px var(--sng-spacing-2);
+  white-space: nowrap;
+}
+
+/* Variants */
+.sng-badge--pill {
+  border-radius: var(--sng-radius-full);
+}
+
+.sng-badge--label {
+  border-radius: var(--sng-radius-sm);
+}
+
+/* Colors */
+.sng-badge--success {
+  background-color: var(--sng-color-state-success-bg);
+  color: var(--sng-color-state-success);
+}
+
+.sng-badge--warning {
+  background-color: var(--sng-color-state-warning-bg);
+  color: var(--sng-color-state-warning);
+}
+
+.sng-badge--error {
+  background-color: var(--sng-color-state-error-bg);
+  color: var(--sng-color-state-error);
+}
+
+.sng-badge--info {
+  background-color: var(--sng-color-state-info-bg);
+  color: var(--sng-color-state-info);
+}
+
+/* Typography Utilities */
+.sng-text-xs {
+  font-size: var(--sng-font-size-xs);
+  line-height: var(--sng-line-height-normal);
+  letter-spacing: var(--sng-letter-spacing-wide);
+}
+
+.sng-text-sm {
+  font-size: var(--sng-font-size-sm);
+  line-height: var(--sng-line-height-normal);
+  letter-spacing: var(--sng-letter-spacing-normal);
+}
+
+.sng-text-base {
+  font-size: var(--sng-font-size-base);
+  line-height: var(--sng-line-height-normal);
+  letter-spacing: var(--sng-letter-spacing-normal);
+}
+
+.sng-text-lg {
+  font-size: var(--sng-font-size-lg);
+  line-height: var(--sng-line-height-tight);
+}
+
+.sng-text-xl {
+  font-size: var(--sng-font-size-xl);
+  line-height: var(--sng-line-height-tight);
+}
+
+.sng-text-h1 {
+  font-size: var(--sng-font-size-4xl);
+  line-height: var(--sng-line-height-tight);
+  font-weight: var(--sng-font-weight-bold);
+  letter-spacing: var(--sng-letter-spacing-tight);
+}
+
+.sng-text-h2 {
+  font-size: var(--sng-font-size-3xl);
+  line-height: var(--sng-line-height-tight);
+  font-weight: var(--sng-font-weight-bold);
+  letter-spacing: var(--sng-letter-spacing-tight);
+}
+
+.sng-text-h3 {
+  font-size: var(--sng-font-size-2xl);
+  line-height: var(--sng-line-height-tight);
+  font-weight: var(--sng-font-weight-semibold);
+}
+
+.sng-text-mono {
+  font-family: var(--sng-font-mono);
+}
+
+.sng-text-regular {
+  font-weight: var(--sng-font-weight-regular);
+}
+
+.sng-text-medium {
+  font-weight: var(--sng-font-weight-medium);
+}
+
+.sng-text-semibold {
+  font-weight: var(--sng-font-weight-semibold);
+}
+
+.sng-text-bold {
+  font-weight: var(--sng-font-weight-bold);
+}
+
+/* Wordmark */
+.sng-wordmark {
+  background-color: var(--sng-color-wordmark-bg);
+  padding: var(--sng-spacing-3) var(--sng-spacing-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sng-spacing-2);
+  border-radius: var(--sng-radius-md);
+  user-select: none;
+}
+
+.sng-wordmark__text {
+  font-family: var(--sng-font-wordmark-en);
+  font-size: var(--sng-font-size-lg);
+  font-weight: var(--sng-font-weight-regular);
+  color: var(--sng-color-text-inverse);
+  letter-spacing: 0.1em;
+}
+
+.sng-wordmark__text--ko {
+  font-family: var(--sng-font-wordmark-ko);
+  font-size: var(--sng-font-size-base);
+}
+
+.sng-wordmark__dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--sng-color-brand-logo);
+  border-radius: var(--sng-radius-full);
 }

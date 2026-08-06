@@ -4,30 +4,36 @@
   "description": "Minimal Tech theme optimized for high-conversion review blogs.",
   "tokens": {
     "color": {
-      "primary": {
-        "base": {
+      "brand": {
+        "primary": {
           "value": "#2563EB",
           "type": "color",
           "description": "CTA button and primary brand color"
         },
-        "hover": {
+        "primary-hover": {
           "value": "#1D4ED8",
           "type": "color",
           "description": "Hover state for primary buttons"
         }
       },
-      "surface": {
-        "background": {
+      "bg": {
+        "base": {
           "value": "#FFFFFF",
           "type": "color",
           "description": "Main background color"
         },
-        "card": {
+        "surface": {
           "value": "#F9FAFB",
           "type": "color",
           "description": "Background for cards and tables"
-        },
-        "border": { "value": "#E5E7EB", "type": "color", "description": "Divider and border color" }
+        }
+      },
+      "border": {
+        "default": {
+          "value": "#E5E7EB",
+          "type": "color",
+          "description": "Divider and border color"
+        }
       },
       "text": {
         "primary": {
@@ -56,7 +62,7 @@
         "mono": { "value": "'JetBrains Mono', 'Fira Code', monospace", "type": "fontFamilies" }
       },
       "lineHeight": {
-        "body": {
+        "normal": {
           "value": "1.6",
           "type": "lineHeights",
           "description": "Optimal line height for reading long posts"
