@@ -22,6 +22,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-docs')
   ],
+  "staticDirs": ['../../tokens/dist'],
   "framework": getAbsolutePath('@storybook/html-vite')
 };
 export default config;

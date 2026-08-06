@@ -105,6 +105,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 4.1.9
         version: 4.1.9(@vitest/browser@4.1.9)(vitest@4.1.9)
+      chromatic:
+        specifier: ^18.1.0
+        version: 18.1.0
       jsdom:
         specifier: ^26.1.0
         version: 26.1.0
@@ -1607,6 +1610,22 @@ packages:
 
   chromatic@16.10.0:
     resolution: {integrity: sha512-nFsztmnu7rFiGafUJgXvLUNpqmRylz92eNvzBoJNTKKQj4EQUyxznwnfpf1dTs7hXtWD8JwcH92jADydaHA1sw==}
+    hasBin: true
+    peerDependencies:
+      '@chromatic-com/cypress': ^0.*.* || ^1.0.0
+      '@chromatic-com/playwright': ^0.*.* || ^1.0.0
+      '@chromatic-com/vitest': ^0.*.* || ^1.0.0
+    peerDependenciesMeta:
+      '@chromatic-com/cypress':
+        optional: true
+      '@chromatic-com/playwright':
+        optional: true
+      '@chromatic-com/vitest':
+        optional: true
+
+  chromatic@18.1.0:
+    resolution: {integrity: sha512-I9av8lUc5CQRlYzwKpmOG9cwYvZ4AFmTvtHeNrzOMC1353F9xYw45CHpSNIsNKuOiqqmzci9esXQd5akl0fi6w==}
+    engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -4044,18 +4063,18 @@ snapshots:
       '@types/react': 18.3.31
       react: 18.3.1
 
-  '@napi-rs/wasm-runtime@1.1.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
-    dependencies:
-      '@emnapi/core': 1.10.0
-      '@emnapi/runtime': 1.10.0
-      '@tybys/wasm-util': 0.10.2
-    optional: true
-
   '@napi-rs/wasm-runtime@1.1.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)':
     dependencies:
       '@emnapi/core': 1.9.2
       '@emnapi/runtime': 1.9.2
       '@tybys/wasm-util': 0.10.2
+    optional: true
+
+  '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
+    dependencies:
+      '@emnapi/core': 1.10.0
+      '@emnapi/runtime': 1.10.0
+      '@tybys/wasm-util': 0.10.3
     optional: true
 
   '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
@@ -4310,7 +4329,7 @@ snapshots:
     dependencies:
       '@emnapi/core': 1.10.0
       '@emnapi/runtime': 1.10.0
-      '@napi-rs/wasm-runtime': 1.1.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
+      '@napi-rs/wasm-runtime': 1.1.6(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
     optional: true
 
   '@rolldown/binding-win32-arm64-msvc@1.0.3':
@@ -5069,6 +5088,10 @@ snapshots:
       readdirp: 4.1.2
 
   chromatic@16.10.0:
+    dependencies:
+      semver: 7.8.4
+
+  chromatic@18.1.0:
     dependencies:
       semver: 7.8.4
 
