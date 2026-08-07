@@ -64,7 +64,7 @@ pnpm run storybook
 본 저장소는 **Chromatic**과 연동되어 있습니다.
 컴포넌트를 수정하고 PR을 생성하면 GitHub Actions가 자동으로 시각적 회귀 테스트(Visual Regression Test)를 수행하여, 의도치 않은 UI 깨짐 현상을 사전에 방지합니다.
 
-- **Storybook 배포 링크**: [Sonagi Design System Storybook](https://6a74ac58510f8ede8dcbbdbd-zmycltjulb.chromatic.com/)
+- **Storybook 배포 링크**: [Sonagi Design System Storybook](https://main--6a74ac58510f8ede8dcbbdbd.chromatic.com/)
 
 <br/>
 
