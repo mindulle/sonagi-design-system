@@ -12,7 +12,8 @@
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./css": "./dist/variables.css"
+    "./css": "./dist/variables.css",
+    "./tokens/*": "./tokens/*"
   },
   "files": [
     "dist/",

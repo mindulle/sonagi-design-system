@@ -1,0 +1,44 @@
+name: "Chromatic"
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+    paths:
+      - 'packages/ui/**'
+      - 'packages/tokens/**'
+      - '.github/workflows/chromatic.yml'
+
+jobs:
+  chromatic:
+    name: Run Chromatic
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Chromatic needs full git history
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.1.2
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build dependencies
+        # Build the tokens package so that variables.css exists before Storybook builds
+        run: pnpm --filter @sonagi/tokens build
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v13
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: packages/ui
