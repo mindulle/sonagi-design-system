@@ -14,10 +14,11 @@
 
 이 저장소는 `pnpm` workspace 및 `Turborepo`를 활용한 모노레포로 구성되어 있습니다.
 
-| 패키지               | 설명                                                                    | 문서                                  |
-| -------------------- | ----------------------------------------------------------------------- | ------------------------------------- |
-| **`@sonagi/tokens`** | 디자인 토큰 (색상, 타이포그래피, 간격 등) 및 프레임워크 독립적 CSS 변수 | [README](./packages/tokens/README.md) |
-| **`@sonagi/ui`**     | `@sonagi/tokens` 기반으로 제작된 React UI 컴포넌트 라이브러리           | [README](./packages/ui/README.md)     |
+| 패키지                   | 설명                                                                    | 문서                                      |
+| ------------------------ | ----------------------------------------------------------------------- | ----------------------------------------- |
+| **`@sonagi/tokens`**     | 디자인 토큰 (색상, 타이포그래피, 간격 등) 및 프레임워크 독립적 CSS 변수 | [README](./packages/tokens/README.md)     |
+| **`@sonagi/ui`**         | `@sonagi/tokens` 기반으로 제작된 React UI 컴포넌트 라이브러리           | [README](./packages/ui/README.md)         |
+| **`@sonagi/discord-ui`** | 디스코드 봇 메시지에서 디자인 룰을 강제하는 Embed 래퍼                  | [README](./packages/discord-ui/README.md) |
 
 <br/>
 
