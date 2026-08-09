@@ -1,0 +1,40 @@
+name: Notify Metabase Sync
+
+on:
+  push:
+    paths:
+      - 'packages/tokens/tokens/**'
+    branches:
+      - main
+
+jobs:
+  notify-metabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Tailscale
+        uses: tailscale/github-action@v2
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+          version: latest
+
+      - name: Create Paperclip Issue for Metabase Sync
+        run: |
+          COMPANY_ID="3fa0dfa2-9f91-4002-8012-ac598bbb4761"
+          PROJECT_ID="a94a0fd5-c698-4d61-98c9-973b003c6c52"
+          GOAL_ID="06df7905-0190-4522-acaf-fe5699838026"
+          API_URL="http://100.91.9.83:3100"
+          
+          curl -s -X POST "$API_URL/api/companies/$COMPANY_ID/issues" \
+            -H "Authorization: Bearer ${{ secrets.PAPERCLIP_JWT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"title\": \"[Action Required] Metabase 차트 컬러 토큰 수동 동기화\",
+              \"description\": \"\`packages/tokens/tokens/\` 내부의 디자인 토큰이 변경되었습니다. Metabase UI에 접속하여 차트 색상(Categorical) 토큰 값들을 수동으로 동기화해주세요.\",
+              \"projectId\": \"$PROJECT_ID\",
+              \"goalId\": \"$GOAL_ID\",
+              \"status\": \"todo\",
+              \"priority\": \"high\"
+            }"
