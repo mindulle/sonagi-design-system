@@ -63,3 +63,9 @@ AI가 이 저장소를 수정할 때 반드시 따라야 할 규칙입니다.
 | ------------------- | ----------------- | ----------------------------------------- |
 | `blog-sonagi-space` | Next.js (React)   | `@import '@sonagi/tokens'` in globals.css |
 | BI 대시보드         | Evidence (Svelte) | `@import '@sonagi/tokens'` in app.css     |
+
+### 6. 작업 제출 규칙 (PR 생성 의무)
+
+에이전트는 로컬 샌드박스에서 빌드 및 테스트(`pnpm build` 등)를 통과하더라도 **절대 `main` 브랜치에 직접 푸시(Direct Push)해서는 안 됩니다.**
+반드시 새로운 브랜치를 파서 푸시한 뒤 **Pull Request(PR)를 생성**해야 합니다.
+이를 통해 GitHub Actions에 연동된 **Chromatic 시각적 회귀 테스트** 및 기타 파이프라인이 정상적으로 동작하여 리뷰 과정에서 사이드 이펙트를 검증할 수 있습니다.
