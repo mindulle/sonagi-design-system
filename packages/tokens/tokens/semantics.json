@@ -103,6 +103,28 @@
             "$type": "color"
           }
         },
+        "chart": {
+          "color1": {
+            "$value": "#1c2c4d",
+            "$type": "color"
+          },
+          "color2": {
+            "$value": "#00ffcc",
+            "$type": "color"
+          },
+          "color3": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          },
+          "color4": {
+            "$value": "#1275b5",
+            "$type": "color"
+          },
+          "color5": {
+            "$value": "#a8dcee",
+            "$type": "color"
+          }
+        },
         "state": {
           "success": {
             "$value": "#2ea043",
@@ -259,6 +281,28 @@
           },
           "strong": {
             "$value": "#1c2c4d",
+            "$type": "color"
+          }
+        },
+        "chart": {
+          "color1": {
+            "$value": "#1c2c4d",
+            "$type": "color"
+          },
+          "color2": {
+            "$value": "#00ffcc",
+            "$type": "color"
+          },
+          "color3": {
+            "$value": "#4A90E2",
+            "$type": "color"
+          },
+          "color4": {
+            "$value": "#1275b5",
+            "$type": "color"
+          },
+          "color5": {
+            "$value": "#a8dcee",
             "$type": "color"
           }
         },
