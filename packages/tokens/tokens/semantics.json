@@ -136,6 +136,34 @@
             "$value": "rgba(74, 144, 226, 0.15)",
             "$type": "color"
           }
+        },
+        "chart": {
+          "categorical": {
+            "1": {
+              "$value": "#FF595E",
+              "$type": "color"
+            },
+            "2": {
+              "$value": "#FFCA3A",
+              "$type": "color"
+            },
+            "3": {
+              "$value": "#8AC926",
+              "$type": "color"
+            },
+            "4": {
+              "$value": "#1982C4",
+              "$type": "color"
+            },
+            "5": {
+              "$value": "#6A4C93",
+              "$type": "color"
+            },
+            "6": {
+              "$value": "#F564A9",
+              "$type": "color"
+            }
+          }
         }
       }
     },
@@ -266,6 +294,34 @@
           "info-bg": {
             "$value": "#e8f4fd",
             "$type": "color"
+          }
+        },
+        "chart": {
+          "categorical": {
+            "1": {
+              "$value": "#FF595E",
+              "$type": "color"
+            },
+            "2": {
+              "$value": "#FFCA3A",
+              "$type": "color"
+            },
+            "3": {
+              "$value": "#8AC926",
+              "$type": "color"
+            },
+            "4": {
+              "$value": "#1982C4",
+              "$type": "color"
+            },
+            "5": {
+              "$value": "#6A4C93",
+              "$type": "color"
+            },
+            "6": {
+              "$value": "#F564A9",
+              "$type": "color"
+            }
           }
         }
       }
