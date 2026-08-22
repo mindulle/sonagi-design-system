@@ -138,3 +138,18 @@ Figma 클라우드 파일에 대한 쓰기 권한이 없는 상태(보유한 Fig
 - 시도 1(폐기): `design.sonagi.space`에 nginx `/exports/` 정적 서빙 경로 추가 → origin에서는 되는데 앞단 Cloudflare가 모든 경로를 SPA(index.html)로 리라이트해서 막힘. nginx 설정은 원복함.
 - **채택**: 이미 레퍼런스 이미지 호스팅에 쓰이던 `cdn.sonagi.space`(MinIO, `references` 버킷)에 `design-system-exports/` 프리픽스로 업로드 → 공개 URL로 전달. `boto3`(S3 호환 API, `.env`에 자격증명 존재: `/home/ubuntu/projects/MCPs/sonagi-reference-mcp/.env`)로 업로드.
 - **흐름**: 서버에서 CLI로 `.fig` 생성/렌더 → PNG를 CDN에 올려 사용자에게 URL로 미리보기 공유(빠른 검토) → 승인되면 `.fig`도 CDN 업로드 → 사용자가 다운로드해 로컬 Figma 데스크톱 앱에서 열고 "Save to Figma"로 클라우드 파일에 반영(또는 필요한 레이어만 기존 클라우드 파일에 복사)
+
+---
+
+## 후속 과제 (Known Gaps) — 2026-08-22 시각 검증 시 발견, 지금 당장 막지는 않음
+
+Color System 1차 빌드(`design-system-exports/foundation/color-system.png`)를 수치로 재검증한 결과, WCAG 통과와는 별개로 아래 4가지가 남아있음. 컴포넌트 단계 들어가기 전에 반드시 재검토할 것:
+
+1. **Elevation 사다리 신뢰도**: `bg-base↔bg-elevated` ΔE(2000)=2.96로, `bg-base↔bg-surface`(3.46)보다도 지각적으로 더 가까움. 가장 멀어야 할 두 레벨이 색만으론 제일 안 구분됨 — 지금은 Shadow(ADR 0003)가 구분을 전담하는 셈. 그림자 없이도 최소한의 구분이 되는지, 혹은 이 의존을 의도로 받아들일지 결정 필요.
+2. **상태색(success/warning/error/info) 미정의**: 브랜드 팔레트는 통째로 재설계했는데(H≈25~30°), 옛 상태색(초록 `#2ea043`/빨강 `#f85149`/파랑 `#4A90E2`)은 채도 높은 차가운 색이라 새 톤과 이질적일 가능성 높음. 별도 ADR 필요.
+3. **Hue 그룹 분리(뉴트럴 H≈27~34° vs 액센트 H≈24~25°)가 의도인지 확인 필요**: 액센트를 더 선명하게 튀게 하는 흔한 기법과 일치하지만, 지금은 계산 과정에서 우연히 나온 결과라 의도한 원칙으로 명문화하거나, 아니면 통일해야 함.
+4. **다크모드 미착수**: 지금까지 전부 라이트모드(Sonagi Core)만 검증. 옛 다크모드 값(`#010609` 등)은 새 러스트 계열로 아직 이관 안 됨.
+
+## 재사용 체크리스트
+
+이 세션에서 발견한 검증 항목들을 일반화해 `decisions/QA-CHECKLIST.md`로 분리 기록함 — 이후 모든 토큰/컴포넌트 작업에 공통 적용.
