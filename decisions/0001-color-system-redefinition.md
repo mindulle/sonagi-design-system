@@ -130,3 +130,11 @@ Figma 클라우드 파일에 대한 쓰기 권한이 없는 상태(보유한 Fig
 - **2026-08-22 검증 완료**: `openpencil` **CLI**는 GUI 앱/소켓 연결 없이도 완전히 헤드리스하게 동작함을 실증. `import`(HTML/CSS → `.fig` 생성) → `eval -w`(JS+Figma Plugin API로 노드 생성/수정, 파일에 직접 write-back) → `export -f png`(CanvasKit WASM 헤드리스 렌더링)까지 전 과정을 이 서버에서 확인. 즉 로컬 `.fig` 작업은 GUI 없이 CLI만으로 전부 자동화 가능.
 - 클라우드 Figma 파일과의 왕복은 자동화하지 않고, **주요 마일스톤마다 사용자가 수동으로 익스포트(로컬 사본 저장)/임포트(클라우드 반영)** 하는 방식으로 다리를 놓는다 (이 부분만 여전히 수동)
 - `render`(JSX→노드 생성), `analyze_colors`/`analyze_typography`/`analyze_spacing`(기존 대비 재검증), `create_component` 등을 CLI `eval`로 호출해 이 ADR에서 확정한 토큰을 로컬 `.fig`에 구현 예정
+
+### 산출물 전달 경로 (2026-08-22 확정)
+
+서버(headless)에서 만든 `.fig`/PNG를 사용자 브라우저(로컬 PC)로 전달하는 다리가 별도로 필요함이 드러남 — `design.sonagi.space`의 웹 에디터는 File System Access API를 쓰므로 **브라우저가 실행 중인 로컬 PC 파일시스템만** 열 수 있고, 서버 파일시스템은 직접 접근 불가.
+
+- 시도 1(폐기): `design.sonagi.space`에 nginx `/exports/` 정적 서빙 경로 추가 → origin에서는 되는데 앞단 Cloudflare가 모든 경로를 SPA(index.html)로 리라이트해서 막힘. nginx 설정은 원복함.
+- **채택**: 이미 레퍼런스 이미지 호스팅에 쓰이던 `cdn.sonagi.space`(MinIO, `references` 버킷)에 `design-system-exports/` 프리픽스로 업로드 → 공개 URL로 전달. `boto3`(S3 호환 API, `.env`에 자격증명 존재: `/home/ubuntu/projects/MCPs/sonagi-reference-mcp/.env`)로 업로드.
+- **흐름**: 서버에서 CLI로 `.fig` 생성/렌더 → PNG를 CDN에 올려 사용자에게 URL로 미리보기 공유(빠른 검토) → 승인되면 `.fig`도 CDN 업로드 → 사용자가 다운로드해 로컬 Figma 데스크톱 앱에서 열고 "Save to Figma"로 클라우드 파일에 반영(또는 필요한 레이어만 기존 클라우드 파일에 복사)
