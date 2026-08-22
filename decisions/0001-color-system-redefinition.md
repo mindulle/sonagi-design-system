@@ -126,6 +126,7 @@ DESIGN.md·`@sonagi/tokens`(`--sng-color-brand-logo`)·`@sonagi/ui`의 `<Wordmar
 Figma 클라우드 파일에 대한 쓰기 권한이 없는 상태(보유한 Figma MCP는 읽기/댓글 전용)라, 실제 반영은 **OpenPencil**(`/home/ubuntu/open-pencil`)을 실행 엔진으로 사용한다.
 
 - OpenPencil은 `.fig`/`.pen` **로컬 파일**을 열고 저장하는 방식(`open_file`/`save_file`)이며, Figma 클라우드와 실시간 동기화되지 않음
-- MCP 서버 경로는 데스크톱 GUI 앱이 떠 있어야 동작(소켓 디스커버리) → 이 headless 서버에서는 **CLI/스크립팅 경로**(`openpencil` 명령, JS+Figma Plugin API 실행)를 사용
-- 클라우드 Figma 파일과의 왕복은 자동화하지 않고, **주요 마일스톤마다 사용자가 수동으로 익스포트(로컬 사본 저장)/임포트(클라우드 반영)** 하는 방식으로 다리를 놓는다
-- `render`(JSX→노드 생성), `analyze_colors`/`analyze_typography`/`analyze_spacing`(기존 대비 재검증), `create_component` 등을 활용해 이 ADR에서 확정한 토큰을 로컬 `.fig`에 구현 예정
+- MCP 서버 경로는 데스크톱 GUI 앱이 떠 있어야 동작(소켓 디스커버리) → 이 headless 서버에서는 사용 불가
+- **2026-08-22 검증 완료**: `openpencil` **CLI**는 GUI 앱/소켓 연결 없이도 완전히 헤드리스하게 동작함을 실증. `import`(HTML/CSS → `.fig` 생성) → `eval -w`(JS+Figma Plugin API로 노드 생성/수정, 파일에 직접 write-back) → `export -f png`(CanvasKit WASM 헤드리스 렌더링)까지 전 과정을 이 서버에서 확인. 즉 로컬 `.fig` 작업은 GUI 없이 CLI만으로 전부 자동화 가능.
+- 클라우드 Figma 파일과의 왕복은 자동화하지 않고, **주요 마일스톤마다 사용자가 수동으로 익스포트(로컬 사본 저장)/임포트(클라우드 반영)** 하는 방식으로 다리를 놓는다 (이 부분만 여전히 수동)
+- `render`(JSX→노드 생성), `analyze_colors`/`analyze_typography`/`analyze_spacing`(기존 대비 재검증), `create_component` 등을 CLI `eval`로 호출해 이 ADR에서 확정한 토큰을 로컬 `.fig`에 구현 예정
