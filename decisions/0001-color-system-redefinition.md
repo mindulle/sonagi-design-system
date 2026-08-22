@@ -143,12 +143,12 @@ Figma 클라우드 파일에 대한 쓰기 권한이 없는 상태(보유한 Fig
 
 ## 후속 과제 (Known Gaps) — 2026-08-22 시각 검증 시 발견, 지금 당장 막지는 않음
 
-Color System 1차 빌드(`design-system-exports/foundation/color-system.png`)를 수치로 재검증한 결과, WCAG 통과와는 별개로 아래 4가지가 남아있음. 컴포넌트 단계 들어가기 전에 반드시 재검토할 것:
+Color System 1차 빌드(`design-system-exports/foundation/color-system.png`)를 수치로 재검증한 결과, WCAG 통과와는 별개로 아래 4가지가 남아있음이 드러남. 처리 현황:
 
-1. **Elevation 사다리 신뢰도**: `bg-base↔bg-elevated` ΔE(2000)=2.96로, `bg-base↔bg-surface`(3.46)보다도 지각적으로 더 가까움. 가장 멀어야 할 두 레벨이 색만으론 제일 안 구분됨 — 지금은 Shadow(ADR 0003)가 구분을 전담하는 셈. 그림자 없이도 최소한의 구분이 되는지, 혹은 이 의존을 의도로 받아들일지 결정 필요.
-2. **상태색(success/warning/error/info) 미정의**: 브랜드 팔레트는 통째로 재설계했는데(H≈25~30°), 옛 상태색(초록 `#2ea043`/빨강 `#f85149`/파랑 `#4A90E2`)은 채도 높은 차가운 색이라 새 톤과 이질적일 가능성 높음. 별도 ADR 필요.
-3. **Hue 그룹 분리(뉴트럴 H≈27~34° vs 액센트 H≈24~25°)가 의도인지 확인 필요**: 액센트를 더 선명하게 튀게 하는 흔한 기법과 일치하지만, 지금은 계산 과정에서 우연히 나온 결과라 의도한 원칙으로 명문화하거나, 아니면 통일해야 함.
-4. **다크모드 미착수**: 지금까지 전부 라이트모드(Sonagi Core)만 검증. 옛 다크모드 값(`#010609` 등)은 새 러스트 계열로 아직 이관 안 됨.
+1. ~~**Elevation 사다리 신뢰도**~~ → [ADR 0004](./0004-state-colors-and-elevation-fix.md)에서 해결 (`bg-elevated`를 순백으로 변경)
+2. ~~**상태색(success/warning/error/info) 미정의**~~ → [ADR 0004](./0004-state-colors-and-elevation-fix.md)에서 해결
+3. ~~**Hue 그룹 분리가 의도인지 확인**~~ → [ADR 0004](./0004-state-colors-and-elevation-fix.md)에서 의도적 원칙으로 명문화
+4. **다크모드 미착수** — **의도적으로 보류 확정 (2026-08-22)**. 지금은 라이트모드(Sonagi Core) Foundation만 마무리하고, 다크모드는 실제 컴포넌트 제작 단계에서 필요해지는 시점에 별도 ADR로 다시 다루기로 사용자 결정. CEO-926 체크리스트에 "미착수 항목"으로 명시해 누락 방지.
 
 ## 재사용 체크리스트
 
