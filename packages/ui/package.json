@@ -1,5 +1,5 @@
 {
-  "name": "@sonagi/ui",
+  "name": "@mindulle/ui",
   "version": "1.1.0",
   "description": "Sonagi Design System — UI Components",
   "license": "MIT",
@@ -47,7 +47,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@sonagi/tokens": "workspace:*"
+    "@mindulle/tokens": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
