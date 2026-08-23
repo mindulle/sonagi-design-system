@@ -146,27 +146,27 @@
 
 /* --- Semantic Tokens (Sonagi Core) --- */
 :root, [data-theme="light"], [data-theme="sonagi-core"] {
-  --sng-color-brand-primary: #1c2c4d;
+  --sng-color-brand-primary: #1991B9;
   --sng-color-brand-primary-hover: #1275b5;
-  --sng-color-brand-accent: #4A90E2;
-  --sng-color-brand-accent-hover: #2a6bbf;
+  --sng-color-brand-accent: #db6c66;
+  --sng-color-brand-accent-hover: #b94644;
   --sng-color-brand-cyan: #00ffcc;
   --sng-color-brand-ink: #47211b;
-  --sng-color-background-base: #faf9f7;
-  --sng-color-background-surface: #fff8f2;
+  --sng-color-background-base: #fcf2f0;
+  --sng-color-background-surface: #f5e5e2;
   --sng-color-background-elevated: #ffffff;
-  --sng-color-text-primary: #0d1117;
-  --sng-color-text-secondary: #30363d;
-  --sng-color-text-muted: #8b949e;
+  --sng-color-text-primary: #1e1311;
+  --sng-color-text-secondary: #614f4b;
+  --sng-color-text-muted: #7c6c6a;
   --sng-color-text-disabled: #c9d1d9;
   --sng-color-text-inverse: #ffffff;
-  --sng-color-border-default: #e6eaef;
-  --sng-color-border-subtle: #f0ede8;
-  --sng-color-border-strong: #1c2c4d;
-  --sng-color-state-info: #4A90E2;
-  --sng-color-state-success: #2ea043;
-  --sng-color-state-warning: #d29922;
-  --sng-color-state-error: #f85149;
+  --sng-color-border-default: #9d8986;
+  --sng-color-border-subtle: #d7c5c2;
+  --sng-color-border-strong: #47211b;
+  --sng-color-state-info: #2a75ba;
+  --sng-color-state-success: #308639;
+  --sng-color-state-warning: #a77600;
+  --sng-color-state-error: #d33a3c;
 }
 
 [data-theme="dark"] {
