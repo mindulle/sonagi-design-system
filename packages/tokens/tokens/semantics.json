@@ -44,8 +44,8 @@
     "dark": {
       "color": {
         "brand": {
-          "primary": { "$value": "#1c2c4d", "$type": "color" },
-          "primary-hover": { "$value": "#1275b5", "$type": "color" },
+          "primary": { "$value": "#58a6ff", "$type": "color" },
+          "primary-hover": { "$value": "#79c0ff", "$type": "color" },
           "accent": { "$value": "#4A90E2", "$type": "color" },
           "accent-hover": { "$value": "#2a6bbf", "$type": "color" },
           "cyan": { "$value": "#00ffcc", "$type": "color" }
@@ -57,15 +57,15 @@
         },
         "text": {
           "primary": { "$value": "#f0f6fc", "$type": "color" },
-          "secondary": { "$value": "#30363d", "$type": "color" },
-          "muted": { "$value": "#8b949e", "$type": "color" },
+          "secondary": { "$value": "#8b949e", "$type": "color" },
+          "muted": { "$value": "#6e7681", "$type": "color" },
           "disabled": { "$value": "#c9d1d9", "$type": "color" },
           "inverse": { "$value": "#0d1117", "$type": "color" }
         },
         "border": {
           "default": { "$value": "#30363d", "$type": "color" },
-          "subtle": { "$value": "#161b22", "$type": "color" },
-          "strong": { "$value": "#1c2c4d", "$type": "color" }
+          "subtle": { "$value": "#21262d", "$type": "color" },
+          "strong": { "$value": "#58a6ff", "$type": "color" }
         },
         "state": {
           "info": { "$value": "#4A90E2", "$type": "color" },
