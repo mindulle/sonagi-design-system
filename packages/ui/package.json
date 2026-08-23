@@ -22,7 +22,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "tsup && ./build-css.sh",
+    "build": "tsup && chmod +x ./build-css.sh && ./build-css.sh",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "tsc --noEmit",
