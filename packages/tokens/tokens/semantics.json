@@ -14,7 +14,8 @@
           "primary-hover": { "$value": "#1275b5", "$type": "color" },
           "accent": { "$value": "#4A90E2", "$type": "color" },
           "accent-hover": { "$value": "#2a6bbf", "$type": "color" },
-          "cyan": { "$value": "#00ffcc", "$type": "color" }
+          "cyan": { "$value": "#00ffcc", "$type": "color" },
+          "ink": { "$value": "#47211b", "$type": "color" }
         },
         "background": {
           "base": { "$value": "#faf9f7", "$type": "color" },
@@ -46,9 +47,10 @@
         "brand": {
           "primary": { "$value": "#58a6ff", "$type": "color" },
           "primary-hover": { "$value": "#79c0ff", "$type": "color" },
-          "accent": { "$value": "#4A90E2", "$type": "color" },
-          "accent-hover": { "$value": "#2a6bbf", "$type": "color" },
-          "cyan": { "$value": "#00ffcc", "$type": "color" }
+          "accent": { "$value": "#db6c66", "$type": "color" },
+          "accent-hover": { "$value": "#b94644", "$type": "color" },
+          "cyan": { "$value": "#00ffcc", "$type": "color" },
+          "ink": { "$value": "#47211b", "$type": "color" }
         },
         "background": {
           "base": { "$value": "#010609", "$type": "color" },
@@ -68,10 +70,10 @@
           "strong": { "$value": "#58a6ff", "$type": "color" }
         },
         "state": {
-          "info": { "$value": "#4A90E2", "$type": "color" },
-          "success": { "$value": "#2ea043", "$type": "color" },
-          "warning": { "$value": "#d29922", "$type": "color" },
-          "error": { "$value": "#f85149", "$type": "color" }
+          "info": { "$value": "#e8f1f8", "$type": "color" },
+          "success": { "$value": "#eaf4eb", "$type": "color" },
+          "warning": { "$value": "#fdf5e5", "$type": "color" },
+          "error": { "$value": "#fcebeb", "$type": "color" }
         }
       }
     }

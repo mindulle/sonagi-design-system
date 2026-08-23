@@ -151,6 +151,7 @@
   --sng-color-brand-accent: #4A90E2;
   --sng-color-brand-accent-hover: #2a6bbf;
   --sng-color-brand-cyan: #00ffcc;
+  --sng-color-brand-ink: #47211b;
   --sng-color-background-base: #faf9f7;
   --sng-color-background-surface: #fff8f2;
   --sng-color-background-elevated: #ffffff;
@@ -171,9 +172,10 @@
 [data-theme="dark"] {
   --sng-color-brand-primary: #58a6ff;
   --sng-color-brand-primary-hover: #79c0ff;
-  --sng-color-brand-accent: #4A90E2;
-  --sng-color-brand-accent-hover: #2a6bbf;
+  --sng-color-brand-accent: #db6c66;
+  --sng-color-brand-accent-hover: #b94644;
   --sng-color-brand-cyan: #00ffcc;
+  --sng-color-brand-ink: #47211b;
   --sng-color-background-base: #010609;
   --sng-color-background-surface: #0d1117;
   --sng-color-background-elevated: #161b22;
@@ -185,19 +187,20 @@
   --sng-color-border-default: #30363d;
   --sng-color-border-subtle: #21262d;
   --sng-color-border-strong: #58a6ff;
-  --sng-color-state-info: #4A90E2;
-  --sng-color-state-success: #2ea043;
-  --sng-color-state-warning: #d29922;
-  --sng-color-state-error: #f85149;
+  --sng-color-state-info: #e8f1f8;
+  --sng-color-state-success: #eaf4eb;
+  --sng-color-state-warning: #fdf5e5;
+  --sng-color-state-error: #fcebeb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="desk-analyst"]) {
     --sng-color-brand-primary: #58a6ff;
     --sng-color-brand-primary-hover: #79c0ff;
-    --sng-color-brand-accent: #4A90E2;
-    --sng-color-brand-accent-hover: #2a6bbf;
+    --sng-color-brand-accent: #db6c66;
+    --sng-color-brand-accent-hover: #b94644;
     --sng-color-brand-cyan: #00ffcc;
+    --sng-color-brand-ink: #47211b;
     --sng-color-background-base: #010609;
     --sng-color-background-surface: #0d1117;
     --sng-color-background-elevated: #161b22;
@@ -209,10 +212,10 @@
     --sng-color-border-default: #30363d;
     --sng-color-border-subtle: #21262d;
     --sng-color-border-strong: #58a6ff;
-    --sng-color-state-info: #4A90E2;
-    --sng-color-state-success: #2ea043;
-    --sng-color-state-warning: #d29922;
-    --sng-color-state-error: #f85149;
+    --sng-color-state-info: #e8f1f8;
+    --sng-color-state-success: #eaf4eb;
+    --sng-color-state-warning: #fdf5e5;
+    --sng-color-state-error: #fcebeb;
   }
 }
 
