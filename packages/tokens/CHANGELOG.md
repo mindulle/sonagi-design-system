@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.2...tokens-v1.5.0) (2026-08-23)
+
+
+### Features
+
+* **ui:** publish @mindulle/ui v1.3.0 to GitHub Packages ([#24](https://github.com/mindulle/sonagi-design-system/issues/24)) ([4113385](https://github.com/mindulle/sonagi-design-system/commit/4113385f3a1205ea3f37489c2f7f6d54869b661c))
+
 ## [1.4.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.1...tokens-v1.4.2) (2026-08-23)
 
 
