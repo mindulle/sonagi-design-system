@@ -73,8 +73,8 @@ importers:
   packages/ui:
     dependencies:
       '@mindulle/tokens':
-        specifier: workspace:*
-        version: link:../tokens
+        specifier: ^1.5.0
+        version: 1.5.0
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^5.2.1
@@ -633,6 +633,9 @@ packages:
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
+
+  '@mindulle/tokens@1.5.0':
+    resolution: {integrity: sha512-nPUF6yWSydaztJiR+527ScMnvp+JjGqhIY+f1kZtfaJ4enAeY7kwQlPjT9Rbm8W0cHh+S4cmdWb3htWB9fq9eA==, tarball: https://npm.pkg.github.com/download/@mindulle/tokens/1.5.0/9cac88bcb5bbbb114bd1aa50f0d9d341f7c0e443}
 
   '@napi-rs/wasm-runtime@1.1.5':
     resolution: {integrity: sha512-AWPoBRJ9tsnVhor4sjO7rkni+7p+2IAEFj6cx06UgP10jkQHqay/36uRV/bFkgrh18D9vb4cr8Q0Pthskgzy+Q==}
@@ -4517,6 +4520,8 @@ snapshots:
       '@types/mdx': 2.0.14
       '@types/react': 18.3.31
       react: 18.3.1
+
+  '@mindulle/tokens@1.5.0': {}
 
   '@napi-rs/wasm-runtime@1.1.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)':
     dependencies:
