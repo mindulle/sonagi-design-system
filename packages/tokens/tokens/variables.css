@@ -1,6 +1,6 @@
 /**
  * Sonagi Design System — CSS Custom Properties
- * Generated automatically from JSON tokens v1.5.0
+ * Generated automatically from JSON tokens v1.5.1
  * Multi-Brand 3-Tier Architecture
  */
 
@@ -160,10 +160,10 @@
   --sng-color-border-default: #9d8986;
   --sng-color-border-subtle: #d7c5c2;
   --sng-color-border-strong: #47211b;
-  --sng-color-state-info: #2a75ba;
-  --sng-color-state-success: #308639;
-  --sng-color-state-warning: #a77600;
-  --sng-color-state-error: #d33a3c;
+  --sng-color-state-info: #e8f1f8;
+  --sng-color-state-success: #eaf4eb;
+  --sng-color-state-warning: #fdf5e5;
+  --sng-color-state-error: #c83e4d;
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(40,20,15,0.08);
   --sng-shadow-floating: 0 8px 24px rgba(40,20,15,0.15);
@@ -173,8 +173,8 @@
 [data-theme="dark"] {
   --sng-color-brand-primary: #58a6ff;
   --sng-color-brand-primary-hover: #79c0ff;
-  --sng-color-brand-accent: #db6c66;
-  --sng-color-brand-accent-hover: #b94644;
+  --sng-color-brand-accent: #ff7b72;
+  --sng-color-brand-accent-hover: #ff7b72;
   --sng-color-brand-cyan: #00ffcc;
   --sng-color-brand-ink: #47211b;
   --sng-color-background-base: #010609;
@@ -185,13 +185,13 @@
   --sng-color-text-muted: #6e7681;
   --sng-color-text-disabled: #c9d1d9;
   --sng-color-text-inverse: #0d1117;
-  --sng-color-border-default: #30363d;
-  --sng-color-border-subtle: #21262d;
+  --sng-color-border-default: #8b949e;
+  --sng-color-border-subtle: #30363d;
   --sng-color-border-strong: #58a6ff;
-  --sng-color-state-info: #e8f1f8;
-  --sng-color-state-success: #eaf4eb;
-  --sng-color-state-warning: #fdf5e5;
-  --sng-color-state-error: #fcebeb;
+  --sng-color-state-info: #1c2d42;
+  --sng-color-state-success: #132e19;
+  --sng-color-state-warning: #2e2305;
+  --sng-color-state-error: #f85149;
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
   --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
@@ -202,8 +202,8 @@
   :root:not([data-theme="light"]):not([data-theme="desk-analyst"]) {
     --sng-color-brand-primary: #58a6ff;
     --sng-color-brand-primary-hover: #79c0ff;
-    --sng-color-brand-accent: #db6c66;
-    --sng-color-brand-accent-hover: #b94644;
+    --sng-color-brand-accent: #ff7b72;
+    --sng-color-brand-accent-hover: #ff7b72;
     --sng-color-brand-cyan: #00ffcc;
     --sng-color-brand-ink: #47211b;
     --sng-color-background-base: #010609;
@@ -214,13 +214,13 @@
     --sng-color-text-muted: #6e7681;
     --sng-color-text-disabled: #c9d1d9;
     --sng-color-text-inverse: #0d1117;
-    --sng-color-border-default: #30363d;
-    --sng-color-border-subtle: #21262d;
+    --sng-color-border-default: #8b949e;
+    --sng-color-border-subtle: #30363d;
     --sng-color-border-strong: #58a6ff;
-    --sng-color-state-info: #e8f1f8;
-    --sng-color-state-success: #eaf4eb;
-    --sng-color-state-warning: #fdf5e5;
-    --sng-color-state-error: #fcebeb;
+    --sng-color-state-info: #1c2d42;
+    --sng-color-state-success: #132e19;
+    --sng-color-state-warning: #2e2305;
+    --sng-color-state-error: #f85149;
     --sng-shadow-flat: none;
     --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
     --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
