@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 export interface AISkeletonProps extends React.HTMLAttributes<HTMLDivElement> {

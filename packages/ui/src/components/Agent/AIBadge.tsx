@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 export interface AIBadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
