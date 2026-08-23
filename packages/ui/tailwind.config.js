@@ -58,7 +58,7 @@ export default {
       boxShadow: {
         sm: 'var(--sng-shadow-raised)',
         md: 'var(--sng-shadow-floating)',
-        focus: '0 0 0 3px rgba(18,117,181,0.3)',
+        focus: 'var(--sng-shadow-focus)',
       }
     },
   },
