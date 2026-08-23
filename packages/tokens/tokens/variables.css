@@ -139,9 +139,6 @@
   --sng-layout-grid-baseline: 8px;
   --sng-layout-grid-gap: 24px;
   --sng-layout-grid-padding: 24px;
-  --sng-elevation-flat: none;
-  --sng-elevation-raised: 0 1px 3px rgba(8,58,100,0.1);
-  --sng-elevation-floating: 0 4px 12px rgba(8,58,100,0.12);
 }
 
 /* --- Semantic Tokens (Sonagi Core) --- */
@@ -167,6 +164,9 @@
   --sng-color-state-success: #308639;
   --sng-color-state-warning: #a77600;
   --sng-color-state-error: #d33a3c;
+  --sng-shadow-flat: none;
+  --sng-shadow-raised: 0 1px 3px rgba(8,58,100,0.1);
+  --sng-shadow-floating: 0 4px 12px rgba(8,58,100,0.12);
 }
 
 [data-theme="dark"] {
@@ -191,6 +191,9 @@
   --sng-color-state-success: #eaf4eb;
   --sng-color-state-warning: #fdf5e5;
   --sng-color-state-error: #fcebeb;
+  --sng-shadow-flat: none;
+  --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
+  --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -216,6 +219,9 @@
     --sng-color-state-success: #eaf4eb;
     --sng-color-state-warning: #fdf5e5;
     --sng-color-state-error: #fcebeb;
+    --sng-shadow-flat: none;
+    --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
+    --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
   }
 }
 
