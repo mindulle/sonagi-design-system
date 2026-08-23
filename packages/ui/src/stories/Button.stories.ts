@@ -19,7 +19,7 @@ const meta = {
     },
     size: {
       control: 'select',
-      options: ['md'],
+      options: ['sm', 'md', 'lg'],
     },
   },
 } satisfies Meta<typeof Button>;
@@ -32,6 +32,7 @@ export const Primary: Story = {
   args: {
     variant: 'primary',
     state: 'default',
+    size: 'md',
     children: 'Primary Button',
   },
 };
@@ -40,6 +41,7 @@ export const Secondary: Story = {
   args: {
     variant: 'secondary',
     state: 'default',
+    size: 'md',
     children: 'Secondary Button',
   },
 };
@@ -48,6 +50,7 @@ export const Danger: Story = {
   args: {
     variant: 'danger',
     state: 'default',
+    size: 'md',
     children: 'Danger Button',
   },
 };
@@ -57,6 +60,7 @@ export const PrimaryHover: Story = {
   args: {
     variant: 'primary',
     state: 'hover',
+    size: 'md',
     children: 'Primary Hover',
   },
 };
@@ -65,6 +69,7 @@ export const PrimaryActive: Story = {
   args: {
     variant: 'primary',
     state: 'active',
+    size: 'md',
     children: 'Primary Active',
   },
 };
@@ -73,6 +78,7 @@ export const PrimaryDisabled: Story = {
   args: {
     variant: 'primary',
     state: 'disabled',
+    size: 'md',
     children: 'Primary Disabled',
   },
 };

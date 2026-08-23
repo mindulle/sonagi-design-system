@@ -9,7 +9,11 @@ const meta: Meta<typeof Badge> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    status: {
+    variant: {
+      control: 'select',
+      options: ['pill', 'label'],
+    },
+    color: {
       control: 'select',
       options: ['info', 'success', 'warning', 'error'],
     },
@@ -21,28 +25,40 @@ type Story = StoryObj<typeof Badge>;
 
 export const Info: Story = {
   args: {
-    status: 'info',
+    color: 'info',
+    variant: 'pill',
     children: 'Info',
   },
 };
 
 export const Success: Story = {
   args: {
-    status: 'success',
+    color: 'success',
+    variant: 'pill',
     children: 'Success',
   },
 };
 
 export const Warning: Story = {
   args: {
-    status: 'warning',
+    color: 'warning',
+    variant: 'pill',
     children: 'Warning',
   },
 };
 
-export const Error: Story = {
+export const ErrorState: Story = {
   args: {
-    status: 'error',
+    color: 'error',
+    variant: 'pill',
     children: 'Error',
+  },
+};
+
+export const LabelVariant: Story = {
+  args: {
+    color: 'info',
+    variant: 'label',
+    children: 'Category',
   },
 };

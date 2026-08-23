@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'danger';
-  size?: 'md';
+  size?: 'sm' | 'md' | 'lg';
   state?: 'default' | 'hover' | 'active' | 'disabled';
   children: React.ReactNode;
 }
@@ -16,11 +16,13 @@ export function Button({
   disabled,
   ...props
 }: ButtonProps) {
-  // Figma v3 Spec: Padding 10px 16px, Radius 6px
+  // Figma v3 Spec
   const baseClasses = 'inline-flex items-center justify-center font-sans font-semibold border transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2';
   
   const sizeClasses = {
+    sm: 'text-xs px-3 py-1.5 rounded-sm',
     md: 'text-sm px-4 py-[10px] rounded-base',
+    lg: 'text-base px-5 py-3 rounded-md',
   };
 
   const variantClasses = {
@@ -29,14 +31,12 @@ export function Button({
     danger: 'bg-state-error text-text-inverse border-transparent',
   };
 
-  // Map state to classes to allow Storybook to force states visually
   let stateClasses = '';
   const isDisabled = disabled || state === 'disabled';
   
   if (isDisabled) {
     stateClasses = 'opacity-60 cursor-not-allowed';
   } else {
-    // default hover/active behaviors if not forcing a specific state
     if (state === 'default') {
       if (variant === 'primary') stateClasses = 'hover:bg-brand-primary-hover active:scale-[0.98]';
       if (variant === 'secondary') stateClasses = 'hover:bg-bg-surface active:scale-[0.98]';
