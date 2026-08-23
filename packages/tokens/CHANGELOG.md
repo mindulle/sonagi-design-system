@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.0...tokens-v1.4.1) (2026-08-23)
+
+
+### Bug Fixes
+
+* **pkg:** scope package names to [@mindulle](https://github.com/mindulle) for GitHub Packages publishing ([#21](https://github.com/mindulle/sonagi-design-system/issues/21)) ([227e6d3](https://github.com/mindulle/sonagi-design-system/commit/227e6d3ee98b8cb47fefc128fe29ef4b5aa62102))
+* **pkg:** update pnpm-lock.yaml and discord-ui workspace dependency ([#22](https://github.com/mindulle/sonagi-design-system/issues/22)) ([9282918](https://github.com/mindulle/sonagi-design-system/commit/9282918c6f1160d0dcdafdd45782d24efe74f4bf))
+
 # [1.4.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.3.1...tokens-v1.4.0) (2026-08-23)
 
 
