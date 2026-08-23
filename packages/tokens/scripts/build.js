@@ -83,6 +83,7 @@ function build() {
   let flatTokens = {};
   let lightTokens = {};
   let darkTokens = {};
+  let typoAndLayoutTokens = {};
   let themesTokens = {};
 
   if (fs.existsSync(PRIMITIVES_SRC)) {
@@ -97,8 +98,12 @@ function build() {
     const semData = JSON.parse(fs.readFileSync(SEMANTICS_SRC, 'utf8'));
     lightTokens = extractTokens({ semantic: { light: semData.semantic?.light || {} }, shadow: { light: semData.shadow?.light || {} }});
     darkTokens = extractTokens({ semantic: { dark: semData.semantic?.dark || {} }, shadow: { dark: semData.shadow?.dark || {} }});
-    Object.assign(flatTokens, lightTokens); 
+    typoAndLayoutTokens = extractTokens({ typography: semData.typography || {}, layout: semData.layout || {}, elevation: semData.elevation || {} });
+    Object.assign(flatTokens, lightTokens, typoAndLayoutTokens); 
     
+    cssOutput += `/* --- Core Typography, Layout & Elevation --- */\n`;
+    cssOutput += generateCssBlock(':root', typoAndLayoutTokens);
+
     cssOutput += `/* --- Semantic Tokens (Sonagi Core) --- */\n`;
     cssOutput += generateCssBlock(':root, [data-theme="light"], [data-theme="sonagi-core"]', lightTokens);
     cssOutput += generateCssBlock('[data-theme="dark"]', darkTokens);

@@ -1,31 +1,37 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../components/Button';
+import { Button } from '../components/Button/Button';
 
-const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
+const meta = {
+  title: 'Primitives/Button',
   component: Button,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
   argTypes: {
     variant: {
       control: 'select',
       options: ['primary', 'secondary', 'danger'],
     },
+    state: {
+      control: 'select',
+      options: ['default', 'hover', 'active', 'disabled'],
+    },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
     },
-    loading: { control: 'boolean' },
-    disabled: { control: 'boolean' },
-    onClick: { action: 'clicked' },
   },
-};
+} satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof meta>;
 
+// Figma v3 Component Mappings
 export const Primary: Story = {
   args: {
     variant: 'primary',
+    state: 'default',
     size: 'md',
     children: 'Primary Button',
   },
@@ -34,6 +40,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
+    state: 'default',
     size: 'md',
     children: 'Secondary Button',
   },
@@ -42,41 +49,36 @@ export const Secondary: Story = {
 export const Danger: Story = {
   args: {
     variant: 'danger',
+    state: 'default',
     size: 'md',
     children: 'Danger Button',
   },
 };
 
-export const Small: Story = {
+// State Demonstrations
+export const PrimaryHover: Story = {
   args: {
     variant: 'primary',
-    size: 'sm',
-    children: 'Small Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    variant: 'primary',
-    size: 'lg',
-    children: 'Large Button',
-  },
-};
-
-export const Loading: Story = {
-  args: {
-    variant: 'primary',
+    state: 'hover',
     size: 'md',
-    loading: true,
-    children: 'Loading Button',
+    children: 'Primary Hover',
   },
 };
 
-export const Disabled: Story = {
+export const PrimaryActive: Story = {
   args: {
     variant: 'primary',
+    state: 'active',
     size: 'md',
-    disabled: true,
-    children: 'Disabled Button',
+    children: 'Primary Active',
+  },
+};
+
+export const PrimaryDisabled: Story = {
+  args: {
+    variant: 'primary',
+    state: 'disabled',
+    size: 'md',
+    children: 'Primary Disabled',
   },
 };

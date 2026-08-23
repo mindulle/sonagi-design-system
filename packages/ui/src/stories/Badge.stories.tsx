@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from '../components/Badge';
+import { Badge } from '../components/Badge/Badge';
 
 const meta: Meta<typeof Badge> = {
-  title: 'Components/Badge',
+  title: 'Primitives/Badge',
   component: Badge,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -12,7 +15,7 @@ const meta: Meta<typeof Badge> = {
     },
     color: {
       control: 'select',
-      options: ['success', 'warning', 'error', 'info'],
+      options: ['info', 'success', 'warning', 'error'],
     },
   },
 };

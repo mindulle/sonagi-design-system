@@ -109,6 +109,19 @@ Z-index ladder: base 0 · raised 10 · dropdown 100 · sticky 200 · modal 300 �
 - **Tablet 640–1023px:** 8-col grid, sidebar collapses to icon-only, 16px gutters.
 - **Mobile < 640px:** 4-col grid, sidebar hidden (bottom nav or hamburger), 12px gutters. Hero drops to 40vh. Font scale steps down one size.
 
+## Macro-Architecture (Atlassian / Jira Model)
+
+- **Global App Switcher:** The Sonagi platform (`blog`, `wiki`, `draw`, `bots`) is connected via a global sidebar/app switcher.
+- **Independent Sub-Apps:** Each application maintains its distinct layout and UI flow suited for its purpose, tied together by the global navigation.
+- **Unified Context:** Allows users to easily switch between completely different tools while feeling anchored in the Sonagi ecosystem.
+
+## Micro-Architecture & Philosophy (Meta Astryx Inspired)
+
+- **AI-Ready First:** APIs, classes, and CLI tools must be strictly typed and predictable so both human engineers and AI coding agents can consume them perfectly.
+- **React 19+ Foundation:** Components must be server-component ready and utilize modern React primitives.
+- **Brand-level Theming:** Avoid forking/wrapping components. Rely on deep token override capabilities to allow flexible customization without bloat.
+- **Self-documenting Primitives:** Components must declare their behavior clearly (e.g., `Shadcn UI` pattern) to eliminate "magic" behavior.
+
 ## Agent Prompt Guide
 
 - Tokens are available as CSS custom properties prefixed `--sng-*`. Use semantic tokens (`--sng-color-bg-base`, `--sng-color-text-primary`) over primitives (`--sng-color-neutral-100`).
