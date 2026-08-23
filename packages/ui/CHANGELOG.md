@@ -1,3 +1,32 @@
+# [1.2.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.1.0...ui-v1.2.0) (2026-08-23)
+
+
+### Bug Fixes
+
+* adjust categorical chart colors to sonagi quiet-depth theme ([7b30476](https://github.com/mindulle/sonagi-design-system/commit/7b304767fd8289bd962b7624d7ce6b73bbe28a94))
+* **ci:** bump node version to 22 for pnpm 11 compatibility ([74b48d0](https://github.com/mindulle/sonagi-design-system/commit/74b48d0838e6c67dfd324d57bd2080c7ade9313e))
+* **ci:** ensure @sonagi/tokens is built before @sonagi/ui in release workflow ([#19](https://github.com/mindulle/sonagi-design-system/issues/19)) ([724476b](https://github.com/mindulle/sonagi-design-system/commit/724476b6672420d47befec0be425032667aa2ea2))
+* **pkg:** scope package names to [@mindulle](https://github.com/mindulle) for GitHub Packages publishing ([#21](https://github.com/mindulle/sonagi-design-system/issues/21)) ([227e6d3](https://github.com/mindulle/sonagi-design-system/commit/227e6d3ee98b8cb47fefc128fe29ef4b5aa62102))
+* **pkg:** update pnpm-lock.yaml and discord-ui workspace dependency ([#22](https://github.com/mindulle/sonagi-design-system/issues/22)) ([9282918](https://github.com/mindulle/sonagi-design-system/commit/9282918c6f1160d0dcdafdd45782d24efe74f4bf))
+* **release:** migrate release pipeline to GitHub Packages (npm.pkg.github.com) ([#20](https://github.com/mindulle/sonagi-design-system/issues/20)) ([d6d97f1](https://github.com/mindulle/sonagi-design-system/commit/d6d97f1b3a977dbc5826df95cd6a37b7efc9dd15))
+* **tokens:** build 스크립트 및 variables.css 다크모드 prefers-color-scheme 불일치 해결 ([ea9eae9](https://github.com/mindulle/sonagi-design-system/commit/ea9eae995fa7716283277b65fa098164f0466e4a))
+* **ui:** bump version to trigger GitHub Packages release ([#23](https://github.com/mindulle/sonagi-design-system/issues/23)) ([ae8b7cd](https://github.com/mindulle/sonagi-design-system/commit/ae8b7cd90d244efc1db1a997c91534988fd9366c))
+* **ui:** chmod +x build-css.sh for CI release runner ([#18](https://github.com/mindulle/sonagi-design-system/issues/18)) ([f9b86ca](https://github.com/mindulle/sonagi-design-system/commit/f9b86ca6676913259ab92be3863a2cae706dd353))
+* **ui:** mdx meta 컴포넌트 임포트 경로를 addon-docs/blocks로 변경 ([91a7d54](https://github.com/mindulle/sonagi-design-system/commit/91a7d54669c72d3b93b1e368362f6c644e8b9f6d))
+* **ui:** storybook blocks 의존성 추가 및 mdx meta 컴포넌트 임포트 ([b9db32e](https://github.com/mindulle/sonagi-design-system/commit/b9db32edbc12c970e5ce06bd9831ac5801eee43e))
+
+
+### Features
+
+* [Design-to-Code] Figma v3.0 토큰 및 컴포넌트 스펙 동기화 ([#17](https://github.com/mindulle/sonagi-design-system/issues/17)) ([6e4deaf](https://github.com/mindulle/sonagi-design-system/commit/6e4deafdfeed2a00f9d252d59c76492943824bb2)), closes [#083a64](https://github.com/mindulle/sonagi-design-system/issues/083a64) [#1275b5](https://github.com/mindulle/sonagi-design-system/issues/1275b5)
+* add metabase chart color tokens and notification ci pipeline ([9bd0b53](https://github.com/mindulle/sonagi-design-system/commit/9bd0b53f026e8d1a9304d6228a519244d2d640f3))
+* define metabase chart color tokens ([56ca489](https://github.com/mindulle/sonagi-design-system/commit/56ca4891fdab020fa7aa1e43818c9ff8482d5eff))
+* **discord-ui:** create discord bot ui wrapper package ([f82e34f](https://github.com/mindulle/sonagi-design-system/commit/f82e34fe3b6dcd3614f5a392ca88e7cc6358d5ef))
+* **tokens:** add chart categorical colors ([70b22ed](https://github.com/mindulle/sonagi-design-system/commit/70b22edeb47bd1c68cac8d5c9ae647a41a9f487b))
+* **ui:** add AI-specific components (AIBadge, AISkeleton, AIPendingApproval) ([edfd21b](https://github.com/mindulle/sonagi-design-system/commit/edfd21bd9616126e78038c5dce06027c13a16116))
+* **ui:** publish @mindulle/ui v1.3.0 to GitHub Packages ([#24](https://github.com/mindulle/sonagi-design-system/issues/24)) ([4113385](https://github.com/mindulle/sonagi-design-system/commit/4113385f3a1205ea3f37489c2f7f6d54869b661c))
+* 디자인 토큰 개편 후속 정렬 및 UI 컴포넌트 구현 ([#7](https://github.com/mindulle/sonagi-design-system/issues/7)) ([ae69f09](https://github.com/mindulle/sonagi-design-system/commit/ae69f094ff4a7b91bc87b638ca2c4785c0ea6a83))
+
 # [1.1.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.0.0...ui-v1.1.0) (2026-07-11)
 
 ### Bug Fixes
