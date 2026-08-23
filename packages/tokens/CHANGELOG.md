@@ -1,3 +1,24 @@
+# [1.4.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.3.1...tokens-v1.4.0) (2026-08-23)
+
+
+### Bug Fixes
+
+* adjust categorical chart colors to sonagi quiet-depth theme ([7b30476](https://github.com/mindulle/sonagi-design-system/commit/7b304767fd8289bd962b7624d7ce6b73bbe28a94))
+* **ci:** bump node version to 22 for pnpm 11 compatibility ([74b48d0](https://github.com/mindulle/sonagi-design-system/commit/74b48d0838e6c67dfd324d57bd2080c7ade9313e))
+* **ci:** ensure @sonagi/tokens is built before @sonagi/ui in release workflow ([#19](https://github.com/mindulle/sonagi-design-system/issues/19)) ([724476b](https://github.com/mindulle/sonagi-design-system/commit/724476b6672420d47befec0be425032667aa2ea2))
+* **release:** migrate release pipeline to GitHub Packages (npm.pkg.github.com) ([#20](https://github.com/mindulle/sonagi-design-system/issues/20)) ([d6d97f1](https://github.com/mindulle/sonagi-design-system/commit/d6d97f1b3a977dbc5826df95cd6a37b7efc9dd15))
+* **ui:** chmod +x build-css.sh for CI release runner ([#18](https://github.com/mindulle/sonagi-design-system/issues/18)) ([f9b86ca](https://github.com/mindulle/sonagi-design-system/commit/f9b86ca6676913259ab92be3863a2cae706dd353))
+
+
+### Features
+
+* [Design-to-Code] Figma v3.0 토큰 및 컴포넌트 스펙 동기화 ([#17](https://github.com/mindulle/sonagi-design-system/issues/17)) ([6e4deaf](https://github.com/mindulle/sonagi-design-system/commit/6e4deafdfeed2a00f9d252d59c76492943824bb2)), closes [#083a64](https://github.com/mindulle/sonagi-design-system/issues/083a64) [#1275b5](https://github.com/mindulle/sonagi-design-system/issues/1275b5)
+* add metabase chart color tokens and notification ci pipeline ([9bd0b53](https://github.com/mindulle/sonagi-design-system/commit/9bd0b53f026e8d1a9304d6228a519244d2d640f3))
+* define metabase chart color tokens ([56ca489](https://github.com/mindulle/sonagi-design-system/commit/56ca4891fdab020fa7aa1e43818c9ff8482d5eff))
+* **discord-ui:** create discord bot ui wrapper package ([f82e34f](https://github.com/mindulle/sonagi-design-system/commit/f82e34fe3b6dcd3614f5a392ca88e7cc6358d5ef))
+* **tokens:** add chart categorical colors ([70b22ed](https://github.com/mindulle/sonagi-design-system/commit/70b22edeb47bd1c68cac8d5c9ae647a41a9f487b))
+* **ui:** add AI-specific components (AIBadge, AISkeleton, AIPendingApproval) ([edfd21b](https://github.com/mindulle/sonagi-design-system/commit/edfd21bd9616126e78038c5dce06027c13a16116))
+
 ## [1.3.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.3.0...tokens-v1.3.1) (2026-07-12)
 
 ### Bug Fixes

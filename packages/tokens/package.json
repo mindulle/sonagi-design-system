@@ -1,6 +1,6 @@
 {
   "name": "@sonagi/tokens",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Sonagi Design System — CSS Custom Properties & Design Tokens",
   "license": "MIT",
   "main": "dist/index.js",
