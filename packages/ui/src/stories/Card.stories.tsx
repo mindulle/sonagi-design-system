@@ -1,42 +1,58 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card } from '../components/Card';
+import { Card } from '../components/Card/Card';
 
 const meta: Meta<typeof Card> = {
-  title: 'Components/Card',
+  title: 'Primitives/Card',
   component: Card,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
   argTypes: {
-    clickable: { control: 'boolean' },
+    elevation: {
+      control: 'select',
+      options: ['flat', 'raised', 'floating'],
+    },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ width: '340px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default meta;
 type Story = StoryObj<typeof Card>;
 
-export const Default: Story = {
+const CardContent = ({ title }: { title: string }) => (
+  <>
+    <h3 className="text-xl font-semibold leading-[28px] m-0">{title} Elevation Card</h3>
+    <p className="text-sm text-text-muted m-0 leading-[20px]">
+      8px Baseline Grid Aligned Container Component ({title})
+    </p>
+  </>
+);
+
+export const Flat: Story = {
   args: {
-    children: (
-      <div>
-        <h3 style={{ margin: '0 0 10px 0', fontFamily: 'var(--sng-font-sans)' }}>Default Card</h3>
-        <p style={{ margin: 0, fontFamily: 'var(--sng-font-sans)', color: 'var(--sng-color-text-secondary)' }}>
-          This is a default Card component with standard styling.
-        </p>
-      </div>
-    ),
+    elevation: 'flat',
+    children: <CardContent title="Flat" />,
   },
 };
 
-export const Clickable: Story = {
+export const Raised: Story = {
   args: {
-    clickable: true,
-    children: (
-      <div>
-        <h3 style={{ margin: '0 0 10px 0', fontFamily: 'var(--sng-font-sans)' }}>Clickable Card</h3>
-        <p style={{ margin: 0, fontFamily: 'var(--sng-font-sans)', color: 'var(--sng-color-text-secondary)' }}>
-          This card has hover and active state styling and is clickable.
-        </p>
-      </div>
-    ),
+    elevation: 'raised',
+    children: <CardContent title="Raised" />,
+  },
+};
+
+export const Floating: Story = {
+  args: {
+    elevation: 'floating',
+    children: <CardContent title="Floating" />,
   },
 };

@@ -1,45 +1,72 @@
 import React from 'react';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** 버튼의 성격에 따른 스타일 변형 */
   variant?: 'primary' | 'secondary' | 'danger';
-  /** 버튼의 크기 */
-  size?: 'sm' | 'md' | 'lg';
-  /** 로딩 중 표시 여부 */
-  loading?: boolean;
-  /** 버튼의 라벨 (텍스트) */
+  size?: 'md';
+  state?: 'default' | 'hover' | 'active' | 'disabled';
   children: React.ReactNode;
 }
 
-/**
- * Button
- * 
- * Sonagi 디자인 시스템의 핵심 버튼 컴포넌트.
- * 프레임워크 비종속 CSS 클래스를 활용한 React 래퍼 컴포넌트입니다.
- */
 export function Button({
   variant = 'primary',
   size = 'md',
-  loading = false,
+  state = 'default',
   children,
   className = '',
   disabled,
   ...props
 }: ButtonProps) {
+  // Figma v3 Spec: Padding 10px 16px, Radius 6px
+  const baseClasses = 'inline-flex items-center justify-center font-sans font-semibold border transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2';
+  
+  const sizeClasses = {
+    md: 'text-sm px-4 py-[10px] rounded-base',
+  };
+
+  const variantClasses = {
+    primary: 'bg-brand-primary text-text-inverse border-transparent',
+    secondary: 'bg-transparent text-text-primary border-border-default',
+    danger: 'bg-state-error text-text-inverse border-transparent',
+  };
+
+  // Map state to classes to allow Storybook to force states visually
+  let stateClasses = '';
+  const isDisabled = disabled || state === 'disabled';
+  
+  if (isDisabled) {
+    stateClasses = 'opacity-60 cursor-not-allowed';
+  } else {
+    // default hover/active behaviors if not forcing a specific state
+    if (state === 'default') {
+      if (variant === 'primary') stateClasses = 'hover:bg-brand-primary-hover active:scale-[0.98]';
+      if (variant === 'secondary') stateClasses = 'hover:bg-bg-surface active:scale-[0.98]';
+      if (variant === 'danger') stateClasses = 'hover:opacity-90 active:scale-[0.98]';
+    } else if (state === 'hover') {
+      if (variant === 'primary') stateClasses = 'bg-brand-primary-hover';
+      if (variant === 'secondary') stateClasses = 'bg-bg-surface';
+      if (variant === 'danger') stateClasses = 'opacity-90';
+    } else if (state === 'active') {
+      stateClasses = 'scale-[0.98]';
+      if (variant === 'primary') stateClasses += ' bg-brand-primary-hover';
+      if (variant === 'secondary') stateClasses += ' bg-bg-surface';
+      if (variant === 'danger') stateClasses += ' opacity-90';
+    }
+  }
+
   const buttonClass = [
-    'sng-btn',
-    `sng-btn--${variant}`,
-    `sng-btn--${size}`,
+    baseClasses,
+    sizeClasses[size],
+    variantClasses[variant],
+    stateClasses,
     className,
   ].filter(Boolean).join(' ');
 
   return (
     <button
       className={buttonClass}
-      disabled={disabled || loading}
+      disabled={isDisabled}
       {...props}
     >
-      {loading && <span className="sng-btn__spinner" aria-hidden="true" />}
       {children}
     </button>
   );

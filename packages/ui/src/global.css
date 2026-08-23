@@ -1,9 +1,12 @@
 /**
  * Sonagi Design System - Core CSS
- * Framework-Agnostic (React, Vanilla, 등 어디서든 사용 가능)
  */
 
-@import '@sonagi/tokens/css';
+@import '../../tokens/dist/variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Base Body (Storybook 환경을 위함) */
 body {
@@ -12,57 +15,15 @@ body {
   background-color: var(--sng-color-bg-base);
 }
 
-/* 
- * UI Components 
- * 모든 클래스는 .sng- 접두사를 사용하여 다른 프레임워크와의 충돌 방지
- */
-
-/* Button */
-.sng-btn {
-  font-family: var(--sng-font-sans);
-  font-size: var(--sng-font-size-sm);
-  font-weight: var(--sng-font-weight-semibold);
-  border: 1px solid transparent;
-  border-radius: var(--sng-radius-base);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px var(--sng-spacing-4);
-  transition:
-    background-color var(--sng-duration-base) var(--sng-ease-default),
-    border-color var(--sng-duration-base) var(--sng-ease-default),
-    color var(--sng-duration-base) var(--sng-ease-default),
-    transform 0.1s;
-}
-
-.sng-btn--sm {
-  font-size: var(--sng-font-size-xs);
-  padding: 6px var(--sng-spacing-3);
-  border-radius: var(--sng-radius-sm);
-}
-
-.sng-btn--md {
-  font-size: var(--sng-font-size-sm);
-  padding: 10px var(--sng-spacing-4);
-  border-radius: var(--sng-radius-base);
-}
-
-.sng-btn--lg {
-  font-size: var(--sng-font-size-base);
-  padding: 12px var(--sng-spacing-5);
-  border-radius: var(--sng-radius-md);
-}
-
 /* Spinner for loading state */
 .sng-btn__spinner {
   width: 1em;
   height: 1em;
-  margin-right: var(--sng-spacing-2);
+  margin-right: 8px;
   border: 2px solid currentColor;
   border-right-color: transparent;
-  border-radius: var(--sng-radius-full);
-  animation: sng-spin var(--sng-duration-slow) linear infinite;
+  border-radius: 9999px;
+  animation: sng-spin 0.6s linear infinite;
 }
 
 @keyframes sng-spin {
@@ -71,122 +32,14 @@ body {
   }
 }
 
-.sng-btn:active:not(:disabled) {
-  transform: scale(0.98);
-}
-
-.sng-btn:focus-visible {
-  outline: none;
-  box-shadow: var(--sng-shadow-focus);
-}
-
-.sng-btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.sng-btn--primary {
-  color: var(--sng-color-text-inverse);
-  background-color: var(--sng-color-brand-primary);
-}
-
-.sng-btn--primary:hover:not(:disabled) {
-  background-color: var(--sng-color-brand-primary-hover);
-}
-
-.sng-btn--secondary {
-  color: var(--sng-color-text-primary);
-  background-color: transparent;
-  border-color: var(--sng-color-border-default);
-}
-
-.sng-btn--secondary:hover:not(:disabled) {
-  background-color: var(--sng-color-bg-overlay);
-}
-
-.sng-btn--danger {
-  color: var(--sng-color-text-inverse);
-  background-color: var(--sng-color-state-error);
-}
-
-.sng-btn--danger:hover:not(:disabled) {
-  opacity: 0.9;
-}
-
-/* HoverPreview */
-.sng-wikilink {
-  color: var(--sng-color-accent-default);
-  text-decoration: none;
-  transition: color var(--sng-duration-base) var(--sng-ease-default);
-}
-
-.sng-wikilink:hover {
-  color: var(--sng-color-accent-hover);
-  text-decoration: underline;
-}
-
-.sng-wikilink-preview {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 0;
-  z-index: var(--sng-z-tooltip);
-  min-width: 240px;
-  max-width: 320px;
-  padding: var(--sng-spacing-3);
-  background-color: var(--sng-color-bg-elevated);
-  border: 1px solid var(--sng-color-border-default);
-  border-radius: var(--sng-radius-md);
-  box-shadow: var(--sng-shadow-md);
-  display: flex;
-  flex-direction: column;
-  gap: var(--sng-spacing-1);
-  text-align: left;
-}
-
-.sng-wikilink-preview__loading {
-  color: var(--sng-color-text-muted);
-  font-size: var(--sng-font-size-sm);
-  font-family: var(--sng-font-sans);
-}
-
-.sng-wikilink-preview__title {
-  color: var(--sng-color-text-primary);
-  font-size: var(--sng-font-size-sm);
-  font-weight: var(--sng-font-weight-semibold);
-  font-family: var(--sng-font-sans);
-}
-
-.sng-wikilink-preview__excerpt {
-  color: var(--sng-color-text-secondary);
-  font-size: var(--sng-font-size-xs);
-  font-family: var(--sng-font-sans);
-  line-height: var(--sng-line-height-normal);
-}
-
 /* Card */
 .sng-card {
   background-color: var(--sng-color-bg-surface);
   border: 1px solid var(--sng-color-border-default);
   border-radius: var(--sng-radius-lg);
-  box-shadow: var(--sng-shadow-sm);
+  box-shadow: var(--sng-shadow-raised);
   padding: var(--sng-spacing-5);
   box-sizing: border-box;
-}
-
-.sng-card--clickable {
-  cursor: pointer;
-  transition:
-    transform var(--sng-duration-base) var(--sng-ease-default),
-    box-shadow var(--sng-duration-base) var(--sng-ease-default);
-}
-
-.sng-card--clickable:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--sng-shadow-md);
-}
-
-.sng-card--clickable:active {
-  transform: translateY(0);
 }
 
 /* Input */
@@ -207,20 +60,17 @@ body {
     border-color var(--sng-duration-base) var(--sng-ease-default),
     box-shadow var(--sng-duration-base) var(--sng-ease-default);
 }
-
 .sng-input:focus {
   outline: none;
   border-color: var(--sng-color-accent-default);
   box-shadow: var(--sng-shadow-focus);
 }
-
 .sng-input:disabled {
   background-color: var(--sng-color-bg-base);
   color: var(--sng-color-text-disabled);
   border-color: var(--sng-color-border-subtle);
   cursor: not-allowed;
 }
-
 .sng-input--error {
   border-color: var(--sng-color-state-error);
 }
@@ -431,10 +281,4 @@ body {
   border-top-color: transparent;
   border-radius: 50%;
   animation: sng-spin 1s linear infinite;
-}
-
-@keyframes sng-spin {
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -1,18 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from '../components/Badge';
+import { Badge } from '../components/Badge/Badge';
 
 const meta: Meta<typeof Badge> = {
-  title: 'Components/Badge',
+  title: 'Primitives/Badge',
   component: Badge,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
   argTypes: {
-    variant: {
+    status: {
       control: 'select',
-      options: ['pill', 'label'],
-    },
-    color: {
-      control: 'select',
-      options: ['success', 'warning', 'error', 'info'],
+      options: ['info', 'success', 'warning', 'error'],
     },
   },
 };
@@ -22,40 +21,28 @@ type Story = StoryObj<typeof Badge>;
 
 export const Info: Story = {
   args: {
-    color: 'info',
-    variant: 'pill',
+    status: 'info',
     children: 'Info',
   },
 };
 
 export const Success: Story = {
   args: {
-    color: 'success',
-    variant: 'pill',
+    status: 'success',
     children: 'Success',
   },
 };
 
 export const Warning: Story = {
   args: {
-    color: 'warning',
-    variant: 'pill',
+    status: 'warning',
     children: 'Warning',
   },
 };
 
-export const ErrorState: Story = {
+export const Error: Story = {
   args: {
-    color: 'error',
-    variant: 'pill',
+    status: 'error',
     children: 'Error',
-  },
-};
-
-export const LabelVariant: Story = {
-  args: {
-    color: 'info',
-    variant: 'label',
-    children: 'Category',
   },
 };

@@ -1,35 +1,39 @@
 import React from 'react';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  /** 뱃지의 형태 (pill = 알약 형태, label = 모서리가 둥근 사각형 형태) */
-  variant?: 'pill' | 'label';
-  /** 상태 색상 */
-  color?: 'success' | 'warning' | 'error' | 'info';
-  /** 뱃지 내부 텍스트 */
+  status?: 'info' | 'success' | 'warning' | 'error';
   children: React.ReactNode;
 }
 
-/**
- * Badge
- * 
- * Sonagi 디자인 시스템의 상태 및 분류 배지 컴포넌트.
- */
 export function Badge({
-  variant = 'pill',
-  color = 'info',
+  status = 'info',
   children,
   className = '',
   ...props
 }: BadgeProps) {
+  // Figma v3 Hand-off Spec for Status Badges:
+  // - Padding Left/Right 16px, Top/Bottom 6px
+  // - Corner Radius: 16px (full)
+  // - Font: 13px (small), Line-Height: 20px
+  
+  const baseClasses = 'inline-flex items-center justify-center font-sans font-medium whitespace-nowrap rounded-full px-4 py-1.5 text-[13px] leading-[20px] gap-1';
+  
+  const statusClasses = {
+    info: 'bg-state-info-light text-state-info',
+    success: 'bg-state-success-light text-state-success',
+    warning: 'bg-state-warning-light text-state-warning',
+    error: 'bg-state-error-light text-state-error',
+  };
+
   const badgeClass = [
-    'sng-badge',
-    `sng-badge--${variant}`,
-    `sng-badge--${color}`,
+    baseClasses,
+    statusClasses[status],
     className,
   ].filter(Boolean).join(' ');
 
   return (
     <span className={badgeClass} {...props}>
+      <span className="text-[10px]">●</span>
       {children}
     </span>
   );
