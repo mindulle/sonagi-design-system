@@ -1,4 +1,4 @@
-# @sonagi/ui
+# @mindulle/ui
 
 Sonagi 디자인 시스템의 공식 UI 컴포넌트 라이브러리입니다.
 이 패키지는 프레임워크 비종속적인 스타일(Core CSS)과 React 래퍼 컴포넌트들을 제공합니다.
@@ -6,9 +6,9 @@ Sonagi 디자인 시스템의 공식 UI 컴포넌트 라이브러리입니다.
 ## 설치
 
 ```bash
-npm install @sonagi/ui @sonagi/tokens
+npm install @mindulle/ui @mindulle/tokens
 # 또는
-pnpm add @sonagi/ui @sonagi/tokens
+pnpm add @mindulle/ui @mindulle/tokens
 ```
 
 > **Note:** 이 패키지는 `react >= 18` 및 `react-dom >= 18`을 peerDependency로 요구합니다.
@@ -20,8 +20,8 @@ pnpm add @sonagi/ui @sonagi/tokens
 애플리케이션의 최상위 진입점(예: Next.js의 `app/layout.tsx` 또는 `pages/_app.tsx`)에서 디자인 토큰과 글로벌 CSS 스타일시트를 임포트합니다.
 
 ```tsx
-import '@sonagi/tokens/css';
-import '@sonagi/ui/global.css';
+import '@mindulle/tokens/css';
+import '@mindulle/ui/global.css';
 ```
 
 ### 2. React 컴포넌트 사용하기
@@ -29,7 +29,7 @@ import '@sonagi/ui/global.css';
 임포트한 후, 원하는 React 컴포넌트를 가져와 사용합니다.
 
 ```tsx
-import { Button, Card, Input, Badge, Wordmark, HoverPreview } from '@sonagi/ui';
+import { Button, Card, Input, Badge, Wordmark, HoverPreview } from '@mindulle/ui';
 
 function App() {
   return (

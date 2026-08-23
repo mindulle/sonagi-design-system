@@ -9,14 +9,14 @@
 
 ## 🛠️ Changes
 
-- [x] `@sonagi/tokens` 패키지 `semantics.json`에 v3.0 스펙 업데이트 및 CSS 변수 빌드 스크립트 수정
-- [x] `@sonagi/ui` 패키지 React 컴포넌트(`Button.tsx`, `Badge.tsx`, `Card.tsx`)에 피그마 베리언츠와 1:1 매핑되는 Tailwind 클래스 적용
+- [x] `@mindulle/tokens` 패키지 `semantics.json`에 v3.0 스펙 업데이트 및 CSS 변수 빌드 스크립트 수정
+- [x] `@mindulle/ui` 패키지 React 컴포넌트(`Button.tsx`, `Badge.tsx`, `Card.tsx`)에 피그마 베리언츠와 1:1 매핑되는 Tailwind 클래스 적용
 - [x] `Storybook` 스토리에 피그마 컴포넌트 레이아웃 1:1 반영
 
 ## 🧪 Testing
 
 - [x] `pnpm build` 통과
-- [x] `pnpm --filter @sonagi/ui storybook` 로컬 렌더링 확인 완료
+- [x] `pnpm --filter @mindulle/ui storybook` 로컬 렌더링 확인 완료
 
 ## 🔗 Related Issue
 

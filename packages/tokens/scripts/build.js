@@ -205,9 +205,9 @@ function build() {
     .map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`)
     .join(',\n');
 
-  const cjsContent = `/**\n * @sonagi/tokens v${version}\n * Auto-generated.\n */\n'use strict';\n\nconst tokens = {\n${tokenEntries}\n};\n\nmodule.exports = { tokens };\n`;
-  const esmContent = `/**\n * @sonagi/tokens v${version}\n * Auto-generated.\n */\nexport const tokens = {\n${tokenEntries}\n};\n`;
-  const dts = `/**\n * @sonagi/tokens v${version}\n */\nexport declare const tokens: Record<string, string>;\n`;
+  const cjsContent = `/**\n * @mindulle/tokens v${version}\n * Auto-generated.\n */\n'use strict';\n\nconst tokens = {\n${tokenEntries}\n};\n\nmodule.exports = { tokens };\n`;
+  const esmContent = `/**\n * @mindulle/tokens v${version}\n * Auto-generated.\n */\nexport const tokens = {\n${tokenEntries}\n};\n`;
+  const dts = `/**\n * @mindulle/tokens v${version}\n */\nexport declare const tokens: Record<string, string>;\n`;
 
   fs.writeFileSync(path.join(DIST_DIR, 'index.js'), cjsContent);
   fs.writeFileSync(path.join(DIST_DIR, 'index.mjs'), esmContent);

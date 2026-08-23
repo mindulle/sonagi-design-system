@@ -12,7 +12,7 @@
 
 ### 색조(rgba 틴트)의 실제 출처 확인
 
-발행된 `@sonagi/tokens`의 shadow 값:
+발행된 `@mindulle/tokens`의 shadow 값:
 
 ```css
 --sng-shadow-sm: 0 1px 3px rgba(8, 58, 100, 0.1);
@@ -54,7 +54,7 @@ Figma의 XS(아주 미세한 구분선)는 DESIGN.md의 "Do not use drop shadows
 
 ## Consequences
 
-- `@sonagi/tokens`의 `--sng-shadow-*` 값 교체 → ADR 0001과 같은 major 범프에 포함
+- `@mindulle/tokens`의 `--sng-shadow-*` 값 교체 → ADR 0001과 같은 major 범프에 포함
 - Figma Shadow 프레임 6단계 → 3단계로 재구성, 색조 전면 교체
 - Z-index 사다리(base 0·raised 10·dropdown 100·sticky 200·modal 300·toast 400·tooltip 500)는 색·수치 문제 없음 확인, 변경 없음
 

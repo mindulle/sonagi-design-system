@@ -8,7 +8,7 @@
 
 ## Context (왜 다시 정하나)
 
-ADR 0001(색상)과 동일한 검증 절차를 타이포그래피에도 적용해야 한다는 지적(사용자)에 따라 재검토함. 처음엔 "발행된 `@sonagi/tokens`와 DESIGN.md가 일치하니 문제없다"고 판단했으나, **일치한다고 해서 검증된 것은 아님**을 지적받음.
+ADR 0001(색상)과 동일한 검증 절차를 타이포그래피에도 적용해야 한다는 지적(사용자)에 따라 재검토함. 처음엔 "발행된 `@mindulle/tokens`와 DESIGN.md가 일치하니 문제없다"고 판단했으나, **일치한다고 해서 검증된 것은 아님**을 지적받음.
 
 ### 스케일의 실제 출처 확인
 
@@ -60,10 +60,10 @@ Perfect Fourth/Major Third는 "가을 소나기(따뜻함·에디토리얼)" 방
 
 ## Consequences
 
-- `@sonagi/tokens`의 `--sng-font-size-*` 값 전면 교체 (xs/sm/lg/xl/2xl/3xl/4xl 값 변경, 8→9단계로 재구성) → ADR 0001과 마찬가지로 semver **major** 범프에 포함
+- `@mindulle/tokens`의 `--sng-font-size-*` 값 전면 교체 (xs/sm/lg/xl/2xl/3xl/4xl 값 변경, 8→9단계로 재구성) → ADR 0001과 마찬가지로 semver **major** 범프에 포함
 - Figma `소나기 디자인 시스템` 파일의 Typography System 프레임 전면 재작업 (H1~H6, Body 3종, Line-height 재적용)
 - Noto Serif KR 실사용 샘플 섹션을 Figma에 신규 추가 필요(토큰엔 있었지만 시각적 목업이 없었음)
-- `@sonagi/ui` 컴포넌트가 구 스케일 값을 하드코딩한 곳이 있는지 별도 점검 필요(후속 이슈)
+- `@mindulle/ui` 컴포넌트가 구 스케일 값을 하드코딩한 곳이 있는지 별도 점검 필요(후속 이슈)
 
 ## Validation
 

@@ -59,10 +59,10 @@ AI가 이 저장소를 수정할 때 반드시 따라야 할 규칙입니다.
 
 ## 소비자 저장소 목록
 
-| 저장소              | 프레임워크        | import 방식                               |
-| ------------------- | ----------------- | ----------------------------------------- |
-| `blog-sonagi-space` | Next.js (React)   | `@import '@sonagi/tokens'` in globals.css |
-| BI 대시보드         | Evidence (Svelte) | `@import '@sonagi/tokens'` in app.css     |
+| 저장소              | 프레임워크        | import 방식                                 |
+| ------------------- | ----------------- | ------------------------------------------- |
+| `blog-sonagi-space` | Next.js (React)   | `@import '@mindulle/tokens'` in globals.css |
+| BI 대시보드         | Evidence (Svelte) | `@import '@mindulle/tokens'` in app.css     |
 
 ### 6. 작업 제출 규칙 (PR 생성 의무)
 

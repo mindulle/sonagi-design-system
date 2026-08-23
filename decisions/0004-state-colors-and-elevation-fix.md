@@ -62,7 +62,7 @@ ADR 0001 시각 검증 시 남겨둔 4개 후속 과제 중 3개(Elevation, 상�
 
 ## Consequences
 
-- `@sonagi/tokens`의 `--sng-color-state-*` 전면 교체, ADR 0001 major 범프에 포함
+- `@mindulle/tokens`의 `--sng-color-state-*` 전면 교체, ADR 0001 major 범프에 포함
 - `bg-elevated` 값 변경으로 Figma Foundation Color System 프레임 재렌더 필요
 - 배지/알림 컴포넌트 설계 시 "상태색 텍스트는 굵게+14px 이상" 규칙을 컴포넌트 스펙에 반영해야 함
 

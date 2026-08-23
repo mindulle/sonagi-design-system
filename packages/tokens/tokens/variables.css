@@ -1,6 +1,6 @@
 /**
  * Sonagi Design System — CSS Custom Properties
- * Generated automatically from JSON tokens v1.3.2
+ * Generated automatically from JSON tokens v1.4.2
  * Multi-Brand 3-Tier Architecture
  */
 
@@ -14,12 +14,12 @@
   --sng-color-blue-500: #1c2c4d;
   --sng-color-blue-600: #1275b5;
   --sng-color-blue-700: #0d5a94;
-  --sng-color-blue-800: #083A64;
+  --sng-color-blue-800: #083a64;
   --sng-color-blue-900: #0a1128;
-  --sng-color-accent-rain: #4A90E2;
+  --sng-color-accent-rain: #4a90e2;
   --sng-color-accent-rain-dark: #2a6bbf;
   --sng-color-wordmark-bg: #030508;
-  --sng-color-wordmark-dot: #4A90E2;
+  --sng-color-wordmark-dot: #4a90e2;
   --sng-color-neutral-50: #fff8f2;
   --sng-color-neutral-100: #faf9f7;
   --sng-color-neutral-150: #f6f3ee;
@@ -61,7 +61,7 @@
   --sng-line-height-snug: 1.375;
   --sng-line-height-normal: 1.5;
   --sng-line-height-relaxed: 1.625;
-  --sng-line-height-loose: 2.0;
+  --sng-line-height-loose: 2;
   --sng-letter-spacing-tight: -0.025em;
   --sng-letter-spacing-normal: 0em;
   --sng-letter-spacing-wide: 0.05em;
@@ -140,15 +140,17 @@
   --sng-layout-grid-gap: 24px;
   --sng-layout-grid-padding: 24px;
   --sng-elevation-flat: none;
-  --sng-elevation-raised: 0 1px 3px rgba(8,58,100,0.1);
-  --sng-elevation-floating: 0 4px 12px rgba(8,58,100,0.12);
+  --sng-elevation-raised: 0 1px 3px rgba(8, 58, 100, 0.1);
+  --sng-elevation-floating: 0 4px 12px rgba(8, 58, 100, 0.12);
 }
 
 /* --- Semantic Tokens (Sonagi Core) --- */
-:root, [data-theme="light"], [data-theme="sonagi-core"] {
+:root,
+[data-theme='light'],
+[data-theme='sonagi-core'] {
   --sng-color-brand-primary: #1c2c4d;
   --sng-color-brand-primary-hover: #1275b5;
-  --sng-color-brand-accent: #4A90E2;
+  --sng-color-brand-accent: #4a90e2;
   --sng-color-brand-accent-hover: #2a6bbf;
   --sng-color-brand-cyan: #00ffcc;
   --sng-color-background-base: #faf9f7;
@@ -162,16 +164,16 @@
   --sng-color-border-default: #e6eaef;
   --sng-color-border-subtle: #f0ede8;
   --sng-color-border-strong: #1c2c4d;
-  --sng-color-state-info: #4A90E2;
+  --sng-color-state-info: #4a90e2;
   --sng-color-state-success: #2ea043;
   --sng-color-state-warning: #d29922;
   --sng-color-state-error: #f85149;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --sng-color-brand-primary: #1c2c4d;
   --sng-color-brand-primary-hover: #1275b5;
-  --sng-color-brand-accent: #4A90E2;
+  --sng-color-brand-accent: #4a90e2;
   --sng-color-brand-accent-hover: #2a6bbf;
   --sng-color-brand-cyan: #00ffcc;
   --sng-color-background-base: #010609;
@@ -185,17 +187,17 @@
   --sng-color-border-default: #30363d;
   --sng-color-border-subtle: #161b22;
   --sng-color-border-strong: #1c2c4d;
-  --sng-color-state-info: #4A90E2;
+  --sng-color-state-info: #4a90e2;
   --sng-color-state-success: #2ea043;
   --sng-color-state-warning: #d29922;
   --sng-color-state-error: #f85149;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="desk-analyst"]) {
+  :root:not([data-theme='light']):not([data-theme='desk-analyst']) {
     --sng-color-brand-primary: #1c2c4d;
     --sng-color-brand-primary-hover: #1275b5;
-    --sng-color-brand-accent: #4A90E2;
+    --sng-color-brand-accent: #4a90e2;
     --sng-color-brand-accent-hover: #2a6bbf;
     --sng-color-brand-cyan: #00ffcc;
     --sng-color-background-base: #010609;
@@ -209,7 +211,7 @@
     --sng-color-border-default: #30363d;
     --sng-color-border-subtle: #161b22;
     --sng-color-border-strong: #1c2c4d;
-    --sng-color-state-info: #4A90E2;
+    --sng-color-state-info: #4a90e2;
     --sng-color-state-success: #2ea043;
     --sng-color-state-warning: #d29922;
     --sng-color-state-error: #f85149;
@@ -218,16 +220,17 @@
 
 /* --- Theme Overrides --- */
 /* Theme: The Desk Analyst */
-[data-theme="desk-analyst"] {
-  --sng-color-brand-primary: #2563EB;
-  --sng-color-brand-primary-hover: #1D4ED8;
-  --sng-color-bg-base: #FFFFFF;
-  --sng-color-bg-surface: #F9FAFB;
-  --sng-color-border-default: #E5E7EB;
+[data-theme='desk-analyst'] {
+  --sng-color-brand-primary: #2563eb;
+  --sng-color-brand-primary-hover: #1d4ed8;
+  --sng-color-bg-base: #ffffff;
+  --sng-color-bg-surface: #f9fafb;
+  --sng-color-border-default: #e5e7eb;
   --sng-color-text-primary: #111827;
-  --sng-color-text-secondary: #4B5563;
-  --sng-color-text-muted: #9CA3AF;
-  --sng-font-sans: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --sng-color-text-secondary: #4b5563;
+  --sng-color-text-muted: #9ca3af;
+  --sng-font-sans:
+    'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --sng-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --sng-line-height-normal: 1.6;
   --sng-spacing-1: 4px;
@@ -240,4 +243,3 @@
   --sng-radius-lg: 8px;
   --sng-radius-full: 9999px;
 }
-

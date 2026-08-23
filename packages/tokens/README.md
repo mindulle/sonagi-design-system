@@ -1,4 +1,4 @@
-# @sonagi/tokens
+# @mindulle/tokens
 
 Sonagi 디자인 시스템의 공식 디자인 토큰 패키지입니다.
 CSS Custom Properties와 W3C Design Tokens JSON 포맷을 제공합니다.
@@ -6,9 +6,9 @@ CSS Custom Properties와 W3C Design Tokens JSON 포맷을 제공합니다.
 ## 설치
 
 ```bash
-npm install @sonagi/tokens
+npm install @mindulle/tokens
 # 또는
-pnpm add @sonagi/tokens
+pnpm add @mindulle/tokens
 ```
 
 ## 사용법
@@ -16,7 +16,7 @@ pnpm add @sonagi/tokens
 ### CSS (모든 프레임워크)
 
 ```css
-@import '@sonagi/tokens/css';
+@import '@mindulle/tokens/css';
 
 .button {
   background-color: var(--sng-color-brand-primary);
@@ -29,14 +29,14 @@ pnpm add @sonagi/tokens
 
 ```tsx
 // app/layout.tsx 또는 globals.css에서 한 번만 import
-import '@sonagi/tokens/css';
+import '@mindulle/tokens/css';
 ```
 
 ### Evidence (Svelte)
 
 ```js
 // evidence.config.yaml 또는 app.css에서 import
-@import '@sonagi/tokens/css';
+@import '@mindulle/tokens/css';
 ```
 
 ## 다크모드

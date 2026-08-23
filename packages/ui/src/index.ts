@@ -1,4 +1,4 @@
-// @sonagi/ui — UI Components
+// @mindulle/ui — UI Components
 export { HoverPreview } from './components/HoverPreview';
 export type { HoverPreviewProps } from './components/HoverPreview';
 export { Button } from './components/Button';

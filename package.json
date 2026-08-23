@@ -23,7 +23,7 @@
   },
   "lint-staged": {
     "packages/tokens/tokens/**/*.json": [
-      "pnpm --filter @sonagi/tokens build"
+      "pnpm --filter @mindulle/tokens build"
     ],
     "**/*.{css,json,md}": [
       "prettier --write"
