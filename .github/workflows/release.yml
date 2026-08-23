@@ -81,8 +81,11 @@ jobs:
       - name: Install Playwright browsers
         run: pnpm --filter @sonagi/ui exec playwright install chromium --with-deps
 
+      - name: Build tokens
+        run: pnpm --filter @sonagi/tokens build
+
       - name: Build ui
-        run: pnpm --filter @sonagi/ui build
+        run: pnpm --filter @sonagi/tokens build && pnpm --filter @sonagi/ui build
 
       - name: Test ui
         run: pnpm --filter @sonagi/ui test
