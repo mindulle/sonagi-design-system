@@ -19,7 +19,7 @@
   ],
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "tsup && chmod +x ./build-css.sh && ./build-css.sh",
