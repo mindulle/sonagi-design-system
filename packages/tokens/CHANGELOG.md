@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.1...tokens-v1.4.2) (2026-08-23)
+
+
+### Bug Fixes
+
+* **ui:** bump version to trigger GitHub Packages release ([#23](https://github.com/mindulle/sonagi-design-system/issues/23)) ([ae8b7cd](https://github.com/mindulle/sonagi-design-system/commit/ae8b7cd90d244efc1db1a997c91534988fd9366c))
+
 ## [1.4.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.0...tokens-v1.4.1) (2026-08-23)
 
 
