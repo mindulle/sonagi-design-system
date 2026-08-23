@@ -1,4 +1,4 @@
-# @sonagi/discord-ui
+# @mindulle/discord-ui
 
 Sonagi 디자인 시스템의 규칙을 Discord 봇 메시지(Embed)에 결정론적으로 강제(Enforcement)하기 위한 UI 래퍼 패키지입니다.
 
@@ -7,9 +7,9 @@ Sonagi 디자인 시스템의 규칙을 Discord 봇 메시지(Embed)에 결정�
 ## 설치
 
 ```bash
-npm install @sonagi/discord-ui discord.js
+npm install @mindulle/discord-ui discord.js
 # 또는
-pnpm add @sonagi/discord-ui discord.js
+pnpm add @mindulle/discord-ui discord.js
 ```
 
 > **Note:** `discord.js` (>=14.0.0)가 peerDependency로 필요합니다.
@@ -19,7 +19,7 @@ pnpm add @sonagi/discord-ui discord.js
 기존의 `EmbedBuilder` 대신 `SonagiEmbed`를 불러와 사용합니다.
 
 ```typescript
-import { SonagiEmbed } from '@sonagi/discord-ui';
+import { SonagiEmbed } from '@mindulle/discord-ui';
 
 // 1. 기본 생성 (타입 미지정 시 'info' 네이비 색상 적용)
 const embed = new SonagiEmbed()

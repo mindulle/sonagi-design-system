@@ -35,7 +35,7 @@ jobs:
 
       - name: Build dependencies
         # Build the tokens package so that variables.css exists before Storybook builds
-        run: pnpm --filter @sonagi/tokens build
+        run: pnpm --filter @mindulle/tokens build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v13

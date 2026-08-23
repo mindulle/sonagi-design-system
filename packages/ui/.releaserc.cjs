@@ -1,6 +1,6 @@
 /**
- * Semantic Release Configuration — @sonagi/ui
- * @sonagi/tokens와 독립적으로 버전이 관리됩니다.
+ * Semantic Release Configuration — @mindulle/ui
+ * @mindulle/tokens와 독립적으로 버전이 관리됩니다.
  */
 module.exports = {
   branches: ['main'],
@@ -17,7 +17,7 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json'],
-        message: 'chore(release): @sonagi/ui ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+        message: 'chore(release): @mindulle/ui ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
     [

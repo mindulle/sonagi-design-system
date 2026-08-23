@@ -14,9 +14,9 @@
 
 `DESIGN.md`는 2026-07-11 단일 커밋(`8311682`, "docs: add DESIGN.md for Open Design integration")으로 전체가 한 번에 추가됨. 팔레트 탐색, 대안 비교, 접근성 검증 등 의사결정 과정을 보여주는 커밋 히스토리가 전혀 없음 — 완성본을 주장하는 초안이 근거 없이 확정된 상태였음.
 
-### 2. 실제 발행된 `@sonagi/tokens` 패키지에 깨진 primitive 스케일 존재
+### 2. 실제 발행된 `@mindulle/tokens` 패키지에 깨진 primitive 스케일 존재
 
-`packages/tokens/tokens/variables.css`(v1.3.2, 이미 npm에 발행되어 `blog-sonagi-space`가 `@import '@sonagi/tokens/css'`로 프로덕션에서 직접 소비 중)의 `--sng-color-blue-*` 스케일을 확인한 결과:
+`packages/tokens/tokens/variables.css`(v1.3.2, 이미 npm에 발행되어 `blog-sonagi-space`가 `@import '@mindulle/tokens/css'`로 프로덕션에서 직접 소비 중)의 `--sng-color-blue-*` 스케일을 확인한 결과:
 
 ```css
 --sng-color-blue-50: #f0f4f8; /* H~205°, 밝은 시안 계열 */
@@ -49,13 +49,13 @@ DESIGN.md에 명시된 조합 중 최소 2건이 실사용 시 접근성 기준 
 
 ### 5. 로고/워드마크도 이미 두 갈래로 분기되어 있어 "고정 제약"이 아님
 
-DESIGN.md·`@sonagi/tokens`(`--sng-color-brand-logo`)·`@sonagi/ui`의 `<Wordmark>` 컴포넌트는 전부 "로고 시안(`#00ffcc`)은 워드마크 전용"이라 명시하지만, 실제 **프로덕션에 배포된 SVG**(`blog-sonagi-space/public/brand/sonagi-wordmark-*.svg`, 현재 블로그 헤더에서 실사용 중)에는 `#00ffcc`가 아예 존재하지 않고 대신 `#4a90e2`(레인블루)를 도트 색으로 사용함. 즉 로고조차 문서·컴포넌트·실배포 자산이 서로 다른 버전으로 갈라져 있어, "로고 색은 고정이니 그대로 유지"라는 전제가 성립하지 않음 → 색 재정의를 완전 백지에서 시작하기로 함.
+DESIGN.md·`@mindulle/tokens`(`--sng-color-brand-logo`)·`@mindulle/ui`의 `<Wordmark>` 컴포넌트는 전부 "로고 시안(`#00ffcc`)은 워드마크 전용"이라 명시하지만, 실제 **프로덕션에 배포된 SVG**(`blog-sonagi-space/public/brand/sonagi-wordmark-*.svg`, 현재 블로그 헤더에서 실사용 중)에는 `#00ffcc`가 아예 존재하지 않고 대신 `#4a90e2`(레인블루)를 도트 색으로 사용함. 즉 로고조차 문서·컴포넌트·실배포 자산이 서로 다른 버전으로 갈라져 있어, "로고 색은 고정이니 그대로 유지"라는 전제가 성립하지 않음 → 색 재정의를 완전 백지에서 시작하기로 함.
 
 ### 결론
 
 - 살릴 것: Spacing 시스템(8px 기반, DESIGN.md와 완전 일치), 폰트 패밀리 선택(Pretendard/JetBrains Mono), Buttons 컴포넌트의 Variant/Size/State 구조
 - 새로 해야 할 것: **Color 토큰 값 자체**를 지각적으로 균일한 색공간(OKLCH) 기반으로 재도출하고, 모든 fg/bg 조합을 WCAG 대비 검증 후 확정. `blue-*` primitive 스케일을 단조 명도 순으로 재구성. 로고/워드마크 색도 포함해 완전 재검토.
-- 영향 범위: `@sonagi/tokens`(npm 발행 패키지, semver 영향 검토 필요) → `blog-sonagi-space`(프로덕션 소비처, 로고 SVG 포함) → Figma 파일(Foundation/Components 재작업) → 화이트보드(`3e4bc060`) 재시각화
+- 영향 범위: `@mindulle/tokens`(npm 발행 패키지, semver 영향 검토 필요) → `blog-sonagi-space`(프로덕션 소비처, 로고 SVG 포함) → Figma 파일(Foundation/Components 재작업) → 화이트보드(`3e4bc060`) 재시각화
 
 ### 참고 자료 (Karakeep 리스트: "색 기획 근거자료 (Color Science)")
 
@@ -108,7 +108,7 @@ DESIGN.md·`@sonagi/tokens`(`--sng-color-brand-logo`)·`@sonagi/ui`의 `<Wordmar
 
 ## Consequences
 
-- `@sonagi/tokens`의 `--sng-color-*` 값 전면 교체 필요 → 이미 프로덕션에서 `@import '@sonagi/tokens/css'` 하는 `blog-sonagi-space`의 실제 화면이 바뀜 → semver **major** 범프 검토 (현재 v1.3.2 → v2.0.0 후보)
+- `@mindulle/tokens`의 `--sng-color-*` 값 전면 교체 필요 → 이미 프로덕션에서 `@import '@mindulle/tokens/css'` 하는 `blog-sonagi-space`의 실제 화면이 바뀜 → semver **major** 범프 검토 (현재 v1.3.2 → v2.0.0 후보)
 - 기존 Figma `소나기 디자인 시스템` 파일의 Color System(6개 프레임) 및 Buttons 컴포넌트(6종)는 구 팔레트(`#1991b9` 계열)를 전부 새 값으로 교체해야 함
 - Desk Analyst 테마(차가운 데이터 대시보드용)는 이번 결정의 영향을 받지 않음 — 별도로 hue 앵커를 유지/재검토할지 다음 ADR에서 다룸
 - 로고 SVG 3종(`sonagi-wordmark-master/en/ko.svg`)의 색상 정합성 작업이 후속 과제로 남음

@@ -19,7 +19,7 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json'],
-        message: 'chore(release): @sonagi/tokens ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+        message: 'chore(release): @mindulle/tokens ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
     [

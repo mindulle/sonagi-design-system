@@ -36,6 +36,6 @@
 
 ## 4. 개발 및 커밋 규칙 (Development Rules)
 
-- **Monorepo:** `pnpm` workspace 및 `turbo` 기반 모노레포 환경입니다. 의존성 추가 시 최상위가 아닌 각 패키지에 맞게 추가하세요 (`pnpm add <pkg> --filter @sonagi/tokens`).
+- **Monorepo:** `pnpm` workspace 및 `turbo` 기반 모노레포 환경입니다. 의존성 추가 시 최상위가 아닌 각 패키지에 맞게 추가하세요 (`pnpm add <pkg> --filter @mindulle/tokens`).
 - **Commitlint:** `Conventional Commits` 규칙을 엄격히 따릅니다. 커밋 훅(`husky`, `commitlint`)이 적용되어 있으므로 `feat:`, `fix:`, `docs:`, `chore:` 등의 접두사를 반드시 사용하세요.
 - **Code Formatting:** 저장 시 `prettier`가 자동으로 작동합니다. CSS, JSON 파일 수정 시 포맷이 깨지지 않도록 주의하세요.
