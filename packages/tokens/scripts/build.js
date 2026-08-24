@@ -171,8 +171,13 @@ function build() {
 </head>
 <body data-theme="light">
   <h1>🎨 Sonagi Design System <small>v${version}</small></h1>
-  <p>이 페이지는 Cloudflare Pages를 통해 무중단 서빙되는 디자인 시스템 CDN입니다. 외부 블로그 및 플랫폼에서는 아래 URL을 참조하세요.</p>
-  <code>&lt;link rel="stylesheet" href="https://design.sonagi.space/variables.css"&gt;</code>
+  <p>이 페이지는 빌드된 디자인 토큰을 확인하기 위한 프리뷰입니다. UI 컴포넌트 가이드와 시각적 요소는 공식 Storybook을 참조해 주세요.</p>
+  <p><a href="https://main--6a74ac58510f8ede8dcbbdbd.chromatic.com/" target="_blank" style="color: var(--sng-color-accent); font-weight: bold; text-decoration: none;">👉 Sonagi UI Storybook 바로가기</a></p>
+  <div style="margin: 1rem 0; padding: 1rem; background: var(--sng-color-bg-elevated); border-radius: var(--sng-radius-md); border: 1px solid var(--sng-color-border-subtle);">
+    <strong>패키지 설치 및 사용법:</strong>
+    <code style="display: block; margin-top: 0.5rem;">pnpm install @mindulle/tokens</code>
+    <code style="display: block; margin-top: 0.5rem;">import '@mindulle/tokens/css';</code>
+  </div>
 
   <div class="theme-selector">
     <label for="theme-select"><strong>미리보기 테마 변경: </strong></label>
