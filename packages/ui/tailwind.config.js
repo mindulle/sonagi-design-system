@@ -35,10 +35,10 @@ export default {
           success: 'var(--sng-color-state-success)',
           warning: 'var(--sng-color-state-warning)',
           error: 'var(--sng-color-state-error)',
-          'info-light': 'var(--sng-color-state-info-light, #e8f1f8)',
-          'success-light': 'var(--sng-color-state-success-light, #d4edda)',
-          'warning-light': 'var(--sng-color-state-warning-light, #fff3cd)',
-          'error-light': 'var(--sng-color-state-error-light, #fde8e8)'
+          'info-bg': 'var(--sng-color-state-info-bg, #e8f1f8)',
+          'success-bg': 'var(--sng-color-state-success-bg, #d4edda)',
+          'warning-bg': 'var(--sng-color-state-warning-bg, #fff3cd)',
+          'error-bg': 'var(--sng-color-state-error-bg, #fde8e8)'
         }
       },
       fontFamily: {

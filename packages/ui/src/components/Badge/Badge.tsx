@@ -22,10 +22,10 @@ export function Badge({
   };
 
   const colorClasses = {
-    info: 'bg-state-info-light text-state-info',
-    success: 'bg-state-success-light text-state-success',
-    warning: 'bg-state-warning-light text-state-warning',
-    error: 'bg-state-error-light text-state-error',
+    info: 'bg-state-info text-[var(--sng-color-brand-primary)] border border-[var(--sng-color-state-info)]',
+    success: 'bg-state-success text-[#0f5132] border border-[var(--sng-color-state-success)]',
+    warning: 'bg-state-warning text-[#664d03] border border-[var(--sng-color-state-warning)]',
+    error: 'bg-state-error text-text-inverse border border-[var(--sng-color-state-error)]',
   };
 
   const badgeClass = [
