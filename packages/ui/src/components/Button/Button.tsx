@@ -61,7 +61,7 @@ export function Button({
   const buttonClass = [
     baseClasses,
     sizeClasses[size],
-    variantClasses[variant],
+    isDisabled ? '' : variantClasses[variant],
     stateClasses,
     className,
   ].filter(Boolean).join(' ');
