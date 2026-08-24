@@ -87,19 +87,35 @@
         },
         "state": {
           "info": {
+            "$value": "#1275b5",
+            "$type": "color"
+          },
+          "info-bg": {
             "$value": "#e8f1f8",
             "$type": "color"
           },
           "success": {
+            "$value": "#2ea043",
+            "$type": "color"
+          },
+          "success-bg": {
             "$value": "#eaf4eb",
             "$type": "color"
           },
           "warning": {
+            "$value": "#d29922",
+            "$type": "color"
+          },
+          "warning-bg": {
             "$value": "#fdf5e5",
             "$type": "color"
           },
           "error": {
             "$value": "#c83e4d",
+            "$type": "color"
+          },
+          "error-bg": {
+            "$value": "#fde8e8",
             "$type": "color"
           }
         }
@@ -185,19 +201,35 @@
         },
         "state": {
           "info": {
+            "$value": "#79c0ff",
+            "$type": "color"
+          },
+          "info-bg": {
             "$value": "#1c2d42",
             "$type": "color"
           },
           "success": {
+            "$value": "#56d364",
+            "$type": "color"
+          },
+          "success-bg": {
             "$value": "#132e19",
             "$type": "color"
           },
           "warning": {
+            "$value": "#e3b341",
+            "$type": "color"
+          },
+          "warning-bg": {
             "$value": "#2e2305",
             "$type": "color"
           },
           "error": {
             "$value": "#f85149",
+            "$type": "color"
+          },
+          "error-bg": {
+            "$value": "#421818",
             "$type": "color"
           }
         }
