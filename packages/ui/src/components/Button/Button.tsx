@@ -28,7 +28,7 @@ export function Button({
 
   const variantClasses = {
     primary: 'bg-brand-primary text-text-inverse border-transparent',
-    secondary: 'bg-transparent text-text-primary border-border-default',
+    secondary: 'bg-transparent text-text-primary border border-border-default',
     danger: 'bg-state-error text-text-inverse border-transparent',
   };
 
@@ -36,20 +36,24 @@ export function Button({
   const isDisabled = disabled || state === 'disabled';
   
   if (isDisabled) {
-    stateClasses = 'opacity-60 cursor-not-allowed';
+    if (variant === 'primary') {
+      stateClasses = 'bg-bg-surface text-text-disabled border border-border-subtle cursor-not-allowed';
+    } else {
+      stateClasses = 'bg-bg-base text-text-disabled border border-border-subtle cursor-not-allowed';
+    }
   } else {
     if (state === 'default') {
       if (variant === 'primary') stateClasses = 'hover:bg-brand-primary-hover active:scale-[0.98]';
-      if (variant === 'secondary') stateClasses = 'hover:bg-bg-surface active:scale-[0.98]';
+      if (variant === 'secondary') stateClasses = 'hover:bg-bg-surface hover:border-border-strong active:scale-[0.98]';
       if (variant === 'danger') stateClasses = 'hover:opacity-90 active:scale-[0.98]';
     } else if (state === 'hover') {
       if (variant === 'primary') stateClasses = 'bg-brand-primary-hover';
-      if (variant === 'secondary') stateClasses = 'bg-bg-surface';
+      if (variant === 'secondary') stateClasses = 'bg-bg-surface border-border-strong';
       if (variant === 'danger') stateClasses = 'opacity-90';
     } else if (state === 'active') {
       stateClasses = 'scale-[0.98]';
       if (variant === 'primary') stateClasses += ' bg-brand-primary-hover';
-      if (variant === 'secondary') stateClasses += ' bg-bg-surface';
+      if (variant === 'secondary') stateClasses += ' bg-bg-surface border-border-strong';
       if (variant === 'danger') stateClasses += ' opacity-90';
     }
   }
@@ -57,7 +61,7 @@ export function Button({
   const buttonClass = [
     baseClasses,
     sizeClasses[size],
-    variantClasses[variant],
+    isDisabled ? '' : variantClasses[variant],
     stateClasses,
     className,
   ].filter(Boolean).join(' ');

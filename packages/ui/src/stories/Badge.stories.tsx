@@ -1,5 +1,6 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from '../components/Badge/Badge';
+import { Badge, BadgeProps } from '../components/Badge/Badge';
 
 const meta: Meta<typeof Badge> = {
   title: 'Primitives/Badge',
@@ -59,10 +60,45 @@ export const ErrorState: Story = {
   },
 };
 
-export const LabelVariant: Story = {
-  args: {
-    color: 'info',
-    variant: 'label',
-    children: 'Category',
-  },
+// 2. All-Variants Matrix (Figma Spec 1:1 Coverage Grid)
+const colors: BadgeProps['color'][] = ['info', 'success', 'warning', 'error'];
+const badgeVariants: BadgeProps['variant'][] = ['pill', 'label'];
+
+export const AllVariantsMatrix: Story = {
+  name: '🎨 All-Variants Matrix (Visual Testing Spec)',
+  render: () => (
+    <div className="flex flex-col gap-6 p-4 bg-bg-base border border-border-subtle rounded-lg">
+      <div className="text-sm font-semibold text-text-muted border-b border-border-subtle pb-2">
+        Figma Badge ComponentSet Matrix — Full Visual Test Grid
+      </div>
+      <table className="border-collapse text-left text-xs">
+        <thead>
+          <tr className="border-b border-border-subtle text-text-muted">
+            <th className="py-2 px-3">Variant / Color</th>
+            {colors.map((c) => (
+              <th key={c} className="py-2 px-3 capitalize">
+                {c}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {badgeVariants.map((bv) => (
+            <tr key={bv} className="border-b border-border-subtle/50">
+              <td className="py-3 px-3 font-mono font-medium text-text-secondary capitalize">
+                {bv}
+              </td>
+              {colors.map((c) => (
+                <td key={c} className="py-3 px-3">
+                  <Badge color={c} variant={bv}>
+                    {c} {bv}
+                  </Badge>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ),
 };

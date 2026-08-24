@@ -1,6 +1,14 @@
 import "../src/global.css";
 import type { Preview } from '@storybook/react';
 
+// Pretendard CDN 링크 동적 추가 (스토리북 폰트 100% 싱크)
+if (typeof document !== 'undefined') {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css';
+  document.head.appendChild(link);
+}
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -11,9 +19,6 @@ const preview: Preview = {
     },
 
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
       test: 'todo',
     },
   },
