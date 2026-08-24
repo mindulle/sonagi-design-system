@@ -1,8 +1,11 @@
 # Sonagi Design System 🌧️
 
-![Sonagi Design System](https://img.shields.io/badge/Design%20System-Sonagi-1c2c4d?style=for-the-badge)
+[![Storybook](https://img.shields.io/badge/Storybook-Live_Docs-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://main--6a74ac58510f8ede8dcbbdbd.chromatic.com/)
+![Design System](https://img.shields.io/badge/Design%20System-Sonagi-1c2c4d?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18.3+-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![pnpm](https://img.shields.io/badge/pnpm-11.x-f69220?style=for-the-badge&logo=pnpm&logoColor=white)
+
+> 🎨 **[온라인 Storybook 바로가기 🔗](https://main--6a74ac58510f8ede8dcbbdbd.chromatic.com/)**
 
 한국적 정서가 담긴 다크-네이비 기반, 비오는 날의 푸른빛(Rain-blue) 악센트를 사용하는 **Sonagi(소나기)** 프로덕트 생태계의 공식 디자인 시스템 모노레포입니다.
 
