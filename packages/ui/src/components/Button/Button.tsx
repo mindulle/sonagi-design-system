@@ -28,29 +28,35 @@ export function Button({
 
   const variantClasses = {
     primary: 'bg-brand-primary text-text-inverse border-transparent',
-    secondary: 'bg-transparent text-text-primary border-border-default',
-    danger: 'bg-state-error text-text-inverse border-transparent',
+    secondary: 'bg-bg-surface text-text-primary border border-border-subtle',
+    danger: 'bg-brand-accent text-text-inverse border-transparent',
   };
 
   let stateClasses = '';
   const isDisabled = disabled || state === 'disabled';
   
   if (isDisabled) {
-    stateClasses = 'bg-bg-surface text-text-disabled border-border-subtle cursor-not-allowed opacity-100';
+    if (variant === 'primary') {
+      stateClasses = 'bg-[#e0d3d0] text-[#a89995] border-transparent cursor-not-allowed';
+    } else if (variant === 'secondary') {
+      stateClasses = 'bg-bg-base text-[#a89995] border border-border-subtle cursor-not-allowed';
+    } else if (variant === 'danger') {
+      stateClasses = 'bg-bg-base text-[#a89995] border border-border-subtle cursor-not-allowed';
+    }
   } else {
     if (state === 'default') {
       if (variant === 'primary') stateClasses = 'hover:bg-brand-primary-hover active:scale-[0.98]';
-      if (variant === 'secondary') stateClasses = 'hover:bg-bg-surface hover:border-border-strong active:scale-[0.98]';
-      if (variant === 'danger') stateClasses = 'hover:opacity-90 active:scale-[0.98]';
+      if (variant === 'secondary') stateClasses = 'hover:bg-[#e6d6d3] hover:border-border-default active:scale-[0.98]';
+      if (variant === 'danger') stateClasses = 'hover:bg-brand-accent-hover active:scale-[0.98]';
     } else if (state === 'hover') {
       if (variant === 'primary') stateClasses = 'bg-brand-primary-hover';
-      if (variant === 'secondary') stateClasses = 'bg-bg-surface border-border-strong';
-      if (variant === 'danger') stateClasses = 'opacity-90';
+      if (variant === 'secondary') stateClasses = 'bg-[#e6d6d3] border-border-default';
+      if (variant === 'danger') stateClasses = 'bg-brand-accent-hover';
     } else if (state === 'active') {
       stateClasses = 'scale-[0.98]';
       if (variant === 'primary') stateClasses += ' bg-brand-primary-hover';
-      if (variant === 'secondary') stateClasses += ' bg-bg-surface border-border-strong';
-      if (variant === 'danger') stateClasses += ' opacity-90';
+      if (variant === 'secondary') stateClasses += ' bg-[#e6d6d3] border-border-default';
+      if (variant === 'danger') stateClasses += ' bg-brand-accent-hover';
     }
   }
 
