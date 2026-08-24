@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.6.0...tokens-v1.7.0) (2026-08-24)
+
+
+### Features
+
+* **ui:** add Pagination and TableOfContents components based on Figma Core-Primitives-v3 spec ([#30](https://github.com/mindulle/sonagi-design-system/issues/30)) ([153beac](https://github.com/mindulle/sonagi-design-system/commit/153beac3f4bfd7384bb2abbe90954dec9154b581))
+
 # [1.6.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.5.0...tokens-v1.6.0) (2026-08-24)
 
 
