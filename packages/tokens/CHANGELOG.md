@@ -1,3 +1,24 @@
+# [1.6.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.5.0...tokens-v1.6.0) (2026-08-24)
+
+
+### Bug Fixes
+
+* **pkg:** update pnpm-lock.yaml with @mindulle/tokens dependency ([#27](https://github.com/mindulle/sonagi-design-system/issues/27)) ([2b7284d](https://github.com/mindulle/sonagi-design-system/commit/2b7284d8e6e222bbc94d56eef4957630e94499a6))
+* **ui:** replace workspace:* with ^1.5.0 in @mindulle/ui dependencies for npm publishing ([#26](https://github.com/mindulle/sonagi-design-system/issues/26)) ([cb92cec](https://github.com/mindulle/sonagi-design-system/commit/cb92cecfe250d7827cfb216f6a28485355d1d4bd))
+
+
+### Features
+
+* add Modal component and token validation pipeline ([#29](https://github.com/mindulle/sonagi-design-system/issues/29)) ([234751c](https://github.com/mindulle/sonagi-design-system/commit/234751ccac075f14f395a9858f526e345ea4ac6d)), closes [#CEO-982](https://github.com/mindulle/sonagi-design-system/issues/CEO-982) [#8b949e](https://github.com/mindulle/sonagi-design-system/issues/8b949e)
+* **tokens:** add remaining full parity dark mode tokens per Foundation-v3 spec ([5bae7b6](https://github.com/mindulle/sonagi-design-system/commit/5bae7b6b66eadf7279e452a03d56b983a3c15477))
+* **tokens:** perfect 100% parity with Foundation-v3 & Core-Primitives-v3 ([bc2353f](https://github.com/mindulle/sonagi-design-system/commit/bc2353fd05c4f554aa4b73a68bfeebbc165a3092))
+* **tokens:** refactor light mode shadow elevation to 1:1 parity with card container spec ([4df601d](https://github.com/mindulle/sonagi-design-system/commit/4df601dc92dd923474ba67a8c58091d05eda2a11))
+* **tokens:** refine dark mode colors per Autumn Shower Night specification ([d083af6](https://github.com/mindulle/sonagi-design-system/commit/d083af68adefa881e9b5a541c80f37e80366fe3e))
+* **tokens:** refine light mode colors per 1:1 Parity specification (Autumn Shower Sunlight) ([fea1eb7](https://github.com/mindulle/sonagi-design-system/commit/fea1eb7c3c9e05f732d3c589012c021aa7c7db2a))
+* **tokens:** separate shadow elevation tokens into light and dark themes to match new Figma spec ([37f072e](https://github.com/mindulle/sonagi-design-system/commit/37f072e8da0942f44ec2390bb628d1f26cb7009b))
+* **ui:** add focus ring tokens to light/dark themes and integrate with tailwind config ([5c46af4](https://github.com/mindulle/sonagi-design-system/commit/5c46af48e440794adeb5a9d233a4f0cd769e530a))
+* **ui:** add Storybook Figma Addon and Figma Code Connect mappings ([#28](https://github.com/mindulle/sonagi-design-system/issues/28)) ([4702ee1](https://github.com/mindulle/sonagi-design-system/commit/4702ee15e250de700e97f017f28348de6fd3e00c))
+
 # [1.5.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.2...tokens-v1.5.0) (2026-08-23)
 
 
