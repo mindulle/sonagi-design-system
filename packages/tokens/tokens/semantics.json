@@ -63,7 +63,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "#c9d1d9",
+            "$value": "#9d8986",
             "$type": "color"
           },
           "inverse": {
@@ -177,7 +177,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "#c9d1d9",
+            "$value": "#8b949e",
             "$type": "color"
           },
           "inverse": {
