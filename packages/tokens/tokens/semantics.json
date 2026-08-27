@@ -2,28 +2,28 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "meta": {
     "name": "Sonagi Design System",
-    "version": "3.0.0",
-    "updated": "2026-08-23",
-    "description": "Semantic tokens for Foundation-v3 (Figma)"
+    "version": "4.0.0",
+    "updated": "2026-08-27",
+    "description": "Semantic tokens — ADR 0001 (light, amended by ADR 0006 §4) + ADR 0006 (dark). OKLCH hue 24-34 derived. WCAG verified against BOTH bg-base and bg-surface."
   },
   "semantic": {
     "light": {
       "color": {
         "brand": {
           "primary": {
-            "$value": "#1991B9",
+            "$value": "#47211b",
             "$type": "color"
           },
           "primary-hover": {
-            "$value": "#1275b5",
+            "$value": "#38130e",
             "$type": "color"
           },
           "accent": {
-            "$value": "#db6c66",
+            "$value": "#d2645f",
             "$type": "color"
           },
           "accent-hover": {
-            "$value": "#b94644",
+            "$value": "#b44240",
             "$type": "color"
           },
           "cyan": {
@@ -45,7 +45,7 @@
             "$type": "color"
           },
           "elevated": {
-            "$value": "#ffffff",
+            "$value": "#fefaf9",
             "$type": "color"
           }
         },
@@ -59,7 +59,7 @@
             "$type": "color"
           },
           "muted": {
-            "$value": "#7c6c6a",
+            "$value": "#756563",
             "$type": "color"
           },
           "disabled": {
@@ -67,13 +67,13 @@
             "$type": "color"
           },
           "inverse": {
-            "$value": "#ffffff",
+            "$value": "#fcf2f0",
             "$type": "color"
           }
         },
         "border": {
           "default": {
-            "$value": "#9d8986",
+            "$value": "#95817f",
             "$type": "color"
           },
           "subtle": {
@@ -125,19 +125,19 @@
       "color": {
         "brand": {
           "primary": {
-            "$value": "#58a6ff",
+            "$value": "#eeb4a9",
             "$type": "color"
           },
           "primary-hover": {
-            "$value": "#79c0ff",
+            "$value": "#ffc6bc",
             "$type": "color"
           },
           "accent": {
-            "$value": "#ff7b72",
+            "$value": "#e5867f",
             "$type": "color"
           },
           "accent-hover": {
-            "$value": "#ff7b72",
+            "$value": "#f7a7a1",
             "$type": "color"
           },
           "cyan": {
@@ -145,57 +145,57 @@
             "$type": "color"
           },
           "ink": {
-            "$value": "#47211b",
+            "$value": "#eeb4a9",
             "$type": "color"
           }
         },
         "background": {
           "base": {
-            "$value": "#010609",
+            "$value": "#1c1412",
             "$type": "color"
           },
           "surface": {
-            "$value": "#0d1117",
+            "$value": "#2c201e",
             "$type": "color"
           },
           "elevated": {
-            "$value": "#161b22",
+            "$value": "#392e2c",
             "$type": "color"
           }
         },
         "text": {
           "primary": {
-            "$value": "#f0f6fc",
+            "$value": "#f7eeec",
             "$type": "color"
           },
           "secondary": {
-            "$value": "#8b949e",
+            "$value": "#c3b4b1",
             "$type": "color"
           },
           "muted": {
-            "$value": "#6e7681",
+            "$value": "#988a88",
             "$type": "color"
           },
           "disabled": {
-            "$value": "#8b949e",
+            "$value": "#6c605e",
             "$type": "color"
           },
           "inverse": {
-            "$value": "#0d1117",
+            "$value": "#1c1412",
             "$type": "color"
           }
         },
         "border": {
           "default": {
-            "$value": "#8b949e",
+            "$value": "#796966",
             "$type": "color"
           },
           "subtle": {
-            "$value": "#30363d",
+            "$value": "#392d2b",
             "$type": "color"
           },
           "strong": {
-            "$value": "#58a6ff",
+            "$value": "#eeb4a9",
             "$type": "color"
           }
         },
@@ -251,7 +251,7 @@
         "$type": "shadow"
       },
       "focus": {
-        "$value": "0 0 0 3px rgba(185,70,68,0.3)",
+        "$value": "0 0 0 3px rgba(180,66,64,0.3)",
         "$type": "shadow"
       }
     },
@@ -269,7 +269,7 @@
         "$type": "shadow"
       },
       "focus": {
-        "$value": "0 0 0 3px rgba(88,166,255,0.3)",
+        "$value": "0 0 0 3px rgba(238,180,169,0.35)",
         "$type": "shadow"
       }
     }

@@ -1,6 +1,6 @@
 /**
  * Sonagi Design System — CSS Custom Properties
- * Generated automatically from JSON tokens v1.5.1
+ * Generated automatically from JSON tokens v1.7.0
  * Multi-Brand 3-Tier Architecture
  */
 
@@ -143,21 +143,21 @@
 
 /* --- Semantic Tokens (Sonagi Core) --- */
 :root, [data-theme="light"], [data-theme="sonagi-core"] {
-  --sng-color-brand-primary: #1991B9;
-  --sng-color-brand-primary-hover: #1275b5;
-  --sng-color-brand-accent: #db6c66;
-  --sng-color-brand-accent-hover: #b94644;
+  --sng-color-brand-primary: #47211b;
+  --sng-color-brand-primary-hover: #38130e;
+  --sng-color-brand-accent: #d2645f;
+  --sng-color-brand-accent-hover: #b44240;
   --sng-color-brand-cyan: #00ffcc;
   --sng-color-brand-ink: #47211b;
   --sng-color-background-base: #fcf2f0;
   --sng-color-background-surface: #f5e5e2;
-  --sng-color-background-elevated: #ffffff;
+  --sng-color-background-elevated: #fefaf9;
   --sng-color-text-primary: #1e1311;
   --sng-color-text-secondary: #614f4b;
-  --sng-color-text-muted: #7c6c6a;
+  --sng-color-text-muted: #756563;
   --sng-color-text-disabled: #9d8986;
-  --sng-color-text-inverse: #ffffff;
-  --sng-color-border-default: #9d8986;
+  --sng-color-text-inverse: #fcf2f0;
+  --sng-color-border-default: #95817f;
   --sng-color-border-subtle: #d7c5c2;
   --sng-color-border-strong: #47211b;
   --sng-color-state-info: #1275b5;
@@ -171,27 +171,27 @@
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(40,20,15,0.08);
   --sng-shadow-floating: 0 8px 24px rgba(40,20,15,0.15);
-  --sng-shadow-focus: 0 0 0 3px rgba(185,70,68,0.3);
+  --sng-shadow-focus: 0 0 0 3px rgba(180,66,64,0.3);
 }
 
 [data-theme="dark"] {
-  --sng-color-brand-primary: #58a6ff;
-  --sng-color-brand-primary-hover: #79c0ff;
-  --sng-color-brand-accent: #ff7b72;
-  --sng-color-brand-accent-hover: #ff7b72;
+  --sng-color-brand-primary: #eeb4a9;
+  --sng-color-brand-primary-hover: #ffc6bc;
+  --sng-color-brand-accent: #e5867f;
+  --sng-color-brand-accent-hover: #f7a7a1;
   --sng-color-brand-cyan: #00ffcc;
-  --sng-color-brand-ink: #47211b;
-  --sng-color-background-base: #010609;
-  --sng-color-background-surface: #0d1117;
-  --sng-color-background-elevated: #161b22;
-  --sng-color-text-primary: #f0f6fc;
-  --sng-color-text-secondary: #8b949e;
-  --sng-color-text-muted: #6e7681;
-  --sng-color-text-disabled: #8b949e;
-  --sng-color-text-inverse: #0d1117;
-  --sng-color-border-default: #8b949e;
-  --sng-color-border-subtle: #30363d;
-  --sng-color-border-strong: #58a6ff;
+  --sng-color-brand-ink: #eeb4a9;
+  --sng-color-background-base: #1c1412;
+  --sng-color-background-surface: #2c201e;
+  --sng-color-background-elevated: #392e2c;
+  --sng-color-text-primary: #f7eeec;
+  --sng-color-text-secondary: #c3b4b1;
+  --sng-color-text-muted: #988a88;
+  --sng-color-text-disabled: #6c605e;
+  --sng-color-text-inverse: #1c1412;
+  --sng-color-border-default: #796966;
+  --sng-color-border-subtle: #392d2b;
+  --sng-color-border-strong: #eeb4a9;
   --sng-color-state-info: #79c0ff;
   --sng-color-state-info-bg: #1c2d42;
   --sng-color-state-success: #56d364;
@@ -203,28 +203,28 @@
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
   --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
-  --sng-shadow-focus: 0 0 0 3px rgba(88,166,255,0.3);
+  --sng-shadow-focus: 0 0 0 3px rgba(238,180,169,0.35);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="desk-analyst"]) {
-    --sng-color-brand-primary: #58a6ff;
-    --sng-color-brand-primary-hover: #79c0ff;
-    --sng-color-brand-accent: #ff7b72;
-    --sng-color-brand-accent-hover: #ff7b72;
+    --sng-color-brand-primary: #eeb4a9;
+    --sng-color-brand-primary-hover: #ffc6bc;
+    --sng-color-brand-accent: #e5867f;
+    --sng-color-brand-accent-hover: #f7a7a1;
     --sng-color-brand-cyan: #00ffcc;
-    --sng-color-brand-ink: #47211b;
-    --sng-color-background-base: #010609;
-    --sng-color-background-surface: #0d1117;
-    --sng-color-background-elevated: #161b22;
-    --sng-color-text-primary: #f0f6fc;
-    --sng-color-text-secondary: #8b949e;
-    --sng-color-text-muted: #6e7681;
-    --sng-color-text-disabled: #8b949e;
-    --sng-color-text-inverse: #0d1117;
-    --sng-color-border-default: #8b949e;
-    --sng-color-border-subtle: #30363d;
-    --sng-color-border-strong: #58a6ff;
+    --sng-color-brand-ink: #eeb4a9;
+    --sng-color-background-base: #1c1412;
+    --sng-color-background-surface: #2c201e;
+    --sng-color-background-elevated: #392e2c;
+    --sng-color-text-primary: #f7eeec;
+    --sng-color-text-secondary: #c3b4b1;
+    --sng-color-text-muted: #988a88;
+    --sng-color-text-disabled: #6c605e;
+    --sng-color-text-inverse: #1c1412;
+    --sng-color-border-default: #796966;
+    --sng-color-border-subtle: #392d2b;
+    --sng-color-border-strong: #eeb4a9;
     --sng-color-state-info: #79c0ff;
     --sng-color-state-info-bg: #1c2d42;
     --sng-color-state-success: #56d364;
@@ -236,7 +236,7 @@
     --sng-shadow-flat: none;
     --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
     --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
-    --sng-shadow-focus: 0 0 0 3px rgba(88,166,255,0.3);
+    --sng-shadow-focus: 0 0 0 3px rgba(238,180,169,0.35);
   }
 }
 
