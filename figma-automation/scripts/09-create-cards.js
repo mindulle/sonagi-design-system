@@ -36,7 +36,7 @@ async function createCardComponent() {
       comp.primaryAxisSizingMode = "AUTO"; 
       comp.counterAxisSizingMode = "FIXED";
       comp.resize(360, comp.height); 
-      comp.cornerRadius = 12;
+      comp.cornerRadius = 12; comp.clipsContent = true;
       
       if (tokens.bg.surface) comp.fills = [bindColor(tokens.bg.surface)];
       let strokeVar = state === "Hover" ? tokens.border.strong : tokens.border.default;
