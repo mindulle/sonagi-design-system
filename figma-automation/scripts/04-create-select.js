@@ -13,7 +13,7 @@ async function createSelectComponent() {
 
   const tokens = {
     text: { primary: getVar("text/primary"), muted: getVar("text/muted"), disabled: getVar("text/disabled") },
-    bg: { base: getVar("background/base"), surface: getVar("background/surface") },
+    bg: { base: getVar("bg/base"), surface: getVar("bg/surface") },
     border: { default: getVar("border/default"), strong: getVar("border/strong") },
     brand: { primary: getVar("brand/primary") },
     state: { danger: getVar("state/danger") }
