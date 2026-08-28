@@ -44,13 +44,12 @@ Sonagi 디자인 시스템은 단일 브랜드에 국한되지 않고, 여러 �
 </html>
 ```
 
-### 3) Desk Analyst 테마 (데이터 대시보드 전용)
-`data-theme="desk-analyst"` 속성을 설정합니다.
-```html
-<html data-theme="desk-analyst">
-  <!-- Desk Analyst 테마가 적용되어 폰트 스케일 및 색상이 정밀 오버라이드됨 -->
-</html>
-```
+### 3) 그 외 테마
+현재는 없습니다. `light`(= `sonagi-core`)와 `dark`가 유일한 유효값입니다.
+
+토큰 위계는 `primitives → semantics` **2-Tier**로 확정되어 있으며, Light/Dark는 semantics 계층 내부 Mode 분기로 처리됩니다. 3번째 계층(`themes/`)은 **겨울 소나기 테마** 착수 시점에 재개됩니다. (ADR 0010)
+
+> 과거 존재했던 `data-theme="desk-analyst"`는 ADR 0009에서 폐기되었습니다. 이제 이 값을 설정해도 오버라이드가 적용되지 않습니다.
 
 ---
 

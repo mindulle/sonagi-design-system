@@ -38,13 +38,9 @@ Quiet depth. The brand lives in the deep navy (`#1c2c4d`) and surfaces upward th
 - **Border default:** `#30363d`
 - Same accent and state colors as light
 
-**Desk Analyst theme** (`[data-theme="desk-analyst"]`)
+There are no other themes. `sonagi-core` (light) and `dark` are the only valid values for `data-theme` — the token set is 2-Tier (primitives → semantics) until the 겨울 소나기 theme is introduced. See [ADR 0010](./decisions/0010-delivery-consolidation-github-packages.md).
 
-- Clinical white (`#FFFFFF`) base, blue-600 primary (`#2563EB`)
-- Tight radius (`sm: 4px`, `md: 6px`, `lg: 8px`) for dense data UI
-- Higher line-height body: `1.6` for readability in long tables
-
-Do not mix themes. Never use `#00ffcc` outside the wordmark context.
+Never use `#00ffcc` outside the wordmark context.
 
 ## Typography Rules
 
@@ -98,7 +94,6 @@ Z-index ladder: base 0 · raised 10 · dropdown 100 · sticky 200 · modal 300 �
 - Korean copy: sentence-case. English copy: sentence-case headings, title-case for proper nouns only.
 - Motion: `150ms` base (`--sng-duration-base`), `cubic-bezier(0.4, 0, 0.2, 1)` (`--sng-ease-default`). Fast interactions: `100ms`. No motion over `250ms` for UI feedback.
 - Do not use `#00ffcc` (logo cyan) anywhere except the wordmark SVG.
-- Do not mix `desk-analyst` theme components with `sonagi-core` components in the same view.
 - Do not use drop shadows on inputs. Use border + focus ring instead.
 - No gradients except a subtle `brand-primary → brand-primary-dark` on hero banners, used sparingly.
 - No neumorphism. No glassmorphism.
@@ -125,8 +120,10 @@ Z-index ladder: base 0 · raised 10 · dropdown 100 · sticky 200 · modal 300 �
 ## Agent Prompt Guide
 
 - Tokens are available as CSS custom properties prefixed `--sng-*`. Use semantic tokens (`--sng-color-bg-base`, `--sng-color-text-primary`) over primitives (`--sng-color-neutral-100`).
-- The CDN stylesheet is at `https://design.sonagi.space/variables.css` — link it in the `<head>` of any HTML artifact.
-- Default to **Sonagi Core** (light). Apply `data-theme="dark"` to `<html>` for dark mode. Apply `data-theme="desk-analyst"` for data-dense dashboard artifacts.
-- When creating a prototype, add `<link rel="stylesheet" href="https://design.sonagi.space/variables.css">` and reference only `--sng-*` variables. Do not invent new hex values.
+- **Distribution is GitHub Packages only** (see ADR 0010). Install `@mindulle/tokens` from `https://npm.pkg.github.com` and import the stylesheet via the package export:
+  - Bundled apps: `import '@mindulle/tokens/css';`
+  - Plain HTML artifacts: link the installed file, e.g. `<link rel="stylesheet" href="./node_modules/@mindulle/tokens/dist/variables.css">`
+- **There is no public CDN for tokens.** Do not link `design.sonagi.space` — that host serves an unrelated SPA and returns HTML for every path, so a stylesheet link there fails silently.
+- Default to **Sonagi Core** (light). Apply `data-theme="dark"` to `<html>` for dark mode. No other themes exist yet — the token set is intentionally 2-Tier (primitives → semantics) until the 겨울 소나기 theme is introduced (ADR 0010).
 - If a color is needed outside the palette, surface a comment `/* WARNING: color outside sonagi palette */` and use the nearest semantic token as a fallback.
 - Pretendard must be loaded from CDN: `https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css`

@@ -39,13 +39,19 @@ Sonagi 디자인 시스템은 **Multi-Brand** 시스템으로, 기본 테마 외
 
 ---
 
-## 3. 대표 테마 소개: The Desk Analyst
+## 3. 현재 등록된 테마
 
-- **목적:** 데이터 대시보드 및 스프레드시트 화면에 최적화된 고대비/고밀도 테마입니다.
-- **활성화 방식:** `<html data-theme="desk-analyst">`
-- **주요 오버라이드 항목:**
-  - `--sng-color-brand-primary`: `#2563EB` (고대비 선명한 파란색)
-  - `--sng-color-bg-base`: `#FFFFFF` (순수 흰색 배경)
-  - `--sng-color-bg-surface`: `#F9FAFB` (카드 및 제브라 테이블 행 배경)
-  - `--sng-line-height-normal`: `1.6` (가로형 긴 표 데이터 읽기 성능을 높이기 위해 기본 1.5에서 1.6으로 높임)
-  - `--sng-radius-md`: `6px` (기본 8px보다 날카롭고 컴팩트하게 조율)
+**없습니다.** `themes/` 디렉토리는 의도적으로 비어 있습니다.
+
+토큰 위계는 [ADR 0010](../../../decisions/0010-delivery-consolidation-github-packages.md)에 따라 `primitives → semantics` **2-Tier**로 확정되어 있으며, 유효한 `data-theme` 값은 다음 둘뿐입니다:
+
+| 값                              | 설명                                    |
+| ------------------------------- | --------------------------------------- |
+| `light` (= `sonagi-core`, 기본) | 가을 소나기 라이트                      |
+| `dark`                          | 가을 소나기 다크 (semantics 내부 Mode 분기) |
+
+즉 위 2절의 프로세스는 **현재 사용되지 않는 확장 지점**입니다. 로더(`scripts/build.js:117`)는 `fs.existsSync` 가드가 걸려 있어 빈 디렉토리에서도 정상 동작하며, 3-Tier 복귀 시 그대로 재사용됩니다.
+
+**재개 시점:** 가을 소나기 테마가 안정적으로 정착했음이 확인된 뒤 **겨울 소나기 테마**를 착수할 때입니다. 그때 `themes/theme-winter-sonagi.json` 하나만 추가하면 됩니다. 자세한 내용은 [`../tokens/themes/README.md`](../tokens/themes/README.md) 참조.
+
+> 과거 존재했던 `desk-analyst` 테마는 [ADR 0009](../../../decisions/0009-typography-major-third-upgrade.md)에서 폐기되었습니다. 이제 `data-theme="desk-analyst"`를 설정해도 아무 오버라이드가 적용되지 않습니다.

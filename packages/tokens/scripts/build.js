@@ -78,7 +78,7 @@ function build() {
   const version = pkgJson.version;
   ensureDir(DIST_DIR);
   
-  let cssOutput = `/**\n * Sonagi Design System — CSS Custom Properties\n * Generated automatically from JSON tokens v${version}\n * Multi-Brand 3-Tier Architecture\n */\n\n`;
+  let cssOutput = `/**\n * Sonagi Design System — CSS Custom Properties\n * Generated automatically from JSON tokens v${version}\n * DO NOT EDIT — regenerate with: pnpm --filter @mindulle/tokens build\n * 2-Tier architecture (primitives -> semantics); Light/Dark branch inside semantics.\n * See decisions/0010-delivery-consolidation-github-packages.md\n */\n\n`;
   
   let flatTokens = {};
   let lightTokens = {};
