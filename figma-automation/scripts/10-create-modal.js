@@ -42,8 +42,9 @@ async function createModalComponent() {
     const title = figma.createText(); title.name = "Title"; title.characters = type === "Destructive" ? "Delete Account" : "Save Changes"; title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 18;
     let titleColor = type === "Destructive" && tokens.state.danger ? tokens.state.danger : tokens.text.primary;
     if (titleColor) title.fills = [bindColor(titleColor)]; header.appendChild(title);
+    const iconWrapper = figma.createFrame(); iconWrapper.name = "Icon Wrapper"; iconWrapper.resize(24, 24); iconWrapper.fills = []; iconWrapper.layoutMode = "HORIZONTAL"; iconWrapper.primaryAxisAlignItems = "CENTER"; iconWrapper.counterAxisAlignItems = "CENTER";
     const closeIcon = figma.createVector(); closeIcon.name = "Close Icon"; closeIcon.vectorPaths = [{ windingRule: "NONE", data: "M 4 4 L 16 16 M 16 4 L 4 16" }];
-    if (tokens.text.muted) { closeIcon.strokes = [bindColor(tokens.text.muted)]; closeIcon.strokeWeight = 2; closeIcon.strokeCap = "ROUND"; } closeIcon.resize(20, 20); header.appendChild(closeIcon); comp.appendChild(header);
+    if (tokens.text.muted) { closeIcon.strokes = [bindColor(tokens.text.muted)]; closeIcon.strokeWeight = 2; closeIcon.strokeCap = "ROUND"; } closeIcon.resize(12, 12); iconWrapper.appendChild(closeIcon); header.appendChild(iconWrapper); comp.appendChild(header);
 
     const desc = figma.createText(); desc.name = "Description"; desc.characters = type === "Destructive" ? "Are you sure you want to permanently delete this account? This action cannot be undone." : "Your changes will be saved securely to the cloud. You can update them later in the settings."; desc.fontName = { family: "Inter", style: "Regular" }; desc.fontSize = 14; desc.layoutAlign = "STRETCH";
     if (tokens.text.secondary) desc.fills = [bindColor(tokens.text.secondary)]; comp.appendChild(desc);
