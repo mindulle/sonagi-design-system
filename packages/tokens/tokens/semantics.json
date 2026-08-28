@@ -117,6 +117,14 @@
           "danger-bg": {
             "$value": "#fde8e8",
             "$type": "color"
+          },
+          "error": {
+            "$value": "var(--sng-color-state-danger)",
+            "$type": "color"
+          },
+          "error-bg": {
+            "$value": "var(--sng-color-state-danger-bg)",
+            "$type": "color"
           }
         }
       }
@@ -230,6 +238,14 @@
           },
           "danger-bg": {
             "$value": "#421818",
+            "$type": "color"
+          },
+          "error": {
+            "$value": "var(--sng-color-state-danger)",
+            "$type": "color"
+          },
+          "error-bg": {
+            "$value": "var(--sng-color-state-danger-bg)",
             "$type": "color"
           }
         }

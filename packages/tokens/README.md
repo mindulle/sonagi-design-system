@@ -74,7 +74,7 @@ document.documentElement.removeAttribute('data-theme');
 | `--sng-color-border-strong`       | `#1c2c4d` | `#1c2c4d` | 강조 테두리    |
 | `--sng-color-state-success`       | `#2ea043` | `#2ea043` | 성공           |
 | `--sng-color-state-warning`       | `#d29922` | `#d29922` | 경고           |
-| `--sng-color-state-error`         | `#f85149` | `#f85149` | 오류           |
+| `--sng-color-state-danger`        | `#f85149` | `#f85149` | 오류 (위험)    |
 
 ### 타이포그래피
 

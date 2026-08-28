@@ -142,7 +142,7 @@
         "$value": "#d29922",
         "$type": "color"
       },
-      "error": {
+      "danger": {
         "$value": "#f85149",
         "$type": "color"
       },
@@ -154,7 +154,7 @@
         "$value": "#fff3cd",
         "$type": "color"
       },
-      "error-light": {
+      "danger-light": {
         "$value": "#fde8e8",
         "$type": "color"
       }

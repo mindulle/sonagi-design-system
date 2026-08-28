@@ -46,5 +46,5 @@ Sonagi 디자인 시스템 v3.0의 모든 디자인 토큰 명세입니다.
 | :-------------------------- | :-------- | :-------- | :----------------------------- | :------------- | :----------------------------- | :------------------------- |
 | `--sng-color-state-success` | `#2ea043` | `#2ea043` | `--sng-color-state-success-bg` | `#d4edda`      | `--sng-color-state-success-bg` | `rgba(46, 160, 67, 0.15)`  |
 | `--sng-color-state-warning` | `#d29922` | `#d29922` | `--sng-color-state-warning-bg` | `#fff3cd`      | `--sng-color-state-warning-bg` | `rgba(210, 153, 34, 0.15)` |
-| `--sng-color-state-error`   | `#f85149` | `#f85149` | `--sng-color-state-error-bg`   | `#fde8e8`      | `--sng-color-state-error-bg`   | `rgba(248, 81, 73, 0.15)`  |
+| `--sng-color-state-danger`  | `#f85149` | `#f85149` | `--sng-color-state-danger-bg`  | `#fde8e8`      | `--sng-color-state-danger-bg`  | `rgba(248, 81, 73, 0.15)`  |
 | `--sng-color-state-info`    | `#4A90E2` | `#4A90E2` | `--sng-color-state-info-bg`    | `#e8f4fd`      | `--sng-color-state-info-bg`    | `rgba(74, 144, 226, 0.15)` |

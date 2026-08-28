@@ -20,7 +20,7 @@ const meta: Meta<typeof Badge> = {
     },
     color: {
       control: 'select',
-      options: ['info', 'success', 'warning', 'error'],
+      options: ['info', 'success', 'warning', 'danger', 'error'],
     },
   },
 };
@@ -52,16 +52,16 @@ export const Warning: Story = {
   },
 };
 
-export const ErrorState: Story = {
+export const Danger: Story = {
   args: {
-    color: 'error',
+    color: 'danger',
     variant: 'pill',
-    children: 'Error',
+    children: 'Danger',
   },
 };
 
 // 2. All-Variants Matrix (Figma Spec 1:1 Coverage Grid)
-const colors: BadgeProps['color'][] = ['info', 'success', 'warning', 'error'];
+const colors: BadgeProps['color'][] = ['info', 'success', 'warning', 'danger'];
 const badgeVariants: BadgeProps['variant'][] = ['pill', 'label'];
 
 export const AllVariantsMatrix: Story = {
