@@ -4,28 +4,30 @@
 
 ## 🚨 CORE PRINCIPLES (절대 원칙)
 
-1. **Framework-Agnostic (프레임워크 독립성)**
-   - NEVER use React, Vue, Svelte, or any JS framework for UI components.
-   - All components MUST be written in pure HTML and CSS (or SCSS).
-   - This ensures the design system can be consumed by Vanilla JS (web tools), React (admin panels), and easily ported to Flutter (mobile).
+1. **React 19+ Foundation (UI 컴포넌트)**
+   - `@mindulle/ui`의 모든 컴포넌트는 **React (Server-Component Ready)**로 작성됩니다.
+   - 외부 블로그 연동을 위한 Vanilla JS 제약은 폐기되었습니다.
+   - 스타일링은 Tailwind CSS를 기본으로 사용하며, 사전에 정의된 토큰 유틸리티 클래스만 사용합니다.
 
-2. **Token-Driven Development**
+2. **Framework-Agnostic Tokens (토큰 계층)**
+   - 컴포넌트는 React로 작성되지만, **디자인 토큰 계층은 프레임워크와 무관**합니다.
+   - `@mindulle/tokens`에서 배포되는 CSS Custom Properties(`var(--sng-*)`)가 유일한 시각적 진실 공급원(SSOT)입니다.
    - Hardcoded values (e.g., `#FF0000`, `16px`) are STRICTLY FORBIDDEN.
-   - Always use CSS Variables derived from design tokens (e.g., `var(--sng-color-primary)`, `var(--sng-space-4)`).
+   - Always use defined variables (e.g., `var(--sng-color-bg-base)`, `var(--sng-radius-md)`).
 
 ## 🏗️ ARCHITECTURE & RULES
 
-1. **CSS Naming Convention**
-   - Use the `.sng-` prefix for all component classes to prevent CSS collisions in consumer applications.
-   - Example: `.sng-btn`, `.sng-btn--primary`, `.sng-input-text` (BEM methodology is recommended).
+1. **Tailwind CSS Naming Convention**
+   - Tailwind 설정(`tailwind.config.ts`)에 토큰이 매핑되어 있습니다.
+   - 임의의 유틸리티 값(`w-[15px]`, `bg-[#123123]`) 사용을 지양하고, 매핑된 클래스(`gap-sng-sm`, `rounded-sng-md`, `bg-bg-surface` 등)를 적극 사용합니다.
 
-2. **Storybook (HTML Mode)**
-   - Storybook is strictly used for Visual QA of HTML/CSS.
-   - Components in Storybook must be written using the HTML renderer (`@storybook/html`), returning pure HTML string templates with applied CSS classes.
+2. **Storybook (React Mode)**
+   - Storybook은 React 컴포넌트의 Visual QA 및 문서화(Docs) 목적으로 사용됩니다.
+   - `@storybook/react` 기반이며, `*.stories.tsx`로 작성합니다.
 
 3. **Workspace Structure (Turborepo)**
-   - `packages/tokens/`: Contains raw JSON tokens (from Figma) and build scripts to convert them into `variables.css`.
-   - `packages/ui/`: Contains core CSS stylesheets and HTML-based Storybook stories.
+   - `packages/tokens/`: Figma JSON 토큰을 파싱하여 `variables.css` 및 TS Export로 변환.
+   - `packages/ui/`: React 기반 UI 컴포넌트, Tailwind 설정 및 Storybook 문서 포함.
 
 ## 📝 GIT & COMMIT CONVENTION
 
