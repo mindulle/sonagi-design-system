@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.3.0...ui-v1.4.0) (2026-08-28)
+
+
+### Features
+
+* **tokens:** apply ADR 0006 and rename state-error to state-danger ([#31](https://github.com/mindulle/sonagi-design-system/issues/31)) ([43c70f9](https://github.com/mindulle/sonagi-design-system/commit/43c70f987e5688e2e10585f4b6fc8e1e792cb3af)), closes [#1991B9](https://github.com/mindulle/sonagi-design-system/issues/1991B9) [#47211b](https://github.com/mindulle/sonagi-design-system/issues/47211b) [#1275b5](https://github.com/mindulle/sonagi-design-system/issues/1275b5) [#38130e](https://github.com/mindulle/sonagi-design-system/issues/38130e) [#ffffff](https://github.com/mindulle/sonagi-design-system/issues/ffffff) [#fefaf9](https://github.com/mindulle/sonagi-design-system/issues/fefaf9) [#ffffff](https://github.com/mindulle/sonagi-design-system/issues/ffffff) [#fcf2f0](https://github.com/mindulle/sonagi-design-system/issues/fcf2f0) [#db6c66](https://github.com/mindulle/sonagi-design-system/issues/db6c66) [#d2645f](https://github.com/mindulle/sonagi-design-system/issues/d2645f) [#b94644](https://github.com/mindulle/sonagi-design-system/issues/b94644) [#b44240](https://github.com/mindulle/sonagi-design-system/issues/b44240) [#7c6c6a](https://github.com/mindulle/sonagi-design-system/issues/7c6c6a) [#756563](https://github.com/mindulle/sonagi-design-system/issues/756563) [#9d8986](https://github.com/mindulle/sonagi-design-system/issues/9d8986) [#95817f](https://github.com/mindulle/sonagi-design-system/issues/95817f) [#eeb4a9](https://github.com/mindulle/sonagi-design-system/issues/eeb4a9) [#1c1412](https://github.com/mindulle/sonagi-design-system/issues/1c1412) [#2c201e](https://github.com/mindulle/sonagi-design-system/issues/2c201e) [#392e2c](https://github.com/mindulle/sonagi-design-system/issues/392e2c) [#f85149](https://github.com/mindulle/sonagi-design-system/issues/f85149)
+* **ui:** add Pagination and TableOfContents components based on Figma Core-Primitives-v3 spec ([#30](https://github.com/mindulle/sonagi-design-system/issues/30)) ([153beac](https://github.com/mindulle/sonagi-design-system/commit/153beac3f4bfd7384bb2abbe90954dec9154b581))
+
 # [1.3.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.2.0...ui-v1.3.0) (2026-08-24)
 
 
