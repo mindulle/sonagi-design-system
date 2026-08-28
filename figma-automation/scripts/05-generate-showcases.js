@@ -10,7 +10,7 @@ async function generateShowcases() {
   const lightMode = colorsColl.modes.find(m => m.name.toLowerCase().includes("light") || m.name === "Mode 1");
   const darkMode = colorsColl.modes.find(m => m.name.toLowerCase().includes("dark"));
   const allVars = await figma.variables.getLocalVariablesAsync();
-  const bgBase = allVars.find(v => v.variableCollectionId === colorsColl.id && v.name === "background/base");
+  const bgBase = allVars.find(v => v.variableCollectionId === colorsColl.id && v.name === "bg/base");
 
   let maxX = 0, maxY = 0;
   master.children.forEach(c => {
