@@ -5,7 +5,7 @@ async function createTooltipComponent() {
   const getVar = (name) => allVars.find(v => v.variableCollectionId === colorsColl?.id && (v.name === name || v.name === name.replace("bg/", "background/")));
 
   const tokens = {
-    bg: { inverse: getVar("bg/inverse") },
+    bg: { inverse: getVar("text/primary") },
     text: { inverse: getVar("text/inverse") }
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
