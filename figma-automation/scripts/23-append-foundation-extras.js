@@ -1,9 +1,9 @@
 async function appendFoundationExtras() {
   await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
   await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
-  const page = figma.root.children.find(p => p.name === "Foundations");
-  if (!page) return;
-  const mainBoard = page.findAll(n => n.name === "Main Board" && n.type === "FRAME")[0];
+   
+   
+  const mainBoard = figma.currentPage.findAll(n => n.name === "Main Board" && n.type === "FRAME")[0];
   if (!mainBoard) return;
   const oldExtra = mainBoard.children.find(c => c.name === "Shape & Elevation");
   if (oldExtra) oldExtra.remove();
