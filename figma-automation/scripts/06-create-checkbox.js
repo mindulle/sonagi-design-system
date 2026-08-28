@@ -33,7 +33,7 @@ async function createCheckboxComponent() {
       comp.paddingLeft = 4; comp.paddingRight = 4; comp.paddingTop = 4; comp.paddingBottom = 4;
 
       const box = figma.createFrame();
-      box.name = "Box"; box.resize(20, 20); box.cornerRadius = 4; box.layoutMode = "NONE"; 
+      box.name = "Box"; box.resize(20, 20); box.cornerRadius = 4; box.layoutMode = "HORIZONTAL"; box.primaryAxisAlignItems = "CENTER"; box.counterAxisAlignItems = "CENTER"; 
       
       let fillVar = tokens.bg.surface; let strokeVar = tokens.border.default; let strokeWeight = 1.5;
 
