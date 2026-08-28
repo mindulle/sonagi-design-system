@@ -1,8 +1,9 @@
 async function generateShowcases() {
-  if (figma.currentPage.selection.length !== 1 || figma.currentPage.selection[0].type !== "COMPONENT_SET") {
-    console.error("❌ 마스터 컴포넌트 세트를 1개만 선택해주세요."); return;
+  const selection = figma.currentPage.selection[0];
+  if (!selection || (selection.type !== "COMPONENT_SET" && selection.type !== "COMPONENT")) {
+    console.error("❌ 컴포넌트 세트나 단일 컴포넌트를 1개만 선택해주세요."); return;
   }
-  const master = figma.currentPage.selection[0];
+  const master = selection;
   const collections = await figma.variables.getLocalVariableCollectionsAsync();
   const colorsColl = collections.find(c => c.name === "Colors");
   const lightMode = colorsColl.modes.find(m => m.name.toLowerCase().includes("light") || m.name === "Mode 1");
@@ -10,11 +11,16 @@ async function generateShowcases() {
   const allVars = await figma.variables.getLocalVariablesAsync();
   const bgBase = allVars.find(v => v.variableCollectionId === colorsColl.id && v.name === "bg/base");
 
+  const variants = master.type === "COMPONENT_SET" ? master.children : [master];
   let maxX = 0, maxY = 0;
-  master.children.forEach(c => {
-    if (c.x + c.width > maxX) maxX = c.x + c.width;
-    if (c.y + c.height > maxY) maxY = c.y + c.height;
-  });
+  if (master.type === "COMPONENT_SET") {
+    master.children.forEach(c => {
+      if (c.x + c.width > maxX) maxX = c.x + c.width;
+      if (c.y + c.height > maxY) maxY = c.y + c.height;
+    });
+  } else {
+    maxX = master.width; maxY = master.height;
+  }
 
   const bindColor = (r, g, b, variable) => {
     if (!variable) return { type: 'SOLID', color: {r, g, b} };
@@ -28,9 +34,10 @@ async function generateShowcases() {
   lightSection.fills = [bindColor(1, 1, 1, bgBase)];
   if (lightMode) lightSection.setExplicitVariableModeForCollection(colorsColl, lightMode.modeId);
 
-  master.children.forEach(variant => {
+  variants.forEach(variant => {
     const inst = variant.createInstance();
-    inst.x = variant.x + 50; inst.y = variant.y + 50;
+    inst.x = lightSection.x + (master.type === "COMPONENT_SET" ? variant.x + 50 : 50); 
+    inst.y = lightSection.y + (master.type === "COMPONENT_SET" ? variant.y + 50 : 50);
     lightSection.appendChild(inst);
   });
 
@@ -41,9 +48,10 @@ async function generateShowcases() {
   darkSection.fills = [bindColor(0, 0, 0, bgBase)];
   if (darkMode) darkSection.setExplicitVariableModeForCollection(colorsColl, darkMode.modeId);
 
-  master.children.forEach(variant => {
+  variants.forEach(variant => {
     const inst = variant.createInstance();
-    inst.x = variant.x + 50; inst.y = variant.y + 50;
+    inst.x = darkSection.x + (master.type === "COMPONENT_SET" ? variant.x + 50 : 50); 
+    inst.y = darkSection.y + (master.type === "COMPONENT_SET" ? variant.y + 50 : 50);
     darkSection.appendChild(inst);
   });
 
