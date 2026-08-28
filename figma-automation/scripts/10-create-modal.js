@@ -38,7 +38,7 @@ async function createModalComponent() {
     if (tokens.border.default) { comp.strokes = [bindColor(tokens.border.default)]; comp.strokeWeight = 1; }
     comp.effects = [{ type: "DROP_SHADOW", color: { r: 0, g: 0, b: 0, a: 0.15 }, offset: { x: 0, y: 8 }, radius: 24, spread: 0, visible: true, blendMode: "NORMAL" }];
 
-    const header = figma.createFrame(); header.name = "Header"; header.layoutMode = "HORIZONTAL"; header.layoutAlign = "STRETCH"; header.primaryAxisAlignItems = "SPACE_BETWEEN"; header.counterAxisAlignItems = "CENTER"; header.fills = [];
+    const header = figma.createFrame(); header.name = "Header"; header.layoutMode = "HORIZONTAL"; header.layoutAlign = "STRETCH"; header.primaryAxisAlignItems = "SPACE_BETWEEN"; header.counterAxisAlignItems = "CENTER"; header.fills = []; header.counterAxisSizingMode = "AUTO";
     const title = figma.createText(); title.name = "Title"; title.characters = type === "Destructive" ? "Delete Account" : "Save Changes"; title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 18;
     let titleColor = type === "Destructive" && tokens.state.danger ? tokens.state.danger : tokens.text.primary;
     if (titleColor) title.fills = [bindColor(titleColor)]; header.appendChild(title);
@@ -49,7 +49,7 @@ async function createModalComponent() {
     const desc = figma.createText(); desc.name = "Description"; desc.characters = type === "Destructive" ? "Are you sure you want to permanently delete this account? This action cannot be undone." : "Your changes will be saved securely to the cloud. You can update them later in the settings."; desc.fontName = { family: "Inter", style: "Regular" }; desc.fontSize = 14; desc.layoutAlign = "STRETCH";
     if (tokens.text.secondary) desc.fills = [bindColor(tokens.text.secondary)]; comp.appendChild(desc);
 
-    const footer = figma.createFrame(); footer.name = "Footer"; footer.layoutMode = "HORIZONTAL"; footer.layoutAlign = "STRETCH"; footer.primaryAxisAlignItems = "MAX"; footer.itemSpacing = 8; footer.paddingTop = 8; footer.fills = [];
+    const footer = figma.createFrame(); footer.name = "Footer"; footer.layoutMode = "HORIZONTAL"; footer.layoutAlign = "STRETCH"; footer.primaryAxisAlignItems = "MAX"; footer.itemSpacing = 8; footer.paddingTop = 8; footer.fills = []; footer.counterAxisSizingMode = "AUTO";
     if (realButton) { footer.appendChild(realButton.createInstance()); footer.appendChild(realButton.createInstance()); } else { const dummy = figma.createFrame(); dummy.resize(80, 40); dummy.fills = [{type:"SOLID", color:{r:0.8,g:0.8,b:0.8}}]; footer.appendChild(dummy.clone()); footer.appendChild(dummy); }
     comp.appendChild(footer);
 
