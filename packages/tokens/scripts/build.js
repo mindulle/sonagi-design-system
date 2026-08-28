@@ -107,7 +107,7 @@ function build() {
     cssOutput += `/* --- Semantic Tokens (Sonagi Core) --- */\n`;
     cssOutput += generateCssBlock(':root, [data-theme="light"], [data-theme="sonagi-core"]', lightTokens);
     cssOutput += generateCssBlock('[data-theme="dark"]', darkTokens);
-    cssOutput += `@media (prefers-color-scheme: dark) {\n  :root:not([data-theme="light"]):not([data-theme="desk-analyst"]) {\n`;
+    cssOutput += `@media (prefers-color-scheme: dark) {\n  :root:not([data-theme="light"]) {\n`;
     for (const [key, val] of Object.entries(darkTokens)) {
       cssOutput += `    ${key}: ${val};\n`;
     }

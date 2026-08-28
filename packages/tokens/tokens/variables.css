@@ -136,6 +136,12 @@
   --sng-typography-caption-fontSize: 11px;
   --sng-typography-caption-lineHeight: 16px;
   --sng-typography-caption-fontWeight: 400;
+  --sng-typography-ui-title-18: [object Object];
+  --sng-typography-ui-body-16: [object Object];
+  --sng-typography-ui-label-14: [object Object];
+  --sng-typography-ui-body-14: [object Object];
+  --sng-typography-ui-label-12: [object Object];
+  --sng-typography-ui-detail-12: [object Object];
   --sng-layout-grid-baseline: 8px;
   --sng-layout-grid-gap: 24px;
   --sng-layout-grid-padding: 24px;
@@ -211,7 +217,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="desk-analyst"]) {
+  :root:not([data-theme="light"]) {
     --sng-color-brand-primary: #eeb4a9;
     --sng-color-brand-primary-hover: #ffc6bc;
     --sng-color-brand-accent: #e5867f;
@@ -247,27 +253,3 @@
 }
 
 /* --- Theme Overrides --- */
-/* Theme: The Desk Analyst */
-[data-theme="desk-analyst"] {
-  --sng-color-brand-primary: #2563EB;
-  --sng-color-brand-primary-hover: #1D4ED8;
-  --sng-color-bg-base: #FFFFFF;
-  --sng-color-bg-surface: #F9FAFB;
-  --sng-color-border-default: #E5E7EB;
-  --sng-color-text-primary: #111827;
-  --sng-color-text-secondary: #4B5563;
-  --sng-color-text-muted: #9CA3AF;
-  --sng-font-sans: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --sng-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --sng-line-height-normal: 1.6;
-  --sng-spacing-1: 4px;
-  --sng-spacing-2: 8px;
-  --sng-spacing-4: 16px;
-  --sng-spacing-6: 24px;
-  --sng-spacing-8: 32px;
-  --sng-radius-sm: 4px;
-  --sng-radius-md: 6px;
-  --sng-radius-lg: 8px;
-  --sng-radius-full: 9999px;
-}
-
