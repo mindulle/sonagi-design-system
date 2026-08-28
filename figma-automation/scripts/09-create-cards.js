@@ -36,7 +36,7 @@ async function createCardComponent() {
       comp.primaryAxisSizingMode = "AUTO"; 
       comp.counterAxisSizingMode = "FIXED";
       comp.resize(360, comp.height); 
-      comp.cornerRadius = 12; comp.clipsContent = true;
+      comp.cornerRadius = 12; comp.clipsContent = true; comp.itemSpacing = 24;
       
       if (tokens.bg.surface) comp.fills = [bindColor(tokens.bg.surface)];
       let strokeVar = state === "Hover" ? tokens.border.strong : tokens.border.default;
@@ -88,21 +88,14 @@ async function createCardComponent() {
       comp.appendChild(content);
 
       if (type === "With Action") {
-        const divider = figma.createFrame();
-        divider.name = "Divider";
-        divider.layoutMode = "HORIZONTAL";
-        divider.layoutAlign = "STRETCH";
-        divider.resize(100, 1);
-        if (tokens.border.subtle) divider.fills = [bindColor(tokens.border.subtle)];
-        comp.appendChild(divider);
 
         const actionRow = figma.createFrame();
         actionRow.name = "Actions";
         actionRow.layoutMode = "HORIZONTAL";
         actionRow.layoutAlign = "STRETCH";
-        actionRow.primaryAxisAlignItems = "MAX"; 
+        actionRow.primaryAxisAlignItems = "MIN"; 
         actionRow.itemSpacing = 12;
-        actionRow.paddingTop = 16;
+        actionRow.paddingTop = 0;
         actionRow.fills = [];
 
         const button = figma.createFrame();
