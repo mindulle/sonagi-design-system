@@ -18,18 +18,18 @@ export function Button({
   ...props
 }: ButtonProps) {
   // Figma v3 Spec
-  const baseClasses = 'inline-flex items-center justify-center font-sans font-semibold border transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2';
+  const baseClasses = 'inline-flex items-center justify-center gap-sng-sm font-sans font-semibold border transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2';
   
   const sizeClasses = {
-    sm: 'text-xs px-3 py-1.5 rounded-sm',
-    md: 'text-sm px-4 py-[10px] rounded-base',
-    lg: 'text-base px-5 py-3 rounded-md',
+    sm: 'text-xs px-3 py-1.5 rounded-sng-sm',
+    md: 'text-sm px-sng-element-px py-sng-element-py rounded-sng-md',
+    lg: 'text-base px-5 py-3 rounded-sng-lg',
   };
 
   const variantClasses = {
     primary: 'bg-brand-primary text-text-inverse border-transparent',
     secondary: 'bg-transparent text-text-primary border border-border-default',
-    danger: 'bg-state-error text-text-inverse border-transparent',
+    danger: 'bg-state-danger text-text-inverse border-transparent',
   };
 
   let stateClasses = '';

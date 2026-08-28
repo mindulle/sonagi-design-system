@@ -1,12 +1,13 @@
 import { EmbedBuilder, EmbedData, APIEmbed } from 'discord.js';
 
-export type SonagiEmbedType = 'info' | 'success' | 'warning' | 'error';
+export type SonagiEmbedType = 'info' | 'success' | 'warning' | 'danger' | 'error';
 
 const SONAGI_COLORS = {
   info: 0x1c2c4d,    // --sng-color-brand-primary
   success: 0x2ea043, // --sng-color-state-success
   warning: 0xd29922, // --sng-color-state-warning
-  error: 0xf85149,   // --sng-color-state-error
+  danger: 0xf85149,  // --sng-color-state-danger
+  error: 0xf85149,   // v1.7 compat alias
 };
 
 /**

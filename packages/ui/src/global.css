@@ -71,12 +71,14 @@ body {
   border-color: var(--sng-color-border-subtle);
   cursor: not-allowed;
 }
-.sng-input--error {
-  border-color: var(--sng-color-state-error);
+.sng-input--error,
+.sng-input--danger {
+  border-color: var(--sng-color-state-danger);
 }
 
-.sng-input--error:focus {
-  border-color: var(--sng-color-state-error);
+.sng-input--error:focus,
+.sng-input--danger:focus {
+  border-color: var(--sng-color-state-danger);
   box-shadow: 0 0 0 3px rgba(248, 81, 73, 0.3);
 }
 
@@ -113,9 +115,10 @@ body {
   color: var(--sng-color-state-warning);
 }
 
-.sng-badge--error {
-  background-color: var(--sng-color-state-error-bg);
-  color: var(--sng-color-state-error);
+.sng-badge--error,
+.sng-badge--danger {
+  background-color: var(--sng-color-state-danger-bg);
+  color: var(--sng-color-state-danger);
 }
 
 .sng-badge--info {

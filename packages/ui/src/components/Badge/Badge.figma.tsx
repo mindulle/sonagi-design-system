@@ -19,7 +19,7 @@ figma.connect(
         Info: 'info',
         Success: 'success',
         Warning: 'warning',
-        Error: 'error',
+        Error: 'danger',
       }),
       children: figma.string('Badge Label'),
     },

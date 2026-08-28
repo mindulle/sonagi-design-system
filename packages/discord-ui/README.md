@@ -29,7 +29,7 @@ const embed = new SonagiEmbed()
 
 // 2. 상태(State) 명시적 지정
 const errorEmbed = new SonagiEmbed()
-  .setType('error') // 빨간색(--sng-color-state-error)이 자동 적용됨
+  .setType('danger') // 빨간색(--sng-color-state-danger)이 자동 적용됨
   .setSonagiTitle('서버 에러 발생', '🚨')
   .setQuoteDescription('데이터베이스 연결에 실패했습니다.');
 
@@ -43,7 +43,7 @@ channel.send({ embeds: [embed, errorEmbed] });
 
 1. **색상 하드코딩 방지 (`setType`)**
    - `.setColor()`를 직접 호출하지 마십시오. (호출 시 콘솔 경고 발생)
-   - `.setType('info' | 'success' | 'warning' | 'error')`를 사용하여 시스템 지정 색상만 적용합니다.
+   - `.setType('info' | 'success' | 'warning' | 'danger')`를 사용하여 시스템 지정 색상만 적용합니다.
 
 2. **자동 마크다운 포맷팅**
    - `setSonagiTitle(title, emoji?)`: 제목 텍스트를 항상 **볼드체(`**`)\*\*로 감쌉니다.

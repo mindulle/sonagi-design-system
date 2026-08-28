@@ -62,11 +62,11 @@ export function Pagination({
 
   const pageNumbers = getPageNumbers();
   const navBtnBase =
-    'flex h-10 w-10 items-center justify-center rounded-base border font-sans text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent';
+    'flex h-10 w-10 items-center justify-center rounded-sng-md border font-sans text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent';
 
   return (
     <nav
-      className={`flex items-center justify-center gap-2 ${className}`}
+      className={`flex items-center justify-center gap-sng-sm ${className}`}
       aria-label="Pagination"
       {...props}
     >

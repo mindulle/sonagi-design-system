@@ -91,7 +91,7 @@ function App() {
 
 - **Props:**
   - `variant`?: `'pill' | 'label'` (기본값: `'pill'`)
-  - `color`?: `'success' | 'warning' | 'error' | 'info'` (기본값: `'info'`)
+  - `color`?: `'success' | 'warning' | 'danger' | 'info'` (기본값: `'info'`)
   - `children`: `React.ReactNode`
 
 ### 5. `Wordmark`

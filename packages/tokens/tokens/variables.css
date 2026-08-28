@@ -1,6 +1,6 @@
 /**
  * Sonagi Design System — CSS Custom Properties
- * Generated automatically from JSON tokens v1.5.1
+ * Generated automatically from JSON tokens v1.8.0
  * Multi-Brand 3-Tier Architecture
  */
 
@@ -36,10 +36,10 @@
   --sng-color-brand-cyan: #00ffcc;
   --sng-color-state-success: #2ea043;
   --sng-color-state-warning: #d29922;
-  --sng-color-state-error: #f85149;
+  --sng-color-state-danger: #f85149;
   --sng-color-state-success-light: #d4edda;
   --sng-color-state-warning-light: #fff3cd;
-  --sng-color-state-error-light: #fde8e8;
+  --sng-color-state-danger-light: #fde8e8;
   --sng-font-sans: 'Pretendard', 'Inter', system-ui, sans-serif;
   --sng-font-serif: 'Noto Serif KR', 'Merriweather', Georgia, serif;
   --sng-font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
@@ -136,6 +136,12 @@
   --sng-typography-caption-fontSize: 11px;
   --sng-typography-caption-lineHeight: 16px;
   --sng-typography-caption-fontWeight: 400;
+  --sng-typography-ui-title-18: [object Object];
+  --sng-typography-ui-body-16: [object Object];
+  --sng-typography-ui-label-14: [object Object];
+  --sng-typography-ui-body-14: [object Object];
+  --sng-typography-ui-label-12: [object Object];
+  --sng-typography-ui-detail-12: [object Object];
   --sng-layout-grid-baseline: 8px;
   --sng-layout-grid-gap: 24px;
   --sng-layout-grid-padding: 24px;
@@ -143,21 +149,21 @@
 
 /* --- Semantic Tokens (Sonagi Core) --- */
 :root, [data-theme="light"], [data-theme="sonagi-core"] {
-  --sng-color-brand-primary: #1991B9;
-  --sng-color-brand-primary-hover: #1275b5;
-  --sng-color-brand-accent: #db6c66;
-  --sng-color-brand-accent-hover: #b94644;
+  --sng-color-brand-primary: #47211b;
+  --sng-color-brand-primary-hover: #38130e;
+  --sng-color-brand-accent: #d2645f;
+  --sng-color-brand-accent-hover: #b44240;
   --sng-color-brand-cyan: #00ffcc;
   --sng-color-brand-ink: #47211b;
   --sng-color-background-base: #fcf2f0;
   --sng-color-background-surface: #f5e5e2;
-  --sng-color-background-elevated: #ffffff;
+  --sng-color-background-elevated: #fefaf9;
   --sng-color-text-primary: #1e1311;
   --sng-color-text-secondary: #614f4b;
-  --sng-color-text-muted: #7c6c6a;
+  --sng-color-text-muted: #756563;
   --sng-color-text-disabled: #9d8986;
-  --sng-color-text-inverse: #ffffff;
-  --sng-color-border-default: #9d8986;
+  --sng-color-text-inverse: #fcf2f0;
+  --sng-color-border-default: #95817f;
   --sng-color-border-subtle: #d7c5c2;
   --sng-color-border-strong: #47211b;
   --sng-color-state-info: #1275b5;
@@ -166,102 +172,84 @@
   --sng-color-state-success-bg: #eaf4eb;
   --sng-color-state-warning: #d29922;
   --sng-color-state-warning-bg: #fdf5e5;
-  --sng-color-state-error: #c83e4d;
-  --sng-color-state-error-bg: #fde8e8;
+  --sng-color-state-danger: #c83e4d;
+  --sng-color-state-danger-bg: #fde8e8;
+  --sng-color-state-error: var(--sng-color-state-danger);
+  --sng-color-state-error-bg: var(--sng-color-state-danger-bg);
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(40,20,15,0.08);
   --sng-shadow-floating: 0 8px 24px rgba(40,20,15,0.15);
-  --sng-shadow-focus: 0 0 0 3px rgba(185,70,68,0.3);
+  --sng-shadow-focus: 0 0 0 3px rgba(180,66,64,0.3);
 }
 
 [data-theme="dark"] {
-  --sng-color-brand-primary: #58a6ff;
-  --sng-color-brand-primary-hover: #79c0ff;
-  --sng-color-brand-accent: #ff7b72;
-  --sng-color-brand-accent-hover: #ff7b72;
+  --sng-color-brand-primary: #eeb4a9;
+  --sng-color-brand-primary-hover: #ffc6bc;
+  --sng-color-brand-accent: #e5867f;
+  --sng-color-brand-accent-hover: #f7a7a1;
   --sng-color-brand-cyan: #00ffcc;
-  --sng-color-brand-ink: #47211b;
-  --sng-color-background-base: #010609;
-  --sng-color-background-surface: #0d1117;
-  --sng-color-background-elevated: #161b22;
-  --sng-color-text-primary: #f0f6fc;
-  --sng-color-text-secondary: #8b949e;
-  --sng-color-text-muted: #6e7681;
-  --sng-color-text-disabled: #8b949e;
-  --sng-color-text-inverse: #0d1117;
-  --sng-color-border-default: #8b949e;
-  --sng-color-border-subtle: #30363d;
-  --sng-color-border-strong: #58a6ff;
+  --sng-color-brand-ink: #eeb4a9;
+  --sng-color-background-base: #1c1412;
+  --sng-color-background-surface: #2c201e;
+  --sng-color-background-elevated: #392e2c;
+  --sng-color-text-primary: #f7eeec;
+  --sng-color-text-secondary: #c3b4b1;
+  --sng-color-text-muted: #988a88;
+  --sng-color-text-disabled: #6c605e;
+  --sng-color-text-inverse: #1c1412;
+  --sng-color-border-default: #796966;
+  --sng-color-border-subtle: #392d2b;
+  --sng-color-border-strong: #eeb4a9;
   --sng-color-state-info: #79c0ff;
   --sng-color-state-info-bg: #1c2d42;
   --sng-color-state-success: #56d364;
   --sng-color-state-success-bg: #132e19;
   --sng-color-state-warning: #e3b341;
   --sng-color-state-warning-bg: #2e2305;
-  --sng-color-state-error: #f85149;
-  --sng-color-state-error-bg: #421818;
+  --sng-color-state-danger: #f85149;
+  --sng-color-state-danger-bg: #421818;
+  --sng-color-state-error: var(--sng-color-state-danger);
+  --sng-color-state-error-bg: var(--sng-color-state-danger-bg);
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
   --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
-  --sng-shadow-focus: 0 0 0 3px rgba(88,166,255,0.3);
+  --sng-shadow-focus: 0 0 0 3px rgba(238,180,169,0.35);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="desk-analyst"]) {
-    --sng-color-brand-primary: #58a6ff;
-    --sng-color-brand-primary-hover: #79c0ff;
-    --sng-color-brand-accent: #ff7b72;
-    --sng-color-brand-accent-hover: #ff7b72;
+  :root:not([data-theme="light"]) {
+    --sng-color-brand-primary: #eeb4a9;
+    --sng-color-brand-primary-hover: #ffc6bc;
+    --sng-color-brand-accent: #e5867f;
+    --sng-color-brand-accent-hover: #f7a7a1;
     --sng-color-brand-cyan: #00ffcc;
-    --sng-color-brand-ink: #47211b;
-    --sng-color-background-base: #010609;
-    --sng-color-background-surface: #0d1117;
-    --sng-color-background-elevated: #161b22;
-    --sng-color-text-primary: #f0f6fc;
-    --sng-color-text-secondary: #8b949e;
-    --sng-color-text-muted: #6e7681;
-    --sng-color-text-disabled: #8b949e;
-    --sng-color-text-inverse: #0d1117;
-    --sng-color-border-default: #8b949e;
-    --sng-color-border-subtle: #30363d;
-    --sng-color-border-strong: #58a6ff;
+    --sng-color-brand-ink: #eeb4a9;
+    --sng-color-background-base: #1c1412;
+    --sng-color-background-surface: #2c201e;
+    --sng-color-background-elevated: #392e2c;
+    --sng-color-text-primary: #f7eeec;
+    --sng-color-text-secondary: #c3b4b1;
+    --sng-color-text-muted: #988a88;
+    --sng-color-text-disabled: #6c605e;
+    --sng-color-text-inverse: #1c1412;
+    --sng-color-border-default: #796966;
+    --sng-color-border-subtle: #392d2b;
+    --sng-color-border-strong: #eeb4a9;
     --sng-color-state-info: #79c0ff;
     --sng-color-state-info-bg: #1c2d42;
     --sng-color-state-success: #56d364;
     --sng-color-state-success-bg: #132e19;
     --sng-color-state-warning: #e3b341;
     --sng-color-state-warning-bg: #2e2305;
-    --sng-color-state-error: #f85149;
-    --sng-color-state-error-bg: #421818;
+    --sng-color-state-danger: #f85149;
+    --sng-color-state-danger-bg: #421818;
+    --sng-color-state-error: var(--sng-color-state-danger);
+    --sng-color-state-error-bg: var(--sng-color-state-danger-bg);
     --sng-shadow-flat: none;
     --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
     --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
-    --sng-shadow-focus: 0 0 0 3px rgba(88,166,255,0.3);
+    --sng-shadow-focus: 0 0 0 3px rgba(238,180,169,0.35);
   }
 }
 
 /* --- Theme Overrides --- */
-/* Theme: The Desk Analyst */
-[data-theme="desk-analyst"] {
-  --sng-color-brand-primary: #2563EB;
-  --sng-color-brand-primary-hover: #1D4ED8;
-  --sng-color-bg-base: #FFFFFF;
-  --sng-color-bg-surface: #F9FAFB;
-  --sng-color-border-default: #E5E7EB;
-  --sng-color-text-primary: #111827;
-  --sng-color-text-secondary: #4B5563;
-  --sng-color-text-muted: #9CA3AF;
-  --sng-font-sans: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --sng-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --sng-line-height-normal: 1.6;
-  --sng-spacing-1: 4px;
-  --sng-spacing-2: 8px;
-  --sng-spacing-4: 16px;
-  --sng-spacing-6: 24px;
-  --sng-spacing-8: 32px;
-  --sng-radius-sm: 4px;
-  --sng-radius-md: 6px;
-  --sng-radius-lg: 8px;
-  --sng-radius-full: 9999px;
-}
-

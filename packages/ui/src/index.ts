@@ -17,4 +17,6 @@ export { TableOfContents } from './components/TableOfContents';
 export type { TableOfContentsProps, TOCHeading } from './components/TableOfContents';
 export { Wordmark } from './components/Wordmark';
 export type { WordmarkProps } from './components/Wordmark';
+export { SonagiLogo } from './components/SonagiLogo';
+export type { SonagiLogoProps } from './components/SonagiLogo';
 export * from './components/Agent';
