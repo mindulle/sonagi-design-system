@@ -35,12 +35,12 @@ async function createFormComposition() {
   if (tokens.bg.surface) formComp.fills = [bindColor(tokens.bg.surface)];
   if (tokens.border.default) { formComp.strokes = [bindColor(tokens.border.default)]; formComp.strokeWeight = 1; }
 
-  const header = figma.createFrame(); header.name = "Header"; header.layoutMode = "VERTICAL"; header.layoutAlign = "STRETCH"; header.fills = []; header.itemSpacing = 8;
+  const header = figma.createFrame(); header.name = "Header"; header.layoutMode = "VERTICAL"; header.layoutAlign = "STRETCH"; header.fills = []; header.itemSpacing = 8; header.primaryAxisSizingMode = "AUTO";
   const title = figma.createText(); title.characters = "Welcome back"; title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 24; if (tokens.text.primary) title.fills = [bindColor(tokens.text.primary)];
   const sub = figma.createText(); sub.characters = "Please enter your details to sign in."; sub.fontName = { family: "Inter", style: "Regular" }; sub.fontSize = 14; if (tokens.text.secondary) sub.fills = [bindColor(tokens.text.secondary)];
   header.appendChild(title); header.appendChild(sub); formComp.appendChild(header);
 
-  const inputGroup = figma.createFrame(); inputGroup.name = "Input Group"; inputGroup.layoutMode = "VERTICAL"; inputGroup.layoutAlign = "STRETCH"; inputGroup.fills = []; inputGroup.itemSpacing = 16;
+  const inputGroup = figma.createFrame(); inputGroup.name = "Input Group"; inputGroup.layoutMode = "VERTICAL"; inputGroup.layoutAlign = "STRETCH"; inputGroup.fills = []; inputGroup.itemSpacing = 16; inputGroup.primaryAxisSizingMode = "AUTO";
   if (masterInput) {
     const emailInput = masterInput.createInstance(); emailInput.layoutAlign = "STRETCH";
     try { const emailLabel = emailInput.findOne(n => n.type === "TEXT" && n.name === "Label"); if (emailLabel) { await figma.loadFontAsync(emailLabel.fontName); emailLabel.characters = "Email Address"; } } catch(e){}
@@ -53,7 +53,7 @@ async function createFormComposition() {
   }
   formComp.appendChild(inputGroup);
 
-  const optionsRow = figma.createFrame(); optionsRow.name = "Options"; optionsRow.layoutMode = "HORIZONTAL"; optionsRow.layoutAlign = "STRETCH"; optionsRow.primaryAxisAlignItems = "SPACE_BETWEEN"; optionsRow.fills = [];
+  const optionsRow = figma.createFrame(); optionsRow.name = "Options"; optionsRow.layoutMode = "HORIZONTAL"; optionsRow.layoutAlign = "STRETCH"; optionsRow.primaryAxisAlignItems = "SPACE_BETWEEN"; optionsRow.fills = []; optionsRow.counterAxisSizingMode = "AUTO"; optionsRow.counterAxisAlignItems = "CENTER";
   if (masterCheckbox) {
     const checkbox = masterCheckbox.createInstance();
     try { const cbLabel = checkbox.findOne(n => n.type === "TEXT" && n.name === "Label"); if (cbLabel) { await figma.loadFontAsync(cbLabel.fontName); cbLabel.characters = "Remember me"; } } catch(e){}
