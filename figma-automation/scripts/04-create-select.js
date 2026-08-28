@@ -75,11 +75,11 @@ async function createSelectComponent() {
       field.resize(320, heights[size]); 
       field.cornerRadius = 6;
 
-      let fillVar = tokens.bg.base, strokeVar = tokens.border.default, strokeWeight = 1;
+      let fillVar = tokens.bg.surface, strokeVar = tokens.border.default, strokeWeight = 1;
       if (state === "Hover") strokeVar = tokens.border.strong;
       if (state === "Focused") { strokeVar = tokens.brand.primary; strokeWeight = 2; }
       if (state === "Danger") { strokeVar = tokens.state.danger; strokeWeight = 2; }
-      if (state === "Disabled") { fillVar = tokens.bg.surface; strokeVar = null; }
+      if (state === "Disabled") { fillVar = tokens.bg.base; strokeVar = null; }
 
       if (fillVar) field.fills = [bindColor(fillVar)];
       if (strokeVar) { 
