@@ -44,7 +44,7 @@ async function createToastComponent() {
     else if (type === "Warning") iconMark.vectorPaths = [{ windingRule: "NONE", data: "M 8 3 L 8 9 M 8 13 L 8 13.5" }];
     else iconMark.vectorPaths = [{ windingRule: "NONE", data: "M 8 3 L 8 3.5 M 8 7 L 8 13" }];
     if (tokens.text.inverse) { iconMark.strokes = [bindColor(tokens.text.inverse)]; iconMark.strokeWeight = 2; iconMark.strokeCap = "ROUND"; iconMark.strokeJoin = "ROUND"; }
-    iconMark.resize(16, 16); iconWrapper.appendChild(iconMark); comp.appendChild(iconWrapper);
+      iconWrapper.appendChild(iconMark); comp.appendChild(iconWrapper);
 
     const textGroup = figma.createFrame(); textGroup.name = "Content"; textGroup.layoutMode = "VERTICAL"; textGroup.layoutGrow = 1; textGroup.fills = []; textGroup.itemSpacing = 4;
     const title = figma.createText(); title.name = "Title"; title.characters = `${type} message`; title.fontName = { family: "Inter", style: "Medium" }; title.fontSize = 14;
