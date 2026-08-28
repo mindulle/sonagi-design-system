@@ -39,7 +39,7 @@ async function createModalComponent() {
     comp.effects = [{ type: "DROP_SHADOW", color: { r: 0, g: 0, b: 0, a: 0.15 }, offset: { x: 0, y: 8 }, radius: 24, spread: 0, visible: true, blendMode: "NORMAL" }];
 
     const header = figma.createFrame(); header.name = "Header"; header.layoutMode = "HORIZONTAL"; header.layoutAlign = "STRETCH"; header.primaryAxisAlignItems = "SPACE_BETWEEN"; header.counterAxisAlignItems = "CENTER"; header.fills = []; header.counterAxisSizingMode = "AUTO";
-    const title = figma.createText(); title.name = "Title"; title.characters = type === "Destructive" ? "Delete Account" : "Save Changes"; title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 18;
+    const title = figma.createText(); title.name = "Title"; title.characters = type === "Destructive" ? "Delete Account" : "Save Changes"; title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 18; title.layoutGrow = 1;
     let titleColor = type === "Destructive" && tokens.state.danger ? tokens.state.danger : tokens.text.primary;
     if (titleColor) title.fills = [bindColor(titleColor)]; header.appendChild(title);
     const iconWrapper = figma.createFrame(); iconWrapper.name = "Icon Wrapper"; iconWrapper.resize(24, 24); iconWrapper.fills = []; iconWrapper.layoutMode = "HORIZONTAL"; iconWrapper.primaryAxisAlignItems = "CENTER"; iconWrapper.counterAxisAlignItems = "CENTER";
