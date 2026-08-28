@@ -2,7 +2,29 @@
 
 > Category: Korean Product
 
-Dark-navy foundation, rain-blue accent, warm off-white surface. Built for Korean-first products that run at the intersection of analytics and editorial — think data dashboards that still feel human. Two modes: **Sonagi Core** (warm light / deep dark) and **Desk Analyst** (clinical light, high-contrast data).
+## 🎯 Figma SSOT (정본)
+
+| | |
+| --- | --- |
+| **파일** | `Sonagi Design System V3` |
+| **키** | `AEoW19jmlUh3rFgzhhV1vH` |
+| **URL** | https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3 |
+| **Foundations 보드** | node `198:2974` — "Sonagi Foundations (SSOT Live Sync)" |
+
+**이 파일이 유일한 디자인 정본입니다.** 아래 두 파일은 폐기된 이력이므로 참조하지 마십시오.
+
+| 폐기된 파일 | 키 | 상태 |
+| --- | --- | --- |
+| `Core-Primitives-v3` | `1hgAgnMvqn2uCF8i45Do4x` | `Test Page` 한 장짜리 스크래치. Button 매트릭스 + 다크모드 테스트 보드만 존재 |
+| `소나기 디자인 시스템` | `KN6Bl6Pb4aW2KJXpBhS7rZ` | 2026-04-30 이후 방치. ADR 0001에서 방향 불일치로 판정됨 |
+
+> ⚠️ `packages/ui/src/components/**/*.figma.tsx` (Code Connect) 5개는 아직 폐기된 `1hgAgnMvqn2uCF8i45Do4x` 를 가리키고 있으며 속성 매핑도 실제 스펙과 불일치합니다. 처리 방향 미결정 (ADR 0010 후속 참조).
+
+## 개요
+
+Built for Korean-first products that run at the intersection of analytics and editorial — think data dashboards that still feel human. 단일 테마 **가을 소나기(Sonagi Core)** 의 light / dark 2모드로 구성됩니다.
+
+> ⚠️ 아래 "Visual Theme" 및 "Color Palette" 절은 가을 소나기 팔레트 전환(현행 semantic: `brand-primary #47211b`, `brand-accent #d2645f`, `background-base #fcf2f0`) 이전에 작성된 것으로 **현행 토큰과 불일치**합니다. 색상 정본은 Figma Foundations 보드와 `packages/tokens/tokens/semantics.json` 입니다. 재작성 필요.
 
 ## Visual Theme & Atmosphere
 
@@ -38,13 +60,9 @@ Quiet depth. The brand lives in the deep navy (`#1c2c4d`) and surfaces upward th
 - **Border default:** `#30363d`
 - Same accent and state colors as light
 
-**Desk Analyst theme** (`[data-theme="desk-analyst"]`)
+There are no other themes. `sonagi-core` (light) and `dark` are the only valid values for `data-theme` — the token set is 2-Tier (primitives → semantics) until the 겨울 소나기 theme is introduced. See [ADR 0010](./decisions/0010-delivery-consolidation-github-packages.md).
 
-- Clinical white (`#FFFFFF`) base, blue-600 primary (`#2563EB`)
-- Tight radius (`sm: 4px`, `md: 6px`, `lg: 8px`) for dense data UI
-- Higher line-height body: `1.6` for readability in long tables
-
-Do not mix themes. Never use `#00ffcc` outside the wordmark context.
+Never use `#00ffcc` outside the wordmark context.
 
 ## Typography Rules
 
@@ -68,7 +86,7 @@ Do not mix themes. Never use `#00ffcc` outside the wordmark context.
 - **Inputs:** `border-radius: 8px` (`--sng-radius-md`), 1px border, accent border + `shadow-focus` on focus. Height: 40px.
 - **Badges / Tags:** `border-radius: 9999px` (`--sng-radius-full`) for status pills; `border-radius: 4px` (`--sng-radius-sm`) for category labels.
 - **Links:** accent blue, no underline, underline on hover. Visited state stays accent.
-- **Tables (Desk Analyst):** Zebra striping with `--sng-color-bg-surface` on odd rows. Mono font for numeric columns.
+- **Tables:** Zebra striping with `--sng-color-background-surface` on odd rows. Mono font for numeric columns.
 
 ## Layout Principles
 
@@ -98,7 +116,6 @@ Z-index ladder: base 0 · raised 10 · dropdown 100 · sticky 200 · modal 300 �
 - Korean copy: sentence-case. English copy: sentence-case headings, title-case for proper nouns only.
 - Motion: `150ms` base (`--sng-duration-base`), `cubic-bezier(0.4, 0, 0.2, 1)` (`--sng-ease-default`). Fast interactions: `100ms`. No motion over `250ms` for UI feedback.
 - Do not use `#00ffcc` (logo cyan) anywhere except the wordmark SVG.
-- Do not mix `desk-analyst` theme components with `sonagi-core` components in the same view.
 - Do not use drop shadows on inputs. Use border + focus ring instead.
 - No gradients except a subtle `brand-primary → brand-primary-dark` on hero banners, used sparingly.
 - No neumorphism. No glassmorphism.
@@ -125,8 +142,10 @@ Z-index ladder: base 0 · raised 10 · dropdown 100 · sticky 200 · modal 300 �
 ## Agent Prompt Guide
 
 - Tokens are available as CSS custom properties prefixed `--sng-*`. Use semantic tokens (`--sng-color-bg-base`, `--sng-color-text-primary`) over primitives (`--sng-color-neutral-100`).
-- The CDN stylesheet is at `https://design.sonagi.space/variables.css` — link it in the `<head>` of any HTML artifact.
-- Default to **Sonagi Core** (light). Apply `data-theme="dark"` to `<html>` for dark mode. Apply `data-theme="desk-analyst"` for data-dense dashboard artifacts.
-- When creating a prototype, add `<link rel="stylesheet" href="https://design.sonagi.space/variables.css">` and reference only `--sng-*` variables. Do not invent new hex values.
+- **Distribution is GitHub Packages only** (see ADR 0010). Install `@mindulle/tokens` from `https://npm.pkg.github.com` and import the stylesheet via the package export:
+  - Bundled apps: `import '@mindulle/tokens/css';`
+  - Plain HTML artifacts: link the installed file, e.g. `<link rel="stylesheet" href="./node_modules/@mindulle/tokens/dist/variables.css">`
+- **There is no public CDN for tokens.** Do not link `design.sonagi.space` — that host serves an unrelated SPA and returns HTML for every path, so a stylesheet link there fails silently.
+- Default to **Sonagi Core** (light). Apply `data-theme="dark"` to `<html>` for dark mode. No other themes exist yet — the token set is intentionally 2-Tier (primitives → semantics) until the 겨울 소나기 theme is introduced (ADR 0010).
 - If a color is needed outside the palette, surface a comment `/* WARNING: color outside sonagi palette */` and use the nearest semantic token as a fallback.
 - Pretendard must be loaded from CDN: `https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css`

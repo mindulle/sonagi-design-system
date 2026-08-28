@@ -1,5 +1,12 @@
 # ADR 0005: Package Distribution Strategy for Sonagi Design System
 
+> **Status: SUPERSEDED by [ADR 0010](./0010-delivery-consolidation-github-packages.md) (2026-08-28).**
+>
+> This ADR ranked Git Submodule 1st, Cloudflare CDN 2nd, and GitHub Packages 3rd. Reality inverted that ranking:
+> the Submodule path was never used, the `design.sonagi.space` CDN never served CSS, and GitHub Packages became
+> the only working channel (`@mindulle/tokens` 1.1.1 → 1.8.0, `@mindulle/ui` 1.2.0 → 1.3.0 all shipped through it).
+> Retained for historical context only. **Do not follow the recommendations below.**
+
 ## Context
 
 사내 모노레포(`sonagi-design-system`)에 Figma v3.0 스펙을 동기화한 후, 이를 외부 블로그(KMS) 등 타 프로젝트에서 어떻게 참조하고 사용할 것인지에 대한 배포 방식 결정이 필요했습니다. 초기에 NPM 공개 레지스트리(NPM Registry) 배포를 기본값으로 고려했으나, 인증 토큰(NPM_TOKEN) 발급 및 유지 비용, 그리고 비공개 사내 자산의 보안 유지 관점에서 최적의 옵션을 검토했습니다.
