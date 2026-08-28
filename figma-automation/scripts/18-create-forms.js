@@ -53,7 +53,7 @@ async function createFormComposition() {
   }
   formComp.appendChild(inputGroup);
 
-  const optionsRow = figma.createFrame(); optionsRow.name = "Options"; optionsRow.layoutMode = "HORIZONTAL"; optionsRow.layoutAlign = "STRETCH"; optionsRow.primaryAxisAlignItems = "SPACE_BETWEEN"; optionsRow.fills = []; optionsRow.counterAxisSizingMode = "AUTO"; optionsRow.counterAxisAlignItems = "CENTER";
+  const optionsRow = figma.createFrame(); optionsRow.name = "Options"; optionsRow.layoutMode = "HORIZONTAL"; optionsRow.layoutAlign = "STRETCH"; optionsRow.primaryAxisAlignItems = "SPACE_BETWEEN"; optionsRow.fills = []; optionsRow.counterAxisSizingMode = "AUTO"; optionsRow.counterAxisAlignItems = "CENTER"; optionsRow.primaryAxisSizingMode = "FIXED";
   if (masterCheckbox) {
     const checkbox = masterCheckbox.createInstance();
     try { const cbLabel = checkbox.findOne(n => n.type === "TEXT" && n.name === "Label"); if (cbLabel) { await figma.loadFontAsync(cbLabel.fontName); cbLabel.characters = "Remember me"; } } catch(e){}
