@@ -4,61 +4,66 @@
 
 ## 🎯 Figma SSOT (정본)
 
-| | |
-| --- | --- |
-| **파일** | `Sonagi Design System V3` |
-| **키** | `AEoW19jmlUh3rFgzhhV1vH` |
-| **URL** | https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3 |
-| **Foundations 보드** | node `198:2974` — "Sonagi Foundations (SSOT Live Sync)" |
+|                      |                                                                             |
+| -------------------- | --------------------------------------------------------------------------- |
+| **파일**             | `Sonagi Design System V3`                                                   |
+| **키**               | `AEoW19jmlUh3rFgzhhV1vH`                                                    |
+| **URL**              | https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3 |
+| **Foundations 보드** | node `198:2974` — "Sonagi Foundations (SSOT Live Sync)"                     |
 
 **이 파일이 유일한 디자인 정본입니다.** 아래 두 파일은 폐기된 이력이므로 참조하지 마십시오.
 
-| 폐기된 파일 | 키 | 상태 |
-| --- | --- | --- |
-| `Core-Primitives-v3` | `1hgAgnMvqn2uCF8i45Do4x` | `Test Page` 한 장짜리 스크래치. Button 매트릭스 + 다크모드 테스트 보드만 존재 |
-| `소나기 디자인 시스템` | `KN6Bl6Pb4aW2KJXpBhS7rZ` | 2026-04-30 이후 방치. ADR 0001에서 방향 불일치로 판정됨 |
-
-> ⚠️ `packages/ui/src/components/**/*.figma.tsx` (Code Connect) 5개는 아직 폐기된 `1hgAgnMvqn2uCF8i45Do4x` 를 가리키고 있으며 속성 매핑도 실제 스펙과 불일치합니다. 처리 방향 미결정 (ADR 0010 후속 참조).
+| 폐기된 파일            | 키                       | 상태                                                                          |
+| ---------------------- | ------------------------ | ----------------------------------------------------------------------------- |
+| `Core-Primitives-v3`   | `1hgAgnMvqn2uCF8i45Do4x` | `Test Page` 한 장짜리 스크래치. Button 매트릭스 + 다크모드 테스트 보드만 존재 |
+| `소나기 디자인 시스템` | `KN6Bl6Pb4aW2KJXpBhS7rZ` | 2026-04-30 이후 방치. ADR 0001에서 방향 불일치로 판정됨                       |
 
 ## 개요
 
 Built for Korean-first products that run at the intersection of analytics and editorial — think data dashboards that still feel human. 단일 테마 **가을 소나기(Sonagi Core)** 의 light / dark 2모드로 구성됩니다.
 
-> ⚠️ 아래 "Visual Theme" 및 "Color Palette" 절은 가을 소나기 팔레트 전환(현행 semantic: `brand-primary #47211b`, `brand-accent #d2645f`, `background-base #fcf2f0`) 이전에 작성된 것으로 **현행 토큰과 불일치**합니다. 색상 정본은 Figma Foundations 보드와 `packages/tokens/tokens/semantics.json` 입니다. 재작성 필요.
-
 ## Visual Theme & Atmosphere
 
-Quiet depth. The brand lives in the deep navy (`#1c2c4d`) and surfaces upward through warm off-whites (`#faf9f7`, `#fff8f2`). The cyan logo accent (`#00ffcc`) is reserved for the wordmark only — never used as a UI accent. Rain blue (`#4A90E2`) is the single interactive accent. Typography is Pretendard-first with Inter fallback; Korean and Latin share the same optical weight.
+Quiet depth. The brand lives in the deep and warm brownish tones (`#47211b`) and surfaces upward through warm off-whites (`#fcf2f0`, `#f5e5e2`). The cyan logo accent (`#00ffcc`) is reserved for the wordmark only — never used as a UI accent. A muted brick red (`#d2645f`) serves as the single interactive accent. Typography is Pretendard-first with Inter fallback; Korean and Latin share the same optical weight.
 
 ## Color Palette & Roles
 
 **Sonagi Core (light mode)**
 
-- **Background base:** `#faf9f7` — warm off-white, never pure white
-- **Surface:** `#fff8f2` — cards, panels
-- **Elevated:** `#ffffff` — modals, popovers
-- **Brand primary:** `#1c2c4d` — deep navy, main CTA fill, sidebar, header
-- **Brand primary hover:** `#1275b5`
-- **Accent:** `#4A90E2` — links, focused borders, interactive highlights; one accent per screen
-- **Accent hover:** `#2a6bbf`
+- **Background base:** `#fcf2f0` — warm off-white, never pure white
+- **Surface:** `#f5e5e2` — cards, panels, input forms
+- **Elevated:** `#fefaf9` — modals, popovers, tooltips
+- **Brand primary:** `#47211b` — deep warm brown, main CTA fill, active elements
+- **Brand primary hover:** `#38130e`
+- **Accent:** `#d2645f` — links, focused borders, interactive highlights; one accent per screen
+- **Accent hover:** `#b44240`
 - **Logo cyan:** `#00ffcc` — wordmark dot only; never used as UI color
-- **Text primary:** `#0d1117`
-- **Text secondary:** `#30363d`
-- **Text muted:** `#8b949e`
-- **Text disabled:** `#c9d1d9`
-- **Border default:** `#e6eaef`
-- **Border subtle:** `#f0ede8`
-- **Border strong:** `#1c2c4d`
-- **Success:** `#2ea043` / **Warning:** `#d29922` / **Error:** `#f85149` / **Info:** `#4A90E2`
+- **Text primary:** `#1e1311`
+- **Text secondary:** `#614f4b`
+- **Text muted:** `#756563`
+- **Text disabled:** `#9d8986`
+- **Border default:** `#95817f`
+- **Border subtle:** `#d7c5c2`
+- **Border strong:** `#47211b`
+- **Success:** `#2ea043` (`#eaf4eb` bg) / **Warning:** `#d29922` (`#fdf5e5` bg) / **Danger (Error):** `#c83e4d` (`#fde8e8` bg) / **Info:** `#1275b5` (`#e8f1f8` bg)
 
 **Dark mode** (`[data-theme="dark"]` or `prefers-color-scheme: dark`)
 
-- **Background base:** `#010609` — near-black
-- **Surface:** `#0d1117`
-- **Elevated:** `#161b22`
-- **Text primary:** `#f0f6fc`
-- **Border default:** `#30363d`
-- Same accent and state colors as light
+- **Background base:** `#1c1412` — near-black warm
+- **Surface:** `#2c201e`
+- **Elevated:** `#392e2c`
+- **Brand primary:** `#eeb4a9`
+- **Brand primary hover:** `#ffc6bc`
+- **Accent:** `#e5867f`
+- **Accent hover:** `#f7a7a1`
+- **Text primary:** `#f7eeec`
+- **Text secondary:** `#c3b4b1`
+- **Text muted:** `#988a88`
+- **Text disabled:** `#6c605e`
+- **Border default:** `#796966`
+- **Border subtle:** `#392d2b`
+- **Border strong:** `#eeb4a9`
+- **Success:** `#56d364` (`#132e19` bg) / **Warning:** `#e3b341` (`#2e2305` bg) / **Danger (Error):** `#f85149` (`#421818` bg) / **Info:** `#79c0ff` (`#1c2d42` bg)
 
 There are no other themes. `sonagi-core` (light) and `dark` are the only valid values for `data-theme` — the token set is 2-Tier (primitives → semantics) until the 겨울 소나기 theme is introduced. See [ADR 0010](./decisions/0010-delivery-consolidation-github-packages.md).
 
