@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss'
+
 export default {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -34,11 +35,14 @@ export default {
           info: 'var(--sng-color-state-info)',
           success: 'var(--sng-color-state-success)',
           warning: 'var(--sng-color-state-warning)',
-          error: 'var(--sng-color-state-error)',
+          danger: 'var(--sng-color-state-danger)',
           'info-bg': 'var(--sng-color-state-info-bg, #e8f1f8)',
           'success-bg': 'var(--sng-color-state-success-bg, #d4edda)',
           'warning-bg': 'var(--sng-color-state-warning-bg, #fff3cd)',
-          'error-bg': 'var(--sng-color-state-error-bg, #fde8e8)'
+          'danger-bg': 'var(--sng-color-state-danger-bg, #fde8e8)',
+          /* v1.7 compat */
+          error: 'var(--sng-color-state-danger)',
+          'error-bg': 'var(--sng-color-state-danger-bg, #fde8e8)',
         }
       },
       fontFamily: {
@@ -46,10 +50,22 @@ export default {
         serif: ['var(--sng-font-serif)'],
         mono: ['var(--sng-font-mono)'],
       },
+      spacing: {
+        'sng-gap-xs': 'var(--sng-space-gap-xs)',
+        'sng-gap-sm': 'var(--sng-space-gap-sm)',
+        'sng-gap-item': 'var(--sng-space-gap-item)',
+        'sng-gap-group': 'var(--sng-space-gap-group)',
+        'sng-gap-section': 'var(--sng-space-gap-section)',
+        'sng-container-sm': 'var(--sng-space-container-sm)',
+        'sng-container-md': 'var(--sng-space-container-md)',
+        'sng-container-lg': 'var(--sng-space-container-lg)',
+        'sng-container-page': 'var(--sng-space-container-page)',
+        'sng-element-py': 'var(--sng-space-element-py)',
+        'sng-element-px': 'var(--sng-space-element-px)',
+      },
       borderRadius: {
         none: 'var(--sng-radius-none)',
         sm: 'var(--sng-radius-sm)',
-        base: 'var(--sng-radius-base)',
         md: 'var(--sng-radius-md)',
         lg: 'var(--sng-radius-lg)',
         xl: 'var(--sng-radius-xl)',
@@ -59,6 +75,12 @@ export default {
         sm: 'var(--sng-shadow-raised)',
         md: 'var(--sng-shadow-floating)',
         focus: 'var(--sng-shadow-focus)',
+      },
+      opacity: {
+        'sng-hover': 'var(--sng-opacity-hover)',
+        'sng-pressed': 'var(--sng-opacity-pressed)',
+        'sng-disabled': 'var(--sng-opacity-disabled)',
+        'sng-overlay': 'var(--sng-opacity-overlay)',
       }
     },
   },

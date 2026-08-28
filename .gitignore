@@ -1,9 +1,17 @@
 node_modules/
 dist/
 *.log
+*.tgz
 .DS_Store
 .npmrc
 .turbo/
 
 *storybook.log
 storybook-static
+
+# Figma automation — track scripts only, not binary artifacts/assets
+figma-automation/artifacts/
+figma-automation/assets/
+
+# Vendor bundles (checked in separately if needed)
+packages/*/vendor/

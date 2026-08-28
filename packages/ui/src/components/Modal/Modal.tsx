@@ -26,22 +26,22 @@ export function Modal({
     <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-black opacity-sng-overlay backdrop-blur-sm transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Dialog Box */}
       <div
-        className={`relative z-[301] w-full max-w-lg overflow-hidden rounded-xl border border-border-default bg-bg-elevated p-6 shadow-lg transition-all ${className}`}
+        className={`relative z-[301] w-full max-w-lg overflow-hidden rounded-sng-xl border border-border-default bg-bg-elevated p-sng-container-lg shadow-lg transition-all flex flex-col gap-sng-group ${className}`}
         role="dialog"
         aria-modal="true"
       >
         {title && (
-          <div className="mb-2 flex items-center justify-between">
+          <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
             <button
               onClick={onClose}
-              className="rounded-md p-1 text-text-muted hover:bg-bg-surface hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+              className="rounded-sng-md p-sng-element-py text-text-muted hover:bg-bg-surface hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
               aria-label="Close modal"
             >
               ✕
@@ -50,13 +50,13 @@ export function Modal({
         )}
 
         {description && (
-          <p className="mb-4 text-sm text-text-muted">{description}</p>
+          <p className="text-sm text-text-muted">{description}</p>
         )}
 
-        <div className="py-2 text-text-primary">{children}</div>
+        <div className="text-text-primary">{children}</div>
 
         {footer && (
-          <div className="mt-6 flex items-center justify-end gap-3 border-t border-border-subtle pt-4">
+          <div className="flex items-center justify-end gap-sng-sm border-t border-border-subtle pt-sng-container-md">
             {footer}
           </div>
         )}

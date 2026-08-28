@@ -110,11 +110,11 @@
             "$value": "#fdf5e5",
             "$type": "color"
           },
-          "error": {
+          "danger": {
             "$value": "#c83e4d",
             "$type": "color"
           },
-          "error-bg": {
+          "danger-bg": {
             "$value": "#fde8e8",
             "$type": "color"
           }
@@ -224,11 +224,11 @@
             "$value": "#2e2305",
             "$type": "color"
           },
-          "error": {
+          "danger": {
             "$value": "#f85149",
             "$type": "color"
           },
-          "error-bg": {
+          "danger-bg": {
             "$value": "#421818",
             "$type": "color"
           }

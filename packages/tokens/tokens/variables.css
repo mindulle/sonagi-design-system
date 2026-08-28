@@ -1,6 +1,6 @@
 /**
  * Sonagi Design System — CSS Custom Properties
- * Generated automatically from JSON tokens v1.7.0
+ * Generated automatically from JSON tokens v1.8.0
  * Multi-Brand 3-Tier Architecture
  */
 
@@ -166,8 +166,8 @@
   --sng-color-state-success-bg: #eaf4eb;
   --sng-color-state-warning: #d29922;
   --sng-color-state-warning-bg: #fdf5e5;
-  --sng-color-state-error: #c83e4d;
-  --sng-color-state-error-bg: #fde8e8;
+  --sng-color-state-danger: #c83e4d;
+  --sng-color-state-danger-bg: #fde8e8;
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(40,20,15,0.08);
   --sng-shadow-floating: 0 8px 24px rgba(40,20,15,0.15);
@@ -198,8 +198,8 @@
   --sng-color-state-success-bg: #132e19;
   --sng-color-state-warning: #e3b341;
   --sng-color-state-warning-bg: #2e2305;
-  --sng-color-state-error: #f85149;
-  --sng-color-state-error-bg: #421818;
+  --sng-color-state-danger: #f85149;
+  --sng-color-state-danger-bg: #421818;
   --sng-shadow-flat: none;
   --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
   --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
@@ -231,8 +231,8 @@
     --sng-color-state-success-bg: #132e19;
     --sng-color-state-warning: #e3b341;
     --sng-color-state-warning-bg: #2e2305;
-    --sng-color-state-error: #f85149;
-    --sng-color-state-error-bg: #421818;
+    --sng-color-state-danger: #f85149;
+    --sng-color-state-danger-bg: #421818;
     --sng-shadow-flat: none;
     --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
     --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
