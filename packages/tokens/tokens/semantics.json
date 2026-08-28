@@ -40,7 +40,7 @@
             "$description": "가장 짙은 브랜드 컬러 (브랜드 배경 위에서 강한 대비를 주는 텍스트용)"
           }
         },
-        "background": {
+        "bg": {
           "base": {
             "$value": "#fcf2f0",
             "$type": "color",
@@ -186,7 +186,7 @@
             "$description": "가장 짙은 브랜드 컬러 (브랜드 배경 위에서 강한 대비를 주는 텍스트용)"
           }
         },
-        "background": {
+        "bg": {
           "base": {
             "$value": "#1c1412",
             "$type": "color",

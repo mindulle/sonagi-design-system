@@ -14,7 +14,7 @@ function ensureDir(dir) {
 }
 
 function getCssVarName(pathArray) {
-  let parts = [...pathArray];
+let parts = [...pathArray];
   if (parts[0] === 'tokens') {
      parts = parts.slice(1);
   }
@@ -35,16 +35,14 @@ function getCssVarName(pathArray) {
      else if (parts[1] === 'fontWeight') parts = ['font-weight', parts[2]];
      else if (parts[1] === 'lineHeight') parts = ['line-height', parts[2]];
      else if (parts[1] === 'letterSpacing') parts = ['letter-spacing', parts[2]];
-  } else if (parts[0] === 'borderRadius') {
-     parts = ['radius', parts[1]];
-  } else if (parts[0] === 'borderWidth') {
-     parts = ['border', parts[1]];
   } else if (parts[0] === 'transition') {
      if (parts[1] === 'duration') parts = ['duration', parts[2]];
      else if (parts[1] === 'easing') parts = ['ease', parts[2]];
   } else if (parts[0] === 'zIndex') {
      parts = ['z', parts[1]];
   }
+  
+  // No transformation needed for 'space', 'radius', 'opacity' as they naturally form --sng-space-gap-sm, etc.
   return `--sng-${parts.join('-')}`;
 }
 

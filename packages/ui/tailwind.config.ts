@@ -15,9 +15,9 @@ export default {
           cyan: 'var(--sng-color-brand-cyan)'
         },
         bg: {
-          base: 'var(--sng-color-background-base)',
-          surface: 'var(--sng-color-background-surface)',
-          elevated: 'var(--sng-color-background-elevated)',
+          base: 'var(--sng-color-bg-base)',
+          surface: 'var(--sng-color-bg-surface)',
+          elevated: 'var(--sng-color-bg-elevated)',
         },
         text: {
           primary: 'var(--sng-color-text-primary)',
@@ -51,11 +51,11 @@ export default {
         mono: ['var(--sng-font-mono)'],
       },
       spacing: {
-        'sng-gap-xs': 'var(--sng-space-gap-xs)',
-        'sng-gap-sm': 'var(--sng-space-gap-sm)',
-        'sng-gap-item': 'var(--sng-space-gap-item)',
-        'sng-gap-group': 'var(--sng-space-gap-group)',
-        'sng-gap-section': 'var(--sng-space-gap-section)',
+        'sng-xs': 'var(--sng-space-gap-xs)',
+        'sng-sm': 'var(--sng-space-gap-sm)',
+        'sng-item': 'var(--sng-space-gap-item)',
+        'sng-group': 'var(--sng-space-gap-group)',
+        'sng-section': 'var(--sng-space-gap-section)',
         'sng-container-sm': 'var(--sng-space-container-sm)',
         'sng-container-md': 'var(--sng-space-container-md)',
         'sng-container-lg': 'var(--sng-space-container-lg)',
@@ -64,12 +64,12 @@ export default {
         'sng-element-px': 'var(--sng-space-element-px)',
       },
       borderRadius: {
-        none: 'var(--sng-radius-none)',
-        sm: 'var(--sng-radius-sm)',
-        md: 'var(--sng-radius-md)',
-        lg: 'var(--sng-radius-lg)',
-        xl: 'var(--sng-radius-xl)',
-        full: 'var(--sng-radius-full)',
+        'sng-none': 'var(--sng-radius-none)',
+        'sng-sm': 'var(--sng-radius-sm)',
+        'sng-md': 'var(--sng-radius-md)',
+        'sng-lg': 'var(--sng-radius-lg)',
+        'sng-xl': 'var(--sng-radius-xl)',
+        'sng-full': 'var(--sng-radius-full)',
       },
       boxShadow: {
         sm: 'var(--sng-shadow-raised)',
