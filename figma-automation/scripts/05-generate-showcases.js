@@ -36,8 +36,8 @@ async function generateShowcases() {
 
   variants.forEach(variant => {
     const inst = variant.createInstance();
-    inst.x = lightSection.x + (master.type === "COMPONENT_SET" ? variant.x + 50 : 50); 
-    inst.y = lightSection.y + (master.type === "COMPONENT_SET" ? variant.y + 50 : 50);
+    inst.x = master.type === "COMPONENT_SET" ? variant.x + 50 : 50; 
+    inst.y = master.type === "COMPONENT_SET" ? variant.y + 50 : 50;
     lightSection.appendChild(inst);
   });
 
@@ -50,8 +50,8 @@ async function generateShowcases() {
 
   variants.forEach(variant => {
     const inst = variant.createInstance();
-    inst.x = darkSection.x + (master.type === "COMPONENT_SET" ? variant.x + 50 : 50); 
-    inst.y = darkSection.y + (master.type === "COMPONENT_SET" ? variant.y + 50 : 50);
+    inst.x = master.type === "COMPONENT_SET" ? variant.x + 50 : 50; 
+    inst.y = master.type === "COMPONENT_SET" ? variant.y + 50 : 50;
     darkSection.appendChild(inst);
   });
 
