@@ -35,7 +35,7 @@ async function createCardComponent() {
       comp.layoutMode = "VERTICAL";
       comp.primaryAxisSizingMode = "AUTO"; 
       comp.counterAxisSizingMode = "FIXED";
-      comp.resize(360, comp.height); 
+      comp.resize(360, 100); comp.primaryAxisSizingMode = "AUTO"; 
       comp.cornerRadius = 12; comp.clipsContent = true; comp.itemSpacing = 24;
       
       if (tokens.bg.surface) comp.fills = [bindColor(tokens.bg.surface)];
