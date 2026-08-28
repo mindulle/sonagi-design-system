@@ -116,7 +116,7 @@ async function createSelectComponent() {
         icon.strokeCap = "ROUND";
         icon.strokeJoin = "ROUND";
       }
-      icon.resize(20, 20);
+      icon.resize(10, 5);
       field.appendChild(icon);
 
       comp.appendChild(field);
