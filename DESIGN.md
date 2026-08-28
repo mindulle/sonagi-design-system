@@ -2,7 +2,29 @@
 
 > Category: Korean Product
 
-Dark-navy foundation, rain-blue accent, warm off-white surface. Built for Korean-first products that run at the intersection of analytics and editorial — think data dashboards that still feel human. Two modes: **Sonagi Core** (warm light / deep dark) and **Desk Analyst** (clinical light, high-contrast data).
+## 🎯 Figma SSOT (정본)
+
+| | |
+| --- | --- |
+| **파일** | `Sonagi Design System V3` |
+| **키** | `AEoW19jmlUh3rFgzhhV1vH` |
+| **URL** | https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3 |
+| **Foundations 보드** | node `198:2974` — "Sonagi Foundations (SSOT Live Sync)" |
+
+**이 파일이 유일한 디자인 정본입니다.** 아래 두 파일은 폐기된 이력이므로 참조하지 마십시오.
+
+| 폐기된 파일 | 키 | 상태 |
+| --- | --- | --- |
+| `Core-Primitives-v3` | `1hgAgnMvqn2uCF8i45Do4x` | `Test Page` 한 장짜리 스크래치. Button 매트릭스 + 다크모드 테스트 보드만 존재 |
+| `소나기 디자인 시스템` | `KN6Bl6Pb4aW2KJXpBhS7rZ` | 2026-04-30 이후 방치. ADR 0001에서 방향 불일치로 판정됨 |
+
+> ⚠️ `packages/ui/src/components/**/*.figma.tsx` (Code Connect) 5개는 아직 폐기된 `1hgAgnMvqn2uCF8i45Do4x` 를 가리키고 있으며 속성 매핑도 실제 스펙과 불일치합니다. 처리 방향 미결정 (ADR 0010 후속 참조).
+
+## 개요
+
+Built for Korean-first products that run at the intersection of analytics and editorial — think data dashboards that still feel human. 단일 테마 **가을 소나기(Sonagi Core)** 의 light / dark 2모드로 구성됩니다.
+
+> ⚠️ 아래 "Visual Theme" 및 "Color Palette" 절은 가을 소나기 팔레트 전환(현행 semantic: `brand-primary #47211b`, `brand-accent #d2645f`, `background-base #fcf2f0`) 이전에 작성된 것으로 **현행 토큰과 불일치**합니다. 색상 정본은 Figma Foundations 보드와 `packages/tokens/tokens/semantics.json` 입니다. 재작성 필요.
 
 ## Visual Theme & Atmosphere
 
@@ -64,7 +86,7 @@ Never use `#00ffcc` outside the wordmark context.
 - **Inputs:** `border-radius: 8px` (`--sng-radius-md`), 1px border, accent border + `shadow-focus` on focus. Height: 40px.
 - **Badges / Tags:** `border-radius: 9999px` (`--sng-radius-full`) for status pills; `border-radius: 4px` (`--sng-radius-sm`) for category labels.
 - **Links:** accent blue, no underline, underline on hover. Visited state stays accent.
-- **Tables (Desk Analyst):** Zebra striping with `--sng-color-bg-surface` on odd rows. Mono font for numeric columns.
+- **Tables:** Zebra striping with `--sng-color-background-surface` on odd rows. Mono font for numeric columns.
 
 ## Layout Principles
 

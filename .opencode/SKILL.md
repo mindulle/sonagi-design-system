@@ -2,15 +2,29 @@
 
 이 문서는 `sonagi-design-system` 리포지토리를 작업하는 Agent와 개발자를 위한 핵심 컨텍스트, 아키텍처 철학, 인프라스트럭처 가이드라인입니다.
 
+## 0. Figma SSOT (정본)
+
+| | |
+| --- | --- |
+| **파일** | `Sonagi Design System V3` |
+| **키** | `AEoW19jmlUh3rFgzhhV1vH` |
+| **Foundations** | node `198:2974` — "Sonagi Foundations (SSOT Live Sync)" |
+
+폐기된 파일: `1hgAgnMvqn2uCF8i45Do4x`(스크래치 Test Page), `KN6Bl6Pb4aW2KJXpBhS7rZ`(4월자 방치). **참조 금지.**
+
+읽기·검수용 PAT는 `~/.secrets/figma-pat` 에 있습니다. 환경변수 `FIGMA_TOKEN` 은 403이므로 사용하지 마십시오.
+
 ## 1. 아키텍처 철학 (Architecture Philosophy)
 
-본 디자인 시스템은 단순한 React UI 라이브러리가 아닙니다. **다양한 마이크로 SaaS, 사내 웹 플랫폼, 외부 블로그(Blogger, Tistory 등)**에 디자인의 일관성을 부여하는 '중앙 통제소'입니다.
+본 디자인 시스템은 단순한 React UI 라이브러리가 아닙니다. 여러 마이크로 SaaS와 사내 웹 플랫폼에 디자인 일관성을 부여하는 '중앙 통제소'입니다.
 
-- **Headless & Platform Agnostic:** 특정 프레임워크(React, Vue 등)에 종속되지 않습니다. 모든 디자인 토큰은 순수 CSS Custom Properties(`var(--...)`)로 컴파일되어야 합니다.
-- **Multi-Brand Support:** '소나기(Sonagi Core)' 테마뿐만 아니라 'The Desk Analyst', 'Eagle Gallery' 등 여러 독립 브랜드의 테마를 동시에 지원해야 합니다.
-- **Single Source of Truth:** 모든 디자인 파라미터(컬러, 폰트, 간격)는 `packages/tokens` 하위의 JSON 파일에서 출발하여 코드로 컴파일됩니다.
+- **토큰 계층이 계약이다:** Figma 정본이 규정하는 것은 컴포넌트 API가 아니라 **토큰과 시각 상태**입니다. 실제로 정본 파일에는 `TEXT`/`BOOLEAN`/`INSTANCE_SWAP` 컴포넌트 속성이 하나도 없고 VARIANT 축(`Size`/`Type`/`State`)만 존재하며, `State` 축은 `Hover`/`Active`/`Focused` 처럼 **CSS 의사클래스에 대응**하는 형태입니다. 따라서 여러 소비자가 공유하는 재사용 단위는 `--sng-*` 토큰이고, React 컴포넌트는 그 소비자 중 하나입니다.
+- **Headless & Platform Agnostic:** 토큰은 특정 프레임워크에 종속되지 않고 순수 CSS Custom Properties(`var(--sng-*)`)로 컴파일됩니다.
+- **Single Source of Truth:** 모든 디자인 파라미터는 Figma 정본 → `packages/tokens` 하위 JSON → 코드로 흐릅니다.
 
-## 2. 디자인 토큰 아키텍처 (3-Tier Token System)
+> **이력 정리:** 과거 이 문서는 "외부 블로그(Blogger, Tistory)에 우겨넣기" 를 플랫폼 무관성의 근거로 들었고, 그 때문에 컴포넌트를 순수 HTML/CSS로만 작성해야 한다는 제약이 파생됐습니다. 해당 전제는 폐기되었습니다(페이지를 직접 구현하는 방식으로 전환). 'The Desk Analyst', 'Eagle Gallery' 등 멀티브랜드 요구도 함께 폐기되었습니다(ADR 0009 / 0010). 컴포넌트 구현 기술 선택은 미결정 상태이며, 토큰 계층의 프레임워크 무관성만 유효합니다.
+
+## 2. 디자인 토큰 아키텍처 (2-Tier Token System)
 
 모든 토큰은 다음 3단계 계층을 통해 조립됩니다. 시스템 수정 시 이 위계를 반드시 지켜야 합니다.
 
