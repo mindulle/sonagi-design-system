@@ -124,11 +124,40 @@ pnpm --filter @mindulle/tokens test   # validate-tokens.js + vitest
 | BI 대시보드         | Evidence (Svelte) | `import '@mindulle/tokens/css'`         |
 | `@mindulle/ui`      | (워크스페이스)    | `@import '../../tokens/dist/variables.css'` |
 
-## ⚠️ 알려진 미해결 사항
+## 🔴 알려진 결함 — 토큰 배선 단절 (조사 완료, 수정 미착수)
 
-`tokens/` 아래 손작성 CSS 3개(`spacing.css`, `opacity.css`, `radius.css`)는 **생성물 `variables.css`에 통합되어 있지 않으며, 현재 아무 곳에서도 참조되지 않습니다.**
+`tokens/` 아래 손작성 CSS 3개(`spacing.css`, `opacity.css`, `radius.css`)는 **생성물 `variables.css`에 통합되어 있지 않고, `packages/ui/src/global.css`도 이들을 import 하지 않습니다** (`variables.css` 하나만 import).
 
-- `spacing.css`의 `--sng-space-gap-*` / `--sng-space-container-*` 는 `variables.css`의 `--sng-spacing-{0..24}` 와 **명명 체계가 다른 중복 정의**입니다.
-- `opacity.css`의 `--sng-opacity-*` 는 `variables.css`에 **대응 토큰이 아예 없습니다.**
+그런데 이 3개 파일은 버려진 잔재가 **아닙니다.** Figma 정본(`Sonagi Design System V3`, key `AEoW19jmlUh3rFgzhhV1vH`)의 Foundations 보드 "Sonagi Foundations (SSOT Live Sync)"와 **1:1로 일치하는 유일한 정의**입니다.
 
-`@mindulle/tokens/css` 만 import 하는 소비자는 이 토큰들을 받지 못합니다. 통합·삭제·유지 중 어느 쪽으로 갈지는 미결정 상태이므로, 새 컴포넌트에서 이 변수들을 **참조하지 마십시오.**
+| 항목 | Figma SSOT | 손작성 CSS | 생성물 `variables.css` (실제 배포됨) |
+| --- | --- | --- | --- |
+| Spacing | `space/gap/*`, `space/container/*`, `space/element/*` — 11개 | `spacing.css` — **11개 완전 일치** | `--sng-spacing-{0..24}` — **Figma에 없는 별개 체계** |
+| `radius/lg` | **16px** | 16px ✅ | **12px** ❌ |
+| `radius/xl` | **24px** | 24px ✅ | **16px** ❌ |
+| `radius/base` | 없음 (총 6개) | 없음 ✅ | **6px 존재** ❌ |
+| Opacity | (Foundations에 미등재) | `opacity.css` — 4개 | **전무** |
+| 배경색 | `bg/base`, `bg/surface`, `bg/elevated` | — | `--sng-color-**background**-*` (이름 불일치) |
+
+### 실제로 깨진 것
+
+`packages/ui/tailwind.config.ts`는 Figma SSOT 명명(`--sng-space-*`, `--sng-opacity-*`)에 유틸리티를 매핑해 두었으나 해당 변수가 로드되지 않아 **선언이 무효화**됩니다. 또한 컴포넌트 코드는 Tailwind 실제 키와 다른 제3의 규약(`rounded-sng-md`, `gap-sng-sm`)을 사용해 **클래스 자체가 생성되지 않습니다.**
+
+`npx tailwindcss` 실측 결과:
+
+| 클래스 | 사용처 | 결과 |
+| --- | --- | --- |
+| `rounded-sng-sm/md/lg/xl` | Button 3사이즈 전체, Modal | **미생성** (실제 키는 `sm`/`md`/`lg`/`xl`) → border-radius 없음 |
+| `gap-sng-sm`, `gap-sng-group` | Button base, Modal | **미생성** (실제 키는 `sng-gap-sm`) → gap 없음 |
+| `px-sng-element-px`, `py-sng-element-py` | Button md | 생성되나 `var(--sng-space-element-*)` **미정의** → padding 없음 |
+| `p-sng-container-lg`, `pt-sng-container-md` | Modal | 생성되나 변수 **미정의** |
+| `opacity-sng-overlay` | Modal 오버레이 | 생성되나 변수 **미정의** → 오버레이 불투명 |
+| `var(--sng-color-bg-*)` 직접 참조 | `global.css` 6곳 | 변수 **미정의** (실제는 `--sng-color-background-*`) |
+
+즉 **배포된 `@mindulle/ui`의 Button은 모든 사이즈에서 border-radius가 없고, md 사이즈는 padding도 없습니다.**
+
+### 수정 방향 (미결정)
+
+Figma가 SSOT이므로 **생성 파이프라인이 Figma 명명을 따라가야** 합니다 (`radius/lg=16px`, `space/gap/*`, `bg/*`). 다만 `--sng-radius-lg`, `--sng-spacing-*` 등은 이미 발행된 v1.8.0의 공개 API이므로 **breaking change**이며 별도 ADR과 major 릴리스가 필요합니다.
+
+**그때까지 새 컴포넌트에서 `--sng-space-*` / `--sng-opacity-*` / `--sng-color-bg-*` / `rounded-sng-*` / `gap-sng-*` 를 사용하지 마십시오.** 조용히 무효화됩니다.

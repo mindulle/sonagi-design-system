@@ -92,3 +92,18 @@ design-ops 거버넌스는 `primitives.json → semantics.json → themes/*.json
 - **Positive**: 테마가 1개인 동안 3계층 유지 비용을 지불하지 않으면서, 확장 지점은 코드에 그대로 남아 겨울 소나기 착수 시 재구현이 불필요하다.
 - **Negative**: GitHub Packages는 다운로드 시 인증을 요구하므로, 빌드 스텝이 없는 외부 정적 페이지에서 토큰을 즉시 수혈받을 수 없다. 해당 요구가 실제로 발생하면 신규 CDN 호스트를 별도 ADR로 신설한다.
 - **Follow-up**: `@mindulle/icons`, `@mindulle/discord-ui`는 `publishConfig`가 없고 `release.yml`에 job도 없어 영구 미배포 상태다. 배포 대상 편입 여부는 별도 판단이 필요하다.
+
+### 🔴 조사 중 발견한 별개 결함 — 토큰 배선 단절
+
+이 ADR의 범위(배포 채널)와 별개로, **Figma 정본과 배포되는 토큰이 어긋나 있고 그로 인해 `@mindulle/ui`의 Button/Modal이 실제로 깨져 있음**을 확인했다.
+
+Figma 정본은 `Sonagi Design System V3` (key `AEoW19jmlUh3rFgzhhV1vH`, lastModified 2026-08-28)이며, Foundations 보드가 스스로 "Sonagi Foundations (SSOT Live Sync)"라고 선언한다. 그런데:
+
+- `tokens/spacing.css`, `radius.css`는 이 Figma SSOT와 **1:1 일치**하지만 빌드 파이프라인과 `global.css` 어디에도 연결되지 않았다.
+- 실제 배포되는 `variables.css`는 `radius/lg`를 16px 대신 **12px**로, `radius/xl`을 24px 대신 **16px**로 내보내며, Figma에 없는 `radius/base`를 추가하고, spacing은 **완전히 다른 체계**(`--sng-spacing-{0..24}`)를 쓴다.
+- 배경색은 Figma `bg/*` ↔ 생성물 `--sng-color-background-*` ↔ 코드 참조 `--sng-color-bg-*` 로 **3중 불일치**한다.
+- 결과적으로 Button은 전 사이즈에서 border-radius가 없고 md 사이즈는 padding이 없다. Modal은 radius·gap이 없고 오버레이가 불투명하다.
+
+상세 실측 결과는 `packages/tokens/AGENTS.md`의 "알려진 결함" 절에 기록했다.
+
+**이 결함의 수정은 이 ADR에 포함하지 않는다.** `--sng-radius-lg` 등은 이미 발행된 v1.8.0의 공개 API이므로 Figma 명명으로 정렬하는 작업은 **breaking change**이며, 별도 ADR + major 릴리스로 다뤄야 한다. 또한 저장소의 Figma 참조가 모두 낡은 파일(Code Connect → `1hgAgnMvqn2uCF8i45Do4x`의 스크래치 `Test Page`, ADR 0001 → 4월자 `KN6Bl6Pb4aW2KJXpBhS7rZ`)을 가리키고 있어, **정본 파일 키를 저장소에 등록하는 작업이 선행**되어야 한다.
