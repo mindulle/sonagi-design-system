@@ -17,7 +17,7 @@ async function createListItemComponent() {
   await figma.setCurrentPageAsync(page);
 
   const avatarSet = figma.root.findOne(n => n.name === "Avatar" && n.type === "COMPONENT_SET");
-  const realAvatar = avatarSet ? (avatarSet.children.find(c => c.name.includes("Md")) || avatarSet.defaultVariant || avatarSet.children[0]) : null;
+  const realAvatar = avatarSet ? (avatarSet.children.find(c => c.name.includes("Size=Md") && c.name.includes("Type=Icon")) || avatarSet.defaultVariant || avatarSet.children[0]) : null;
 
   const types = ["Basic", "With Avatar", "With Action"];
   const states = ["Default", "Hover"];
@@ -58,7 +58,7 @@ async function createListItemComponent() {
 
       if (type === "With Action") {
         const iconWrapper = figma.createFrame(); iconWrapper.name = "Icon Wrapper";
-        iconWrapper.resize(24, 24); iconWrapper.fills = []; iconWrapper.layoutMode = "HORIZONTAL";
+        iconWrapper.layoutMode = "HORIZONTAL"; iconWrapper.primaryAxisSizingMode = "FIXED"; iconWrapper.counterAxisSizingMode = "FIXED"; iconWrapper.resize(24, 24); iconWrapper.fills = [];
         iconWrapper.primaryAxisAlignItems = "CENTER"; iconWrapper.counterAxisAlignItems = "CENTER";
         const chevronRight = figma.createVector(); chevronRight.name = "Chevron Right";
         chevronRight.vectorPaths = [{ windingRule: "NONE", data: "M 9 6 L 15 12 L 9 18" }];
