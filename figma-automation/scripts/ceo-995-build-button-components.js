@@ -1,6 +1,6 @@
 (async () => {
   // 폰트 로드 (텍스트 레이어 생성을 위해 필수)
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
 
   const types = ["Primary", "Secondary", "Danger"];
   const states = ["Default", "Hover", "Active", "Disabled"];
@@ -46,7 +46,7 @@
       const text = figma.createText();
       text.characters = "Button";
       text.fontSize = 16;
-      text.fontName = { family: "Inter", style: "Medium" };
+      text.fontName = { family: "Pretendard", style: "Medium" };
       text.fills = [{ type: 'SOLID', color: textColor }];
       
       btn.appendChild(text);

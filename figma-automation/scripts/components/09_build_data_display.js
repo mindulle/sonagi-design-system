@@ -1,7 +1,7 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
 
   // 1. 최신 Async 토큰 헬퍼
   async function getToken(name, rgbColor) {
@@ -50,7 +50,7 @@
 
   const avText = figma.createText();
   avText.name = "InitialsText";
-  avText.fontName = { family: "Inter", style: "Bold" };
+  avText.fontName = { family: "Pretendard", style: "Bold" };
   avText.fontSize = 14;
   avText.characters = "JD";
   let avTxtPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -115,7 +115,7 @@
   const ttTextProp = baseTt.addComponentProperty('Text', 'TEXT', 'This is a tooltip');
   const ttText = figma.createText();
   ttText.name = "TooltipText";
-  ttText.fontName = { family: "Inter", style: "Medium" };
+  ttText.fontName = { family: "Pretendard", style: "Medium" };
   ttText.fontSize = 12;
   ttText.characters = "This is a tooltip";
   let ttTxtPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -169,7 +169,7 @@
   const toastTextProp = baseToast.addComponentProperty('Message', 'TEXT', 'Changes saved successfully.');
   const toastText = figma.createText();
   toastText.name = "ToastText";
-  toastText.fontName = { family: "Inter", style: "Medium" };
+  toastText.fontName = { family: "Pretendard", style: "Medium" };
   toastText.fontSize = 14;
   toastText.characters = "Changes saved successfully.";
   let toastTxtPaint = { type: 'SOLID', color: rgb(0,0,0) };

@@ -10,9 +10,9 @@ async function createFormComposition() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
   await figma.loadFontAsync({ family: "Pretendard", style: "Medium" }).catch(e=>{});
   await figma.loadFontAsync({ family: "Pretendard", style: "Regular" }).catch(e=>{});
 
@@ -36,8 +36,8 @@ async function createFormComposition() {
   if (tokens.border.default) { formComp.strokes = [bindColor(tokens.border.default)]; formComp.strokeWeight = 1; }
 
   const header = figma.createFrame(); header.name = "Header"; header.layoutMode = "VERTICAL"; header.layoutAlign = "STRETCH"; header.fills = []; header.itemSpacing = 8; header.primaryAxisSizingMode = "AUTO";
-  const title = figma.createText(); title.characters = "Welcome back"; title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 24; if (tokens.text.primary) title.fills = [bindColor(tokens.text.primary)];
-  const sub = figma.createText(); sub.characters = "Please enter your details to sign in."; sub.fontName = { family: "Inter", style: "Regular" }; sub.fontSize = 14; if (tokens.text.secondary) sub.fills = [bindColor(tokens.text.secondary)];
+  const title = figma.createText(); title.characters = "Welcome back"; title.fontName = { family: "Pretendard", style: "Bold" }; title.fontSize = 24; if (tokens.text.primary) title.fills = [bindColor(tokens.text.primary)];
+  const sub = figma.createText(); sub.characters = "Please enter your details to sign in."; sub.fontName = { family: "Pretendard", style: "Regular" }; sub.fontSize = 14; if (tokens.text.secondary) sub.fills = [bindColor(tokens.text.secondary)];
   header.appendChild(title); header.appendChild(sub); formComp.appendChild(header);
 
   const inputGroup = figma.createFrame(); inputGroup.name = "Input Group"; inputGroup.layoutMode = "VERTICAL"; inputGroup.layoutAlign = "STRETCH"; inputGroup.fills = []; inputGroup.itemSpacing = 16; inputGroup.primaryAxisSizingMode = "AUTO";
@@ -59,7 +59,7 @@ async function createFormComposition() {
     try { const cbLabel = checkbox.findOne(n => n.type === "TEXT" && n.name === "Label"); if (cbLabel) { await figma.loadFontAsync(cbLabel.fontName); cbLabel.characters = "Remember me"; } } catch(e){}
     optionsRow.appendChild(checkbox);
   }
-  const forgotPw = figma.createText(); forgotPw.characters = "Forgot password?"; forgotPw.fontName = { family: "Inter", style: "Medium" }; forgotPw.fontSize = 14; if (tokens.text.brand) forgotPw.fills = [bindColor(tokens.text.brand)]; optionsRow.appendChild(forgotPw); formComp.appendChild(optionsRow);
+  const forgotPw = figma.createText(); forgotPw.characters = "Forgot password?"; forgotPw.fontName = { family: "Pretendard", style: "Medium" }; forgotPw.fontSize = 14; if (tokens.text.brand) forgotPw.fills = [bindColor(tokens.text.brand)]; optionsRow.appendChild(forgotPw); formComp.appendChild(optionsRow);
 
   if (masterButton) {
     const submitBtn = masterButton.createInstance(); submitBtn.layoutAlign = "STRETCH";

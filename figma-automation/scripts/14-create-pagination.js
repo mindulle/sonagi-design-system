@@ -12,8 +12,8 @@ async function createPaginationComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
 
   let page = figma.root.children.find(p => p.name === "Pagination");
   await figma.setCurrentPageAsync(page);
@@ -48,7 +48,7 @@ async function createPaginationComponent() {
 
       if (type === "Number" || type === "Ellipsis") {
         const text = figma.createText(); text.name = "Text"; text.characters = type === "Number" ? "1" : "...";
-        text.fontName = { family: "Inter", style: state === "Selected" ? "Bold" : "Medium" }; text.fontSize = 14;
+        text.fontName = { family: "Pretendard", style: state === "Selected" ? "Bold" : "Medium" }; text.fontSize = 14;
         if (textColor) text.fills = [bindColor(textColor)]; comp.appendChild(text);
       } else {
         const iconWrapper = figma.createFrame(); iconWrapper.name = "Icon Wrapper"; iconWrapper.layoutMode = "HORIZONTAL";

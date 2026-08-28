@@ -13,7 +13,7 @@ async function createBadgeComponent() {
 
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
   let page = figma.root.children.find(p => p.name === "Badge");
   if (!page) { page = figma.createPage(); page.name = "Badge"; }
   await figma.setCurrentPageAsync(page);
@@ -38,7 +38,7 @@ async function createBadgeComponent() {
 
       const label = figma.createText();
       label.name = "Text"; label.characters = color;
-      label.fontName = { family: "Inter", style: "Medium" }; label.fontSize = 12;
+      label.fontName = { family: "Pretendard", style: "Medium" }; label.fontSize = 12;
       if (tokens[color].text) label.fills = [bindColor(tokens[color].text)];
       comp.appendChild(label);
 

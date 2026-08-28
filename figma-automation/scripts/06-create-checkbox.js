@@ -12,7 +12,7 @@ async function createCheckboxComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
   let page = figma.root.children.find(p => p.name === "Checkbox");
   if (!page) { page = figma.createPage(); page.name = "Checkbox"; }
   await figma.setCurrentPageAsync(page);
@@ -61,7 +61,7 @@ async function createCheckboxComponent() {
 
       const label = figma.createText();
       label.name = "Label"; label.characters = "Accept terms and conditions";
-      label.fontName = { family: "Inter", style: "Medium" }; label.fontSize = 14;
+      label.fontName = { family: "Pretendard", style: "Medium" }; label.fontSize = 14;
       let labelVar = (state === "Disabled") ? tokens.text.disabled : tokens.text.primary;
       if (labelVar) label.fills = [bindColor(labelVar)];
       comp.appendChild(label);

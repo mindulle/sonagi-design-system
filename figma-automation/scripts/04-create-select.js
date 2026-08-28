@@ -23,8 +23,8 @@ async function createSelectComponent() {
     return figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
   };
 
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
 
   let page = figma.root.children.find(p => p.name === "Select");
   if (!page) { 
@@ -54,7 +54,7 @@ async function createSelectComponent() {
       const label = figma.createText();
       label.name = "Label"; 
       label.characters = "Select an option";
-      label.fontName = { family: "Inter", style: "Medium" };
+      label.fontName = { family: "Pretendard", style: "Medium" };
       label.fontSize = size === "Lg" ? 14 : size === "Md" ? 14 : 12;
       
       let labelVar = (state === "Disabled") ? tokens.text.disabled : tokens.text.primary;
@@ -93,7 +93,7 @@ async function createSelectComponent() {
       const value = figma.createText();
       value.name = "Value"; 
       value.characters = "Choose option...";
-      value.fontName = { family: "Inter", style: "Regular" };
+      value.fontName = { family: "Pretendard", style: "Regular" };
       value.fontSize = size === "Sm" ? 12 : 14;
       value.layoutGrow = 1; // 아이콘을 우측으로 밀어내기 위해 공간 차지
       
@@ -125,7 +125,7 @@ async function createSelectComponent() {
       const hint = figma.createText();
       hint.name = "Hint"; 
       hint.characters = state === "Danger" ? "Please select a valid option." : "Select from the list.";
-      hint.fontName = { family: "Inter", style: "Regular" }; 
+      hint.fontName = { family: "Pretendard", style: "Regular" }; 
       hint.fontSize = 12;
       
       let hintVar = (state === "Danger") ? tokens.state.danger : ((state === "Disabled") ? tokens.text.disabled : tokens.text.muted);

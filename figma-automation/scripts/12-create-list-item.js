@@ -10,8 +10,8 @@ async function createListItemComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   let page = figma.root.children.find(p => p.name === "List Item");
   await figma.setCurrentPageAsync(page);
@@ -47,11 +47,11 @@ async function createListItemComponent() {
       textGroup.layoutMode = "VERTICAL"; textGroup.layoutGrow = 1; textGroup.fills = []; textGroup.itemSpacing = 4;
 
       const title = figma.createText(); title.name = "Title"; title.characters = "List Item Title";
-      title.fontName = { family: "Inter", style: "Medium" }; title.fontSize = 16;
+      title.fontName = { family: "Pretendard", style: "Medium" }; title.fontSize = 16;
       if (tokens.text.primary) title.fills = [bindColor(tokens.text.primary)];
       
       const sub = figma.createText(); sub.name = "Subtitle"; sub.characters = "This is a supporting description.";
-      sub.fontName = { family: "Inter", style: "Regular" }; sub.fontSize = 14;
+      sub.fontName = { family: "Pretendard", style: "Regular" }; sub.fontSize = 14;
       if (tokens.text.secondary) sub.fills = [bindColor(tokens.text.secondary)];
 
       textGroup.appendChild(title); textGroup.appendChild(sub); comp.appendChild(textGroup);

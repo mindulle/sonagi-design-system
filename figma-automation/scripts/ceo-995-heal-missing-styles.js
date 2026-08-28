@@ -34,7 +34,7 @@
         try {
           // 물음표(Missing Font) 에러가 걸려있을 경우를 대비해 폰트를 강제 로드 후 덮어쓰기
           if (node.hasMissingFont) {
-             const fontName = node.fontName !== figma.mixed ? node.fontName : { family: "Inter", style: "Regular" };
+             const fontName = node.fontName !== figma.mixed ? node.fontName : { family: "Pretendard", style: "Regular" };
              await figma.loadFontAsync(fontName).catch(() => {});
           }
           node.textStyleId = masterStyleId;

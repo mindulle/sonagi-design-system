@@ -1,5 +1,5 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   // 1. 토큰(Variable) 매니저 (최신 Async API로 업데이트)
   async function getToken(name, rgbColor) {

@@ -1,7 +1,7 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
 
   // 1. 최신 Async 토큰 헬퍼
   async function getToken(name, rgbColor) {
@@ -60,7 +60,7 @@
 
   const titleNode = figma.createText();
   titleNode.name = "TitleText";
-  titleNode.fontName = { family: "Inter", style: "Bold" };
+  titleNode.fontName = { family: "Pretendard", style: "Bold" };
   titleNode.fontSize = 18;
   titleNode.characters = "Dialog Title";
   let tPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -93,7 +93,7 @@
 
   const msgNode = figma.createText();
   msgNode.name = "MessageText";
-  msgNode.fontName = { family: "Inter", style: "Regular" };
+  msgNode.fontName = { family: "Pretendard", style: "Regular" };
   msgNode.fontSize = 14;
   msgNode.characters = "Are you sure you want to proceed with this action? This step cannot be undone.";
   msgNode.textAutoResize = "HEIGHT"; // 가로 352px 안에서 줄바꿈
@@ -130,7 +130,7 @@
   cancelBtn.fills = [cBg];
 
   const cancelTextNode = figma.createText();
-  cancelTextNode.fontName = { family: "Inter", style: "Medium" };
+  cancelTextNode.fontName = { family: "Pretendard", style: "Medium" };
   cancelTextNode.fontSize = 14;
   cancelTextNode.characters = "Cancel";
   let cTxtPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -153,7 +153,7 @@
   confirmBtn.fills = [cfBg];
 
   const confirmTextNode = figma.createText();
-  confirmTextNode.fontName = { family: "Inter", style: "Medium" };
+  confirmTextNode.fontName = { family: "Pretendard", style: "Medium" };
   confirmTextNode.fontSize = 14;
   confirmTextNode.characters = "Confirm";
   confirmTextNode.fills = [{ type: 'SOLID', color: rgb(255, 255, 255) }];

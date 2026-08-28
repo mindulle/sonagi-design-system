@@ -1,6 +1,6 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
 
   // 1. 최신 Async 토큰 헬퍼
   async function getToken(name, rgbColor) {
@@ -66,7 +66,7 @@
   // 3-A. Top Label Node
   const labelNode = figma.createText();
   labelNode.name = "FieldLabel";
-  labelNode.fontName = { family: "Inter", style: "Medium" };
+  labelNode.fontName = { family: "Pretendard", style: "Medium" };
   labelNode.fontSize = 14;
   labelNode.characters = "Email";
   let labelPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -89,7 +89,7 @@
   // Input Value Text inside Box
   const valueText = figma.createText();
   valueText.name = "InputValue";
-  valueText.fontName = { family: "Inter", style: "Regular" };
+  valueText.fontName = { family: "Pretendard", style: "Regular" };
   valueText.fontSize = 14;
   valueText.characters = "Enter your email...";
   inputBox.appendChild(valueText);
@@ -98,7 +98,7 @@
   // 3-C. Help Text Node
   const helpNode = figma.createText();
   helpNode.name = "HelpText";
-  helpNode.fontName = { family: "Inter", style: "Regular" };
+  helpNode.fontName = { family: "Pretendard", style: "Regular" };
   helpNode.fontSize = 12;
   helpNode.characters = "This is a hint text to help user.";
   let helpPaint = { type: 'SOLID', color: rgb(0,0,0) };

@@ -12,8 +12,8 @@ async function createToastComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   let page = figma.root.children.find(p => p.name === "Toast");
   if (!page) { page = figma.createPage(); page.name = "Toast"; }
@@ -47,9 +47,9 @@ async function createToastComponent() {
       iconWrapper.appendChild(iconMark); comp.appendChild(iconWrapper);
 
     const textGroup = figma.createFrame(); textGroup.name = "Content"; textGroup.layoutMode = "VERTICAL"; textGroup.layoutGrow = 1; textGroup.fills = []; textGroup.itemSpacing = 4;
-    const title = figma.createText(); title.name = "Title"; title.characters = `${type} message`; title.fontName = { family: "Inter", style: "Medium" }; title.fontSize = 14;
+    const title = figma.createText(); title.name = "Title"; title.characters = `${type} message`; title.fontName = { family: "Pretendard", style: "Medium" }; title.fontSize = 14;
     if (tokens.text.primary) title.fills = [bindColor(tokens.text.primary)];
-    const desc = figma.createText(); desc.name = "Description"; desc.characters = "This is a detailed description of the notification. It can wrap to multiple lines if needed."; desc.fontName = { family: "Inter", style: "Regular" }; desc.fontSize = 14; desc.textAutoResize = "HEIGHT"; desc.layoutAlign = "STRETCH";
+    const desc = figma.createText(); desc.name = "Description"; desc.characters = "This is a detailed description of the notification. It can wrap to multiple lines if needed."; desc.fontName = { family: "Pretendard", style: "Regular" }; desc.fontSize = 14; desc.textAutoResize = "HEIGHT"; desc.layoutAlign = "STRETCH";
     if (tokens.text.secondary) desc.fills = [bindColor(tokens.text.secondary)];
     textGroup.appendChild(title); textGroup.appendChild(desc); comp.appendChild(textGroup);
 

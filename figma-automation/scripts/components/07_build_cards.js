@@ -1,7 +1,7 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
 
   // 1. 최신 Async 토큰 헬퍼
   async function getToken(name, rgbColor) {
@@ -56,7 +56,7 @@
 
   const titleNode = figma.createText();
   titleNode.name = "TitleText";
-  titleNode.fontName = { family: "Inter", style: "Bold" };
+  titleNode.fontName = { family: "Pretendard", style: "Bold" };
   titleNode.fontSize = 18;
   titleNode.characters = "Card Title";
   let tPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -66,7 +66,7 @@
 
   const subNode = figma.createText();
   subNode.name = "SubtitleText";
-  subNode.fontName = { family: "Inter", style: "Regular" };
+  subNode.fontName = { family: "Pretendard", style: "Regular" };
   subNode.fontSize = 13;
   subNode.characters = "Card description and details go here.";
   let subPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -90,7 +90,7 @@
 
   const bodyText = figma.createText();
   bodyText.name = "BodyText";
-  bodyText.fontName = { family: "Inter", style: "Regular" };
+  bodyText.fontName = { family: "Pretendard", style: "Regular" };
   bodyText.fontSize = 13;
   bodyText.characters = "This is the main body container for card content.";
   let bPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -122,7 +122,7 @@
   btn1.fills = [{ type: 'SOLID', color: rgb(25, 91, 255) }];
 
   const btn1Text = figma.createText();
-  btn1Text.fontName = { family: "Inter", style: "Medium" };
+  btn1Text.fontName = { family: "Pretendard", style: "Medium" };
   btn1Text.fontSize = 12;
   btn1Text.characters = "Confirm";
   btn1Text.fills = [{ type: 'SOLID', color: rgb(255, 255, 255) }];
@@ -141,7 +141,7 @@
   btn2.fills = [{ type: 'SOLID', color: rgb(241, 245, 249) }];
 
   const btn2Text = figma.createText();
-  btn2Text.fontName = { family: "Inter", style: "Medium" };
+  btn2Text.fontName = { family: "Pretendard", style: "Medium" };
   btn2Text.fontSize = 12;
   btn2Text.characters = "Cancel";
   btn2Text.fills = [{ type: 'SOLID', color: rgb(71, 85, 105) }];

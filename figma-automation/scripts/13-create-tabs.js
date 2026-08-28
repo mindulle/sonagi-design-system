@@ -11,7 +11,7 @@ async function createTabsComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
   let page = figma.root.children.find(p => p.name === "Tabs");
   await figma.setCurrentPageAsync(page);
 
@@ -28,7 +28,7 @@ async function createTabsComponent() {
 
       const textWrapper = figma.createFrame(); textWrapper.name = "Text Wrapper"; textWrapper.layoutMode = "HORIZONTAL";
       textWrapper.paddingLeft = 16; textWrapper.paddingRight = 16; textWrapper.paddingTop = 12; textWrapper.paddingBottom = 10; textWrapper.fills = [];
-      const label = figma.createText(); label.name = "Label"; label.characters = "Tab Item"; label.fontName = { family: "Inter", style: "Medium" }; label.fontSize = 14;
+      const label = figma.createText(); label.name = "Label"; label.characters = "Tab Item"; label.fontName = { family: "Pretendard", style: "Medium" }; label.fontSize = 14;
       
       let textColor = tokens.text.secondary;
       if (state === "Disabled") textColor = tokens.text.disabled; else if (selected === "True") textColor = tokens.brand.primary; else if (state === "Hover") textColor = tokens.text.primary;

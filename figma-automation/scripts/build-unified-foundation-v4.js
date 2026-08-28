@@ -1,7 +1,7 @@
 async function buildUnifiedFoundationBoard() {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
 
   const rgb = (r, g, b) => ({ r: r/255, g: g/255, b: b/255 });
 
@@ -40,13 +40,13 @@ async function buildUnifiedFoundationBoard() {
   const title = figma.createText();
   title.characters = "Sonagi Design Foundation V4";
   title.fontSize = 64;
-  title.fontName = { family: "Inter", style: "Bold" };
+  title.fontName = { family: "Pretendard", style: "Bold" };
   board.appendChild(title);
 
   const createText = (str, w, isBold, colorHex = "#000000", size = 16) => {
     const t = figma.createText();
     t.characters = str; t.fontSize = size;
-    t.fontName = { family: "Inter", style: isBold ? "Bold" : "Medium" };
+    t.fontName = { family: "Pretendard", style: isBold ? "Bold" : "Medium" };
     const h = colorHex.replace('#', '');
     t.fills = [{ type: 'SOLID', color: rgb(parseInt(h.substr(0,2),16), parseInt(h.substr(2,2),16), parseInt(h.substr(4,2),16)) }];
     if(w) t.resize(w, t.height);

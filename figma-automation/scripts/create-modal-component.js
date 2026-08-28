@@ -105,7 +105,7 @@ async function createModalComponentSet() {
     closeBtn.fills = [];
     
     const xText = figma.createText();
-    xText.fontName = { family: "Inter", style: "Medium" };
+    xText.fontName = { family: "Pretendard", style: "Medium" };
     xText.characters = "✕";
     xText.fontSize = 20;
     if (v.txtPri) xText.fills = [figma.variables.setBoundVariableForPaint({type:'SOLID', color:{r:0,g:0,b:0}}, 'color', v.txtPri)];

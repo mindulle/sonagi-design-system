@@ -12,9 +12,9 @@ async function createModalComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   let page = figma.root.children.find(p => p.name === "Modal");
   await figma.setCurrentPageAsync(page);
@@ -39,14 +39,14 @@ async function createModalComponent() {
     comp.effects = [{ type: "DROP_SHADOW", color: { r: 0, g: 0, b: 0, a: 0.15 }, offset: { x: 0, y: 8 }, radius: 24, spread: 0, visible: true, blendMode: "NORMAL" }];
 
     const header = figma.createFrame(); header.name = "Header"; header.layoutMode = "HORIZONTAL"; header.layoutAlign = "STRETCH"; header.primaryAxisAlignItems = "SPACE_BETWEEN"; header.counterAxisAlignItems = "CENTER"; header.fills = []; header.counterAxisSizingMode = "AUTO";
-    const title = figma.createText(); title.name = "Title"; title.characters = type === "Destructive" ? "Delete Account" : "Save Changes"; title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 18; title.layoutGrow = 1;
+    const title = figma.createText(); title.name = "Title"; title.characters = type === "Destructive" ? "Delete Account" : "Save Changes"; title.fontName = { family: "Pretendard", style: "Bold" }; title.fontSize = 18; title.layoutGrow = 1;
     let titleColor = type === "Destructive" && tokens.state.danger ? tokens.state.danger : tokens.text.primary;
     if (titleColor) title.fills = [bindColor(titleColor)]; header.appendChild(title);
     const iconWrapper = figma.createFrame(); iconWrapper.name = "Icon Wrapper"; iconWrapper.resize(24, 24); iconWrapper.fills = []; iconWrapper.layoutMode = "HORIZONTAL"; iconWrapper.primaryAxisAlignItems = "CENTER"; iconWrapper.counterAxisAlignItems = "CENTER";
     const closeIcon = figma.createVector(); closeIcon.name = "Close Icon"; closeIcon.vectorPaths = [{ windingRule: "NONE", data: "M 4 4 L 16 16 M 16 4 L 4 16" }];
     if (tokens.text.muted) { closeIcon.strokes = [bindColor(tokens.text.muted)]; closeIcon.strokeWeight = 2; closeIcon.strokeCap = "ROUND"; } closeIcon.resize(12, 12); iconWrapper.appendChild(closeIcon); header.appendChild(iconWrapper); comp.appendChild(header);
 
-    const desc = figma.createText(); desc.name = "Description"; desc.characters = type === "Destructive" ? "Are you sure you want to permanently delete this account? This action cannot be undone." : "Your changes will be saved securely to the cloud. You can update them later in the settings."; desc.fontName = { family: "Inter", style: "Regular" }; desc.fontSize = 14; desc.layoutAlign = "STRETCH";
+    const desc = figma.createText(); desc.name = "Description"; desc.characters = type === "Destructive" ? "Are you sure you want to permanently delete this account? This action cannot be undone." : "Your changes will be saved securely to the cloud. You can update them later in the settings."; desc.fontName = { family: "Pretendard", style: "Regular" }; desc.fontSize = 14; desc.layoutAlign = "STRETCH";
     if (tokens.text.secondary) desc.fills = [bindColor(tokens.text.secondary)]; comp.appendChild(desc);
 
     const footer = figma.createFrame(); footer.name = "Footer"; footer.layoutMode = "HORIZONTAL"; footer.layoutAlign = "STRETCH"; footer.primaryAxisAlignItems = "MAX"; footer.itemSpacing = 8; footer.paddingTop = 8; footer.fills = []; footer.counterAxisSizingMode = "AUTO";

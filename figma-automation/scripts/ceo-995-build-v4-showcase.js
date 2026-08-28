@@ -1,8 +1,8 @@
 (async () => {
   // 필수 폰트 로드
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
 
   console.log("🚀 [V4 Architecture] 완벽한 파운데이션 시각화 보드 렌더링 시작...");
 
@@ -69,7 +69,7 @@
   const title = figma.createText();
   title.characters = "Sonagi Design Foundation V4";
   title.fontSize = 64;
-  title.fontName = { family: "Inter", style: "Bold" };
+  title.fontName = { family: "Pretendard", style: "Bold" };
   board.appendChild(title);
 
   // --- [섹션 1: Primitive Colors] ---
@@ -82,7 +82,7 @@
   const primTitle = figma.createText();
   primTitle.characters = "1. Primitive Colors (물감 진열대)";
   primTitle.fontSize = 32;
-  primTitle.fontName = { family: "Inter", style: "Bold" };
+  primTitle.fontName = { family: "Pretendard", style: "Bold" };
   primTitle.fills = [{ type: 'SOLID', color: rgb(100, 100, 110) }];
   primSection.appendChild(primTitle);
 
@@ -109,7 +109,7 @@
     const label = figma.createText();
     label.characters = group.toUpperCase();
     label.fontSize = 20;
-    label.fontName = { family: "Inter", style: "Bold" };
+    label.fontName = { family: "Pretendard", style: "Bold" };
     label.resize(180, 24);
     row.appendChild(label);
 
@@ -143,7 +143,7 @@
   const semTitle = figma.createText();
   semTitle.characters = "2. Semantic Tokens (의미 매핑 테이블)";
   semTitle.fontSize = 32;
-  semTitle.fontName = { family: "Inter", style: "Bold" };
+  semTitle.fontName = { family: "Pretendard", style: "Bold" };
   semTitle.fills = [{ type: 'SOLID', color: rgb(100, 100, 110) }];
   semSection.appendChild(semTitle);
 
@@ -152,7 +152,7 @@
   const createText = (str, w, isBold, colorHex = "#000000") => {
     const t = figma.createText();
     t.characters = str; t.fontSize = 20;
-    t.fontName = { family: "Inter", style: isBold ? "Bold" : "Medium" };
+    t.fontName = { family: "Pretendard", style: isBold ? "Bold" : "Medium" };
     t.fills = [{ type: 'SOLID', color: hexToRgb(colorHex) }];
     if(w) t.resize(w, 28);
     return t;

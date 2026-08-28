@@ -13,9 +13,9 @@ async function createCardComponent() {
 
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   let page = figma.root.children.find(p => p.name === "Cards");
   if (!page) { page = figma.createPage(); page.name = "Cards"; }
@@ -73,14 +73,14 @@ async function createCardComponent() {
 
       const title = figma.createText();
       title.name = "Title"; title.characters = "Composition Card";
-      title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 18;
+      title.fontName = { family: "Pretendard", style: "Bold" }; title.fontSize = 18;
       if (tokens.text.primary) title.fills = [bindColor(tokens.text.primary)];
       content.appendChild(title);
 
       const desc = figma.createText();
       desc.name = "Description"; 
       desc.characters = "This card represents a composition of various foundational elements. It uses bg/surface to stand out from the base background.";
-      desc.fontName = { family: "Inter", style: "Regular" }; desc.fontSize = 14;
+      desc.fontName = { family: "Pretendard", style: "Regular" }; desc.fontSize = 14;
       desc.layoutAlign = "STRETCH";
       if (tokens.text.secondary) desc.fills = [bindColor(tokens.text.secondary)];
       content.appendChild(desc);
@@ -108,7 +108,7 @@ async function createCardComponent() {
 
         const btnText = figma.createText();
         btnText.name = "Label"; btnText.characters = "Confirm";
-        btnText.fontName = { family: "Inter", style: "Medium" }; btnText.fontSize = 14;
+        btnText.fontName = { family: "Pretendard", style: "Medium" }; btnText.fontSize = 14;
         if (tokens.text.inverse) btnText.fills = [bindColor(tokens.text.inverse)];
         button.appendChild(btnText);
         

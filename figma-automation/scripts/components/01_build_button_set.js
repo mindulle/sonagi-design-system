@@ -1,6 +1,6 @@
 (async () => {
   // 1. 텍스트 생성을 위해 기본 폰트 로드 (필수)
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   // 2. Base 컴포넌트 생성 (실제 속성을 모두 가짐)
   const base = figma.createComponent();

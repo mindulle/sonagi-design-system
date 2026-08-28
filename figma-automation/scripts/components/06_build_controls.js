@@ -1,5 +1,5 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   // 1. 최신 Async 토큰 헬퍼
   async function getToken(name, rgbColor) {
@@ -64,7 +64,7 @@
   // Label Text
   const cbText = figma.createText();
   cbText.name = "LabelText";
-  cbText.fontName = { family: "Inter", style: "Regular" };
+  cbText.fontName = { family: "Pretendard", style: "Regular" };
   cbText.fontSize = 14;
   cbText.characters = "Remember me";
   let labelPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -174,7 +174,7 @@
   // Switch Label Text
   const swText = figma.createText();
   swText.name = "LabelText";
-  swText.fontName = { family: "Inter", style: "Regular" };
+  swText.fontName = { family: "Pretendard", style: "Regular" };
   swText.fontSize = 14;
   swText.characters = "Enable Notifications";
   let swTextPaint = { type: 'SOLID', color: rgb(0,0,0) };

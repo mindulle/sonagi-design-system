@@ -1,5 +1,5 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
 
   async function getToken(name, rgbColor) {
     let vars = await figma.variables.getLocalVariablesAsync("COLOR");

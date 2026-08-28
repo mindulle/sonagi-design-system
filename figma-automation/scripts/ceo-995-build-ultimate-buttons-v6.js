@@ -1,7 +1,7 @@
 (async () => {
   await figma.loadAllPagesAsync();
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
 
   console.log("🔍 [V6 Ultimate] 문서 내 Foundation 토큰 스캔 시작...");
 
@@ -144,7 +144,7 @@
         const text = figma.createText();
         text.characters = "Button";
         text.fontSize = size.fontSize;
-        text.fontName = { family: "Inter", style: "Medium" };
+        text.fontName = { family: "Pretendard", style: "Medium" };
         
         let txtPaint = { type: 'SOLID', color: rgb(0,0,0) };
         txtPaint = figma.variables.setBoundVariableForPaint(txtPaint, 'color', textToken);

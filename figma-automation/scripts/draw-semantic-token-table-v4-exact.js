@@ -7,8 +7,8 @@ async function drawSemanticTokenTableV4_Exact() {
     await figma.loadFontAsync(fontBold);
     await figma.loadFontAsync(fontReg);
   } catch (e) {
-    fontBold = { family: "Inter", style: "SemiBold" };
-    fontReg = { family: "Inter", style: "Regular" };
+    fontBold = { family: "Pretendard", style: "SemiBold" };
+    fontReg = { family: "Pretendard", style: "Regular" };
     await figma.loadFontAsync(fontBold);
     await figma.loadFontAsync(fontReg);
   }

@@ -11,7 +11,7 @@ async function createAvatarComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
   let page = figma.root.children.find(p => p.name === "Avatar");
   if (!page) { page = figma.createPage(); page.name = "Avatar"; }
   await figma.setCurrentPageAsync(page);
@@ -38,7 +38,7 @@ async function createAvatarComponent() {
       } else if (type === "Initials") {
         if (tokens.bg.surface) comp.fills = [bindColor(tokens.bg.surface)];
         if (tokens.border.subtle) { comp.strokes = [bindColor(tokens.border.subtle)]; comp.strokeWeight = 1; }
-        const txt = figma.createText(); txt.name = "Initial"; txt.characters = "U"; txt.fontName = { family: "Inter", style: "Medium" }; txt.fontSize = sizeObj.fontSize;
+        const txt = figma.createText(); txt.name = "Initial"; txt.characters = "U"; txt.fontName = { family: "Pretendard", style: "Medium" }; txt.fontSize = sizeObj.fontSize;
         if (tokens.text.secondary) txt.fills = [bindColor(tokens.text.secondary)]; comp.appendChild(txt);
       } else if (type === "Icon") {
         if (tokens.bg.surface) comp.fills = [bindColor(tokens.bg.surface)];

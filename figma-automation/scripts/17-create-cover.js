@@ -1,6 +1,6 @@
 async function createCoverPage() {
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
 
   let page = figma.root.children.find(p => p.name === "Cover");
   await figma.setCurrentPageAsync(page);
@@ -22,12 +22,12 @@ async function createCoverPage() {
   blurCircle2.x = -200; blurCircle2.y = 600; frame.appendChild(blurCircle2);
 
   const title = figma.createText(); title.characters = "Sonagi\nDesign System";
-  title.fontName = { family: "Inter", style: "Bold" }; title.fontSize = 140;
+  title.fontName = { family: "Pretendard", style: "Bold" }; title.fontSize = 140;
   title.lineHeight = { value: 110, unit: "PERCENT" }; title.fills = [{ type: "SOLID", color: { r: 1, g: 1, b: 1 } }];
   title.x = 160; title.y = 320; frame.appendChild(title);
 
   const subtitle = figma.createText(); subtitle.characters = "Core Primitives & Compositions V1";
-  subtitle.fontName = { family: "Inter", style: "Medium" }; subtitle.fontSize = 48;
+  subtitle.fontName = { family: "Pretendard", style: "Medium" }; subtitle.fontSize = 48;
   subtitle.fills = [{ type: "SOLID", color: { r: 0.7, g: 0.7, b: 0.75 } }];
   subtitle.x = 165; subtitle.y = 660; frame.appendChild(subtitle);
 
@@ -35,7 +35,7 @@ async function createCoverPage() {
   tag.cornerRadius = 999; tag.fills = [{ type: "SOLID", color: { r: 1, g: 1, b: 1 } }]; tag.x = 165; tag.y = 800;
   
   const tagText = figma.createText(); tagText.characters = "Last Updated: " + new Date().toISOString().split('T')[0];
-  tagText.fontName = { family: "Inter", style: "Bold" }; tagText.fontSize = 24; tagText.fills = [{ type: "SOLID", color: { r: 0, g: 0, b: 0 } }];
+  tagText.fontName = { family: "Pretendard", style: "Bold" }; tagText.fontSize = 24; tagText.fills = [{ type: "SOLID", color: { r: 0, g: 0, b: 0 } }];
   tag.appendChild(tagText); frame.appendChild(tag);
 
   figma.viewport.scrollAndZoomIntoView([frame]);

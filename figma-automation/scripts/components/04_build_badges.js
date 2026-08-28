@@ -1,5 +1,5 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
 
   // 1. 최신 Async 토큰(Variable) 헬퍼
   async function getToken(name, rgbColor) {
@@ -74,7 +74,7 @@
 
   // Badge Text
   const text = figma.createText();
-  text.fontName = { family: "Inter", style: "Medium" };
+  text.fontName = { family: "Pretendard", style: "Medium" };
   text.fontSize = 12;
   text.characters = "Badge";
   base.appendChild(text);

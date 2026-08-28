@@ -1,7 +1,7 @@
 (async () => {
   await figma.loadAllPagesAsync(); // Figma 권장 사항 반영
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
 
   console.log("🔍 문서 내의 Foundation 토큰 스캔 시작...");
 

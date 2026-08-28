@@ -1,7 +1,7 @@
 (async () => {
-  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
-  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Regular" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Bold" });
 
   // 1. 최신 Async 토큰 헬퍼
   async function getToken(name, rgbColor) {
@@ -46,7 +46,7 @@
 
   const tabText = figma.createText();
   tabText.name = "TabText";
-  tabText.fontName = { family: "Inter", style: "Medium" };
+  tabText.fontName = { family: "Pretendard", style: "Medium" };
   tabText.fontSize = 14;
   tabText.characters = "Tab Item";
   baseTab.appendChild(tabText);
@@ -122,7 +122,7 @@
 
   const pageText = figma.createText();
   pageText.name = "PageText";
-  pageText.fontName = { family: "Inter", style: "Medium" };
+  pageText.fontName = { family: "Pretendard", style: "Medium" };
   pageText.fontSize = 14;
   pageText.characters = "1";
   basePage.appendChild(pageText);
@@ -189,7 +189,7 @@
 
   const bcText = figma.createText();
   bcText.name = "BcText";
-  bcText.fontName = { family: "Inter", style: "Medium" };
+  bcText.fontName = { family: "Pretendard", style: "Medium" };
   bcText.fontSize = 14;
   bcText.characters = "Home";
   let bcPaint = { type: 'SOLID', color: rgb(0,0,0) };
@@ -200,7 +200,7 @@
   // Slash Separator /
   const slash = figma.createText();
   slash.name = "Slash";
-  slash.fontName = { family: "Inter", style: "Regular" };
+  slash.fontName = { family: "Pretendard", style: "Regular" };
   slash.fontSize = 14;
   slash.characters = "/";
   let slashPaint = { type: 'SOLID', color: rgb(148, 163, 184) };

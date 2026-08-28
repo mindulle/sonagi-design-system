@@ -10,7 +10,7 @@ async function createTooltipComponent() {
   };
   const bindColor = (variable) => figma.variables.setBoundVariableForPaint({ type: 'SOLID', color: {r:0, g:0, b:0} }, 'color', variable);
 
-  await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+  await figma.loadFontAsync({ family: "Pretendard", style: "Medium" });
   let page = figma.root.children.find(p => p.name === "Tooltip");
   await figma.setCurrentPageAsync(page);
 
@@ -30,7 +30,7 @@ async function createTooltipComponent() {
     if (tokens.bg.inverse) body.fills = [bindColor(tokens.bg.inverse)];
 
     const text = figma.createText(); text.name = "Text"; text.characters = "This is a helpful tooltip";
-    text.fontName = { family: "Inter", style: "Medium" }; text.fontSize = 12;
+    text.fontName = { family: "Pretendard", style: "Medium" }; text.fontSize = 12;
     if (tokens.text.inverse) text.fills = [bindColor(tokens.text.inverse)]; body.appendChild(text);
 
     const arrow = figma.createPolygon(); arrow.name = "Arrow"; arrow.resize(10, 5);
