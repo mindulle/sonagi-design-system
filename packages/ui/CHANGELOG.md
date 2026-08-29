@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.5.0...ui-v1.6.0) (2026-08-29)
+
+
+### Features
+
+* **ui:** add form components matching Figma SSOT (Textarea, Select, Checkbox, Radio, Toggle) ([#49](https://github.com/mindulle/sonagi-design-system/issues/49)) ([46a3d2a](https://github.com/mindulle/sonagi-design-system/commit/46a3d2a8fc9bbd1227b33bfc23c94d64d5b3561b))
+
 # [1.5.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.4.0...ui-v1.5.0) (2026-08-29)
 
 
