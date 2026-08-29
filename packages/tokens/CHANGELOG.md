@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.0...tokens-v1.9.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** fix Pagination border-radius and replace text arrows with svg ([#38](https://github.com/mindulle/sonagi-design-system/issues/38)) ([52b5d51](https://github.com/mindulle/sonagi-design-system/commit/52b5d512f8b4fda4541160dfd553717806608ccf))
+
 # [1.9.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.2...tokens-v1.9.0) (2026-08-29)
 
 
