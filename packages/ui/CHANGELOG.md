@@ -1,3 +1,16 @@
+# [1.8.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.7.0...ui-v1.8.0) (2026-08-29)
+
+
+### Bug Fixes
+
+* **storybook:** explicitly set data-theme=light to prevent OS dark mode override ([ce2af5e](https://github.com/mindulle/sonagi-design-system/commit/ce2af5ef2ed9b8e12c64633aeea4674096114764))
+* **storybook:** remove duplicate design blocks and map SonagiLogo ([9bf73c1](https://github.com/mindulle/sonagi-design-system/commit/9bf73c1968948ac537dd59e4bfefb6a0a019d7dc))
+
+
+### Features
+
+* **storybook:** add light/dark mode toggle to toolbar ([f0d8693](https://github.com/mindulle/sonagi-design-system/commit/f0d86933f427d90ac647d924b6b83bb5550050ce))
+
 # [1.7.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.6.1...ui-v1.7.0) (2026-08-29)
 
 
