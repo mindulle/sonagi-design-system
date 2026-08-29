@@ -1,3 +1,10 @@
+## [1.9.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.2...tokens-v1.9.3) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ops:** run pnpm build before build-storybook to ensure tokens dist is generated ([#40](https://github.com/mindulle/sonagi-design-system/issues/40)) ([7e6046f](https://github.com/mindulle/sonagi-design-system/commit/7e6046f8f871578e3c0e3065696e0497e7ab984f))
+
 ## [1.9.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.1...tokens-v1.9.2) (2026-08-29)
 
 
