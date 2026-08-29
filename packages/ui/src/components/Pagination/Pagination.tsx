@@ -62,7 +62,7 @@ export function Pagination({
 
   const pageNumbers = getPageNumbers();
   const navBtnBase =
-    'flex h-10 w-10 items-center justify-center rounded-sng-md border font-sans text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent';
+    'flex h-10 w-10 items-center justify-center rounded-md border font-sans text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent';
 
   return (
     <nav
@@ -81,7 +81,7 @@ export function Pagination({
         }`}
         aria-label="Previous Page"
       >
-        ‹
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
       </button>
 
       {/* Page Numbers */}
@@ -128,7 +128,7 @@ export function Pagination({
         }`}
         aria-label="Next Page"
       >
-        ›
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </button>
     </nav>
   );
