@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.1...tokens-v1.9.2) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ops:** remove pnpm version from setup action to avoid conflict ([#39](https://github.com/mindulle/sonagi-design-system/issues/39)) ([203042e](https://github.com/mindulle/sonagi-design-system/commit/203042e0d93da4d87d847928b4fca14c0655c3cc))
+
 ## [1.9.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.0...tokens-v1.9.1) (2026-08-29)
 
 
