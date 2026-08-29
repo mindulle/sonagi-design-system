@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.1...tokens-v1.8.2) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** trigger release for recent refactoring ([fc1e80b](https://github.com/mindulle/sonagi-design-system/commit/fc1e80b295456debab3833172909ce5e061f5d79))
+
 ## [1.8.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.0...tokens-v1.8.1) (2026-08-29)
 
 
