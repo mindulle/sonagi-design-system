@@ -1,6 +1,6 @@
 /**
  * Sonagi Design System — CSS Custom Properties
- * Generated automatically from JSON tokens v1.9.6
+ * Generated automatically from JSON tokens v1.10.0
  * DO NOT EDIT — regenerate with: pnpm --filter @mindulle/tokens build
  * 2-Tier architecture (primitives -> semantics); Light/Dark branch inside semantics.
  * See decisions/0010-delivery-consolidation-github-packages.md
@@ -16,12 +16,12 @@
   --sng-color-blue-500: #1c2c4d;
   --sng-color-blue-600: #1275b5;
   --sng-color-blue-700: #0d5a94;
-  --sng-color-blue-800: #083a64;
+  --sng-color-blue-800: #083A64;
   --sng-color-blue-900: #0a1128;
-  --sng-color-accent-rain: #4a90e2;
+  --sng-color-accent-rain: #4A90E2;
   --sng-color-accent-rain-dark: #2a6bbf;
   --sng-color-wordmark-bg: #030508;
-  --sng-color-wordmark-dot: #4a90e2;
+  --sng-color-wordmark-dot: #4A90E2;
   --sng-color-neutral-50: #fff8f2;
   --sng-color-neutral-100: #faf9f7;
   --sng-color-neutral-150: #f6f3ee;
@@ -42,6 +42,38 @@
   --sng-color-state-success-light: #d4edda;
   --sng-color-state-warning-light: #fff3cd;
   --sng-color-state-danger-light: #fde8e8;
+  --sng-color-state-info-bg: #e8f1f8;
+  --sng-color-state-info-light: #79c0ff;
+  --sng-color-state-info-dark: #1c2d42;
+  --sng-color-state-success-dark: #132e19;
+  --sng-color-state-warning-dark: #2e2305;
+  --sng-color-state-danger-dark: #421818;
+  --sng-color-burgundy-25: #fefaf9;
+  --sng-color-burgundy-50: #fcf2f0;
+  --sng-color-burgundy-100: #f5e5e2;
+  --sng-color-burgundy-150: #ffc6bc;
+  --sng-color-burgundy-200: #eeb4a9;
+  --sng-color-burgundy-250: #f7a7a1;
+  --sng-color-burgundy-300: #e5867f;
+  --sng-color-burgundy-400: #d2645f;
+  --sng-color-burgundy-500: #b44240;
+  --sng-color-burgundy-800: #47211b;
+  --sng-color-burgundy-900: #38130e;
+  --sng-color-brown-50: #f7eeec;
+  --sng-color-brown-200: #d7c5c2;
+  --sng-color-brown-300: #c3b4b1;
+  --sng-color-brown-400: #9d8986;
+  --sng-color-brown-410: #988a88;
+  --sng-color-brown-450: #95817f;
+  --sng-color-brown-500: #756563;
+  --sng-color-brown-550: #796966;
+  --sng-color-brown-600: #614f4b;
+  --sng-color-brown-650: #6c605e;
+  --sng-color-brown-800: #392e2c;
+  --sng-color-brown-820: #392d2b;
+  --sng-color-brown-850: #2c201e;
+  --sng-color-brown-900: #1e1311;
+  --sng-color-brown-950: #1c1412;
   --sng-font-sans: 'Pretendard', 'Inter', system-ui, sans-serif;
   --sng-font-serif: 'Noto Serif KR', 'Merriweather', Georgia, serif;
   --sng-font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
@@ -63,7 +95,7 @@
   --sng-line-height-snug: 1.375;
   --sng-line-height-normal: 1.5;
   --sng-line-height-relaxed: 1.625;
-  --sng-line-height-loose: 2;
+  --sng-line-height-loose: 2.0;
   --sng-letter-spacing-tight: -0.025em;
   --sng-letter-spacing-normal: 0em;
   --sng-letter-spacing-wide: 0.05em;
@@ -138,121 +170,137 @@
   --sng-typography-caption-fontSize: 11px;
   --sng-typography-caption-lineHeight: 16px;
   --sng-typography-caption-fontWeight: 400;
-  --sng-typography-ui-title-18: [object Object];
-  --sng-typography-ui-body-16: [object Object];
-  --sng-typography-ui-label-14: [object Object];
-  --sng-typography-ui-body-14: [object Object];
-  --sng-typography-ui-label-12: [object Object];
-  --sng-typography-ui-detail-12: [object Object];
+  --sng-typography-ui-title-18-font-family: {font.sans};
+  --sng-typography-ui-title-18-font-size: 18px;
+  --sng-typography-ui-title-18-font-weight: 700;
+  --sng-typography-ui-title-18-line-height: 24px;
+  --sng-typography-ui-body-16-font-family: {font.sans};
+  --sng-typography-ui-body-16-font-size: 16px;
+  --sng-typography-ui-body-16-font-weight: 500;
+  --sng-typography-ui-body-16-line-height: 24px;
+  --sng-typography-ui-label-14-font-family: {font.sans};
+  --sng-typography-ui-label-14-font-size: 14px;
+  --sng-typography-ui-label-14-font-weight: 500;
+  --sng-typography-ui-label-14-line-height: 20px;
+  --sng-typography-ui-body-14-font-family: {font.sans};
+  --sng-typography-ui-body-14-font-size: 14px;
+  --sng-typography-ui-body-14-font-weight: 400;
+  --sng-typography-ui-body-14-line-height: 20px;
+  --sng-typography-ui-label-12-font-family: {font.sans};
+  --sng-typography-ui-label-12-font-size: 12px;
+  --sng-typography-ui-label-12-font-weight: 500;
+  --sng-typography-ui-label-12-line-height: 16px;
+  --sng-typography-ui-detail-12-font-family: {font.sans};
+  --sng-typography-ui-detail-12-font-size: 12px;
+  --sng-typography-ui-detail-12-font-weight: 400;
+  --sng-typography-ui-detail-12-line-height: 16px;
   --sng-layout-grid-baseline: 8px;
   --sng-layout-grid-gap: 24px;
   --sng-layout-grid-padding: 24px;
 }
 
 /* --- Semantic Tokens (Sonagi Core) --- */
-:root,
-[data-theme='light'],
-[data-theme='sonagi-core'] {
-  --sng-color-brand-primary: #47211b;
-  --sng-color-brand-primary-hover: #38130e;
-  --sng-color-brand-accent: #d2645f;
-  --sng-color-brand-accent-hover: #b44240;
-  --sng-color-brand-cyan: #00ffcc;
-  --sng-color-brand-ink: #47211b;
-  --sng-color-background-base: #fcf2f0;
-  --sng-color-background-surface: #f5e5e2;
-  --sng-color-background-elevated: #fefaf9;
-  --sng-color-text-primary: #1e1311;
-  --sng-color-text-secondary: #614f4b;
-  --sng-color-text-muted: #756563;
-  --sng-color-text-disabled: #9d8986;
-  --sng-color-text-inverse: #fcf2f0;
-  --sng-color-border-default: #95817f;
-  --sng-color-border-subtle: #d7c5c2;
-  --sng-color-border-strong: #47211b;
-  --sng-color-state-info: #1275b5;
-  --sng-color-state-info-bg: #e8f1f8;
-  --sng-color-state-success: #2ea043;
-  --sng-color-state-success-bg: #eaf4eb;
-  --sng-color-state-warning: #d29922;
-  --sng-color-state-warning-bg: #fdf5e5;
-  --sng-color-state-danger: #c83e4d;
-  --sng-color-state-danger-bg: #fde8e8;
+:root, [data-theme="light"], [data-theme="sonagi-core"] {
+  --sng-color-brand-primary: {primitive.burgundy.800};
+  --sng-color-brand-primary-hover: {primitive.burgundy.900};
+  --sng-color-brand-accent: {primitive.burgundy.400};
+  --sng-color-brand-accent-hover: {primitive.burgundy.500};
+  --sng-color-brand-cyan: {primitive.brand.cyan};
+  --sng-color-brand-ink: {primitive.burgundy.800};
+  --sng-color-background-base: {primitive.burgundy.50};
+  --sng-color-background-surface: {primitive.burgundy.100};
+  --sng-color-background-elevated: {primitive.burgundy.25};
+  --sng-color-text-primary: {primitive.brown.900};
+  --sng-color-text-secondary: {primitive.brown.600};
+  --sng-color-text-muted: {primitive.brown.500};
+  --sng-color-text-disabled: {primitive.brown.400};
+  --sng-color-text-inverse: {primitive.burgundy.50};
+  --sng-color-border-default: {primitive.brown.450};
+  --sng-color-border-subtle: {primitive.brown.200};
+  --sng-color-border-strong: {primitive.burgundy.800};
+  --sng-color-state-info: {primitive.blue.600};
+  --sng-color-state-info-bg: {primitive.state.info-bg};
+  --sng-color-state-success: {primitive.state.success};
+  --sng-color-state-success-bg: {primitive.state.success-bg};
+  --sng-color-state-warning: {primitive.state.warning};
+  --sng-color-state-warning-bg: {primitive.state.warning-bg};
+  --sng-color-state-danger: {primitive.state.danger};
+  --sng-color-state-danger-bg: {primitive.state.danger-light};
   --sng-color-state-error: var(--sng-color-state-danger);
   --sng-color-state-error-bg: var(--sng-color-state-danger-bg);
   --sng-shadow-flat: none;
-  --sng-shadow-raised: 0 2px 6px rgba(40, 20, 15, 0.08);
-  --sng-shadow-floating: 0 8px 24px rgba(40, 20, 15, 0.15);
-  --sng-shadow-focus: 0 0 0 3px rgba(180, 66, 64, 0.3);
+  --sng-shadow-raised: 0 2px 6px rgba(40,20,15,0.08);
+  --sng-shadow-floating: 0 8px 24px rgba(40,20,15,0.15);
+  --sng-shadow-focus: 0 0 0 3px rgba(180,66,64,0.3);
 }
 
-[data-theme='dark'] {
-  --sng-color-brand-primary: #eeb4a9;
-  --sng-color-brand-primary-hover: #ffc6bc;
-  --sng-color-brand-accent: #e5867f;
-  --sng-color-brand-accent-hover: #f7a7a1;
-  --sng-color-brand-cyan: #00ffcc;
-  --sng-color-brand-ink: #eeb4a9;
-  --sng-color-background-base: #1c1412;
-  --sng-color-background-surface: #2c201e;
-  --sng-color-background-elevated: #392e2c;
-  --sng-color-text-primary: #f7eeec;
-  --sng-color-text-secondary: #c3b4b1;
-  --sng-color-text-muted: #988a88;
-  --sng-color-text-disabled: #6c605e;
-  --sng-color-text-inverse: #1c1412;
-  --sng-color-border-default: #796966;
-  --sng-color-border-subtle: #392d2b;
-  --sng-color-border-strong: #eeb4a9;
-  --sng-color-state-info: #79c0ff;
-  --sng-color-state-info-bg: #1c2d42;
-  --sng-color-state-success: #56d364;
-  --sng-color-state-success-bg: #132e19;
-  --sng-color-state-warning: #e3b341;
-  --sng-color-state-warning-bg: #2e2305;
-  --sng-color-state-danger: #f85149;
-  --sng-color-state-danger-bg: #421818;
+[data-theme="dark"] {
+  --sng-color-brand-primary: {primitive.burgundy.200};
+  --sng-color-brand-primary-hover: {primitive.burgundy.150};
+  --sng-color-brand-accent: {primitive.burgundy.300};
+  --sng-color-brand-accent-hover: {primitive.burgundy.250};
+  --sng-color-brand-cyan: {primitive.brand.cyan};
+  --sng-color-brand-ink: {primitive.burgundy.200};
+  --sng-color-background-base: {primitive.brown.950};
+  --sng-color-background-surface: {primitive.brown.850};
+  --sng-color-background-elevated: {primitive.brown.800};
+  --sng-color-text-primary: {primitive.brown.50};
+  --sng-color-text-secondary: {primitive.brown.300};
+  --sng-color-text-muted: {primitive.brown.410};
+  --sng-color-text-disabled: {primitive.brown.650};
+  --sng-color-text-inverse: {primitive.brown.950};
+  --sng-color-border-default: {primitive.brown.550};
+  --sng-color-border-subtle: {primitive.brown.820};
+  --sng-color-border-strong: {primitive.burgundy.200};
+  --sng-color-state-info: {primitive.state.info-light};
+  --sng-color-state-info-bg: {primitive.state.info-dark};
+  --sng-color-state-success: {primitive.state.success-light};
+  --sng-color-state-success-bg: {primitive.state.success-dark};
+  --sng-color-state-warning: {primitive.state.warning-light};
+  --sng-color-state-warning-bg: {primitive.state.warning-dark};
+  --sng-color-state-danger: {primitive.state.danger};
+  --sng-color-state-danger-bg: {primitive.state.danger-dark};
   --sng-color-state-error: var(--sng-color-state-danger);
   --sng-color-state-error-bg: var(--sng-color-state-danger-bg);
   --sng-shadow-flat: none;
-  --sng-shadow-raised: 0 2px 6px rgba(0, 0, 0, 0.4);
-  --sng-shadow-floating: 0 8px 24px rgba(0, 0, 0, 0.6);
-  --sng-shadow-focus: 0 0 0 3px rgba(238, 180, 169, 0.35);
+  --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
+  --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
+  --sng-shadow-focus: 0 0 0 3px rgba(238,180,169,0.35);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --sng-color-brand-primary: #eeb4a9;
-    --sng-color-brand-primary-hover: #ffc6bc;
-    --sng-color-brand-accent: #e5867f;
-    --sng-color-brand-accent-hover: #f7a7a1;
-    --sng-color-brand-cyan: #00ffcc;
-    --sng-color-brand-ink: #eeb4a9;
-    --sng-color-background-base: #1c1412;
-    --sng-color-background-surface: #2c201e;
-    --sng-color-background-elevated: #392e2c;
-    --sng-color-text-primary: #f7eeec;
-    --sng-color-text-secondary: #c3b4b1;
-    --sng-color-text-muted: #988a88;
-    --sng-color-text-disabled: #6c605e;
-    --sng-color-text-inverse: #1c1412;
-    --sng-color-border-default: #796966;
-    --sng-color-border-subtle: #392d2b;
-    --sng-color-border-strong: #eeb4a9;
-    --sng-color-state-info: #79c0ff;
-    --sng-color-state-info-bg: #1c2d42;
-    --sng-color-state-success: #56d364;
-    --sng-color-state-success-bg: #132e19;
-    --sng-color-state-warning: #e3b341;
-    --sng-color-state-warning-bg: #2e2305;
-    --sng-color-state-danger: #f85149;
-    --sng-color-state-danger-bg: #421818;
+  :root:not([data-theme="light"]) {
+    --sng-color-brand-primary: {primitive.burgundy.200};
+    --sng-color-brand-primary-hover: {primitive.burgundy.150};
+    --sng-color-brand-accent: {primitive.burgundy.300};
+    --sng-color-brand-accent-hover: {primitive.burgundy.250};
+    --sng-color-brand-cyan: {primitive.brand.cyan};
+    --sng-color-brand-ink: {primitive.burgundy.200};
+    --sng-color-background-base: {primitive.brown.950};
+    --sng-color-background-surface: {primitive.brown.850};
+    --sng-color-background-elevated: {primitive.brown.800};
+    --sng-color-text-primary: {primitive.brown.50};
+    --sng-color-text-secondary: {primitive.brown.300};
+    --sng-color-text-muted: {primitive.brown.410};
+    --sng-color-text-disabled: {primitive.brown.650};
+    --sng-color-text-inverse: {primitive.brown.950};
+    --sng-color-border-default: {primitive.brown.550};
+    --sng-color-border-subtle: {primitive.brown.820};
+    --sng-color-border-strong: {primitive.burgundy.200};
+    --sng-color-state-info: {primitive.state.info-light};
+    --sng-color-state-info-bg: {primitive.state.info-dark};
+    --sng-color-state-success: {primitive.state.success-light};
+    --sng-color-state-success-bg: {primitive.state.success-dark};
+    --sng-color-state-warning: {primitive.state.warning-light};
+    --sng-color-state-warning-bg: {primitive.state.warning-dark};
+    --sng-color-state-danger: {primitive.state.danger};
+    --sng-color-state-danger-bg: {primitive.state.danger-dark};
     --sng-color-state-error: var(--sng-color-state-danger);
     --sng-color-state-error-bg: var(--sng-color-state-danger-bg);
     --sng-shadow-flat: none;
-    --sng-shadow-raised: 0 2px 6px rgba(0, 0, 0, 0.4);
-    --sng-shadow-floating: 0 8px 24px rgba(0, 0, 0, 0.6);
-    --sng-shadow-focus: 0 0 0 3px rgba(238, 180, 169, 0.35);
+    --sng-shadow-raised: 0 2px 6px rgba(0,0,0,0.4);
+    --sng-shadow-floating: 0 8px 24px rgba(0,0,0,0.6);
+    --sng-shadow-focus: 0 0 0 3px rgba(238,180,169,0.35);
   }
 }
 
