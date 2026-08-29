@@ -3,6 +3,9 @@
  */
 
 @import '../../tokens/dist/variables.css';
+@import '../../tokens/tokens/spacing.css';
+@import '../../tokens/tokens/opacity.css';
+@import '../../tokens/tokens/radius.css';
 
 @tailwind base;
 @tailwind components;
