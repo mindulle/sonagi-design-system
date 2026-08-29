@@ -18,13 +18,6 @@ const meta: Meta<typeof HoverPreview> = {
   },
 };
 
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=225-4',
-    },
-  },
-
 export default meta;
 type Story = StoryObj<typeof HoverPreview>;
 

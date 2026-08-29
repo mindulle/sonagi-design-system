@@ -14,13 +14,6 @@ const meta: Meta<typeof TableOfContents> = {
   },
 };
 
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=220-495',
-    },
-  },
-
 export default meta;
 type Story = StoryObj<typeof TableOfContents>;
 

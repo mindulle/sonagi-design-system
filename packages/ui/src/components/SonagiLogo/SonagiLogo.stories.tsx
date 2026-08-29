@@ -5,6 +5,11 @@ const meta: Meta<typeof SonagiLogo> = {
   title: 'Brand/SonagiLogo',
   component: SonagiLogo,
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=225-1499',
+    },
+
     layout: 'centered',
   },
   tags: ['autodocs'],
