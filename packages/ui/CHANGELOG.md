@@ -1,3 +1,27 @@
+# [1.5.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.4.0...ui-v1.5.0) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ops:** fix pnpm filter syntax for build-storybook ([#47](https://github.com/mindulle/sonagi-design-system/issues/47)) ([49a335d](https://github.com/mindulle/sonagi-design-system/commit/49a335dc84e80de9c90f48d3e0e07874e93a4930))
+* **ops:** remove empty with key in pnpm setup action ([#44](https://github.com/mindulle/sonagi-design-system/issues/44)) ([7c1aea7](https://github.com/mindulle/sonagi-design-system/commit/7c1aea757cd4b36f0d11c97dd4eb1a5dc6c74b17))
+* **ops:** remove pnpm version from setup action to avoid conflict ([#39](https://github.com/mindulle/sonagi-design-system/issues/39)) ([203042e](https://github.com/mindulle/sonagi-design-system/commit/203042e0d93da4d87d847928b4fca14c0655c3cc))
+* **ops:** restore accidentally deleted with keys in deploy workflow ([#45](https://github.com/mindulle/sonagi-design-system/issues/45)) ([c801007](https://github.com/mindulle/sonagi-design-system/commit/c80100758bfcf7a9e6279ad6f82cf4dad20a82c2))
+* **ops:** run pnpm build before build-storybook to ensure tokens dist is generated ([#40](https://github.com/mindulle/sonagi-design-system/issues/40)) ([7e6046f](https://github.com/mindulle/sonagi-design-system/commit/7e6046f8f871578e3c0e3065696e0497e7ab984f))
+* **ops:** upgrade setup-node to v22 to support pnpm v11 ([#46](https://github.com/mindulle/sonagi-design-system/issues/46)) ([9f93a23](https://github.com/mindulle/sonagi-design-system/commit/9f93a23fa7f5b32ac23691196f1e8a1a3b14be45))
+* **ui:** add 'base' to border-radius in tailwind config ([9c1d8ea](https://github.com/mindulle/sonagi-design-system/commit/9c1d8ea1b1a52cf6a8c975456b8116ff54b5f137))
+* **ui:** fix invalid tailwind classes in Button, Modal, and Pagination ([#41](https://github.com/mindulle/sonagi-design-system/issues/41)) ([95eb58e](https://github.com/mindulle/sonagi-design-system/commit/95eb58e35e8aac774195b8992f343a523bcdecbd))
+* **ui:** fix Pagination border-radius and replace text arrows with svg ([#38](https://github.com/mindulle/sonagi-design-system/issues/38)) ([52b5d51](https://github.com/mindulle/sonagi-design-system/commit/52b5d512f8b4fda4541160dfd553717806608ccf))
+* **ui:** remove unresolved sng-space variables and use standard tailwind spacing ([a73ea41](https://github.com/mindulle/sonagi-design-system/commit/a73ea41d382f62f74be06b71517da8ab9d7dfe7f))
+* **ui:** restore semantic spacing tokens by importing them in global.css ([#43](https://github.com/mindulle/sonagi-design-system/issues/43)) ([abeedf8](https://github.com/mindulle/sonagi-design-system/commit/abeedf8ca5d13d2355591e38a12156a280251e9e))
+* **ui:** trigger release for recent refactoring ([fc1e80b](https://github.com/mindulle/sonagi-design-system/commit/fc1e80b295456debab3833172909ce5e061f5d79))
+* **ui:** update storybook figma urls to the correct V3 file ([#42](https://github.com/mindulle/sonagi-design-system/issues/42)) ([75d7762](https://github.com/mindulle/sonagi-design-system/commit/75d776271f81cc4a27c66ed34c1767dc10df1616))
+
+
+### Features
+
+* **ops:** add cloudflare pages deployment for storybook ([#37](https://github.com/mindulle/sonagi-design-system/issues/37)) ([aae2627](https://github.com/mindulle/sonagi-design-system/commit/aae26274c90c1abe64739a09da7944c9aed70d59))
+
 # [1.4.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.3.0...ui-v1.4.0) (2026-08-28)
 
 
