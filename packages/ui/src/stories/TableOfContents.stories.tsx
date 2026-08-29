@@ -30,14 +30,3 @@ export const Default: Story = {
   },
 };
 
-export const AllVariantsMatrix: Story = {
-  name: '🎨 All-Variants Matrix (Visual Testing Spec)',
-  render: () => (
-    <div className="flex flex-col gap-6 p-4 bg-bg-base border border-border-subtle rounded-lg w-80">
-      <div className="text-sm font-semibold text-text-muted border-b border-border-subtle pb-2">
-        Figma ComponentSet Matrix — TOC Item States
-      </div>
-      <TableOfContents headings={sampleHeadings} />
-    </div>
-  ),
-};
