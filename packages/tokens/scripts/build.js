@@ -54,8 +54,17 @@ function extractTokens(node, pathArray = [], result = {}) {
     
     const newPath = [...pathArray, key];
     if (val && typeof val === 'object' && ('$value' in val || 'value' in val)) {
-      const cssVar = getCssVarName(newPath);
-      result[cssVar] = val.$value || val.value;
+      const rawVal = val.$value || val.value;
+      if (typeof rawVal === 'object') {
+        for (const [subKey, subVal] of Object.entries(rawVal)) {
+           const camelToKebab = subKey.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
+           const cssVar = getCssVarName([...newPath, camelToKebab]);
+           result[cssVar] = subVal;
+        }
+      } else {
+        const cssVar = getCssVarName(newPath);
+        result[cssVar] = rawVal;
+      }
     } else if (val && typeof val === 'object') {
       extractTokens(val, newPath, result);
     }
