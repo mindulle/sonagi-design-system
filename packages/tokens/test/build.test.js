@@ -29,7 +29,7 @@ describe('Token Build Output Verification', () => {
     const { tokens } = await import(cjsPath);
     expect(tokens).toBeDefined();
     expect(typeof tokens).toBe('object');
-    expect(tokens['--sng-color-blue-500']).toBeDefined();
+    expect(tokens['--sng-primitive-blue-500']).toBeDefined();
     expect(tokens['--sng-color-text-primary']).toBeDefined();
   });
 
