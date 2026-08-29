@@ -19,4 +19,3 @@ export { Wordmark } from './components/Wordmark';
 export type { WordmarkProps } from './components/Wordmark';
 export { SonagiLogo } from './components/SonagiLogo';
 export type { SonagiLogoProps } from './components/SonagiLogo';
-export * from './components/Agent';
