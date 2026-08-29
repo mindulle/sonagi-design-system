@@ -13,6 +13,15 @@ function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
+
+function resolveAliases(value) {
+  if (typeof value !== 'string') return value;
+  return value.replace(/\{([^}]+)\}/g, (match, pathStr) => {
+    const parts = pathStr.split('.');
+    return 'var(' + getCssVarName(parts) + ')';
+  });
+}
+
 function getCssVarName(pathArray) {
   let parts = [...pathArray];
   if (parts[0] === 'tokens') {
@@ -59,11 +68,11 @@ function extractTokens(node, pathArray = [], result = {}) {
         for (const [subKey, subVal] of Object.entries(rawVal)) {
            const camelToKebab = subKey.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
            const cssVar = getCssVarName([...newPath, camelToKebab]);
-           result[cssVar] = subVal;
+           result[cssVar] = resolveAliases(subVal);
         }
       } else {
         const cssVar = getCssVarName(newPath);
-        result[cssVar] = rawVal;
+        result[cssVar] = resolveAliases(rawVal);
       }
     } else if (val && typeof val === 'object') {
       extractTokens(val, newPath, result);
