@@ -66,6 +66,7 @@ export default {
       borderRadius: {
         none: 'var(--sng-radius-none)',
         sm: 'var(--sng-radius-sm)',
+        base: 'var(--sng-radius-base)',
         md: 'var(--sng-radius-md)',
         lg: 'var(--sng-radius-lg)',
         xl: 'var(--sng-radius-xl)',
