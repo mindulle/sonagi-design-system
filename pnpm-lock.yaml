@@ -71,14 +71,13 @@ importers:
         version: 4.1.9(@types/node@25.9.3)(@vitest/browser-playwright@4.1.9)(@vitest/coverage-v8@4.1.9)(jsdom@26.1.0)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.9.0))
 
   packages/ui:
-    dependencies:
-      '@mindulle/tokens':
-        specifier: workspace:^
-        version: link:../tokens
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^5.2.1
         version: 5.2.1(storybook@10.5.0(@types/react@18.3.31)(prettier@3.8.4)(react@18.3.1))
+      '@mindulle/tokens':
+        specifier: workspace:^
+        version: link:../tokens
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@25.0.5(typescript@5.9.3))

@@ -46,12 +46,11 @@
   },
   "peerDependencies": {
     "react": ">=18",
-    "react-dom": ">=18"
-  },
-  "dependencies": {
-    "@mindulle/tokens": "workspace:^"
+    "react-dom": ">=18",
+    "@mindulle/tokens": ">=1.11.0"
   },
   "devDependencies": {
+    "@mindulle/tokens": "workspace:^",
     "@chromatic-com/storybook": "^5.2.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
