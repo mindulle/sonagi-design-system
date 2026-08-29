@@ -18,11 +18,11 @@ export function Button({
   ...props
 }: ButtonProps) {
   // Figma v3 Spec
-  const baseClasses = 'inline-flex items-center justify-center gap-2 font-sans font-semibold border transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2';
+  const baseClasses = 'inline-flex items-center justify-center gap-sng-gap-sm font-sans font-semibold border transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2';
   
   const sizeClasses = {
     sm: 'text-xs px-3 py-1.5 rounded-sm',
-    md: 'text-sm px-4 py-2 rounded-base',
+    md: 'text-sm px-sng-element-px py-sng-element-py rounded-base',
     lg: 'text-base px-5 py-3 rounded-md',
   };
 
