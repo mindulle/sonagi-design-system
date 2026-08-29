@@ -1,3 +1,20 @@
+# [1.11.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.10.1...tokens-v1.11.0) (2026-08-29)
+
+
+### Bug Fixes
+
+* **storybook:** explicitly set data-theme=light to prevent OS dark mode override ([ce2af5e](https://github.com/mindulle/sonagi-design-system/commit/ce2af5ef2ed9b8e12c64633aeea4674096114764))
+* **storybook:** remove duplicate design blocks and map SonagiLogo ([9bf73c1](https://github.com/mindulle/sonagi-design-system/commit/9bf73c1968948ac537dd59e4bfefb6a0a019d7dc))
+* **tokens:** prevent namespace collision between primitive and semantic variables ([0c22cab](https://github.com/mindulle/sonagi-design-system/commit/0c22cab2367039977c4d7ca615ef387a4a87a8c4))
+* **tokens:** prevent namespace collision between primitive and semantic variables ([cb5033a](https://github.com/mindulle/sonagi-design-system/commit/cb5033a443ab5d841748fd319b030a4ea4c8dcb8))
+* **tokens:** resolve json aliases in CSS ([a128db5](https://github.com/mindulle/sonagi-design-system/commit/a128db54fae1b0d74e31018cc24f19bb6012f049))
+
+
+### Features
+
+* **storybook:** add light/dark mode toggle to toolbar ([f0d8693](https://github.com/mindulle/sonagi-design-system/commit/f0d86933f427d90ac647d924b6b83bb5550050ce))
+* **ui:** refactor HoverPreview to use Tailwind SSOT tokens ([c888aa7](https://github.com/mindulle/sonagi-design-system/commit/c888aa7e8eef18392ec7dff099149d673d7cd3fe))
+
 ## [1.10.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.10.0...tokens-v1.10.1) (2026-08-29)
 
 
