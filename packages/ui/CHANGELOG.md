@@ -1,3 +1,13 @@
+## [1.6.1](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.6.0...ui-v1.6.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **tokens:** prevent namespace collision between primitive and semantic variables ([0c22cab](https://github.com/mindulle/sonagi-design-system/commit/0c22cab2367039977c4d7ca615ef387a4a87a8c4))
+* **tokens:** prevent namespace collision between primitive and semantic variables ([cb5033a](https://github.com/mindulle/sonagi-design-system/commit/cb5033a443ab5d841748fd319b030a4ea4c8dcb8))
+* **tokens:** resolve json aliases in CSS ([a128db5](https://github.com/mindulle/sonagi-design-system/commit/a128db54fae1b0d74e31018cc24f19bb6012f049))
+* **tokens:** resolve json aliases in CSS ([#51](https://github.com/mindulle/sonagi-design-system/issues/51)) ([d0cb14a](https://github.com/mindulle/sonagi-design-system/commit/d0cb14aa27ee5a65d851828c5d55d3ead6da88ff))
+
 # [1.6.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.5.0...ui-v1.6.0) (2026-08-29)
 
 
