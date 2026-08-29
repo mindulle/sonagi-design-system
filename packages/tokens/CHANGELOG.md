@@ -1,3 +1,10 @@
+## [1.9.10](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.9...tokens-v1.9.10) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ops:** upgrade setup-node to v22 to support pnpm v11 ([#46](https://github.com/mindulle/sonagi-design-system/issues/46)) ([9f93a23](https://github.com/mindulle/sonagi-design-system/commit/9f93a23fa7f5b32ac23691196f1e8a1a3b14be45))
+
 ## [1.9.9](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.8...tokens-v1.9.9) (2026-08-29)
 
 
