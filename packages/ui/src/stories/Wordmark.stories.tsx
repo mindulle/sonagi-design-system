@@ -11,7 +11,20 @@ const meta: Meta<typeof Wordmark> = {
       options: ['en', 'ko'],
     },
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=225-1499',
+    },
+  },
 };
+
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=225-1499',
+    },
+  },
 
 export default meta;
 type Story = StoryObj<typeof Wordmark>;

@@ -10,7 +10,20 @@ const meta: Meta<typeof Input> = {
     disabled: { control: 'boolean' },
     placeholder: { control: 'text' },
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=159-393',
+    },
+  },
 };
+
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=159-393',
+    },
+  },
 
 export default meta;
 type Story = StoryObj<typeof Input>;
