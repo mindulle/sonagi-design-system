@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.10.0...tokens-v1.10.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **tokens:** resolve json aliases in CSS ([#51](https://github.com/mindulle/sonagi-design-system/issues/51)) ([d0cb14a](https://github.com/mindulle/sonagi-design-system/commit/d0cb14aa27ee5a65d851828c5d55d3ead6da88ff))
+
 # [1.10.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.11...tokens-v1.10.0) (2026-08-29)
 
 
