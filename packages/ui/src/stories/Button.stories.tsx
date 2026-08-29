@@ -9,7 +9,7 @@ const meta = {
     layout: 'centered',
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/1hgAgnMvqn2uCF8i45Do4x/Core-Primitives-v3?node-id=4-3',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Core-Primitives-v3?node-id=4-3',
     },
   },
   tags: ['autodocs'],
