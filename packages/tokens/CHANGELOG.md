@@ -1,3 +1,10 @@
+## [1.9.9](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.8...tokens-v1.9.9) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ops:** restore accidentally deleted with keys in deploy workflow ([#45](https://github.com/mindulle/sonagi-design-system/issues/45)) ([c801007](https://github.com/mindulle/sonagi-design-system/commit/c80100758bfcf7a9e6279ad6f82cf4dad20a82c2))
+
 ## [1.9.8](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.7...tokens-v1.9.8) (2026-08-29)
 
 
