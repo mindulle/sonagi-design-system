@@ -73,7 +73,7 @@ importers:
   packages/ui:
     dependencies:
       '@mindulle/tokens':
-        specifier: link:../tokens
+        specifier: workspace:^
         version: link:../tokens
     devDependencies:
       '@chromatic-com/storybook':

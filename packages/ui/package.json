@@ -49,7 +49,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@mindulle/tokens": "link:../tokens"
+    "@mindulle/tokens": "workspace:^"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
