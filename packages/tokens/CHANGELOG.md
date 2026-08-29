@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.0...tokens-v1.8.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** add 'base' to border-radius in tailwind config ([9c1d8ea](https://github.com/mindulle/sonagi-design-system/commit/9c1d8ea1b1a52cf6a8c975456b8116ff54b5f137))
+
 # [1.8.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.7.0...tokens-v1.8.0) (2026-08-28)
 
 
