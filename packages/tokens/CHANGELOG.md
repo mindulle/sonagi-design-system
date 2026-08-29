@@ -1,3 +1,10 @@
+## [1.9.8](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.7...tokens-v1.9.8) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ops:** remove empty with key in pnpm setup action ([#44](https://github.com/mindulle/sonagi-design-system/issues/44)) ([7c1aea7](https://github.com/mindulle/sonagi-design-system/commit/7c1aea757cd4b36f0d11c97dd4eb1a5dc6c74b17))
+
 ## [1.9.7](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.6...tokens-v1.9.7) (2026-08-29)
 
 
