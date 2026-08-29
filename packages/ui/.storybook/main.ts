@@ -23,7 +23,13 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-docs'),
     getAbsolutePath('@storybook/addon-designs')
   ],
-  "staticDirs": ['../../tokens/dist'],
+  // Generated graphics are build artifacts: packages/graphics-generator/output is
+  // gitignored, so run `python3 build_all.py` in that package before starting
+  // Storybook. The gallery degrades to an instruction panel when it is absent.
+  "staticDirs": [
+    '../../tokens/dist',
+    { from: '../../graphics-generator/output', to: '/generated' }
+  ],
   "framework": getAbsolutePath('@storybook/react-vite')
 };
 export default config;
