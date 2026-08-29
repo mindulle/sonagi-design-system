@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.8.1...ui-v1.8.2) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** declare tokens as a peer dependency to survive npm publish ([6ca876a](https://github.com/mindulle/sonagi-design-system/commit/6ca876a34d483f8c99fa0b03064ee45b8c5ef6f6))
+
 ## [1.8.1](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.8.0...ui-v1.8.1) (2026-08-29)
 
 
