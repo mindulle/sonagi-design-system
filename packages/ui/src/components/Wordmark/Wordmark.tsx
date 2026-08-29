@@ -10,6 +10,7 @@ export interface WordmarkProps extends React.HTMLAttributes<HTMLDivElement> {
 /**
  * Wordmark
  * 
+ * @deprecated V3 디자인 시스템에서 제외되었습니다. 추후 삭제될 예정이므로 신규 화면에 사용하지 마세요.
  * Sonagi 디자인 시스템의 브랜드 로고/워드마크 컴포넌트.
  * 로고 고유의 색상(#00ffcc) 도트 포인트를 포함합니다.
  */

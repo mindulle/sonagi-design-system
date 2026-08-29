@@ -19,6 +19,7 @@ export interface NotePreview {
 /**
  * HoverPreview
  *
+ * @deprecated V3 디자인 시스템에서 제외되었습니다. 신규 화면에 사용하지 마세요.
  * 위키링크에 마우스를 올리면 해당 노트의 제목과 요약을 팝업으로 보여주는 컴포넌트.
  * 노트 데이터 fetching 로직은 소비자(blog-sonagi-space)가 fetchNote prop으로 주입한다.
  */
