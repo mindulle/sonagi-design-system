@@ -10,266 +10,50 @@ Sonagi 디자인 시스템의 모든 디자인 토큰 명세입니다. 이 토�
 
 ## 1. Colors (색상)
 
+**V3 아키텍처 업데이트 (2026-08)**: 
+이전 V2의 Navy/Blue 테마에서 벗어나, 특유의 단단하고 따뜻한 감성을 담은 **Burgundy & Brown** 기반의 색상 체계로 전면 개편되었습니다.
+
+모든 시맨틱 색상은 \`var(--sng-color-*)\` 형태로 사용할 수 있으며, 다크모드 적용 시 자동으로 알맞은 Primitive 값으로 스왑(Swap)됩니다.
+
 ### Brand Colors (브랜드 컬러)
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px', marginBottom: '32px' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-primary)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-brand-primary</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #1c2c4d</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #1c2c4d</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-primary-dark)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-brand-primary-dark</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #0a1128</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #0a1128</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-primary-hover)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-brand-primary-hover</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #1275b5</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #1275b5</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-brand-logo)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-brand-logo</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #00ffcc</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #00ffcc</code>
-  </div>
-</div>
+- **`--sng-color-brand-primary`**: 메인 브랜드 컬러 (버튼 배경 등)
+- **`--sng-color-brand-primary-hover`**: 메인 브랜드 컬러 호버 상태
+- **`--sng-color-brand-accent`**: 보조 강조 컬러 (뱃지, 포인트)
+- **`--sng-color-brand-cyan`**: 로고 및 심볼용 시그니처 옥색 점(`#00ffcc`)
 
-### Interactive Accent Colors (인터랙티브 악센트)
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px', marginBottom: '32px' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-accent-default)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-accent-default</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #4A90E2</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #4A90E2</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-accent-hover)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-accent-hover</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #2a6bbf</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #2a6bbf</code>
-  </div>
-</div>
-
-### Semantic Backgrounds & Surfaces (배경 및 서페이스)
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px', marginBottom: '32px' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-base)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-bg-base</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #faf9f7</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #010609</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-surface)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-bg-surface</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #fff8f2</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #0d1117</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-elevated)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-bg-elevated</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #ffffff</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #161b22</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-bg-overlay)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-bg-overlay</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #f0ede8</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #1c2128</code>
-  </div>
-</div>
+### Background Colors (배경 컬러)
+- **`--sng-color-background-base`**: 최하단 도화지 배경
+- **`--sng-color-background-surface`**: 1단계 돌출된 카드/입력창 배경
+- **`--sng-color-background-elevated`**: 2단계 부유하는 팝업/모달 배경
 
 ### Text Colors (텍스트 컬러)
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px', marginBottom: '32px' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-text-primary)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-text-primary</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #0d1117</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #f0f6fc</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-text-secondary)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-text-secondary</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #30363d</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #c9d1d9</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-text-muted)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-text-muted</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #8b949e</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #8b949e</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-text-disabled)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-text-disabled</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #c9d1d9</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #484f58</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-text-inverse)', border: '1px solid var(--sng-color-border-default)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-text-inverse</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #faf9f7</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #010609</code>
-  </div>
-</div>
-
-### Border Colors (경계선 컬러)
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px', marginBottom: '32px' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-border-default)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-border-default</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #e6eaef</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #30363d</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-border-subtle)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-border-subtle</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #f0ede8</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #1c2128</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-border-strong)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-border-strong</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #1c2c4d</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #1c2c4d</code>
-  </div>
-</div>
-
-### State Colors (상태 컬러)
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px', marginBottom: '32px' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-success)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-success</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #2ea043</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #2ea043</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-success-bg)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-success-bg</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #d4edda</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: rgba(46, 160, 67, 0.15)</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-warning)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-warning</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #d29922</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #d29922</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-warning-bg)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-warning-bg</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #fff3cd</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: rgba(210, 153, 34, 0.15)</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-danger)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-danger</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #f85149</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #f85149</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-danger-bg)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-danger-bg</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #fde8e8</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: rgba(248, 81, 73, 0.15)</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-info)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-info</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #4A90E2</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: #4A90E2</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: '8px', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <div style={{ height: '64px', borderRadius: '4px', backgroundColor: 'var(--sng-color-state-info-bg)', marginBottom: '8px' }} />
-    <strong style={{ display: 'block', fontSize: '14px', wordBreak: 'break-all' }}>--sng-color-state-info-bg</strong>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Light: #e8f4fd</code>
-    <code style={{ fontSize: '11px', display: 'block', color: 'var(--sng-color-text-muted)' }}>Dark: rgba(74, 144, 226, 0.15)</code>
-  </div>
-</div>
+- **`--sng-color-text-primary`**: 기본 텍스트 (가장 높은 가독성)
+- **`--sng-color-text-secondary`**: 보조 텍스트 (설명, 서브타이틀)
+- **`--sng-color-text-muted`**: 비활성/힌트 텍스트
+- **`--sng-color-text-inverse`**: 짙은 배경 위 반전 텍스트
 
 ---
 
 ## 2. Typography (타이포그래피)
 
-### Font Families
-- **Sans-serif (Body & UI):** `var(--sng-font-sans)`
-  - <span style={{ fontFamily: 'var(--sng-font-sans)', fontSize: '16px' }}>가나다라마바사 아자차카타파하 (Pretendard, Inter, system-ui)</span>
-- **Serif (Editorial):** `var(--sng-font-serif)`
-  - <span style={{ fontFamily: 'var(--sng-font-serif)', fontSize: '16px' }}>가나다라마바사 아자차카타파하 (Noto Serif KR, Merriweather)</span>
-- **Monospace (Code & Numbers):** `var(--sng-font-mono)`
-  - <span style={{ fontFamily: 'var(--sng-font-mono)', fontSize: '16px' }}>const sonagi = 12345; (JetBrains Mono, Fira Code)</span>
+Sonagi 시스템은 Minor Third(1.2) 스케일을 기반으로 한 수학적인 타이포그래피 스케일을 제공합니다.
+피그마의 `UI / Body 16`, `UI / Label 14` 등의 텍스트 스타일과 1:1로 매칭됩니다.
 
-### Font Size Scale
-- `var(--sng-font-size-xs)` (12px): <span style={{ fontSize: 'var(--sng-font-size-xs)' }}>동해물과 백두산이 마르고 닳도록 (Caption, Details)</span>
-- `var(--sng-font-size-sm)` (14px): <span style={{ fontSize: 'var(--sng-font-size-sm)' }}>동해물과 백두산이 마르고 닳도록 (Small copy, UI copy)</span>
-- `var(--sng-font-size-base)` (16px): <span style={{ fontSize: 'var(--sng-font-size-base)' }}>동해물과 백두산이 마르고 닳도록 (Default body)</span>
-- `var(--sng-font-size-lg)` (18px): <span style={{ fontSize: 'var(--sng-font-size-lg)' }}>동해물과 백두산이 마르고 닳도록 (Large body, Subheading)</span>
-- `var(--sng-font-size-xl)` (20px): <span style={{ fontSize: 'var(--sng-font-size-xl)' }}>동해물과 백두산이 마르고 닳도록</span>
-- `var(--sng-font-size-2xl)` (24px): <span style={{ fontSize: 'var(--sng-font-size-2xl)', fontWeight: 'bold' }}>동해물과 백두산이 마르고 닳도록 (H3)</span>
-- `var(--sng-font-size-3xl)` (30px): <span style={{ fontSize: 'var(--sng-font-size-3xl)', fontWeight: 'bold' }}>동해물과 백두산이 마르고 닳도록 (H2)</span>
-- `var(--sng-font-size-4xl)` (36px): <span style={{ fontSize: 'var(--sng-font-size-4xl)', fontWeight: 'bold' }}>동해물과 백두산이 마르고 (H1)</span>
+- **Title (18px)**: `--sng-typography-ui-title-18-*`
+- **Body (16px)**: `--sng-typography-ui-body-16-*`
+- **Label (14px)**: `--sng-typography-ui-label-14-*`
+- **Body (14px)**: `--sng-typography-ui-body-14-*`
+- **Detail (12px)**: `--sng-typography-ui-detail-12-*`
+
+> 주의: 오프스케일(예: 24px) 텍스트는 허용되지 않으며, 피그마 상에서 반드시 공식 스케일로 스냅(Snap)되어야 합니다.
 
 ---
 
-## 3. Spacing & Radius (간격 및 라운딩)
+## 3. Shadows (그림자)
 
-### Spacing Scale
-- `var(--sng-spacing-1)` (4px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-1)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
-- `var(--sng-spacing-2)` (8px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-2)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
-- `var(--sng-spacing-3)` (12px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-3)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
-- `var(--sng-spacing-4)` (16px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-4)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
-- `var(--sng-spacing-5)` (20px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-5)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
-- `var(--sng-spacing-6)` (24px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-6)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
-- `var(--sng-spacing-8)` (32px): <div style={{ display: 'inline-block', width: 'var(--sng-spacing-8)', height: '16px', backgroundColor: 'var(--sng-color-brand-primary)', verticalAlign: 'middle', marginLeft: '8px' }} />
+부유(Elevation) 계층을 시각적으로 구분하기 위해 3단계의 그림자를 지원합니다.
 
-### Border Radius
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '16px', margin: '16px 0' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-sm)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <code>sm: 4px</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-base)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <code>base: 6px</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-md)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <code>md: 8px</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-lg)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <code>lg: 12px</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-xl)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <code>xl: 16px</code>
-  </div>
-  <div style={{ padding: '16px', border: '1px solid var(--sng-color-border-default)', borderRadius: 'var(--sng-radius-full)', textAlign: 'center', backgroundColor: 'var(--sng-color-bg-surface)' }}>
-    <code>full</code>
-  </div>
-</div>
-
----
-
-## 4. Depth & Z-Index (그림자 및 심도)
-
-### Shadows
-- **Focus Ring (`var(--sng-shadow-focus)`):** 포커스 링 표시 전용 외곽 테두리
-  - `Light:` `0 0 0 3px rgba(18,117,181,0.3)`
-  - `Dark:` `0 0 0 3px rgba(25,145,185,0.4)`
-- **Raised (`var(--sng-shadow-sm)`):** 카트, 패널 등 기본 띄움
-  - `Light:` `0 1px 3px rgba(8,58,100,0.1)`
-  - `Dark:` `0 1px 3px rgba(1,6,9,0.4)`
-- **Floating (`var(--sng-shadow-md)`):** 드롭다운, 모달, 토스트
-  - `Light:` `0 4px 12px rgba(8,58,100,0.12)`
-  - `Dark:` `0 4px 12px rgba(1,6,9,0.5)`
-- **Elevated (`var(--sng-shadow-lg)`):** 컨텍스트 메뉴, 모달 팝업 등 강한 띄움
-  - `Light:` `0 8px 24px rgba(8,58,100,0.15)`
-  - `Dark:` `0 8px 24px rgba(1,6,9,0.6)`
-
-### Z-Index Ladder
-- **Default:** `0`
-- **Raised:** `10` (`var(--sng-z-raised)`)
-- **Dropdown:** `100` (`var(--sng-z-dropdown)`)
-- **Sticky Header:** `200` (`var(--sng-z-sticky)`)
-- **Modal:** `300` (`var(--sng-z-modal)`)
-- **Toast:** `400` (`var(--sng-z-toast)`)
-- **Tooltip:** `500` (`var(--sng-z-tooltip)`)
+- **`--sng-shadow-flat`**: 그림자 없음
+- **`--sng-shadow-raised`**: 버튼, 카드 등 살짝 돌출된 요소
+- **`--sng-shadow-floating`**: 호버 프리뷰, 모달 등 높이 떠있는 요소
+- **`--sng-shadow-focus`**: 키보드 접근성(Focus Ring)을 위한 아웃라인 효과

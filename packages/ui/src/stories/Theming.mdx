@@ -13,8 +13,8 @@ Sonagi 디자인 시스템은 단일 브랜드에 국한되지 않고, 여러 �
 현재 제공하는 공식 테마는 다음과 같습니다:
 
 ### 1) Sonagi Core (기본값)
-- **성격:** 감성적이고 따뜻한 느낌의 라이트/다크 테마 (조용한 깊이감).
-- **디자인 특징:** Warm off-white 배경(`#faf9f7`), deep navy(`#1c2c4d`) 포인트 및 rain-blue(`#4A90E2`) 인터랙티브 강조색.
+- **성격:** 차분하고 단단한 감성을 지닌 라이트/다크 테마.
+- **디자인 특징:** 따뜻한 Brown 계열 배경(Light: `#fcf2f0`, Dark: `#1c1412`), 묵직한 Burgundy 포인트(Light: `#47211b`, Dark: `#eeb4a9`).
 - **적용 대상:** 일반 콘텐츠 서비스, 홈페이지, 브랜딩 중심 웹.
 
 ### 2) The Desk Analyst (데이터 대시보드 테마)
@@ -47,9 +47,7 @@ Sonagi 디자인 시스템은 단일 브랜드에 국한되지 않고, 여러 �
 ### 3) 그 외 테마
 현재는 없습니다. `light`(= `sonagi-core`)와 `dark`가 유일한 유효값입니다.
 
-토큰 위계는 `primitives → semantics` **2-Tier**로 확정되어 있으며, Light/Dark는 semantics 계층 내부 Mode 분기로 처리됩니다. 3번째 계층(`themes/`)은 **겨울 소나기 테마** 착수 시점에 재개됩니다. (ADR 0010)
-
-> 과거 존재했던 `data-theme="desk-analyst"`는 ADR 0009에서 폐기되었습니다. 이제 이 값을 설정해도 오버라이드가 적용되지 않습니다.
+토큰 위계는 `primitives → semantics` **3-Tier**로 확정되어 있으며, Light/Dark는 semantics 계층 내부 Mode 분기로 처리됩니다. 
 
 ---
 
@@ -72,9 +70,8 @@ setTheme(isDark ? 'light' : 'dark');
 
 ---
 
-## 4. 테마 오버라이드 개발자 규칙
+## 4. Figma SSOT 및 아키텍처 연동 원칙
 
-새로운 브랜드 또는 하위 페이지를 위해 독자적인 테마를 추가해야 하는 경우:
-1. `packages/tokens/tokens/themes/` 내에 `theme-새테마명.json` 포맷으로 신규 정의 파일을 생성합니다.
-2. `semantics.json`에 정의된 정규 시맨틱 토큰 경로와 동일한 구조로 오버라이드할 값을 지정합니다. (예: `color.brand.primary`)
-3. `pnpm build`를 수행하여 `variables.css` 내에 스코프 제한자(`[data-theme="새테마명"]`)를 포함하는 스타일이 자동 빌드되도록 합니다.
+- **Figma (Visual SSOT)**: 컴포넌트의 형태, 색상, 여백, 그림자 등 시각적 뼈대와 규칙의 정본.
+- **React Code (Motion & Time SSOT)**: 애니메이션 타이밍, 호버 딜레이, 상태 지속시간 등 상호작용의 정본.
+- 오버레이 팝업류(HoverPreview, Modal 등)는 피그마 캔버스에서 프로토타이핑을 연결하지 않고, React 단에서 트리거 및 타이밍을 완벽히 제어합니다.
