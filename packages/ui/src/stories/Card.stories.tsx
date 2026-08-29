@@ -9,7 +9,7 @@ const meta: Meta<typeof Card> = {
     layout: 'centered',
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Core-Primitives-v3?node-id=0-1',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=198-1779',
     },
   },
   tags: ['autodocs'],

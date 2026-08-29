@@ -6,6 +6,12 @@ const meta: Meta<typeof Pagination> = {
   title: 'Components/Pagination',
   component: Pagination,
   tags: ['autodocs'],
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=198-2352',
+    },
+  },
 };
 
 export default meta;
