@@ -51,6 +51,10 @@ jobs:
   release-ui:
     name: Release @mindulle/ui
     runs-on: ubuntu-latest
+    # release-tokens가 @semantic-release/git으로 main에 릴리스 커밋을 푸시하므로,
+    # 병렬 실행 시 이 잡의 로컬 main이 뒤처져 "branch is behind the remote" 사유로
+    # 릴리스가 조용히 스킵된다. 순차 실행하여 경쟁 조건을 제거한다.
+    needs: release-tokens
     permissions:
       contents: write
       issues: write
