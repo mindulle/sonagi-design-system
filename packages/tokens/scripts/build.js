@@ -32,9 +32,7 @@ function getCssVarName(pathArray) {
      parts = ['typography', ...parts];
   }
   
-  if (parts[0] === 'primitive') {
-     parts[0] = 'color'; 
-  } else if (parts[0] === 'semantic') {
+  if (parts[0] === 'primitive') { /* keep as primitive */ } else if (parts[0] === 'semantic') {
      parts = parts.slice(2);
   } else if (parts[0] === 'shadow' && parts[1]) {
      parts = [parts[0], ...parts.slice(2)];
