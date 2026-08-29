@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.1...tokens-v1.11.2) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ci:** run ui release sequentially to avoid losing releases to a race ([1846125](https://github.com/mindulle/sonagi-design-system/commit/184612589c006284b8e0207e012960e6510be572))
+
 ## [1.11.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.0...tokens-v1.11.1) (2026-08-29)
 
 
