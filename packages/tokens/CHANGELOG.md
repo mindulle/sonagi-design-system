@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.2...tokens-v1.11.3) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ci:** check out main tip in ui release job ([ff04ecf](https://github.com/mindulle/sonagi-design-system/commit/ff04ecf121fc9b1a216f71d6e1bb685f80f689f2))
+
 ## [1.11.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.1...tokens-v1.11.2) (2026-08-29)
 
 
