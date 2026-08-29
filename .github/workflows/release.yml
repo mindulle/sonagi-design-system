@@ -65,6 +65,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # 기본값은 워크플로를 트리거한 SHA다. release-tokens가 그 뒤에 릴리스 커밋을
+          # main에 푸시하므로, 기본값으로 체크아웃하면 이 잡은 항상 remote보다 뒤처진
+          # 상태가 되어 semantic-release가 릴리스를 스킵한다. main의 최신 tip을 받는다.
+          ref: main
           fetch-depth: 0
           persist-credentials: false
 
