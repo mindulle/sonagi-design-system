@@ -32,7 +32,7 @@ export function Modal({
 
       {/* Modal Dialog Box */}
       <div
-            className={`relative z-[301] w-full max-w-lg overflow-hidden rounded-xl border border-border-default bg-bg-elevated p-sng-container-lg shadow-lg transition-all flex flex-col gap-sng-gap-group ${className}`}
+            className={`relative z-[301] w-full max-w-lg overflow-hidden rounded-xl border border-border-default bg-bg-elevated p-6 shadow-lg transition-all flex flex-col gap-6 ${className}`}
         role="dialog"
         aria-modal="true"
       >
@@ -41,7 +41,7 @@ export function Modal({
             <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
             <button
               onClick={onClose}
-                className="rounded-md p-sng-element-py text-text-muted hover:bg-bg-surface hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+                className="rounded-md p-2 text-text-muted hover:bg-bg-surface hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
               aria-label="Close modal"
             >
               ✕
@@ -56,7 +56,7 @@ export function Modal({
         <div className="text-text-primary">{children}</div>
 
         {footer && (
-          <div className="flex items-center justify-end gap-sng-sm border-t border-border-subtle pt-sng-container-md">
+          <div className="flex items-center justify-end gap-2 border-t border-border-subtle pt-4">
             {footer}
           </div>
         )}
