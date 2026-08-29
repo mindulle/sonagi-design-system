@@ -1,3 +1,10 @@
+## [1.9.5](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.4...tokens-v1.9.5) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** update storybook figma urls to the correct V3 file ([#42](https://github.com/mindulle/sonagi-design-system/issues/42)) ([75d7762](https://github.com/mindulle/sonagi-design-system/commit/75d776271f81cc4a27c66ed34c1767dc10df1616))
+
 ## [1.9.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.3...tokens-v1.9.4) (2026-08-29)
 
 
