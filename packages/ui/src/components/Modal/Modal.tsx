@@ -32,7 +32,7 @@ export function Modal({
 
       {/* Modal Dialog Box */}
       <div
-        className={`relative z-[301] w-full max-w-lg overflow-hidden rounded-sng-xl border border-border-default bg-bg-elevated p-sng-container-lg shadow-lg transition-all flex flex-col gap-sng-group ${className}`}
+            className={`relative z-[301] w-full max-w-lg overflow-hidden rounded-xl border border-border-default bg-bg-elevated p-sng-container-lg shadow-lg transition-all flex flex-col gap-sng-gap-group ${className}`}
         role="dialog"
         aria-modal="true"
       >
@@ -41,7 +41,7 @@ export function Modal({
             <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
             <button
               onClick={onClose}
-              className="rounded-sng-md p-sng-element-py text-text-muted hover:bg-bg-surface hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+                className="rounded-md p-sng-element-py text-text-muted hover:bg-bg-surface hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
               aria-label="Close modal"
             >
               ✕
