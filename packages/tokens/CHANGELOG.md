@@ -1,3 +1,10 @@
+## [1.9.7](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.6...tokens-v1.9.7) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** restore semantic spacing tokens by importing them in global.css ([#43](https://github.com/mindulle/sonagi-design-system/issues/43)) ([abeedf8](https://github.com/mindulle/sonagi-design-system/commit/abeedf8ca5d13d2355591e38a12156a280251e9e))
+
 ## [1.9.6](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.5...tokens-v1.9.6) (2026-08-29)
 
 
