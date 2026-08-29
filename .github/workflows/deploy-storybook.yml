@@ -28,7 +28,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Storybook
-        run: pnpm run build-storybook --filter @mindulle/ui
+        run: pnpm build && pnpm run build-storybook --filter @mindulle/ui
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
