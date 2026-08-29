@@ -51,7 +51,7 @@ export const decorators = [
       if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
       } else {
-        document.documentElement.removeAttribute('data-theme'); // default is light
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     }
     return Story();
