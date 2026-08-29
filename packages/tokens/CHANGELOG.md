@@ -1,3 +1,10 @@
+## [1.11.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.3...tokens-v1.11.4) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** declare tokens as a peer dependency to survive npm publish ([6ca876a](https://github.com/mindulle/sonagi-design-system/commit/6ca876a34d483f8c99fa0b03064ee45b8c5ef6f6))
+
 ## [1.11.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.2...tokens-v1.11.3) (2026-08-29)
 
 
