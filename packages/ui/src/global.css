@@ -3,6 +3,9 @@
  */
 
 @import '../../tokens/dist/variables.css';
+@import '../../tokens/tokens/spacing.css';
+@import '../../tokens/tokens/opacity.css';
+@import '../../tokens/tokens/radius.css';
 
 @tailwind base;
 @tailwind components;
@@ -43,45 +46,6 @@ body {
 }
 
 /* Input */
-.sng-input {
-  font-family: var(--sng-font-sans);
-  font-size: var(--sng-font-size-sm);
-  color: var(--sng-color-text-primary);
-  background-color: var(--sng-color-bg-elevated);
-  border: 1px solid var(--sng-color-border-default);
-  border-radius: var(--sng-radius-md);
-  height: 40px;
-  padding: 0 var(--sng-spacing-3);
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  width: 100%;
-  transition:
-    border-color var(--sng-duration-base) var(--sng-ease-default),
-    box-shadow var(--sng-duration-base) var(--sng-ease-default);
-}
-.sng-input:focus {
-  outline: none;
-  border-color: var(--sng-color-accent-default);
-  box-shadow: var(--sng-shadow-focus);
-}
-.sng-input:disabled {
-  background-color: var(--sng-color-bg-base);
-  color: var(--sng-color-text-disabled);
-  border-color: var(--sng-color-border-subtle);
-  cursor: not-allowed;
-}
-.sng-input--error,
-.sng-input--danger {
-  border-color: var(--sng-color-state-danger);
-}
-
-.sng-input--error:focus,
-.sng-input--danger:focus {
-  border-color: var(--sng-color-state-danger);
-  box-shadow: 0 0 0 3px rgba(248, 81, 73, 0.3);
-}
-
 /* Badge */
 .sng-badge {
   display: inline-flex;

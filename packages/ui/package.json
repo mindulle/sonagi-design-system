@@ -1,6 +1,6 @@
 {
   "name": "@mindulle/ui",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Sonagi Design System — UI Components",
   "license": "MIT",
   "type": "module",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./css": "./dist/global.css",
+    "./dist/global.css": "./dist/global.css"
   },
   "files": [
     "dist/"

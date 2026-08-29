@@ -9,7 +9,7 @@ const meta = {
     layout: 'centered',
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Core-Primitives-v3?node-id=4-3',
     },
   },
   tags: ['autodocs'],
