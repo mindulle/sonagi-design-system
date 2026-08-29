@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.2...tokens-v1.9.0) (2026-08-29)
+
+
+### Features
+
+* **ops:** add cloudflare pages deployment for storybook ([#37](https://github.com/mindulle/sonagi-design-system/issues/37)) ([aae2627](https://github.com/mindulle/sonagi-design-system/commit/aae26274c90c1abe64739a09da7944c9aed70d59))
+
 ## [1.8.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.1...tokens-v1.8.2) (2026-08-29)
 
 
