@@ -14,9 +14,14 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
  */
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ error = false, className = '', disabled, ...props }, ref) => {
+    const baseClasses = 'flex w-full items-center font-sans text-sm h-10 px-3 rounded-md border bg-bg-elevated text-text-primary transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-bg-base disabled:text-text-disabled disabled:border-border-subtle';
+    const stateClasses = error
+      ? 'border-state-error focus-visible:border-state-error focus-visible:ring-state-error/30'
+      : 'border-border-default focus-visible:border-brand-accent focus-visible:ring-brand-accent/30';
+
     const inputClass = [
-      'sng-input',
-      error && 'sng-input--error',
+      baseClasses,
+      stateClasses,
       className,
     ].filter(Boolean).join(' ');
 
