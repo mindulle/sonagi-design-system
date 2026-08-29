@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.6.1...ui-v1.7.0) (2026-08-29)
+
+
+### Features
+
+* **ui:** refactor HoverPreview to use Tailwind SSOT tokens ([c888aa7](https://github.com/mindulle/sonagi-design-system/commit/c888aa7e8eef18392ec7dff099149d673d7cd3fe))
+
 ## [1.6.1](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.6.0...ui-v1.6.1) (2026-08-29)
 
 
