@@ -1,3 +1,10 @@
+## [1.9.6](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.5...tokens-v1.9.6) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** remove unresolved sng-space variables and use standard tailwind spacing ([a73ea41](https://github.com/mindulle/sonagi-design-system/commit/a73ea41d382f62f74be06b71517da8ab9d7dfe7f))
+
 ## [1.9.5](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.4...tokens-v1.9.5) (2026-08-29)
 
 
