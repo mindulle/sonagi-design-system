@@ -1,3 +1,12 @@
+## [1.8.1](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.8.0...ui-v1.8.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ci:** check out main tip in ui release job ([ff04ecf](https://github.com/mindulle/sonagi-design-system/commit/ff04ecf121fc9b1a216f71d6e1bb685f80f689f2))
+* **ci:** run ui release sequentially to avoid losing releases to a race ([1846125](https://github.com/mindulle/sonagi-design-system/commit/184612589c006284b8e0207e012960e6510be572))
+* **ui:** replace link: protocol with workspace:^ for tokens dependency ([ef93c71](https://github.com/mindulle/sonagi-design-system/commit/ef93c712eabfcdd79bd755868daa7f6676a2fc24))
+
 # [1.8.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.7.0...ui-v1.8.0) (2026-08-29)
 
 
