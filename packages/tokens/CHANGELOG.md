@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.11...tokens-v1.10.0) (2026-08-29)
+
+
+### Features
+
+* **ui:** add form components matching Figma SSOT (Textarea, Select, Checkbox, Radio, Toggle) ([#49](https://github.com/mindulle/sonagi-design-system/issues/49)) ([46a3d2a](https://github.com/mindulle/sonagi-design-system/commit/46a3d2a8fc9bbd1227b33bfc23c94d64d5b3561b))
+
 ## [1.9.11](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.10...tokens-v1.9.11) (2026-08-29)
 
 
