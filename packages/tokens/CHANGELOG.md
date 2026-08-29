@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.3...tokens-v1.9.4) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** fix invalid tailwind classes in Button, Modal, and Pagination ([#41](https://github.com/mindulle/sonagi-design-system/issues/41)) ([95eb58e](https://github.com/mindulle/sonagi-design-system/commit/95eb58e35e8aac774195b8992f343a523bcdecbd))
+
 ## [1.9.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.2...tokens-v1.9.3) (2026-08-29)
 
 
