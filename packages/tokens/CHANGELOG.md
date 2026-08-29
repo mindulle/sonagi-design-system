@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.0...tokens-v1.11.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ui:** replace link: protocol with workspace:^ for tokens dependency ([ef93c71](https://github.com/mindulle/sonagi-design-system/commit/ef93c712eabfcdd79bd755868daa7f6676a2fc24))
+
 # [1.11.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.10.1...tokens-v1.11.0) (2026-08-29)
 
 
