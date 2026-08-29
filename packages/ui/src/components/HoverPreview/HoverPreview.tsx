@@ -20,9 +20,8 @@ export interface NotePreview {
 /**
  * HoverPreview
  *
- * @deprecated V3 디자인 시스템에서 제외되었습니다. 신규 화면에 사용하지 마세요.
  * 위키링크에 마우스를 올리면 해당 노트의 제목과 요약을 팝업으로 보여주는 컴포넌트.
- * 노트 데이터 fetching 로직은 소비자(blog-sonagi-space)가 fetchNote prop으로 주입한다.
+ * Figma SSOT 규격에 맞추어 Tailwind CSS로 완전히 매핑되었습니다.
  */
 export function HoverPreview({
   children,
@@ -47,7 +46,7 @@ export function HoverPreview({
           setLoading(false);
         }
       }
-    }, 300); // 300ms 딜레이 — 스쳐지나가는 hover 방지
+    }, 300); // 300ms 딜레이 — 스쳐지나가는 hover 방지 (Motion SSOT)
   };
 
   const handleMouseLeave = () => {
@@ -57,13 +56,13 @@ export function HoverPreview({
 
   return (
     <span
-      style={{ position: 'relative', display: 'inline-block' }}
+      className="relative inline-block"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <a
         href={href ?? `/notes/${slug}`}
-        className="sng-wikilink"
+        className="text-brand-primary font-medium underline decoration-border-subtle underline-offset-2 hover:decoration-brand-primary transition-colors"
         data-slug={slug}
       >
         {children}
@@ -72,14 +71,14 @@ export function HoverPreview({
       {visible && (
         <span
           role="tooltip"
-          className="sng-wikilink-preview"
+          className="absolute z-[500] bottom-full mb-2 left-1/2 -translate-x-1/2 w-80 p-4 flex flex-col gap-2 rounded-xl bg-bg-elevated border border-border-subtle shadow-md pointer-events-none"
         >
           {loading ? (
-            <span className="sng-wikilink-preview__loading">불러오는 중...</span>
+            <span className="text-sm text-text-muted animate-pulse">불러오는 중...</span>
           ) : preview ? (
             <>
-              <span className="sng-wikilink-preview__title">{preview.title}</span>
-              <span className="sng-wikilink-preview__excerpt">{preview.excerpt}</span>
+              <span className="text-base font-bold text-text-primary">{preview.title}</span>
+              <span className="text-sm font-normal text-text-secondary leading-snug break-keep">{preview.excerpt}</span>
             </>
           ) : null}
         </span>
