@@ -25,3 +25,35 @@ const preview: Preview = {
 };
 
 export default preview;
+
+
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'light',
+    toolbar: {
+      icon: 'circlehollow',
+      items: [
+        { value: 'light', title: 'Light Mode', icon: 'sun' },
+        { value: 'dark', title: 'Dark Mode', icon: 'moon' },
+      ],
+      showName: true,
+      dynamicTitle: true,
+    },
+  },
+};
+
+export const decorators = [
+  (Story, context) => {
+    const theme = context.globals.theme;
+    if (typeof document !== 'undefined') {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme'); // default is light
+      }
+    }
+    return Story();
+  },
+];
