@@ -1,3 +1,10 @@
+## [1.9.11](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.10...tokens-v1.9.11) (2026-08-29)
+
+
+### Bug Fixes
+
+* **ops:** fix pnpm filter syntax for build-storybook ([#47](https://github.com/mindulle/sonagi-design-system/issues/47)) ([49a335d](https://github.com/mindulle/sonagi-design-system/commit/49a335dc84e80de9c90f48d3e0e07874e93a4930))
+
 ## [1.9.10](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.9...tokens-v1.9.10) (2026-08-29)
 
 
