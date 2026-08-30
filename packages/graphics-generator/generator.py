@@ -53,20 +53,41 @@ def build_palette(tokens: Tokens) -> dict[str, str]:
     # symbol accents (Rule E).
 
 
-def in_safe_zone(x: float, y: float, w: int, h: int) -> bool:
-    """Rule F — centred region reserved for text."""
-    return (
-        abs(x - w / 2) < w * SAFE_ZONE_W / 2 and abs(y - h / 2) < h * SAFE_ZONE_H / 2
-    )
+def safe_zone_distance(x: float, y: float, w: int, h: int) -> float:
+    """
+    Rule F — centred region reserved for text.
+    Returns normalized distance from the centre (0.0 = exact centre, 1.0 = safe zone edge).
+    Uses an elliptical distance field.
+    """
+    # Normalized coordinates from centre (-1 to 1 across full width/height)
+    nx = (x - w / 2) / (w / 2)
+    ny = (y - h / 2) / (h / 2)
+
+    # Scale by safe zone ratios to map the boundary to dist = 1.0
+    dx = nx / (SAFE_ZONE_W / 2)
+    dy = ny / (SAFE_ZONE_H / 2)
+
+    return (dx * dx + dy * dy) ** 0.5
 
 
 def safe_zone_gate(rng: random.Random, x: float, y: float, w: int, h: int) -> float | None:
     """Return an opacity multiplier, or None if the element should be dropped."""
-    if not in_safe_zone(x, y, w, h):
+    dist = safe_zone_distance(x, y, w, h)
+
+    # Completely outside the defined safe zone ellipse
+    if dist >= 1.0:
         return 1.0
-    if rng.random() > SAFE_ZONE_KEEP:
+
+    # Smooth falloff: probability of survival scales with distance squared.
+    # At centre (0.0): SAFE_ZONE_KEEP
+    # At edge (1.0): 1.0
+    prob = SAFE_ZONE_KEEP + (1.0 - SAFE_ZONE_KEEP) * (dist ** 2)
+
+    if rng.random() > prob:
         return None
-    return SAFE_ZONE_OPACITY
+
+    # Opacity also scales smoothly towards the centre
+    return SAFE_ZONE_OPACITY + (1.0 - SAFE_ZONE_OPACITY) * dist
 
 
 def render_ripples(rng: random.Random, palette: dict[str, str], w: int, h: int) -> list[str]:
