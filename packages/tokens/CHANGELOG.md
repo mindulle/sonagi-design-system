@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.4...tokens-v1.12.0) (2026-08-30)
+
+
+### Features
+
+* **graphics-generator:** procedural brand asset pipeline + Storybook gallery (CEO-1034) ([#53](https://github.com/mindulle/sonagi-design-system/issues/53)) ([68fd384](https://github.com/mindulle/sonagi-design-system/commit/68fd384c0546adfe0ae85af1378ba0b0b0125d7c))
+
 ## [1.11.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.3...tokens-v1.11.4) (2026-08-29)
 
 

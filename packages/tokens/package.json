@@ -1,6 +1,6 @@
 {
   "name": "@mindulle/tokens",
-  "version": "1.11.4",
+  "version": "1.12.0",
   "description": "Sonagi Design System — CSS Custom Properties & Design Tokens",
   "license": "MIT",
   "main": "dist/index.js",
