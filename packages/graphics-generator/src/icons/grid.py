@@ -114,21 +114,118 @@ class Ellipse:
 
 
 @dataclass
+@dataclass
 class Path:
     """
     Freeform path.
-
-    LIMITATION: curves cannot be bounds-checked without flattening them, and arc
-    parameters (`A rx ry rot laf sf x y`) break naive x/y pairing. Validation for
-    paths is therefore weak — it only asserts that every numeric literal falls
-    within 0..CANVAS, which requires absolute (uppercase) commands. Lines and
-    ellipses get the full grid contract; paths are trusted more than they deserve.
+    
+    Parses a subset of SVG path commands (M, L, H, V, C, Q, Z, both absolute and
+    relative) and flattens them into polylines for rigorous gap and bounds checking.
+    Arc (A) and smooth (S, T) commands are not supported and will raise an error,
+    as they should be flattened or simplified in the design tool first.
     """
 
     d: str
 
     def coords(self) -> list[float]:
         return [float(m.group()) for m in _NUM.finditer(self.d)]
+
+    def polyline(self) -> list[tuple[float, float]]:
+        tokens = [t for t in re.split(r'([a-zA-Z])|[,\s]+', self.d) if t and t.strip()]
+        i = 0
+        cmd = ''
+        pts = []
+        curr = (0.0, 0.0)
+        start = (0.0, 0.0)
+        
+        while i < len(tokens):
+            if tokens[i].isalpha():
+                cmd = tokens[i]
+                i += 1
+                
+            is_rel = cmd.islower()
+            c = cmd.upper()
+            
+            def nxt():
+                nonlocal i
+                if i >= len(tokens):
+                    raise GridViolation(f"Path command {cmd} missing arguments")
+                v = float(tokens[i])
+                i += 1
+                return v
+                
+            if c == 'M':
+                x, y = nxt(), nxt()
+                if is_rel:
+                    x += curr[0]; y += curr[1]
+                curr = (x, y)
+                start = curr
+                pts.append(curr)
+                cmd = 'l' if is_rel else 'L'  # Implicit subsequent L
+                
+            elif c == 'L':
+                x, y = nxt(), nxt()
+                if is_rel:
+                    x += curr[0]; y += curr[1]
+                curr = (x, y)
+                pts.append(curr)
+                
+            elif c == 'H':
+                x = nxt()
+                if is_rel:
+                    x += curr[0]
+                curr = (x, curr[1])
+                pts.append(curr)
+                
+            elif c == 'V':
+                y = nxt()
+                if is_rel:
+                    y += curr[1]
+                curr = (curr[0], y)
+                pts.append(curr)
+                
+            elif c == 'C':
+                x1, y1 = nxt(), nxt()
+                x2, y2 = nxt(), nxt()
+                x, y = nxt(), nxt()
+                if is_rel:
+                    x1 += curr[0]; y1 += curr[1]
+                    x2 += curr[0]; y2 += curr[1]
+                    x += curr[0]; y += curr[1]
+                
+                for s in range(1, SAMPLES + 1):
+                    t = s / SAMPLES
+                    u = 1 - t
+                    px = u**3 * curr[0] + 3 * u**2 * t * x1 + 3 * u * t**2 * x2 + t**3 * x
+                    py = u**3 * curr[1] + 3 * u**2 * t * y1 + 3 * u * t**2 * y2 + t**3 * y
+                    pts.append((px, py))
+                curr = (x, y)
+                
+            elif c == 'Q':
+                x1, y1 = nxt(), nxt()
+                x, y = nxt(), nxt()
+                if is_rel:
+                    x1 += curr[0]; y1 += curr[1]
+                    x += curr[0]; y += curr[1]
+                    
+                for s in range(1, SAMPLES + 1):
+                    t = s / SAMPLES
+                    u = 1 - t
+                    px = u**2 * curr[0] + 2 * u * t * x1 + t**2 * x
+                    py = u**2 * curr[1] + 2 * u * t * y1 + t**2 * y
+                    pts.append((px, py))
+                curr = (x, y)
+                
+            elif c == 'Z':
+                curr = start
+                pts.append(curr)
+                
+            else:
+                raise GridViolation(
+                    f"Path command '{cmd}' is not supported. Use M, L, H, V, C, Q, Z only."
+                )
+
+        return pts
 
     def svg(self) -> str:
         return f'<path d="{self.d}"/>'
@@ -171,15 +268,6 @@ class Icon:
         for el in self.elements:
             kind = type(el).__name__
 
-            if isinstance(el, Path):
-                for v in el.coords():
-                    if v < 0 or v > CANVAS:
-                        raise GridViolation(
-                            f"{self.name}: path literal {v} outside 0..{CANVAS} "
-                            f"(absolute commands required)"
-                        )
-                continue
-
             pts = el.polyline()
             xs = [p[0] for p in pts]
             ys = [p[1] for p in pts]
@@ -194,8 +282,8 @@ class Icon:
                         f"{self.name}: {kind} coordinate {v} is not on the {GRID}px grid"
                     )
 
-        # Uniform minimum-gap check across every flattenable primitive pair.
-        flat = [(type(e).__name__, e.polyline()) for e in self.elements if not isinstance(e, Path)]
+        # Uniform minimum-gap check across every primitive pair.
+        flat = [(type(e).__name__, e.polyline()) for e in self.elements]
         for i, (kind_a, a) in enumerate(flat):
             for kind_b, b in flat[i + 1:]:
                 gap = _polyline_distance(a, b)
