@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.8.2...ui-v1.9.0) (2026-08-30)
+
+
+### Features
+
+* **graphics-generator:** procedural brand asset pipeline + Storybook gallery (CEO-1034) ([#53](https://github.com/mindulle/sonagi-design-system/issues/53)) ([68fd384](https://github.com/mindulle/sonagi-design-system/commit/68fd384c0546adfe0ae85af1378ba0b0b0125d7c))
+
 ## [1.8.2](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.8.1...ui-v1.8.2) (2026-08-29)
 
 
