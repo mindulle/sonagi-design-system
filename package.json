@@ -9,9 +9,13 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "build:fix": "python3 scripts/fix-build.py",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "tokens:sync": "python3 scripts/fix-tokens.py",
+    "blog:refactor": "python3 scripts/refactor_blog_ui.py",
+    "script:test-fetch": "node scripts/test-fetch.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.0",
