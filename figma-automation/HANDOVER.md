@@ -1,30 +1,61 @@
-# Sonagi Design System v3.0 - Foundation & OpenPencil Handover
+# Sonagi Design System v3.0 - Figma to Code Handover Guide
 
-## 1. 진행 상황 (Progress)
+> 🚨 **경고**: 과거 사용되던 OpenPencil 관련 인프라는 폐기되었습니다. (재도입 금지)
+> 현재 Sonagi의 유일한 디자인 작업대는 **Figma**이며, 아래의 가이드에 따라 토큰을 코드로 이관합니다.
 
-- **Foundation 정의 완료**: ADR 0001~0004를 통해 Color, Typography, Shadow/Elevation 토큰의 스펙을 확정했습니다.
-- **MCP 빌드 스크립트 작성**: `build-foundation-mcp.mjs` 스크립트를 작성하여 OpenPencil MCP API(`create_shape`, `set_text`, `set_font`, `set_fill` 등)를 통해 Foundation 페이지를 자동 생성하도록 구현했습니다.
-- **Pretendard 폰트 확보**: npm 공식 배포판에서 정상적인 TrueType(`.ttf`) 파일을 추출하여 준비했습니다.
+## 🔄 Figma 변수(Variables) 추출 및 코드 동기화 가이드
 
-## 2. 발생한 문제 (The Blocker)
+Figma의 Enterprise 요금제(API 제한) 및 Tokens Studio Pro 요금제 정책으로 인해 무인 자동화(Zero-click CI/CD)가 불가능합니다. (관련 결정: `ADR-0011`)
+대신 아래의 **3초 반자동화 스크립트**를 사용하여 수동으로 토큰을 추출하고 덮어씌웁니다.
 
-- OpenPencil 웹(Browser) 환경의 CanvasKit(Skia WASM) 렌더러에서 폰트 지연 로딩(Lazy Loading) 타이밍 문제가 발생했습니다.
-- 폰트 파일 자체는 정상적으로 다운로드 되었으나, 텍스트 노드가 그려질 때 `renderNow()` 리페인트가 호출되지 않아 텍스트가 투명한 박스로 렌더링되는 현상을 확인했습니다.
+### 1단계: Figma 콘솔에서 추출 스크립트 실행
 
-## 3. 아키텍처 결정 사항 (Architectural Decision)
+Figma 데스크탑 앱(또는 웹)에서 디자인 시스템 파일을 열고, **개발자 도구(Console)**에 아래 스크립트를 붙여넣고 실행합니다.
 
-- **Web 인프라 폐기 및 Desktop 이관**: 웹 브라우저 환경에서의 커스텀 폰트 로딩, Cloudflare 캐싱, CORS 등의 인프라 오버헤드를 줄이기 위해 OpenPencil Web 인프라를 내리기로 결정했습니다.
-- **Tauri Desktop 활용**: 데스크톱 환경(Tauri v2)에서는 OS에 설치된 시스템 폰트(`queryLocalFonts`)를 직접 읽어올 수 있으므로, 로컬 환경(Mac/Windows)에 Pretendard를 설치하고 데스크톱 앱을 실행하여 MCP로 연결하는 방식이 훨씬 안정적이고 빠릅니다.
+```javascript
+new Promise(async (resolve) => {
+  console.log('📥 Breakpoints 변수 추출 시작...');
+  try {
+    const collections = await figma.variables.getLocalVariableCollectionsAsync();
+    const variables = await figma.variables.getLocalVariablesAsync();
 
-## 4. 수행된 후속 조치
+    const bpCollection = collections.find((c) => c.name === 'Breakpoints');
+    if (!bpCollection) return resolve();
 
-- 서버 자원 확보를 위해 PM2에서 구동 중이던 `openpencil-web` 프로세스를 완전히 삭제하고 저장(`pm2 delete openpencil-web && pm2 save`)했습니다.
-- Foundation 자동 생성 스크립트는 `/tmp/opencode/foundation-build/build-foundation-mcp.mjs`에 잘 보존되어 있으며, 추후 로컬 데스크톱 MCP와 연결하여 즉시 재사용할 수 있도록 파라미터(`set_fill`의 hex 처리 등) 패치를 완료해 두었습니다.
+    const bpVars = variables.filter((v) => v.variableCollectionId === bpCollection.id);
+    const exportData = { breakpoints: {} };
+
+    bpCollection.modes.forEach((mode) => {
+      exportData.breakpoints[mode.name.toLowerCase()] = {};
+      bpVars.forEach((v) => {
+        const val = v.valuesByMode[mode.modeId];
+        const cleanName = v.name.includes('/') ? v.name.split('/')[1] : v.name;
+        exportData.breakpoints[mode.name.toLowerCase()][cleanName] = {
+          $value: `${val}px`,
+          $type: 'dimension',
+        };
+      });
+    });
+
+    console.log(JSON.stringify(exportData, null, 2));
+  } catch (error) {
+    console.error(error);
+  }
+  resolve();
+});
+```
+
+### 2단계: JSON 결과물 복사
+
+콘솔에 출력된 `{ "breakpoints": { "desktop": ... } }` 형태의 JSON 텍스트 전체를 드래그해서 복사합니다.
+
+### 3단계: 코드베이스에 덮어쓰기 및 커밋
+
+1. 복사한 JSON을 `sonagi-design-system/packages/tokens/tokens/breakpoints.json` (또는 해당 컬렉션 파일)에 붙여넣어 덮어씁니다.
+2. 터미널에서 `pnpm changeset`을 실행하여 버전을 올린 뒤 커밋(Commit) 및 PR을 생성합니다.
 
 ---
 
-**Next Step for User**:
+## 🗑️ (Legacy) OpenPencil Handover History
 
-1. 로컬(Mac/Win) 환경에 Pretendard 폰트를 설치합니다.
-2. 로컬에서 OpenPencil 데스크톱 앱을 실행합니다.
-3. 로컬 데스크톱 앱의 MCP 서버 주소로 `build-foundation-mcp.mjs` 스크립트의 URL 및 Token을 수정하여 실행합니다.
+- 과거 Web/Desktop 기반 CanvasKit(Skia) 폰트 렌더링 지연 문제로 인해 OpenPencil 프로젝트는 전면 중단 및 인프라 삭제 조치되었습니다. 절대 이전 인프라를 복구하거나 재사용하지 마십시오.
