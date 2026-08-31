@@ -1,0 +1,7 @@
+{
+  "name": "@mindulle/figma-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sonagi Internal Token Sync Figma Plugin",
+  "scripts": {}
+}
