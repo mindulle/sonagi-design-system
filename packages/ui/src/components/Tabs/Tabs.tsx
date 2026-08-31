@@ -11,7 +11,8 @@ const Container = React.forwardRef<HTMLDivElement, TabsContainerProps>(
     return (
       <div
         ref={ref}
-        className={`flex flex-row items-center overflow-x-auto gap-6 w-full ${className}`}
+        // py-1을 주어 포커스 링이 잘리지 않게 보호하고, scroll-smooth 추가
+        className={`flex flex-row items-center overflow-x-auto gap-6 w-full py-1 ${className}`}
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         {...props}
       >
@@ -30,8 +31,8 @@ export interface TabsItemProps extends React.ButtonHTMLAttributes<HTMLButtonElem
 
 const Item = React.forwardRef<HTMLButtonElement, TabsItemProps>(
   ({ isActive = false, children, className = '', ...props }, ref) => {
-    // 1층위 시각적 디자인 규칙 적용
-    const baseClasses = 'flex items-center justify-center px-4 py-2 rounded-lg text-sm transition-colors duration-200 whitespace-nowrap';
+    // 1층위 시각적 디자인 규칙 적용 (shrink-0 추가로 찌그러짐 방지)
+    const baseClasses = 'flex shrink-0 items-center justify-center px-4 py-2 rounded-lg text-sm transition-colors duration-200 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary';
     const stateClasses = isActive
       ? 'text-brand-primary bg-bg-surface font-semibold'
       : 'text-text-secondary bg-transparent hover:text-text-primary hover:bg-bg-elevated font-normal';
