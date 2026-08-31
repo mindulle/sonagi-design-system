@@ -1,222 +1,198 @@
 ## [1.13.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.13.0...tokens-v1.13.1) (2026-08-31)
 
+## 1.14.0
+
+### Minor Changes
+
+- 64d0616: feat: add Breakpoints token collection (desktop, tablet, mobile) with max-width, global-margin, and gap
 
 ### Bug Fixes
 
-* **ui:** export Pagination component from index.ts ([#57](https://github.com/mindulle/sonagi-design-system/issues/57)) ([01e6cfa](https://github.com/mindulle/sonagi-design-system/commit/01e6cfa7a37216754986f75aa5f1c4c36d2b7b72))
+- **ui:** export Pagination component from index.ts ([#57](https://github.com/mindulle/sonagi-design-system/issues/57)) ([01e6cfa](https://github.com/mindulle/sonagi-design-system/commit/01e6cfa7a37216754986f75aa5f1c4c36d2b7b72))
 
 # [1.13.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.12.0...tokens-v1.13.0) (2026-08-31)
 
-
 ### Features
 
-* **ui:** add gap checker script for figma and storybook sync ([#56](https://github.com/mindulle/sonagi-design-system/issues/56)) ([3115cf4](https://github.com/mindulle/sonagi-design-system/commit/3115cf4c25abdd22e20ce5b61dd2d8271d9f9f7c))
+- **ui:** add gap checker script for figma and storybook sync ([#56](https://github.com/mindulle/sonagi-design-system/issues/56)) ([3115cf4](https://github.com/mindulle/sonagi-design-system/commit/3115cf4c25abdd22e20ce5b61dd2d8271d9f9f7c))
 
 # [1.12.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.4...tokens-v1.12.0) (2026-08-30)
 
-
 ### Features
 
-* **graphics-generator:** procedural brand asset pipeline + Storybook gallery (CEO-1034) ([#53](https://github.com/mindulle/sonagi-design-system/issues/53)) ([68fd384](https://github.com/mindulle/sonagi-design-system/commit/68fd384c0546adfe0ae85af1378ba0b0b0125d7c))
+- **graphics-generator:** procedural brand asset pipeline + Storybook gallery (CEO-1034) ([#53](https://github.com/mindulle/sonagi-design-system/issues/53)) ([68fd384](https://github.com/mindulle/sonagi-design-system/commit/68fd384c0546adfe0ae85af1378ba0b0b0125d7c))
 
 ## [1.11.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.3...tokens-v1.11.4) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** declare tokens as a peer dependency to survive npm publish ([6ca876a](https://github.com/mindulle/sonagi-design-system/commit/6ca876a34d483f8c99fa0b03064ee45b8c5ef6f6))
+- **ui:** declare tokens as a peer dependency to survive npm publish ([6ca876a](https://github.com/mindulle/sonagi-design-system/commit/6ca876a34d483f8c99fa0b03064ee45b8c5ef6f6))
 
 ## [1.11.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.2...tokens-v1.11.3) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ci:** check out main tip in ui release job ([ff04ecf](https://github.com/mindulle/sonagi-design-system/commit/ff04ecf121fc9b1a216f71d6e1bb685f80f689f2))
+- **ci:** check out main tip in ui release job ([ff04ecf](https://github.com/mindulle/sonagi-design-system/commit/ff04ecf121fc9b1a216f71d6e1bb685f80f689f2))
 
 ## [1.11.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.1...tokens-v1.11.2) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ci:** run ui release sequentially to avoid losing releases to a race ([1846125](https://github.com/mindulle/sonagi-design-system/commit/184612589c006284b8e0207e012960e6510be572))
+- **ci:** run ui release sequentially to avoid losing releases to a race ([1846125](https://github.com/mindulle/sonagi-design-system/commit/184612589c006284b8e0207e012960e6510be572))
 
 ## [1.11.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.11.0...tokens-v1.11.1) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** replace link: protocol with workspace:^ for tokens dependency ([ef93c71](https://github.com/mindulle/sonagi-design-system/commit/ef93c712eabfcdd79bd755868daa7f6676a2fc24))
+- **ui:** replace link: protocol with workspace:^ for tokens dependency ([ef93c71](https://github.com/mindulle/sonagi-design-system/commit/ef93c712eabfcdd79bd755868daa7f6676a2fc24))
 
 # [1.11.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.10.1...tokens-v1.11.0) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **storybook:** explicitly set data-theme=light to prevent OS dark mode override ([ce2af5e](https://github.com/mindulle/sonagi-design-system/commit/ce2af5ef2ed9b8e12c64633aeea4674096114764))
-* **storybook:** remove duplicate design blocks and map SonagiLogo ([9bf73c1](https://github.com/mindulle/sonagi-design-system/commit/9bf73c1968948ac537dd59e4bfefb6a0a019d7dc))
-* **tokens:** prevent namespace collision between primitive and semantic variables ([0c22cab](https://github.com/mindulle/sonagi-design-system/commit/0c22cab2367039977c4d7ca615ef387a4a87a8c4))
-* **tokens:** prevent namespace collision between primitive and semantic variables ([cb5033a](https://github.com/mindulle/sonagi-design-system/commit/cb5033a443ab5d841748fd319b030a4ea4c8dcb8))
-* **tokens:** resolve json aliases in CSS ([a128db5](https://github.com/mindulle/sonagi-design-system/commit/a128db54fae1b0d74e31018cc24f19bb6012f049))
-
+- **storybook:** explicitly set data-theme=light to prevent OS dark mode override ([ce2af5e](https://github.com/mindulle/sonagi-design-system/commit/ce2af5ef2ed9b8e12c64633aeea4674096114764))
+- **storybook:** remove duplicate design blocks and map SonagiLogo ([9bf73c1](https://github.com/mindulle/sonagi-design-system/commit/9bf73c1968948ac537dd59e4bfefb6a0a019d7dc))
+- **tokens:** prevent namespace collision between primitive and semantic variables ([0c22cab](https://github.com/mindulle/sonagi-design-system/commit/0c22cab2367039977c4d7ca615ef387a4a87a8c4))
+- **tokens:** prevent namespace collision between primitive and semantic variables ([cb5033a](https://github.com/mindulle/sonagi-design-system/commit/cb5033a443ab5d841748fd319b030a4ea4c8dcb8))
+- **tokens:** resolve json aliases in CSS ([a128db5](https://github.com/mindulle/sonagi-design-system/commit/a128db54fae1b0d74e31018cc24f19bb6012f049))
 
 ### Features
 
-* **storybook:** add light/dark mode toggle to toolbar ([f0d8693](https://github.com/mindulle/sonagi-design-system/commit/f0d86933f427d90ac647d924b6b83bb5550050ce))
-* **ui:** refactor HoverPreview to use Tailwind SSOT tokens ([c888aa7](https://github.com/mindulle/sonagi-design-system/commit/c888aa7e8eef18392ec7dff099149d673d7cd3fe))
+- **storybook:** add light/dark mode toggle to toolbar ([f0d8693](https://github.com/mindulle/sonagi-design-system/commit/f0d86933f427d90ac647d924b6b83bb5550050ce))
+- **ui:** refactor HoverPreview to use Tailwind SSOT tokens ([c888aa7](https://github.com/mindulle/sonagi-design-system/commit/c888aa7e8eef18392ec7dff099149d673d7cd3fe))
 
 ## [1.10.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.10.0...tokens-v1.10.1) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **tokens:** resolve json aliases in CSS ([#51](https://github.com/mindulle/sonagi-design-system/issues/51)) ([d0cb14a](https://github.com/mindulle/sonagi-design-system/commit/d0cb14aa27ee5a65d851828c5d55d3ead6da88ff))
+- **tokens:** resolve json aliases in CSS ([#51](https://github.com/mindulle/sonagi-design-system/issues/51)) ([d0cb14a](https://github.com/mindulle/sonagi-design-system/commit/d0cb14aa27ee5a65d851828c5d55d3ead6da88ff))
 
 # [1.10.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.11...tokens-v1.10.0) (2026-08-29)
 
-
 ### Features
 
-* **ui:** add form components matching Figma SSOT (Textarea, Select, Checkbox, Radio, Toggle) ([#49](https://github.com/mindulle/sonagi-design-system/issues/49)) ([46a3d2a](https://github.com/mindulle/sonagi-design-system/commit/46a3d2a8fc9bbd1227b33bfc23c94d64d5b3561b))
+- **ui:** add form components matching Figma SSOT (Textarea, Select, Checkbox, Radio, Toggle) ([#49](https://github.com/mindulle/sonagi-design-system/issues/49)) ([46a3d2a](https://github.com/mindulle/sonagi-design-system/commit/46a3d2a8fc9bbd1227b33bfc23c94d64d5b3561b))
 
 ## [1.9.11](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.10...tokens-v1.9.11) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ops:** fix pnpm filter syntax for build-storybook ([#47](https://github.com/mindulle/sonagi-design-system/issues/47)) ([49a335d](https://github.com/mindulle/sonagi-design-system/commit/49a335dc84e80de9c90f48d3e0e07874e93a4930))
+- **ops:** fix pnpm filter syntax for build-storybook ([#47](https://github.com/mindulle/sonagi-design-system/issues/47)) ([49a335d](https://github.com/mindulle/sonagi-design-system/commit/49a335dc84e80de9c90f48d3e0e07874e93a4930))
 
 ## [1.9.10](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.9...tokens-v1.9.10) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ops:** upgrade setup-node to v22 to support pnpm v11 ([#46](https://github.com/mindulle/sonagi-design-system/issues/46)) ([9f93a23](https://github.com/mindulle/sonagi-design-system/commit/9f93a23fa7f5b32ac23691196f1e8a1a3b14be45))
+- **ops:** upgrade setup-node to v22 to support pnpm v11 ([#46](https://github.com/mindulle/sonagi-design-system/issues/46)) ([9f93a23](https://github.com/mindulle/sonagi-design-system/commit/9f93a23fa7f5b32ac23691196f1e8a1a3b14be45))
 
 ## [1.9.9](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.8...tokens-v1.9.9) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ops:** restore accidentally deleted with keys in deploy workflow ([#45](https://github.com/mindulle/sonagi-design-system/issues/45)) ([c801007](https://github.com/mindulle/sonagi-design-system/commit/c80100758bfcf7a9e6279ad6f82cf4dad20a82c2))
+- **ops:** restore accidentally deleted with keys in deploy workflow ([#45](https://github.com/mindulle/sonagi-design-system/issues/45)) ([c801007](https://github.com/mindulle/sonagi-design-system/commit/c80100758bfcf7a9e6279ad6f82cf4dad20a82c2))
 
 ## [1.9.8](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.7...tokens-v1.9.8) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ops:** remove empty with key in pnpm setup action ([#44](https://github.com/mindulle/sonagi-design-system/issues/44)) ([7c1aea7](https://github.com/mindulle/sonagi-design-system/commit/7c1aea757cd4b36f0d11c97dd4eb1a5dc6c74b17))
+- **ops:** remove empty with key in pnpm setup action ([#44](https://github.com/mindulle/sonagi-design-system/issues/44)) ([7c1aea7](https://github.com/mindulle/sonagi-design-system/commit/7c1aea757cd4b36f0d11c97dd4eb1a5dc6c74b17))
 
 ## [1.9.7](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.6...tokens-v1.9.7) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** restore semantic spacing tokens by importing them in global.css ([#43](https://github.com/mindulle/sonagi-design-system/issues/43)) ([abeedf8](https://github.com/mindulle/sonagi-design-system/commit/abeedf8ca5d13d2355591e38a12156a280251e9e))
+- **ui:** restore semantic spacing tokens by importing them in global.css ([#43](https://github.com/mindulle/sonagi-design-system/issues/43)) ([abeedf8](https://github.com/mindulle/sonagi-design-system/commit/abeedf8ca5d13d2355591e38a12156a280251e9e))
 
 ## [1.9.6](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.5...tokens-v1.9.6) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** remove unresolved sng-space variables and use standard tailwind spacing ([a73ea41](https://github.com/mindulle/sonagi-design-system/commit/a73ea41d382f62f74be06b71517da8ab9d7dfe7f))
+- **ui:** remove unresolved sng-space variables and use standard tailwind spacing ([a73ea41](https://github.com/mindulle/sonagi-design-system/commit/a73ea41d382f62f74be06b71517da8ab9d7dfe7f))
 
 ## [1.9.5](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.4...tokens-v1.9.5) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** update storybook figma urls to the correct V3 file ([#42](https://github.com/mindulle/sonagi-design-system/issues/42)) ([75d7762](https://github.com/mindulle/sonagi-design-system/commit/75d776271f81cc4a27c66ed34c1767dc10df1616))
+- **ui:** update storybook figma urls to the correct V3 file ([#42](https://github.com/mindulle/sonagi-design-system/issues/42)) ([75d7762](https://github.com/mindulle/sonagi-design-system/commit/75d776271f81cc4a27c66ed34c1767dc10df1616))
 
 ## [1.9.4](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.3...tokens-v1.9.4) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** fix invalid tailwind classes in Button, Modal, and Pagination ([#41](https://github.com/mindulle/sonagi-design-system/issues/41)) ([95eb58e](https://github.com/mindulle/sonagi-design-system/commit/95eb58e35e8aac774195b8992f343a523bcdecbd))
+- **ui:** fix invalid tailwind classes in Button, Modal, and Pagination ([#41](https://github.com/mindulle/sonagi-design-system/issues/41)) ([95eb58e](https://github.com/mindulle/sonagi-design-system/commit/95eb58e35e8aac774195b8992f343a523bcdecbd))
 
 ## [1.9.3](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.2...tokens-v1.9.3) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ops:** run pnpm build before build-storybook to ensure tokens dist is generated ([#40](https://github.com/mindulle/sonagi-design-system/issues/40)) ([7e6046f](https://github.com/mindulle/sonagi-design-system/commit/7e6046f8f871578e3c0e3065696e0497e7ab984f))
+- **ops:** run pnpm build before build-storybook to ensure tokens dist is generated ([#40](https://github.com/mindulle/sonagi-design-system/issues/40)) ([7e6046f](https://github.com/mindulle/sonagi-design-system/commit/7e6046f8f871578e3c0e3065696e0497e7ab984f))
 
 ## [1.9.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.1...tokens-v1.9.2) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ops:** remove pnpm version from setup action to avoid conflict ([#39](https://github.com/mindulle/sonagi-design-system/issues/39)) ([203042e](https://github.com/mindulle/sonagi-design-system/commit/203042e0d93da4d87d847928b4fca14c0655c3cc))
+- **ops:** remove pnpm version from setup action to avoid conflict ([#39](https://github.com/mindulle/sonagi-design-system/issues/39)) ([203042e](https://github.com/mindulle/sonagi-design-system/commit/203042e0d93da4d87d847928b4fca14c0655c3cc))
 
 ## [1.9.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.9.0...tokens-v1.9.1) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** fix Pagination border-radius and replace text arrows with svg ([#38](https://github.com/mindulle/sonagi-design-system/issues/38)) ([52b5d51](https://github.com/mindulle/sonagi-design-system/commit/52b5d512f8b4fda4541160dfd553717806608ccf))
+- **ui:** fix Pagination border-radius and replace text arrows with svg ([#38](https://github.com/mindulle/sonagi-design-system/issues/38)) ([52b5d51](https://github.com/mindulle/sonagi-design-system/commit/52b5d512f8b4fda4541160dfd553717806608ccf))
 
 # [1.9.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.2...tokens-v1.9.0) (2026-08-29)
 
-
 ### Features
 
-* **ops:** add cloudflare pages deployment for storybook ([#37](https://github.com/mindulle/sonagi-design-system/issues/37)) ([aae2627](https://github.com/mindulle/sonagi-design-system/commit/aae26274c90c1abe64739a09da7944c9aed70d59))
+- **ops:** add cloudflare pages deployment for storybook ([#37](https://github.com/mindulle/sonagi-design-system/issues/37)) ([aae2627](https://github.com/mindulle/sonagi-design-system/commit/aae26274c90c1abe64739a09da7944c9aed70d59))
 
 ## [1.8.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.1...tokens-v1.8.2) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** trigger release for recent refactoring ([fc1e80b](https://github.com/mindulle/sonagi-design-system/commit/fc1e80b295456debab3833172909ce5e061f5d79))
+- **ui:** trigger release for recent refactoring ([fc1e80b](https://github.com/mindulle/sonagi-design-system/commit/fc1e80b295456debab3833172909ce5e061f5d79))
 
 ## [1.8.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.8.0...tokens-v1.8.1) (2026-08-29)
 
-
 ### Bug Fixes
 
-* **ui:** add 'base' to border-radius in tailwind config ([9c1d8ea](https://github.com/mindulle/sonagi-design-system/commit/9c1d8ea1b1a52cf6a8c975456b8116ff54b5f137))
+- **ui:** add 'base' to border-radius in tailwind config ([9c1d8ea](https://github.com/mindulle/sonagi-design-system/commit/9c1d8ea1b1a52cf6a8c975456b8116ff54b5f137))
 
 # [1.8.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.7.0...tokens-v1.8.0) (2026-08-28)
 
-
 ### Features
 
-* **tokens:** apply ADR 0006 and rename state-error to state-danger ([#31](https://github.com/mindulle/sonagi-design-system/issues/31)) ([43c70f9](https://github.com/mindulle/sonagi-design-system/commit/43c70f987e5688e2e10585f4b6fc8e1e792cb3af)), closes [#1991B9](https://github.com/mindulle/sonagi-design-system/issues/1991B9) [#47211b](https://github.com/mindulle/sonagi-design-system/issues/47211b) [#1275b5](https://github.com/mindulle/sonagi-design-system/issues/1275b5) [#38130e](https://github.com/mindulle/sonagi-design-system/issues/38130e) [#ffffff](https://github.com/mindulle/sonagi-design-system/issues/ffffff) [#fefaf9](https://github.com/mindulle/sonagi-design-system/issues/fefaf9) [#ffffff](https://github.com/mindulle/sonagi-design-system/issues/ffffff) [#fcf2f0](https://github.com/mindulle/sonagi-design-system/issues/fcf2f0) [#db6c66](https://github.com/mindulle/sonagi-design-system/issues/db6c66) [#d2645f](https://github.com/mindulle/sonagi-design-system/issues/d2645f) [#b94644](https://github.com/mindulle/sonagi-design-system/issues/b94644) [#b44240](https://github.com/mindulle/sonagi-design-system/issues/b44240) [#7c6c6a](https://github.com/mindulle/sonagi-design-system/issues/7c6c6a) [#756563](https://github.com/mindulle/sonagi-design-system/issues/756563) [#9d8986](https://github.com/mindulle/sonagi-design-system/issues/9d8986) [#95817f](https://github.com/mindulle/sonagi-design-system/issues/95817f) [#eeb4a9](https://github.com/mindulle/sonagi-design-system/issues/eeb4a9) [#1c1412](https://github.com/mindulle/sonagi-design-system/issues/1c1412) [#2c201e](https://github.com/mindulle/sonagi-design-system/issues/2c201e) [#392e2c](https://github.com/mindulle/sonagi-design-system/issues/392e2c) [#f85149](https://github.com/mindulle/sonagi-design-system/issues/f85149)
+- **tokens:** apply ADR 0006 and rename state-error to state-danger ([#31](https://github.com/mindulle/sonagi-design-system/issues/31)) ([43c70f9](https://github.com/mindulle/sonagi-design-system/commit/43c70f987e5688e2e10585f4b6fc8e1e792cb3af)), closes [#1991B9](https://github.com/mindulle/sonagi-design-system/issues/1991B9) [#47211b](https://github.com/mindulle/sonagi-design-system/issues/47211b) [#1275b5](https://github.com/mindulle/sonagi-design-system/issues/1275b5) [#38130e](https://github.com/mindulle/sonagi-design-system/issues/38130e) [#ffffff](https://github.com/mindulle/sonagi-design-system/issues/ffffff) [#fefaf9](https://github.com/mindulle/sonagi-design-system/issues/fefaf9) [#ffffff](https://github.com/mindulle/sonagi-design-system/issues/ffffff) [#fcf2f0](https://github.com/mindulle/sonagi-design-system/issues/fcf2f0) [#db6c66](https://github.com/mindulle/sonagi-design-system/issues/db6c66) [#d2645f](https://github.com/mindulle/sonagi-design-system/issues/d2645f) [#b94644](https://github.com/mindulle/sonagi-design-system/issues/b94644) [#b44240](https://github.com/mindulle/sonagi-design-system/issues/b44240) [#7c6c6a](https://github.com/mindulle/sonagi-design-system/issues/7c6c6a) [#756563](https://github.com/mindulle/sonagi-design-system/issues/756563) [#9d8986](https://github.com/mindulle/sonagi-design-system/issues/9d8986) [#95817f](https://github.com/mindulle/sonagi-design-system/issues/95817f) [#eeb4a9](https://github.com/mindulle/sonagi-design-system/issues/eeb4a9) [#1c1412](https://github.com/mindulle/sonagi-design-system/issues/1c1412) [#2c201e](https://github.com/mindulle/sonagi-design-system/issues/2c201e) [#392e2c](https://github.com/mindulle/sonagi-design-system/issues/392e2c) [#f85149](https://github.com/mindulle/sonagi-design-system/issues/f85149)
 
 # [1.7.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.6.0...tokens-v1.7.0) (2026-08-24)
 
-
 ### Features
 
-* **ui:** add Pagination and TableOfContents components based on Figma Core-Primitives-v3 spec ([#30](https://github.com/mindulle/sonagi-design-system/issues/30)) ([153beac](https://github.com/mindulle/sonagi-design-system/commit/153beac3f4bfd7384bb2abbe90954dec9154b581))
+- **ui:** add Pagination and TableOfContents components based on Figma Core-Primitives-v3 spec ([#30](https://github.com/mindulle/sonagi-design-system/issues/30)) ([153beac](https://github.com/mindulle/sonagi-design-system/commit/153beac3f4bfd7384bb2abbe90954dec9154b581))
 
 # [1.6.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.5.0...tokens-v1.6.0) (2026-08-24)
 
-
 ### Bug Fixes
 
-* **pkg:** update pnpm-lock.yaml with @mindulle/tokens dependency ([#27](https://github.com/mindulle/sonagi-design-system/issues/27)) ([2b7284d](https://github.com/mindulle/sonagi-design-system/commit/2b7284d8e6e222bbc94d56eef4957630e94499a6))
-* **ui:** replace workspace:* with ^1.5.0 in @mindulle/ui dependencies for npm publishing ([#26](https://github.com/mindulle/sonagi-design-system/issues/26)) ([cb92cec](https://github.com/mindulle/sonagi-design-system/commit/cb92cecfe250d7827cfb216f6a28485355d1d4bd))
-
+- **pkg:** update pnpm-lock.yaml with @mindulle/tokens dependency ([#27](https://github.com/mindulle/sonagi-design-system/issues/27)) ([2b7284d](https://github.com/mindulle/sonagi-design-system/commit/2b7284d8e6e222bbc94d56eef4957630e94499a6))
+- **ui:** replace workspace:\* with ^1.5.0 in @mindulle/ui dependencies for npm publishing ([#26](https://github.com/mindulle/sonagi-design-system/issues/26)) ([cb92cec](https://github.com/mindulle/sonagi-design-system/commit/cb92cecfe250d7827cfb216f6a28485355d1d4bd))
 
 ### Features
 
-* add Modal component and token validation pipeline ([#29](https://github.com/mindulle/sonagi-design-system/issues/29)) ([234751c](https://github.com/mindulle/sonagi-design-system/commit/234751ccac075f14f395a9858f526e345ea4ac6d)), closes [#CEO-982](https://github.com/mindulle/sonagi-design-system/issues/CEO-982) [#8b949e](https://github.com/mindulle/sonagi-design-system/issues/8b949e)
-* **tokens:** add remaining full parity dark mode tokens per Foundation-v3 spec ([5bae7b6](https://github.com/mindulle/sonagi-design-system/commit/5bae7b6b66eadf7279e452a03d56b983a3c15477))
-* **tokens:** perfect 100% parity with Foundation-v3 & Core-Primitives-v3 ([bc2353f](https://github.com/mindulle/sonagi-design-system/commit/bc2353fd05c4f554aa4b73a68bfeebbc165a3092))
-* **tokens:** refactor light mode shadow elevation to 1:1 parity with card container spec ([4df601d](https://github.com/mindulle/sonagi-design-system/commit/4df601dc92dd923474ba67a8c58091d05eda2a11))
-* **tokens:** refine dark mode colors per Autumn Shower Night specification ([d083af6](https://github.com/mindulle/sonagi-design-system/commit/d083af68adefa881e9b5a541c80f37e80366fe3e))
-* **tokens:** refine light mode colors per 1:1 Parity specification (Autumn Shower Sunlight) ([fea1eb7](https://github.com/mindulle/sonagi-design-system/commit/fea1eb7c3c9e05f732d3c589012c021aa7c7db2a))
-* **tokens:** separate shadow elevation tokens into light and dark themes to match new Figma spec ([37f072e](https://github.com/mindulle/sonagi-design-system/commit/37f072e8da0942f44ec2390bb628d1f26cb7009b))
-* **ui:** add focus ring tokens to light/dark themes and integrate with tailwind config ([5c46af4](https://github.com/mindulle/sonagi-design-system/commit/5c46af48e440794adeb5a9d233a4f0cd769e530a))
-* **ui:** add Storybook Figma Addon and Figma Code Connect mappings ([#28](https://github.com/mindulle/sonagi-design-system/issues/28)) ([4702ee1](https://github.com/mindulle/sonagi-design-system/commit/4702ee15e250de700e97f017f28348de6fd3e00c))
+- add Modal component and token validation pipeline ([#29](https://github.com/mindulle/sonagi-design-system/issues/29)) ([234751c](https://github.com/mindulle/sonagi-design-system/commit/234751ccac075f14f395a9858f526e345ea4ac6d)), closes [#CEO-982](https://github.com/mindulle/sonagi-design-system/issues/CEO-982) [#8b949e](https://github.com/mindulle/sonagi-design-system/issues/8b949e)
+- **tokens:** add remaining full parity dark mode tokens per Foundation-v3 spec ([5bae7b6](https://github.com/mindulle/sonagi-design-system/commit/5bae7b6b66eadf7279e452a03d56b983a3c15477))
+- **tokens:** perfect 100% parity with Foundation-v3 & Core-Primitives-v3 ([bc2353f](https://github.com/mindulle/sonagi-design-system/commit/bc2353fd05c4f554aa4b73a68bfeebbc165a3092))
+- **tokens:** refactor light mode shadow elevation to 1:1 parity with card container spec ([4df601d](https://github.com/mindulle/sonagi-design-system/commit/4df601dc92dd923474ba67a8c58091d05eda2a11))
+- **tokens:** refine dark mode colors per Autumn Shower Night specification ([d083af6](https://github.com/mindulle/sonagi-design-system/commit/d083af68adefa881e9b5a541c80f37e80366fe3e))
+- **tokens:** refine light mode colors per 1:1 Parity specification (Autumn Shower Sunlight) ([fea1eb7](https://github.com/mindulle/sonagi-design-system/commit/fea1eb7c3c9e05f732d3c589012c021aa7c7db2a))
+- **tokens:** separate shadow elevation tokens into light and dark themes to match new Figma spec ([37f072e](https://github.com/mindulle/sonagi-design-system/commit/37f072e8da0942f44ec2390bb628d1f26cb7009b))
+- **ui:** add focus ring tokens to light/dark themes and integrate with tailwind config ([5c46af4](https://github.com/mindulle/sonagi-design-system/commit/5c46af48e440794adeb5a9d233a4f0cd769e530a))
+- **ui:** add Storybook Figma Addon and Figma Code Connect mappings ([#28](https://github.com/mindulle/sonagi-design-system/issues/28)) ([4702ee1](https://github.com/mindulle/sonagi-design-system/commit/4702ee15e250de700e97f017f28348de6fd3e00c))
 
 # [1.5.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.2...tokens-v1.5.0) (2026-08-23)
 
-
 ### Features
 
-* **ui:** publish @mindulle/ui v1.3.0 to GitHub Packages ([#24](https://github.com/mindulle/sonagi-design-system/issues/24)) ([4113385](https://github.com/mindulle/sonagi-design-system/commit/4113385f3a1205ea3f37489c2f7f6d54869b661c))
+- **ui:** publish @mindulle/ui v1.3.0 to GitHub Packages ([#24](https://github.com/mindulle/sonagi-design-system/issues/24)) ([4113385](https://github.com/mindulle/sonagi-design-system/commit/4113385f3a1205ea3f37489c2f7f6d54869b661c))
 
 ## [1.4.2](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.4.1...tokens-v1.4.2) (2026-08-23)
 
