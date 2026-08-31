@@ -1,6 +1,6 @@
 {
   "name": "@mindulle/discord-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sonagi Design System - Discord Bot UI Wrapper",
   "type": "module",
   "main": "dist/index.cjs",
