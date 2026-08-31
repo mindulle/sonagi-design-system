@@ -1,14 +1,14 @@
 "use client";
 import React from 'react';
 
-export interface TopBarProps extends React.HTMLAttributes<HTMLHeaderElement> {
+export interface TopBarProps extends React.HTMLAttributes<HTMLElement> {
   leftSlot?: React.ReactNode;
   centerSlot?: React.ReactNode;
   rightSlot?: React.ReactNode;
   isSticky?: boolean;
 }
 
-export const TopBar = React.forwardRef<HTMLHeaderElement, TopBarProps>(
+export const TopBar = React.forwardRef<HTMLElement, TopBarProps>(
   ({ leftSlot, centerSlot, rightSlot, isSticky = true, className = '', ...props }, ref) => {
     return (
       <header
