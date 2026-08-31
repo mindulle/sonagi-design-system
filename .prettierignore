@@ -1,0 +1,19 @@
+# Build output & caches
+dist/
+.turbo/
+storybook-static/
+
+# Lockfiles
+pnpm-lock.yaml
+
+# Generated design tokens.
+#
+# packages/tokens/tokens/variables.css is emitted by
+# packages/tokens/scripts/build.js — its formatting is owned by the generator.
+# The root lint-staged config runs prettier on **/*.{css,json,md}, so without
+# this entry every `pnpm --filter @mindulle/tokens build` and every prettier
+# pass fought each other and produced an endless ~18 line formatting diff
+# (hex casing, quote style, rgba spacing, selector line breaks).
+#
+# Source of truth is primitives.json / semantics.json — edit those, not the CSS.
+packages/tokens/tokens/variables.css
