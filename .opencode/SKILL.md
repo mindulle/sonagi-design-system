@@ -4,15 +4,15 @@
 
 ## 0. Figma SSOT (정본)
 
-| | |
-| --- | --- |
-| **파일** | `Sonagi Design System V3` |
-| **키** | `AEoW19jmlUh3rFgzhhV1vH` |
+|                 |                                                         |
+| --------------- | ------------------------------------------------------- |
+| **파일**        | `Sonagi Design System V3`                               |
+| **키**          | `AEoW19jmlUh3rFgzhhV1vH`                                |
 | **Foundations** | node `198:2974` — "Sonagi Foundations (SSOT Live Sync)" |
 
 폐기된 파일: `1hgAgnMvqn2uCF8i45Do4x`(스크래치 Test Page), `KN6Bl6Pb4aW2KJXpBhS7rZ`(4월자 방치). **참조 금지.**
 
-읽기·검수용 PAT는 `~/.secrets/figma-pat` 에 있습니다. 환경변수 `FIGMA_TOKEN` 은 403이므로 사용하지 마십시오.
+읽기·검수용 PAT는 `~/.secrets/figma-pat` 에 있으며, 환경변수 `FIGMA_TOKEN` 으로 설정되어 있습니다. (일반 컴포넌트 목록 등은 정상 200 반환. 단, `/variables/local` 등 일부 API는 Enterprise 플랜 전용이므로 403을 반환합니다.)
 
 ## 1. 아키텍처 철학 (Architecture Philosophy)
 
