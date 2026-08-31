@@ -5,14 +5,20 @@ import { Radio } from './Radio';
 const meta: Meta<typeof Radio> = {
   title: 'Components/Radio',
   component: Radio,
-  parameters: {
-    layout: 'padded',
-  },
+  parameters: { layout: 'padded' },
+};
+export default meta;
+
+export const Default: StoryObj<typeof Radio> = {
+  args: { name: 'group1', label: '공개 옵션', description: '모든 사용자가 볼 수 있습니다.' },
 };
 
-export default meta;
-type Story = StoryObj<typeof Radio>;
-
-export const Default: Story = {
-  args: {},
+export const States: StoryObj<typeof Radio> = {
+  render: () => (
+    <div className="flex flex-col gap-4">
+      <Radio name="g2" label="기본 라디오" />
+      <Radio name="g2" defaultChecked label="선택된 상태" />
+      <Radio name="g3" disabled label="비활성화" description="선택할 수 없습니다." />
+    </div>
+  ),
 };

@@ -1,20 +1,15 @@
 import React from 'react';
 
-export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {}
+export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+  label?: React.ReactNode;
+  description?: React.ReactNode;
+}
 
-/**
- * Radio
- * 
- * 단일 선택을 지원하는 라디오 버튼 컴포넌트.
- */
 export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
-  ({ className = '', disabled, ...props }, ref) => {
-    const radioClass = [
-      'sng-radio',
-      className,
-    ].filter(Boolean).join(' ');
+  ({ label, description, className = '', disabled, ...props }, ref) => {
+    const radioClass = ['sng-radio'].filter(Boolean).join(' ');
 
-    return (
+    const inputElement = (
       <input
         type="radio"
         ref={ref}
@@ -23,7 +18,18 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
         {...props}
       />
     );
+
+    if (!label && !description) return inputElement;
+
+    return (
+      <label className={`flex items-start gap-3 ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`}>
+        <div className="mt-0.5 shrink-0">{inputElement}</div>
+        <div className="flex flex-col">
+          {label && <span className="text-sm font-semibold text-text-primary">{label}</span>}
+          {description && <span className="text-xs text-text-secondary mt-0.5">{description}</span>}
+        </div>
+      </label>
+    );
   }
 );
-
 Radio.displayName = 'Radio';

@@ -1,56 +1,37 @@
 import React from 'react';
 
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  /** 에러 상태 여부 */
   error?: boolean;
+  label?: React.ReactNode;
+  description?: React.ReactNode;
+  placeholder?: string;
 }
 
-/**
- * Select
- * 
- * Sonagi 디자인 시스템의 드롭다운 선택 컴포넌트.
- * Input 아키텍처를 기반으로 확장되며, 우측에 Chevron 아이콘이 고정됩니다.
- */
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ error = false, className = '', disabled, children, ...props }, ref) => {
-    const selectWrapperClass = [
-      'sng-select-wrapper',
-      className,
-    ].filter(Boolean).join(' ');
+  ({ error = false, label, description, placeholder, className = '', disabled, children, defaultValue = "", ...props }, ref) => {
+    const selectWrapperClass = ['sng-select-wrapper'].filter(Boolean).join(' ');
+    const selectClass = ['sng-select', error && 'sng-select--error'].filter(Boolean).join(' ');
 
-    const selectClass = [
-      'sng-select',
-      error && 'sng-select--error',
-    ].filter(Boolean).join(' ');
-
-    return (
+    const selectElement = (
       <div className={selectWrapperClass}>
-        <select
-          ref={ref}
-          disabled={disabled}
-          className={selectClass}
-          aria-invalid={error ? true : undefined}
-          {...props}
-        >
+        <select ref={ref} disabled={disabled} className={selectClass} defaultValue={defaultValue} {...props}>
+          {placeholder && (
+            <option value="" disabled hidden>{placeholder}</option>
+          )}
           {children}
         </select>
-        <div className="sng-select__icon" aria-hidden="true">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
+      </div>
+    );
+
+    if (!label && !description) return selectElement;
+
+    return (
+      <div className={`flex flex-col gap-1.5 w-full ${className}`}>
+        {label && <label className="text-sm font-semibold text-text-primary">{label}</label>}
+        {selectElement}
+        {description && <span className={`text-xs ${error ? 'text-state-danger' : 'text-text-secondary'}`}>{description}</span>}
       </div>
     );
   }
 );
-
 Select.displayName = 'Select';

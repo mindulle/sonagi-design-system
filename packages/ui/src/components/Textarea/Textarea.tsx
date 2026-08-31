@@ -1,34 +1,28 @@
 import React from 'react';
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  /** 에러 상태 여부 */
   error?: boolean;
+  label?: React.ReactNode;
+  description?: React.ReactNode;
 }
 
-/**
- * Textarea
- * 
- * Sonagi 디자인 시스템의 다중 입력 텍스트 컴포넌트.
- * Input 아키텍처를 기반으로 확장되며, 우측 하단 리사이즈를 지원합니다.
- */
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ error = false, className = '', disabled, ...props }, ref) => {
-    const textareaClass = [
-      'sng-textarea',
-      error && 'sng-textarea--error',
-      className,
-    ].filter(Boolean).join(' ');
+  ({ error = false, label, description, className = '', disabled, ...props }, ref) => {
+    const textareaClass = ['sng-textarea', error && 'sng-textarea--error'].filter(Boolean).join(' ');
+
+    const textareaElement = (
+      <textarea ref={ref} disabled={disabled} className={textareaClass} {...props} />
+    );
+
+    if (!label && !description) return textareaElement;
 
     return (
-      <textarea
-        ref={ref}
-        disabled={disabled}
-        className={textareaClass}
-        aria-invalid={error ? true : undefined}
-        {...props}
-      />
+      <div className={`flex flex-col gap-1.5 w-full ${className}`}>
+        {label && <label className="text-sm font-semibold text-text-primary">{label}</label>}
+        {textareaElement}
+        {description && <span className={`text-xs ${error ? 'text-state-danger' : 'text-text-secondary'}`}>{description}</span>}
+      </div>
     );
   }
 );
-
 Textarea.displayName = 'Textarea';
