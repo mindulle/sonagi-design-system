@@ -15,6 +15,8 @@ export { Modal } from './components/Modal';
 export type { ModalProps } from './components/Modal';
 export { TableOfContents } from './components/TableOfContents';
 export { SonagiLogo } from './components/SonagiLogo';
+export { Pagination } from './components/Pagination';
+export type { PaginationProps } from './components/Pagination';
 
 // Form Components
 export { Textarea } from './components/Textarea';
