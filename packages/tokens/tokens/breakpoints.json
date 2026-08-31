@@ -1,0 +1,46 @@
+{
+  "breakpoints": {
+    "desktop": {
+      "max-width": {
+        "$value": "1200px",
+        "$type": "dimension"
+      },
+      "global-margin": {
+        "$value": "32px",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "24px",
+        "$type": "dimension"
+      }
+    },
+    "tablet": {
+      "max-width": {
+        "$value": "768px",
+        "$type": "dimension"
+      },
+      "global-margin": {
+        "$value": "24px",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "dimension"
+      }
+    },
+    "mobile": {
+      "max-width": {
+        "$value": "390px",
+        "$type": "dimension"
+      },
+      "global-margin": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "dimension"
+      }
+    }
+  }
+}
