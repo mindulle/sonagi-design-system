@@ -32,7 +32,7 @@ export const Default: Story = {
           </Tabs.Container>
         }
         rightSlot={
-          <Button variant="ghost" size="sm">
+          <Button variant="secondary" size="sm">
             🌙 Dark
           </Button>
         }

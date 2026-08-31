@@ -8,7 +8,7 @@ describe('SonagiLogo Component', () => {
     const { container } = render(<SonagiLogo height={32} />);
     const svg = container.querySelector('svg');
     expect(svg).toBeTruthy();
-    expect(svg).toHaveAttribute('height', '32');
+    expect(svg?.getAttribute('height')).toBe('32');
     expect(container.querySelector('mask#sng-stencil-mask')).toBeTruthy();
   });
 });

@@ -14,11 +14,6 @@ const meta: Meta<typeof SonagiLogo> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    variant: {
-      control: 'select',
-      options: ['full', 'symbol', 'monochrome'],
-      description: '로고 표시 형태 선택',
-    },
     height: {
       control: { type: 'range', min: 16, max: 80, step: 2 },
       description: '로고 높이 (px)',
@@ -32,13 +27,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     height: 32,
-  },
-};
-
-export const SymbolOnly: Story = {
-  args: {
-    height: 32,
-    variant: 'symbol',
   },
 };
 
