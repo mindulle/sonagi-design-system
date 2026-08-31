@@ -41,11 +41,6 @@
     "directory": "packages/tokens"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^12.0.8",
-    "@semantic-release/npm": "^13.1.5",
-    "semantic-release": "^25.0.5",
     "vitest": "^4.1.9"
   }
 }
