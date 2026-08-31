@@ -31,3 +31,4 @@ export { Toggle } from './components/Toggle';
 export type { ToggleProps } from './components/Toggle';
 export * from './components/Tabs/Tabs';
 export * from './components/Accordion/Accordion';
+export * from './components/TopBar/TopBar';
