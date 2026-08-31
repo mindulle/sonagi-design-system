@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.10.0...ui-v1.10.1) (2026-08-31)
+
+
+### Bug Fixes
+
+* **ui:** export Pagination component from index.ts ([#57](https://github.com/mindulle/sonagi-design-system/issues/57)) ([01e6cfa](https://github.com/mindulle/sonagi-design-system/commit/01e6cfa7a37216754986f75aa5f1c4c36d2b7b72))
+
 # [1.10.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.9.0...ui-v1.10.0) (2026-08-31)
 
 
