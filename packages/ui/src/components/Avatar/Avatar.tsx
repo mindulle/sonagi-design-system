@@ -10,7 +10,6 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ({ size = 'md', src, alt = 'Avatar', initials, className = '', ...props }, ref) => {
-    // Figma 시안에 정의된 Size (Sm, Md, Lg)
     const sizeClasses = {
       sm: 'w-8 h-8 text-xs',     // 32px
       md: 'w-10 h-10 text-sm',   // 40px
@@ -20,7 +19,8 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     return (
       <div
         ref={ref}
-        className={`relative flex items-center justify-center shrink-0 rounded-full overflow-hidden bg-gray-200 text-text-primary font-medium ${sizeClasses[size]} ${className}`}
+        // bg-gray-200을 시맨틱 토큰(bg-bg-elevated)으로 변경하여 다크모드 대응
+        className={`relative flex items-center justify-center shrink-0 rounded-full overflow-hidden bg-bg-elevated border border-border-subtle text-text-primary font-medium ${sizeClasses[size]} ${className}`}
         {...props}
       >
         {src ? (
