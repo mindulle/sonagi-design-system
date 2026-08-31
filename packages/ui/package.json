@@ -31,7 +31,8 @@
     "prepack": "pnpm build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "chromatic"
+    "chromatic": "chromatic",
+    "figma:check": "node scripts/design-sync-check.mjs"
   },
   "keywords": [
     "design-system",
