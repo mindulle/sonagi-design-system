@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.13.0...tokens-v1.13.1) (2026-08-31)
+
+
+### Bug Fixes
+
+* **ui:** export Pagination component from index.ts ([#57](https://github.com/mindulle/sonagi-design-system/issues/57)) ([01e6cfa](https://github.com/mindulle/sonagi-design-system/commit/01e6cfa7a37216754986f75aa5f1c4c36d2b7b72))
+
 # [1.13.0](https://github.com/mindulle/sonagi-design-system/compare/tokens-v1.12.0...tokens-v1.13.0) (2026-08-31)
 
 
