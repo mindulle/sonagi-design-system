@@ -13,7 +13,7 @@ const meta: Meta<typeof Input> = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=159-393',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=179-1682',
     },
   },
 };
