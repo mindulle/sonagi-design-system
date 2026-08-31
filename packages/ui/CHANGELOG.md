@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.9.0...ui-v1.10.0) (2026-08-31)
+
+
+### Features
+
+* **ui:** add gap checker script for figma and storybook sync ([#56](https://github.com/mindulle/sonagi-design-system/issues/56)) ([3115cf4](https://github.com/mindulle/sonagi-design-system/commit/3115cf4c25abdd22e20ce5b61dd2d8271d9f9f7c))
+
 # [1.9.0](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.8.2...ui-v1.9.0) (2026-08-30)
 
 
