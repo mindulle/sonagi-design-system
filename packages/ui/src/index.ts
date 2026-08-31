@@ -29,3 +29,5 @@ export { Radio } from './components/Radio';
 export type { RadioProps } from './components/Radio';
 export { Toggle } from './components/Toggle';
 export type { ToggleProps } from './components/Toggle';
+export * from './components/Tabs/Tabs';
+export * from './components/Accordion/Accordion';
