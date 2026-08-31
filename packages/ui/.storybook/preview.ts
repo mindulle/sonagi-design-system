@@ -53,6 +53,9 @@ export const decorators = [
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
       }
+      document.body.style.backgroundColor = 'var(--sng-color-background-base)';
+      document.body.style.color = 'var(--sng-color-text-primary)';
+      document.body.style.transition = 'background-color 0.2s ease, color 0.2s ease';
     }
     return Story();
   },
