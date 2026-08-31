@@ -7,7 +7,7 @@ const meta: Meta<typeof SonagiLogo> = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=225-1499',
+      url: 'https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3?node-id=225-1481',
     },
 
     layout: 'centered',
