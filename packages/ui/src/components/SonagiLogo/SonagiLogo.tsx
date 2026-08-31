@@ -3,8 +3,6 @@ import React from 'react';
 export interface SonagiLogoProps extends React.SVGAttributes<SVGSVGElement> {
   /** 높이 (기본값: 28px) */
   height?: number;
-  /** 로고 타입 (full: 전체 워드마크+도트, symbol: 도트 전용, monochrome: 단색 모드) */
-  variant?: 'full' | 'symbol' | 'monochrome';
 }
 
 /**
@@ -15,40 +13,16 @@ export interface SonagiLogoProps extends React.SVGAttributes<SVGSVGElement> {
  */
 export function SonagiLogo({
   height = 28,
-  variant = 'full',
   className = '',
   style,
   ...props
 }: SonagiLogoProps) {
-  if (variant === 'symbol') {
-    return (
-      <svg
-        height={height}
-        width={height}
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        className={`sng-logo sng-logo--symbol ${className}`}
-        style={style}
-        {...props}
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="8"
-          fill="var(--sng-color-brand-logo, #00ffcc)"
-        />
-      </svg>
-    );
-  }
-
-  const isMonochrome = variant === 'monochrome';
-
   return (
     <svg
       height={height}
       viewBox="170 70 450 115"
       xmlns="http://www.w3.org/2000/svg"
-      className={`sng-logo sng-logo--${variant} ${className}`}
+      className={`sng-logo ${className}`}
       style={style}
       {...props}
     >
@@ -82,7 +56,7 @@ export function SonagiLogo({
 
       {/* 브랜드 시안 도트 포인트 */}
       <path
-        style={{ fill: isMonochrome ? 'currentColor' : 'var(--sng-color-brand-logo, #00ffcc)' }}
+        style={{ fill: 'var(--sng-color-brand-logo, #00ffcc)' }}
         d="m 614,76 a 6,6 0 0 1 -6,6 6,6 0 0 1 -6,-6 6,6 0 0 1 6,-6 6,6 0 0 1 6,6 z"
       />
     </svg>

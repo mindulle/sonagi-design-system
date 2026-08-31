@@ -32,7 +32,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     height: 32,
-    variant: 'full',
   },
 };
 
@@ -40,13 +39,6 @@ export const SymbolOnly: Story = {
   args: {
     height: 32,
     variant: 'symbol',
-  },
-};
-
-export const Monochrome: Story = {
-  args: {
-    height: 32,
-    variant: 'monochrome',
   },
 };
 
