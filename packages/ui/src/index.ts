@@ -32,3 +32,5 @@ export type { ToggleProps } from './components/Toggle';
 export * from './components/Tabs/Tabs';
 export * from './components/Accordion/Accordion';
 export * from './components/TopBar/TopBar';
+export * from './components/Avatar/Avatar';
+export * from './components/ListItem/ListItem';
