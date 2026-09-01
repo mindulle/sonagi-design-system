@@ -11,7 +11,7 @@ export { Badge } from './components/Badge';
 export type { BadgeProps } from './components/Badge';
 export { Modal } from './components/Modal';
 export type { ModalProps } from './components/Modal';
-export { TableOfContents } from './components/TableOfContents';
+
 export { SonagiLogo } from './components/SonagiLogo';
 export { Pagination } from './components/Pagination';
 export type { PaginationProps } from './components/Pagination';
@@ -27,9 +27,9 @@ export { Radio } from './components/Radio';
 export type { RadioProps } from './components/Radio';
 export * from './components/Tabs/Tabs';
 export * from './components/Accordion/Accordion';
-export * from './components/TopBar/TopBar';
+
 export * from './components/Avatar/Avatar';
 export * from './components/ListItem/ListItem';
 export * from './components/Tooltip/Tooltip';
 export * from './components/Toast/Toast';
-export * from './components/MobileNav/MobileNav';
+

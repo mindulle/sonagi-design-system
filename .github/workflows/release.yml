@@ -37,7 +37,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Install Playwright browsers (if UI tests need it)
-        run: pnpm --filter @mindulle/ui exec playwright install chromium --with-deps || true
+        run: pnpm --filter @mindulle/ui exec playwright install chromium --with-deps
 
       - name: Build packages
         run: pnpm run build
