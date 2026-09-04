@@ -34,7 +34,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Tokens
-        run: pnpm --filter @mindulle/tokens build
+        run: pnpm run build
 
       - name: Build Storybook
         run: pnpm --filter @mindulle/ui build-storybook
