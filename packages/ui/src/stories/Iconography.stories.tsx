@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as Icons from '@mindulle/icons';
 
 const customIconNames = [
-  'AddIcon', 'ArrowRightIcon', 'CheckIcon', 'CloseIcon', 
-  'DocumentIcon', 'HomeIcon', 'MenuIcon', 'SearchIcon', 'UserIcon'
+  'SngAddIcon', 'SngArrowRightIcon', 'SngCheckIcon', 'SngCloseIcon', 
+  'SngDocumentIcon', 'SngHomeIcon', 'SngMenuIcon', 'SngSearchIcon', 'SngUserIcon'
 ];
 
 function IconGallery() {
@@ -12,7 +12,7 @@ function IconGallery() {
       <h2 style={{ marginBottom: '8px', color: 'var(--sng-color-text-primary)' }}>Sonagi Custom Icons</h2>
       <p style={{ color: 'var(--sng-color-text-secondary)', marginBottom: '32px' }}>
         이 아이콘들은 Vector Ops (Affinity Designer)에서 절차적으로 생성되어 React 컴포넌트로 자동 변환된 에셋입니다.
-        Lucide 아이콘과 동일한 Props(<code>size</code>, <code>color</code>, <code>strokeWidth</code> 등)를 지원합니다.
+        Lucide 아이콘과 동일한 Props(<code>size</code>, <code>color</code>, <code>strokeWidth</code> 등)를 지원하며 충돌을 방지하기 위해 <code>Sng</code> 접두사가 붙어있습니다.
       </p>
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '16px' }}>

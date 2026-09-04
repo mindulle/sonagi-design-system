@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LucideProps } from "lucide-react";
 
-export const ArrowRightIcon = React.forwardRef<SVGSVGElement, LucideProps>(
+export const SngHomeIcon = React.forwardRef<SVGSVGElement, LucideProps>(
   ({ color = "currentColor", size = 24, strokeWidth = 2, className = "", ...props }, ref) => (
     <svg
       ref={ref}
@@ -17,8 +17,8 @@ export const ArrowRightIcon = React.forwardRef<SVGSVGElement, LucideProps>(
       className={className}
       {...props}
     >
-      <line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/>
+      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
     </svg>
   )
 );
-ArrowRightIcon.displayName = "ArrowRightIcon";
+SngHomeIcon.displayName = "SngHomeIcon";

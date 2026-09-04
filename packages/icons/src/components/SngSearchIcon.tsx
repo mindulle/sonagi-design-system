@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LucideProps } from "lucide-react";
 
-export const AddIcon = React.forwardRef<SVGSVGElement, LucideProps>(
+export const SngSearchIcon = React.forwardRef<SVGSVGElement, LucideProps>(
   ({ color = "currentColor", size = 24, strokeWidth = 2, className = "", ...props }, ref) => (
     <svg
       ref={ref}
@@ -17,8 +17,8 @@ export const AddIcon = React.forwardRef<SVGSVGElement, LucideProps>(
       className={className}
       {...props}
     >
-      <line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/>
+      <circle cx="10" cy="10" r="7"/><line x1="15" y1="15" x2="21" y2="21"/>
     </svg>
   )
 );
-AddIcon.displayName = "AddIcon";
+SngSearchIcon.displayName = "SngSearchIcon";

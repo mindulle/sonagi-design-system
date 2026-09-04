@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LucideProps } from "lucide-react";
 
-export const CheckIcon = React.forwardRef<SVGSVGElement, LucideProps>(
+export const SngCloseIcon = React.forwardRef<SVGSVGElement, LucideProps>(
   ({ color = "currentColor", size = 24, strokeWidth = 2, className = "", ...props }, ref) => (
     <svg
       ref={ref}
@@ -17,8 +17,8 @@ export const CheckIcon = React.forwardRef<SVGSVGElement, LucideProps>(
       className={className}
       {...props}
     >
-      <polyline points="19 7 9 17 5 13"/>
+      <line x1="19" y1="5" x2="5" y2="19"/><line x1="5" y1="5" x2="19" y2="19"/>
     </svg>
   )
 );
-CheckIcon.displayName = "CheckIcon";
+SngCloseIcon.displayName = "SngCloseIcon";
