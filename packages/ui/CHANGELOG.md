@@ -1,5 +1,11 @@
 ## [1.10.1](https://github.com/mindulle/sonagi-design-system/compare/ui-v1.10.0...ui-v1.10.1) (2026-08-31)
 
+## 2.0.0
+
+### Major Changes
+
+- c7c5434: Removed domain-specific legacy components (TopBar, MobileNav, TableOfContents) to restore UI library isolation.
+
 ## 1.12.0
 
 ### Minor Changes
