@@ -42,6 +42,7 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
+          packageManager: npm
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy packages/ui/storybook-static --project-name 'sonagi-design-system' # 프로젝트 이름이 다를 경우 수정 필요 (예: design-sonagi-space)
