@@ -36,14 +36,16 @@ jobs:
       - name: Build Tokens
         run: pnpm run build
 
+      - name: Install Wrangler globally
+        run: npm install -g wrangler@3.90.0
+
       - name: Build Storybook
         run: pnpm --filter @mindulle/ui build-storybook
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: 'sonagi-design-system' # 프로젝트 이름이 다를 경우 수정 필요 (예: design-sonagi-space)
-          directory: 'packages/ui/storybook-static'
+          command: pages deploy packages/ui/storybook-static --project-name sonagi-design-system # 프로젝트 이름이 다를 경우 수정 필요 (예: design-sonagi-space)
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
