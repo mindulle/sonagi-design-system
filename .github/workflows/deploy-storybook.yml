@@ -36,6 +36,9 @@ jobs:
       - name: Build Tokens
         run: pnpm run build
 
+      - name: Install Wrangler globally
+        run: npm install -g wrangler@3.90.0
+
       - name: Build Storybook
         run: pnpm --filter @mindulle/ui build-storybook
 
