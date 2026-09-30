@@ -26,6 +26,12 @@
     "prettier": "^3.8.4",
     "turbo": "^2.5.4"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
+  },
   "lint-staged": {
     "packages/tokens/tokens/**/*.json": [
       "pnpm --filter @mindulle/tokens build"
