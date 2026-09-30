@@ -1,0 +1,10 @@
+[pr_reviewer]
+extra_instructions = """
+[Sonagi Architecture Convention Check]
+이 레포지토리는 디자인 시스템(sonagi-design-system) 프로젝트입니다.
+PR 리뷰 시 아래 규칙을 엄격히 검사하고 위반 시 지적(Request Changes)하세요.
+
+1. 토큰 바인딩 강제 (CRITICAL): CSS나 UI 컴포넌트 내부(스타일링 코드)에 Raw Hex Color(예: #FFFFFF)나 고정 Font Size(예: 24px)가 하드코딩되었는지 강력히 검사하세요. 모든 시각 속성은 반드시 디자인 토큰(Design Tokens) 변수(`var(--sng-*)`)로 바인딩되어야 합니다.
+2. 에셋 관리 거버넌스: 아이콘 및 벡터 에셋은 자체 포함하지 말고, Vector Ops 파이프라인에서 생성된 CDN URL(cdn.sonagi.space)을 참조하도록 작성되었는지 확인하세요.
+3. 호환성 및 오토레이아웃: 컴포넌트 설계 시 외부 여백(Margin)을 고정하여 강제하지 말고, 래퍼 컨테이너가 오토레이아웃(Flex/Grid)을 주도할 수 있도록 확장성을 열어두었는지 검토하세요.
+"""
