@@ -9,7 +9,7 @@ const sheet = project.sheet('Hero Scene');
 
 export default function HeroScene() {
   return (
-    <div className="w-full h-full absolute inset-0 -z-10">
+    <div className="w-full h-full absolute inset-0">
       <Canvas 
         camera={{ position: [0, 0, 5], fov: 45 }}
         gl={{ preserveDrawingBuffer: true, alpha: true }}
