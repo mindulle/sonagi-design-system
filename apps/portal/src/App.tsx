@@ -206,19 +206,21 @@ function Playground() {
   }, []);
 
   return (
-    <div className="h-screen w-full flex flex-col bg-zinc-950 text-white">
-      <header className="p-4 border-b border-zinc-800 flex justify-between items-center relative z-50">
+    <div className="h-screen w-full flex flex-col bg-zinc-950 text-white relative">
+      
+      {/* Theatre.js Studio UI와 겹치지 않도록 플로팅(우측 하단) 바 형태로 변경 */}
+      <div className="fixed bottom-6 right-6 z-[9999] bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 rounded-2xl shadow-2xl p-4 flex items-center gap-6">
         <div>
-          <h1 className="font-bold text-xl text-purple-400">Sonagi Motion Lab</h1>
-          <p className="text-xs text-zinc-500">Theatre.js Studio Environment</p>
+          <h1 className="font-bold text-sm text-purple-400">Sonagi Motion Lab</h1>
+          <p className="text-[10px] text-zinc-500">Theatre.js Environment</p>
         </div>
         <a 
           href="/" 
-          className="text-sm px-4 py-2 bg-white/10 hover:bg-white/20 rounded-md transition-colors"
+          className="text-xs px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
         >
           ← Exit Lab
         </a>
-      </header>
+      </div>
       
       <div className="flex-1 flex items-center justify-center relative overflow-hidden">
         {/* 모션 프리뷰 캔버스가 들어갈 자리 */}
