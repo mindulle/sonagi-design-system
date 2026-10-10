@@ -199,16 +199,12 @@ function Playground() {
           <h1 className="font-bold text-xl text-purple-400">Sonagi Motion Lab</h1>
           <p className="text-xs text-zinc-500">Theatre.js Studio Environment</p>
         </div>
-        <Link 
-          to="/" 
+        <a 
+          href="/" 
           className="text-sm px-4 py-2 bg-white/10 hover:bg-white/20 rounded-md transition-colors"
-          onClick={() => {
-            // 메인 이동 시 새로고침하여 Studio UI를 완전히 날리는 것이 깔끔함
-            window.location.href = '/';
-          }}
         >
           ← Exit Lab
-        </Link>
+        </a>
       </header>
       
       <div className="flex-1 flex items-center justify-center relative overflow-hidden">
