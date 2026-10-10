@@ -2,6 +2,16 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
+import * as studioModule from '@theatre/studio';
+import { getProject } from '@theatre/core';
+
+const getStudio = () => {
+  let s: any = studioModule;
+  while (s && !s.initialize && s.default) {
+    s = s.default;
+  }
+  return s;
+};
 
 const bentoVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -176,20 +186,16 @@ function Catalog() {
 
 function Playground() {
   useEffect(() => {
-    // 플레이그라운드 진입 시 Theatre.js Studio 초기화 (다이내믹 임포트로 번들 분리 및 런타임 오류 방지)
-    let studioInstance: any;
-    import('@theatre/studio').then(studioModule => {
-      studioInstance = studioModule.default || studioModule;
-      if (typeof studioInstance.initialize === 'function') {
-        studioInstance.initialize();
-      }
-      
-      // 임시 프로젝트 생성 (모션 테스트용)
-      import('@theatre/core').then(({ getProject }) => {
-        const project = getProject('Sonagi Motion Lab');
-        project.sheet('Hero Scene'); // 시트 생성만 해둠
-      });
-    }).catch(console.error);
+    // 플레이그라운드 진입 시 Theatre.js Studio 초기화
+    const studioInstance = getStudio();
+    
+    if (studioInstance && typeof studioInstance.initialize === 'function') {
+      studioInstance.initialize();
+    }
+    
+    // 임시 프로젝트 생성 (모션 테스트용)
+    const project = getProject('Sonagi Motion Lab');
+    project.sheet('Hero Scene'); // 시트 생성만 해둠
     
     return () => {
       // 컴포넌트 언마운트 시 Studio UI 감춤
