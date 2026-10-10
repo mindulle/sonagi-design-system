@@ -35,6 +35,8 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Install Playwright browsers (if UI tests need it)
         run: pnpm --filter @mindulle/ui exec playwright install chromium --with-deps

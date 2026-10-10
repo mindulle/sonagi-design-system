@@ -26,6 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -34,6 +35,8 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build dependencies
         # Build the tokens package so that variables.css exists before Storybook builds
