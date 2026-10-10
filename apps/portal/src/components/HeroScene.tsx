@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { Environment, Float, MeshTransmissionMaterial } from '@react-three/drei';
+import { Environment, Float } from '@react-three/drei';
 import { getProject } from '@theatre/core';
 import { SheetProvider, editable as e } from '@theatre/r3f';
 
@@ -27,19 +27,11 @@ export default function HeroScene() {
             <Float speed={2} rotationIntensity={1} floatIntensity={2}>
               <e.mesh theatreKey="Sphere 1" position={[-1.5, 0.5, 0]}>
                 <sphereGeometry args={[0.8, 64, 64]} />
-                {/* 물방울 같은 유리/투명한 질감을 내기 위한 R3F Material */}
-                <MeshTransmissionMaterial 
-                  backside
-                  samples={4}
-                  thickness={0.5}
-                  chromaticAberration={0.5}
-                  anisotropy={0.1}
-                  distortion={0.2}
-                  distortionScale={0.5}
-                  temporalDistortion={0.1}
-                  transmission={1}
-                  roughness={0.1}
+                {/* 잘 보이도록 물리 기반 투명/반사 재질 대신 눈에 띄는 Standard Material로 변경했습니다. */}
+                <meshStandardMaterial 
                   color="#c084fc"
+                  roughness={0.2}
+                  metalness={0.5}
                 />
               </e.mesh>
             </Float>
@@ -47,14 +39,10 @@ export default function HeroScene() {
             <Float speed={1.5} rotationIntensity={1.5} floatIntensity={1.5}>
               <e.mesh theatreKey="Sphere 2" position={[1.2, -0.5, -1]}>
                 <sphereGeometry args={[0.6, 64, 64]} />
-                <MeshTransmissionMaterial 
-                  backside
-                  samples={4}
-                  thickness={0.2}
-                  chromaticAberration={0.3}
-                  transmission={0.9}
-                  roughness={0.2}
-                  color="#a78bfa"
+                <meshStandardMaterial 
+                  color="#818cf8"
+                  roughness={0.3}
+                  metalness={0.6}
                 />
               </e.mesh>
             </Float>
@@ -62,10 +50,10 @@ export default function HeroScene() {
             <Float speed={3} rotationIntensity={0.5} floatIntensity={1}>
               <e.mesh theatreKey="Sphere 3" position={[0.5, 1.5, -2]}>
                 <sphereGeometry args={[0.4, 64, 64]} />
-                <MeshTransmissionMaterial 
-                  transmission={0.9}
-                  roughness={0.1}
+                <meshStandardMaterial 
                   color="#e879f9"
+                  roughness={0.1}
+                  metalness={0.8}
                 />
               </e.mesh>
             </Float>
