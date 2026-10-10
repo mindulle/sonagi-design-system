@@ -1,4 +1,4 @@
-name: Deploy Storybook
+name: Deploy Portal & Storybook
 
 on:
   push:
@@ -36,19 +36,24 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Tokens
+      - name: Build Tokens & Portal
         run: pnpm run build
-
-      - name: Install Wrangler globally
-        run: npm install -g wrangler@3.90.0
 
       - name: Build Storybook
         run: pnpm --filter @mindulle/ui build-storybook
+
+      - name: Merge Storybook into Portal
+        run: |
+          mkdir -p apps/portal/dist/storybook
+          cp -R packages/ui/storybook-static/* apps/portal/dist/storybook/
+
+      - name: Install Wrangler globally
+        run: npm install -g wrangler@3.90.0
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy packages/ui/storybook-static --project-name sonagi-design-system # 프로젝트 이름이 다를 경우 수정 필요 (예: design-sonagi-space)
+          command: pages deploy apps/portal/dist --project-name sonagi-design-system
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
