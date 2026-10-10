@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
-import studio from '@theatre/studio';
-import { getProject } from '@theatre/core';
 
 const bentoVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -178,17 +176,26 @@ function Catalog() {
 
 function Playground() {
   useEffect(() => {
-    // 플레이그라운드 진입 시 Theatre.js Studio 초기화
-    studio.initialize();
-    
-    // 임시 프로젝트 생성 (모션 테스트용)
-    const project = getProject('Sonagi Motion Lab');
-    project.sheet('Hero Scene'); // 시트 생성만 해둠
+    // 플레이그라운드 진입 시 Theatre.js Studio 초기화 (다이내믹 임포트로 번들 분리 및 런타임 오류 방지)
+    let studioInstance: any;
+    import('@theatre/studio').then(studioModule => {
+      studioInstance = studioModule.default || studioModule;
+      if (typeof studioInstance.initialize === 'function') {
+        studioInstance.initialize();
+      }
+      
+      // 임시 프로젝트 생성 (모션 테스트용)
+      import('@theatre/core').then(({ getProject }) => {
+        const project = getProject('Sonagi Motion Lab');
+        project.sheet('Hero Scene'); // 시트 생성만 해둠
+      });
+    }).catch(console.error);
     
     return () => {
-      // 컴포넌트 언마운트 시 Studio UI를 감추는 방식 사용 
-      // (완벽한 unmount API가 없으므로 CSS로 숨김 처리하거나 새로고침 유도)
-      studio.ui.hide();
+      // 컴포넌트 언마운트 시 Studio UI 감춤
+      if (studioInstance && studioInstance.ui) {
+        studioInstance.ui.hide();
+      }
     };
   }, []);
 
