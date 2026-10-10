@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import * as studioModule from '@theatre/studio';
 import { getProject } from '@theatre/core';
+import HeroScene from './components/HeroScene';
 
 const getStudio = () => {
   let s: any = studioModule;
@@ -31,12 +32,16 @@ function Landing() {
     <div className="min-h-screen flex flex-col bg-black text-white selection:bg-purple-500/30">
       {/* Hero Section */}
       <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black -z-20" />
+        
+        {/* 3D Canvas Scene */}
+        <HeroScene />
+        
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-6xl md:text-8xl font-bold tracking-tighter mb-4"
+          className="text-6xl md:text-8xl font-bold tracking-tighter mb-4 z-10"
         >
           Wild & Thin.
         </motion.h1>
@@ -44,7 +49,7 @@ function Landing() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl text-center"
+          className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl text-center z-10"
         >
           디자인 시스템 그 이상의 캔버스.
         </motion.p>
@@ -52,13 +57,14 @@ function Landing() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
+          className="z-10"
         >
-          <Link 
-            to="/catalog" 
+          <a 
+            href="/catalog" 
             className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             Explore Components
-          </Link>
+          </a>
         </motion.div>
       </section>
 
@@ -222,10 +228,10 @@ function Playground() {
         </a>
       </div>
       
-      <div className="flex-1 flex items-center justify-center relative overflow-hidden">
-        {/* 모션 프리뷰 캔버스가 들어갈 자리 */}
-        <div className="w-[800px] h-[500px] border border-zinc-800 rounded-lg bg-black flex items-center justify-center flex-col gap-4">
-          <div className="w-16 h-16 bg-purple-500 rounded-2xl" id="motion-target"></div>
+      <div className="flex-1 flex items-center justify-center relative overflow-hidden bg-black">
+        {/* 모션 프리뷰 캔버스 (실제 랜딩페이지와 동일한 씬) */}
+        <HeroScene />
+        <div className="absolute bottom-4 left-4 z-10 pointer-events-none">
           <p className="text-zinc-500 text-sm">Select objects in Studio to animate.</p>
         </div>
       </div>
