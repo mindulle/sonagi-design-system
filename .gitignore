@@ -3,7 +3,6 @@ dist/
 *.log
 *.tgz
 .DS_Store
-.npmrc
 .turbo/
 
 *storybook.log

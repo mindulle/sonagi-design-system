@@ -1,6 +1,7 @@
 {
   "name": "@mindulle/icons",
   "version": "1.0.0",
+  "private": true,
   "main": "./dist/index.cjs",
   "dependencies": {
     "lucide-react": "^0.300.0",
