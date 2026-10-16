@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <radialGradient id="ragGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd166" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#060911" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="20" fill="#0b101d" stroke="#30363d" stroke-width="2" />
+  <circle cx="64" cy="64" r="48" fill="url(#ragGlow)" />
+  <!-- Open Codex Tome Spine & Pages -->
+  <path d="M 64,88 C 52,82 34,82 26,86 L 26,44 C 34,40 52,40 64,46 C 76,40 94,40 102,44 L 102,86 C 94,82 76,82 64,88 Z"
+        fill="#060911" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" />
+  <!-- Center Book Spine -->
+  <line x1="64" y1="46" x2="64" y2="88" stroke="#ffd166" stroke-width="2.5" />
+  <!-- Text Ruled Lines (SSOT Markdown) -->
+  <line x1="36" y1="54" x2="54" y2="54" stroke="#30363d" stroke-width="1.5" />
+  <line x1="36" y1="62" x2="54" y2="62" stroke="#30363d" stroke-width="1.5" />
+  <line x1="36" y1="70" x2="48" y2="70" stroke="#30363d" stroke-width="1.5" />
+  <!-- Floating Vector Crystalline Core (Memory Vector) -->
+  <polygon points="64,22 74,34 64,46 54,34" fill="#ffd166" stroke="#ffffff" stroke-width="2" />
+  <line x1="54" y1="34" x2="74" y2="34" stroke="#ffffff" stroke-width="1" />
+  <line x1="64" y1="22" x2="64" y2="46" stroke="#f59e0b" stroke-width="1" />
+  <!-- Knowledge Beams -->
+  <line x1="64" y1="14" x2="64" y2="18" stroke="#ffd166" stroke-width="2" stroke-linecap="round" />
+  <circle cx="44" cy="24" r="1.5" fill="#ffd166" />
+  <circle cx="84" cy="24" r="1.5" fill="#ffd166" />
+</svg>

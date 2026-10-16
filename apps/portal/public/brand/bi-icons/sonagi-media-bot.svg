@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <radialGradient id="mediaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#ffd166" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#060911" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="20" fill="#0b101d" stroke="#30363d" stroke-width="2" />
+  <circle cx="64" cy="64" r="48" fill="url(#mediaGlow)" />
+  <!-- Outer Aperture Lens Ring -->
+  <circle cx="64" cy="64" r="42" stroke="#30363d" stroke-width="2" />
+  <circle cx="64" cy="64" r="38" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- 6-Blade Camera Aperture Mechanism -->
+  <g stroke="#ffffff" stroke-width="2" fill="none" stroke-linejoin="round">
+    <path d="M 64,28 L 86,48 L 74,64" />
+    <path d="M 94,54 L 88,80 L 68,76" />
+    <path d="M 88,88 L 62,94 L 54,74" />
+    <path d="M 64,100 L 42,80 L 54,64" />
+    <path d="M 34,74 L 40,48 L 60,52" />
+    <path d="M 40,40 L 66,34 L 74,54" />
+  </g>
+  <!-- Central Sensor Core (Dandelion Golden Center) -->
+  <circle cx="64" cy="64" r="10" fill="#ffd166" />
+  <circle cx="64" cy="64" r="5" fill="#ffffff" />
+  <!-- Audio Spectrum Wave Overlay -->
+  <line x1="28" y1="64" x2="28" y2="64" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
+  <line x1="100" y1="64" x2="100" y2="64" stroke="#ffd166" stroke-width="3" stroke-linecap="round" />
+</svg>
