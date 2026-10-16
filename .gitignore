@@ -14,3 +14,6 @@ figma-automation/assets/
 
 # Vendor bundles (checked in separately if needed)
 packages/*/vendor/
+
+# VectorCraft Web Canvas static build (auto-downloaded on build)
+apps/portal/public/vectorcraft/

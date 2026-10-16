@@ -1,0 +1,3 @@
+# Cloudflare Pages header rules for Portal
+/*
+  X-Content-Type-Options: nosniff

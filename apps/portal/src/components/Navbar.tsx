@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Film, BookOpen } from 'lucide-react';
+import { Github, Film, BookOpen, PenTool } from 'lucide-react';
 import { MindulleSeal } from './MindulleSeal';
 
 export const Navbar: React.FC = () => {
@@ -42,6 +42,13 @@ export const Navbar: React.FC = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
+          <Link
+            to="/canvas"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-sng-dandelion border-2 border-sng-dandelion/60 bg-sng-dandelion/10 rounded-sm hover:bg-sng-dandelion/20 transition-all"
+          >
+            <PenTool className="w-3.5 h-3.5" />
+            <span>Canvas</span>
+          </Link>
           <Link
             to="/playground"
             className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-purple-300 border-2 border-purple-500/50 bg-purple-500/10 rounded-sm hover:bg-purple-500/20 transition-all"
