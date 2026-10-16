@@ -32,6 +32,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'Pretendard', 'system-ui', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
       },
     },

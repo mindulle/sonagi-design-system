@@ -1,19 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Film, BookOpen } from 'lucide-react';
+import { MindulleSeal } from './MindulleSeal';
 
 export const Navbar: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#090d16]/90 backdrop-blur-md border-b-2 border-sng-border px-6 md:px-16 py-4">
+    <header className="sticky top-0 z-50 w-full bg-[#090d16]/90 backdrop-blur-md border-b-2 border-sng-border px-6 md:px-16 py-3.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Brand Group */}
         <div className="flex items-center gap-3">
-          <Link to="/" className="flex items-center gap-2 group">
-            <span className="font-mono text-base md:text-lg font-bold tracking-tight text-white group-hover:text-sng-rain transition-colors">
-              Mindulle Studio <span className="text-sng-dandelion font-normal">/</span> <span className="text-gray-200 font-semibold">소나기 .</span>
-            </span>
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <MindulleSeal size={32} showText={false} className="transition-transform group-hover:rotate-12 duration-300" />
+            <div className="flex items-baseline gap-1.5">
+              <span className="font-serif text-lg md:text-xl font-bold tracking-[0.08em] text-white group-hover:text-sng-dandelion transition-colors">
+                MINDULLE STUDIO
+              </span>
+              <span className="text-sng-dandelion font-light">/</span>
+              <span className="text-sm font-mono text-gray-300 font-medium">소나기 .</span>
+            </div>
           </Link>
-          <span className="hidden sm:inline-block text-[11px] font-mono px-2 py-0.5 rounded-full border border-sng-dandelion/60 text-sng-dandelion bg-sng-dandelion/10">
+          <span className="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded-full border border-sng-dandelion/60 text-sng-dandelion bg-sng-dandelion/10 tracking-wider">
             Tooling Suite
           </span>
         </div>

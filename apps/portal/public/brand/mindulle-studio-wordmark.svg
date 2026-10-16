@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 120" width="680" height="120" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap');
+      .wm-serif {
+        font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+        font-weight: 700;
+        font-size: 52px;
+        letter-spacing: 0.18em;
+        fill: #ffffff;
+      }
+      .wm-mono {
+        font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.32em;
+        fill: #8b949e;
+      }
+      .wm-accent {
+        fill: #ffd166;
+      }
+      .wm-rain {
+        fill: #4A90E2;
+      }
+    </style>
+  </defs>
+
+  <!-- Seal Emblem Icon (Scaled Left Anchor) -->
+  <g transform="translate(16, 12) scale(0.24)">
+    <circle cx="200" cy="200" r="188" stroke="#30363d" stroke-width="6" fill="#090d16" />
+    <circle cx="200" cy="200" r="174" stroke="#4A90E2" stroke-width="4" stroke-dasharray="10 10" />
+    <circle cx="200" cy="200" r="126" stroke="#ffd166" stroke-width="5" />
+    <!-- Center Dandelion -->
+    <ellipse cx="200" cy="200" rx="14" ry="24" fill="#ffd166" />
+    <ellipse cx="200" cy="200" rx="7" ry="14" fill="#ffffff" />
+    <line x1="200" y1="200" x2="200" y2="70" stroke="#ffd166" stroke-width="4" />
+    <line x1="200" y1="200" x2="200" y2="330" stroke="#ffd166" stroke-width="4" />
+    <line x1="200" y1="200" x2="70" y2="200" stroke="#ffd166" stroke-width="4" />
+    <line x1="200" y1="200" x2="330" y2="200" stroke="#ffd166" stroke-width="4" />
+    <line x1="200" y1="200" x2="108" y2="108" stroke="#ffd166" stroke-width="3" />
+    <line x1="200" y1="200" x2="292" y2="108" stroke="#ffd166" stroke-width="3" />
+    <line x1="200" y1="200" x2="292" y2="292" stroke="#ffd166" stroke-width="3" />
+    <line x1="200" y1="200" x2="108" y2="292" stroke="#ffd166" stroke-width="3" />
+  </g>
+
+  <!-- Divider Line (2px Sonagi Architecture) -->
+  <line x1="130" y1="24" x2="130" y2="96" stroke="#1e2430" stroke-width="2" />
+
+  <!-- Main Wordmark: MINDULLE STUDIO -->
+  <text x="156" y="66" class="wm-serif">
+    MINDULLE <tspan class="wm-accent">STUDIO</tspan>
+  </text>
+
+  <!-- Subtitle: ATELIER OF SOFTWARE • EST. 2026 -->
+  <text x="160" y="94" class="wm-mono">
+    ATELIER OF SOFTWARE <tspan class="wm-rain">/ FEAT. SONAGI</tspan>
+  </text>
+</svg>

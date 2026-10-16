@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Sun, CheckCircle, Sparkles } from 'lucide-react';
+import { Shield, Sun, CheckCircle } from 'lucide-react';
+import { MindulleSeal } from './MindulleSeal';
 
 export const BrandPhilosophy: React.FC = () => {
   return (
@@ -148,9 +149,9 @@ export const BrandPhilosophy: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-10 w-full bg-[#060911] border-2 border-sng-border rounded-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden"
         >
-          <div className="flex items-start md:items-center gap-4">
-            <div className="p-3 bg-white/5 border border-white/20 rounded-sm shrink-0 text-sng-dandelion">
-              <Sparkles className="w-6 h-6" />
+          <div className="flex items-start md:items-center gap-5">
+            <div className="shrink-0 p-1 bg-[#090d16] border-2 border-sng-border rounded-sm shadow-xl">
+              <MindulleSeal size={72} showText={true} />
             </div>
             <div>
               <span className="text-[11px] font-mono text-sng-dandelion block mb-1">
