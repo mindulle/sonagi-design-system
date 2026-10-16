@@ -62,7 +62,7 @@ const TOOLS: Record<StudioTool, ToolConfig> = {
     adobeEquivalent: 'After Effects',
     version: 'v0.10.0',
     cliBin: 'effectcraft-cli',
-    webUrl: 'https://draw.sonagi.space/motion/',
+    webUrl: 'https://draw.sonagi.space/motion/?webgl',
     description: '키프레임 타임라인, 306개 라이브 이펙트, 웹용 Lottie JSON 및 헤드리스 MP4 렌더링'
   },
   design: {
@@ -216,7 +216,7 @@ export const CanvasPage: React.FC = () => {
           src={current.webUrl}
           className="absolute inset-0 w-full h-full border-0"
           title={`${current.name} Canvas`}
-          allow="fullscreen; clipboard-read; clipboard-write"
+          allow="fullscreen; clipboard-read; clipboard-write; webgpu"
           allowFullScreen
         />
       </main>
