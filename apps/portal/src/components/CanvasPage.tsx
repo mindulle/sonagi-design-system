@@ -62,7 +62,7 @@ const TOOLS: Record<StudioTool, ToolConfig> = {
     adobeEquivalent: 'After Effects',
     version: 'v0.10.0',
     cliBin: 'effectcraft-cli',
-    webUrl: 'https://draw.sonagi.space/motion/?webgl',
+    webUrl: 'https://draw.sonagi.space/effect/',
     description: '키프레임 타임라인, 306개 라이브 이펙트, 웹용 Lottie JSON 및 헤드리스 MP4 렌더링'
   },
   design: {
