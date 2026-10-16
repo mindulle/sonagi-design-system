@@ -1,10 +1,17 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
 import * as studioModule from '@theatre/studio';
 import { getProject } from '@theatre/core';
+import { Sparkles, ArrowRight, Layers, Film } from 'lucide-react';
 import HeroScene from './components/HeroScene';
+import { Navbar } from './components/Navbar';
+import { BrandPhilosophy } from './components/BrandPhilosophy';
+import { BentoGrid } from './components/BentoGrid';
+import { ProjectGallery } from './components/ProjectGallery';
+import { TokenSpecimen } from './components/TokenSpecimen';
+import { ContactSection } from './components/ContactSection';
+import { Footer } from './components/Footer';
 
 const getStudio = () => {
   let s: any = studioModule;
@@ -14,157 +21,110 @@ const getStudio = () => {
   return s;
 };
 
-const bentoVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-    },
-  }),
-};
-
 function Landing() {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white selection:bg-purple-500/30">
-      {/* Hero Section */}
-      <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black -z-20" />
-        
-        {/* 3D Canvas Scene */}
-        <HeroScene />
-        
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-6xl md:text-8xl font-bold tracking-tighter mb-4 z-10"
-        >
-          Wild & Thin.
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl text-center z-10"
-        >
-          디자인 시스템 그 이상의 캔버스.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="z-10"
-        >
-          <a 
-            href="/catalog" 
-            className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors"
-          >
-            Explore Components
-          </a>
-        </motion.div>
-      </section>
+    <div className="min-h-screen flex flex-col bg-[#060911] text-gray-100 selection:bg-[#4A90E2]/30 selection:text-white">
+      {/* 00. Top Navigation */}
+      <Navbar />
 
-      {/* Bento Box Showcase */}
-      <section className="py-24 px-8 max-w-7xl mx-auto w-full">
-        <motion.h2 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-4xl font-bold mb-12 text-center md:text-left"
-        >
-          Interactive Components
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <motion.div 
-            custom={0}
-            variants={bentoVariants}
-            initial="hidden"
-            whileInView="visible"
-            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="col-span-1 md:col-span-2 bg-zinc-900 rounded-[2rem] p-8 h-80 flex flex-col justify-between border border-white/5 cursor-pointer relative overflow-hidden group"
+      {/* 01. Hero Section (소나기 Wild) with Three.js / Theatre.js HeroScene */}
+      <section className="relative min-h-[92vh] flex flex-col items-center justify-center px-6 md:px-16 pt-8 pb-20 border-b-2 border-sng-border bg-gradient-to-b from-[#070a12] via-[#060911] to-[#090d16] overflow-hidden">
+        {/* Subtle Background Grid */}
+        <div 
+          className="absolute inset-0 opacity-[0.03] pointer-events-none -z-10"
+          style={{
+            backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
+            backgroundSize: '48px 48px'
+          }}
+        />
+
+        {/* 3D Canvas Scene with Floating Theatre.js Meshes */}
+        <div className="absolute inset-0 pointer-events-none -z-10">
+          <HeroScene />
+        </div>
+
+        <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10 pointer-events-auto">
+          {/* Eyebrow Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border-2 border-sng-dandelion/60 bg-sng-dandelion/10 text-sng-dandelion text-xs font-mono mb-6"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="flex-1 flex items-center justify-center">
-              {/* Mockup for Cards */}
-              <div className="w-48 h-32 bg-white/5 rounded-xl border border-white/10 shadow-2xl backdrop-blur-sm" />
-            </div>
-            <h3 className="text-2xl font-semibold relative z-10">Cards & Surfaces</h3>
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>MINDULLE STUDIO • ARCHITECTURE &amp; IN-HOUSE TOOLING SUITE</span>
           </motion.div>
 
-          <motion.div 
-            custom={1}
-            variants={bentoVariants}
-            initial="hidden"
-            whileInView="visible"
-            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="bg-zinc-900 rounded-[2rem] p-8 h-80 flex flex-col justify-between border border-white/5 cursor-pointer relative overflow-hidden group"
+          {/* Main Headline */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white mb-6"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="flex-1 flex items-center justify-center">
-              {/* Mockup for Inputs */}
-              <div className="w-full h-12 bg-white/10 rounded-full border border-white/20" />
-            </div>
-            <h3 className="text-2xl font-semibold relative z-10">Inputs</h3>
-          </motion.div>
+            Mindulle Studio<span className="text-sng-dandelion">.</span>
+          </motion.h1>
 
-          <motion.div 
-            custom={2}
-            variants={bentoVariants}
-            initial="hidden"
-            whileInView="visible"
-            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="bg-zinc-900 rounded-[2rem] p-8 h-80 flex flex-col justify-between border border-white/5 cursor-pointer relative overflow-hidden group"
+          {/* Subtitle */}
+          <motion.p 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+            className="text-lg sm:text-xl md:text-2xl text-sng-muted max-w-3xl leading-relaxed mb-10"
           >
-            <div className="absolute inset-0 bg-gradient-to-bl from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="flex-1 flex gap-2 items-center justify-center">
-              {/* Mockup for Navigation */}
-              <div className="w-10 h-10 rounded-full bg-white/10" />
-              <div className="w-10 h-10 rounded-full bg-white/10" />
-              <div className="w-10 h-10 rounded-full bg-white/10" />
-            </div>
-            <h3 className="text-2xl font-semibold relative z-10">Navigation</h3>
-          </motion.div>
+            차가운 콘크리트 건축의 성벽 틈에서 피어난 <span className="text-sng-dandelion font-semibold">소박하고 끈질긴 생명력</span>.<br className="hidden sm:inline" />
+            민들레 스튜디오가 자체 제작하고 실무에서 검증한 사내 도구 &amp; 오픈소스 제품군, <span className="text-sng-rain font-semibold">소나기(Sonagi)</span>.
+          </motion.p>
 
-          <motion.div 
-            custom={3}
-            variants={bentoVariants}
-            initial="hidden"
-            whileInView="visible"
-            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="col-span-1 md:col-span-2 bg-zinc-900 rounded-[2rem] p-8 h-80 flex flex-col justify-between border border-white/5 cursor-pointer relative overflow-hidden group"
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap items-center justify-center gap-4"
           >
-            <div className="absolute inset-0 bg-gradient-to-tl from-rose-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="flex-1 flex items-center justify-center">
-              {/* Mockup for Modals */}
-              <div className="w-64 h-40 bg-zinc-800 rounded-2xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] flex items-center justify-center">
-                <div className="w-1/2 h-2 bg-white/20 rounded-full" />
-              </div>
-            </div>
-            <h3 className="text-2xl font-semibold relative z-10">Modals & Overlays</h3>
+            <a 
+              href="#bento" 
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-sng-dandelion text-black font-semibold text-sm border-2 border-sng-dandelion rounded-sm hover:bg-sng-dandelion/90 transition-all shadow-lg shadow-sng-dandelion/20"
+            >
+              소나기 도구군 둘러보기
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a 
+              href="#showroom" 
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent text-white font-semibold text-sm border-2 border-white/60 rounded-sm hover:border-white hover:bg-white/5 transition-all"
+            >
+              <Layers className="w-4 h-4" />
+              실전 쇼룸 (Case Studies)
+            </a>
+            <Link 
+              to="/playground" 
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-purple-500/10 text-purple-300 font-semibold text-sm border-2 border-purple-500/50 rounded-sm hover:bg-purple-500/20 transition-all"
+            >
+              <Film className="w-4 h-4" />
+              Theatre.js 모션 랩
+            </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Motion Lab Teaser */}
-      <section className="py-24 px-8 flex flex-col items-center text-center">
-        <h2 className="text-4xl font-bold mb-4">Motion Lab Teaser</h2>
-        <p className="text-gray-400 mb-8">개발자 없이 디자이너가 직접 연출하는 타임라인.</p>
-        <Link 
-          to="/playground" 
-          className="px-6 py-3 border border-white/20 rounded-full hover:bg-white/10 transition-colors"
-        >
-          [플레이그라운드 열기]
-        </Link>
-      </section>
+      {/* 02. Philosophy Transition Section (Wild to Thin) */}
+      <BrandPhilosophy />
+
+      {/* 03. Bento Box Showcase (6 Core Disciplines) */}
+      <BentoGrid />
+
+      {/* 04. Featured Projects Showroom (CEO-1001) */}
+      <ProjectGallery />
+
+      {/* 05. Token Specimen */}
+      <TokenSpecimen />
+
+      {/* 06. Get in Touch & Collaborate */}
+      <ContactSection />
+
+      {/* 07. Footer */}
+      <Footer />
     </div>
   );
 }
