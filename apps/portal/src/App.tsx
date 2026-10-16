@@ -12,6 +12,7 @@ import { ProjectGallery } from './components/ProjectGallery';
 import { TokenSpecimen } from './components/TokenSpecimen';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { CanvasPage } from './components/CanvasPage';
 
 const getStudio = () => {
   let s: any = studioModule;
@@ -204,6 +205,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/canvas" element={<CanvasPage />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/playground" element={<Playground />} />
       </Routes>
