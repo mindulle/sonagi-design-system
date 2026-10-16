@@ -5,6 +5,7 @@ import { MindulleSeal } from './MindulleSeal';
 
 export const CanvasPage: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const canvasUrl = import.meta.env.VITE_VECTORCRAFT_URL || 'https://vectorcraft.live/';
 
   return (
     <div className="h-screen w-full flex flex-col bg-[#060911] text-gray-100 overflow-hidden">
@@ -47,7 +48,7 @@ export const CanvasPage: React.FC = () => {
           </a>
 
           <a
-            href="/vectorcraft/index.html"
+            href={canvasUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono text-gray-300 hover:text-white border border-sng-border hover:border-gray-500 rounded-sm transition-colors"
@@ -87,7 +88,7 @@ export const CanvasPage: React.FC = () => {
           </button>
         )}
         <iframe
-          src="/vectorcraft/index.html"
+          src={canvasUrl}
           className="absolute inset-0 w-full h-full border-0"
           title="ArtCraft Vector Studio Canvas"
           allow="fullscreen; clipboard-read; clipboard-write"

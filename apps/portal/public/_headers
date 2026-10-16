@@ -1,17 +1,3 @@
-# Cloudflare Pages header rules for Portal & VectorCraft Canvas
+# Cloudflare Pages header rules for Portal
 /*
   X-Content-Type-Options: nosniff
-
-/vectorcraft/*.wasm
-  Content-Type: application/wasm
-  Cache-Control: public, max-age=31536000, immutable
-
-/vectorcraft/*.js
-  Cache-Control: public, max-age=31536000, immutable
-
-/vectorcraft/index.html
-  Cache-Control: no-cache
-
-/vectorcraft/fonts/*
-  Content-Type: font/ttf
-  Cache-Control: public, max-age=31536000, immutable

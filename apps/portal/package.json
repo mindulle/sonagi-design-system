@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "setup:canvas": "node ./scripts/setup-canvas.cjs",
-    "build": "node ./scripts/setup-canvas.cjs && tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
