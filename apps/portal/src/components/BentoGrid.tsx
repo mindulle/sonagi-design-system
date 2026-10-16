@@ -165,14 +165,14 @@ export const BentoGrid: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="text-[11px] font-mono px-2 py-0.5 border border-sng-dandelion/40 rounded-sm text-sng-dandelion bg-sng-dandelion/10">
-                  AFFINITY JS SDK • MINIO CDN • KARAKEEP
+                  ARTCRAFT (VECTORCRAFT) • SONAGI-GRAPH HITL • MINIO CDN
                 </span>
                 <Sparkles className="w-5 h-5 text-sng-dandelion group-hover:rotate-12 transition-transform" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">In-House Asset &amp; Vector Pipeline</h3>
               <p className="text-sng-muted text-sm leading-relaxed mb-6">
-                아이콘과 Key Visual을 스크립트로 생성하는 Affinity Vector Ops와 사내 에셋 허브(sonagi-assets).
-                MinIO CDN(cdn.sonagi.space)을 통해 모든 정적 에셋을 지연 없이 스트리밍합니다.
+                Rust 기반 ArtCraft(VectorCraft) 헤드리스 엔진과 sonagi-graph HITL 파이프라인.
+                멀티 시안 자동 생성 및 Paperclip 디렉터 승인을 거쳐 MinIO CDN(cdn.sonagi.space) 및 사내 에셋 허브로 무손실 배포합니다.
               </p>
             </div>
             <div className="flex items-center gap-3 font-mono text-xs text-sng-dandelion/80">
