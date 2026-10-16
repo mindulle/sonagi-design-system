@@ -4,6 +4,11 @@
 
 @layer base {
   body {
-    @apply m-0 p-0 font-sans text-gray-900 bg-gray-50;
+    @apply m-0 p-0 font-sans text-gray-100 bg-[#060911] selection:bg-[#4A90E2]/30 selection:text-white antialiased;
   }
+}
+
+.v3-box {
+  border: 2px solid #1e2430;
+  border-radius: 4px;
 }
