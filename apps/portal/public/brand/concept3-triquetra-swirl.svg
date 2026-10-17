@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Concept 3-B: Continuous Triquetra Swirl (단 하나의 삐져나옴도 없는 연속 리본 곡선) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(200, 200)">
+    <defs>
+      <!-- Single continuous loop arm -->
+      <path id="swirlArm" 
+            d="M 0,0 C 25,-45 75,-45 80,-10 C 85,25 45,65 0,0" 
+            stroke="#1c1514" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="#1c1514" fill-opacity="0.04" />
+    </defs>
+
+    <!-- 3 Interlocking Swirl Arms -->
+    <use href="#swirlArm" transform="rotate(-30)" />
+    <use href="#swirlArm" transform="rotate(90)" />
+    <use href="#swirlArm" transform="rotate(210)" />
+
+    <!-- Pure Central Seed Center -->
+    <circle cx="0" cy="0" r="10" fill="#faf8f5" stroke="#1c1514" stroke-width="2" />
+    <circle cx="0" cy="0" r="6" fill="#d97706" />
+    <circle cx="-1.5" cy="-1.5" r="1.8" fill="#ffffff" />
+  </g>
+</svg>

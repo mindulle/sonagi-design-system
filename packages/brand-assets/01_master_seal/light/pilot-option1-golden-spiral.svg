@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap');
+      .opt1-serif { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 20px; letter-spacing: 0.28em; fill: #1c1514; }
+      .opt1-mono { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; letter-spacing: 0.22em; fill: #9a3412; }
+    </style>
+    <path id="opt1UpperArc" d="M 58,200 A 142,142 0 1,1 342,200" fill="none" />
+    <path id="opt1LowerArc" d="M 68,208 A 136,136 0 0,0 332,208" fill="none" />
+    
+    <radialGradient id="opt1Glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#faf8f5" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="opt1Gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="60%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+
+    <linearGradient id="opt1Breeze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Warm Ivory Base Canvas (#faf8f5) -->
+  <circle cx="200" cy="200" r="192" fill="#faf8f5" stroke="#1c1514" stroke-width="2" />
+  <circle cx="200" cy="200" r="192" fill="url(#opt1Glow)" />
+
+  <!-- Outer Elegant Frame (Not a rigid military ring, but a refined editorial rim) -->
+  <circle cx="200" cy="200" r="178" stroke="#d97706" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" />
+  <circle cx="200" cy="200" r="126" stroke="#1c1514" stroke-width="1.5" />
+
+  <!-- Lettering -->
+  <text class="opt1-serif">
+    <textPath href="#opt1UpperArc" startOffset="50%" text-anchor="middle">MINDULLE STUDIO</textPath>
+  </text>
+  <text class="opt1-mono">
+    <textPath href="#opt1LowerArc" startOffset="50%" text-anchor="middle">• SOUL &amp; HARNESS • EST. 2026 •</textPath>
+  </text>
+
+  <!-- Golden Ratio Embracing Halo (Fibonacci Arc - gentle breeze shelter) -->
+  <path
+    d="M 130,220 C 120,150 160,95 225,90 C 275,85 305,125 300,175 C 295,220 255,255 210,250"
+    stroke="url(#opt1Breeze)"
+    stroke-width="1.5"
+    stroke-dasharray="4 4"
+    fill="none"
+  />
+
+  <!-- The Floating Dandelion Seed (Organic Bézier Curves) -->
+  <!-- Natural gently curved seed stem -->
+  <path d="M 200,272 C 197,235 201,195 200,165" stroke="#1c1514" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Teardrop Seed Pod at Base -->
+  <path d="M 200,274 C 193,258 193,240 200,234 C 207,240 207,258 200,274 Z" fill="url(#opt1Gold)" stroke="#9a3412" stroke-width="1" />
+  <ellipse cx="200" cy="246" rx="2" ry="5" fill="#ffffff" opacity="0.7" />
+
+  <!-- Plume Core Joint -->
+  <circle cx="200" cy="165" r="4.5" fill="#d97706" stroke="#1c1514" stroke-width="1.2" />
+  <circle cx="200" cy="165" r="2" fill="#ffffff" />
+
+  <!-- Delicate Silken Parachute Filaments (Organic S-Curves catching the breeze) -->
+  <g stroke="url(#opt1Gold)" stroke-width="1.5" stroke-linecap="round">
+    <!-- Center Upward Filaments -->
+    <path d="M 200,165 C 198,135 196,110 200,82" />
+    <path d="M 200,165 C 205,138 212,112 216,86" />
+    <path d="M 200,165 C 193,138 186,112 182,88" />
+
+    <!-- Left Spreading Filaments (Soft curving natural arcs) -->
+    <path d="M 200,165 C 182,145 160,130 142,108" />
+    <path d="M 200,165 C 172,152 144,142 120,128" />
+    <path d="M 200,165 C 168,162 136,160 108,154" />
+
+    <!-- Right Spreading Filaments -->
+    <path d="M 200,165 C 218,145 240,130 258,108" />
+    <path d="M 200,165 C 228,152 256,142 280,128" />
+    <path d="M 200,165 C 232,162 264,160 292,154" />
+  </g>
+
+  <!-- Feathery Seedlet Tips (Soft dots and cross-hairs) -->
+  <g fill="#d97706">
+    <circle cx="200" cy="82" r="2.5" />
+    <circle cx="216" cy="86" r="2" />
+    <circle cx="182" cy="88" r="2" />
+    <circle cx="142" cy="108" r="2.5" />
+    <circle cx="120" cy="128" r="2.5" />
+    <circle cx="108" cy="154" r="2" />
+    <circle cx="258" cy="108" r="2.5" />
+    <circle cx="280" cy="128" r="2.5" />
+    <circle cx="292" cy="154" r="2" />
+  </g>
+
+  <!-- Subtle Whispering Seedlets (Secondary particles floating) -->
+  <g fill="#fbbf24" opacity="0.8">
+    <circle cx="225" cy="74" r="1.5" />
+    <circle cx="170" cy="78" r="1.5" />
+    <circle cx="130" cy="98" r="1.2" />
+    <circle cx="270" cy="98" r="1.2" />
+  </g>
+</svg>

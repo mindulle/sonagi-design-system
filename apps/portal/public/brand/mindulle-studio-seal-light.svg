@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=JetBrains+Mono:wght@600&amp;display=swap');
+      .seal-serif-light { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 21px; letter-spacing: 0.28em; fill: #1c1514; }
+      .seal-mono-light { font-family: 'JetBrains Mono', Consolas, monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.22em; fill: #9a3412; }
+    </style>
+    <path id="upperArcLight" d="M 54,200 A 146,146 0 1,1 346,200" fill="none" />
+    <path id="lowerArcLight" d="M 64,210 A 142,142 0 0,0 336,210" fill="none" />
+    
+    <radialGradient id="glassAuraLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#faf8f5" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="goldCoreLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+
+    <linearGradient id="facetHighlightLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Paper Disc (#faf8f5) -->
+  <circle cx="200" cy="200" r="192" fill="#faf8f5" />
+  <circle cx="200" cy="200" r="192" fill="url(#glassAuraLight)" />
+
+  <!-- Outer Double Rings (2px Architecture) -->
+  <circle cx="200" cy="200" r="188" stroke="#1c1514" stroke-width="2.5" />
+  <circle cx="200" cy="200" r="176" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.8" />
+  <circle cx="200" cy="200" r="126" stroke="#1c1514" stroke-width="2" />
+  <circle cx="200" cy="200" r="120" stroke="#d6cfc7" stroke-width="1" />
+
+  <!-- Typography on Arcs -->
+  <text class="seal-serif-light">
+    <textPath href="#upperArcLight" startOffset="50%" text-anchor="middle">MINDULLE STUDIO</textPath>
+  </text>
+  <text class="seal-mono-light">
+    <textPath href="#lowerArcLight" startOffset="50%" text-anchor="middle">• SOUL &amp; HARNESS • EST. 2026 •</textPath>
+  </text>
+
+  <!-- Separator Stars -->
+  <polygon points="50,193 52,198 57,200 52,202 50,207 48,202 43,200 48,198" fill="#d97706" />
+  <polygon points="350,193 352,198 357,200 352,202 350,207 348,202 343,200 348,198" fill="#d97706" />
+
+  <!-- Glass Dome Facets (Octagon) -->
+  <polygon points="200,88 279,121 312,200 279,279 200,312 121,279 88,200 121,121"
+           stroke="#2563eb" stroke-width="1.5" fill="none" opacity="0.45" />
+  <polygon points="200,104 268,132 296,200 268,268 200,296 132,268 104,200 132,132"
+           stroke="url(#facetHighlightLight)" stroke-width="1.2" fill="#ffffff" fill-opacity="0.45" />
+
+  <!-- Facet Diagonals -->
+  <line x1="121" y1="121" x2="200" y2="200" stroke="#2563eb" stroke-width="1" stroke-dasharray="2 3" opacity="0.3" />
+  <line x1="279" y1="121" x2="200" y2="200" stroke="#2563eb" stroke-width="1" stroke-dasharray="2 3" opacity="0.3" />
+  <line x1="279" y1="279" x2="200" y2="200" stroke="#2563eb" stroke-width="1" stroke-dasharray="2 3" opacity="0.3" />
+  <line x1="121" y1="279" x2="200" y2="200" stroke="#2563eb" stroke-width="1" stroke-dasharray="2 3" opacity="0.3" />
+
+  <!-- Crystal Highlight Glint -->
+  <path d="M 148,148 A 74,74 0 0,1 252,148" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+  <circle cx="160" cy="154" r="2.5" fill="#2563eb" opacity="0.7" />
+
+  <!-- Dandelion Plume Stems & Parachutes -->
+  <g stroke="#b45309" stroke-width="1.2">
+    <line x1="200" y1="200" x2="200" y2="132" />
+    <circle cx="200" cy="132" r="2.5" fill="#d97706" />
+    <line x1="200" y1="138" x2="194" y2="132" stroke-width="0.8" />
+    <line x1="200" y1="138" x2="206" y2="132" stroke-width="0.8" />
+
+    <line x1="200" y1="200" x2="226" y2="137" />
+    <circle cx="226" cy="137" r="2" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="248" y2="152" />
+    <circle cx="248" cy="152" r="2.5" fill="#d97706" />
+    <line x1="242" y1="158" x2="245" y2="149" stroke-width="0.8" />
+    <line x1="242" y1="158" x2="252" y2="157" stroke-width="0.8" />
+
+    <line x1="200" y1="200" x2="263" y2="174" />
+    <circle cx="263" cy="174" r="2" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="268" y2="200" />
+    <circle cx="268" cy="200" r="2.5" fill="#d97706" />
+    <line x1="262" y1="200" x2="268" y2="194" stroke-width="0.8" />
+    <line x1="262" y1="200" x2="268" y2="206" stroke-width="0.8" />
+
+    <line x1="200" y1="200" x2="263" y2="226" />
+    <circle cx="263" cy="226" r="2" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="248" y2="248" />
+    <circle cx="248" cy="248" r="2.5" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="226" y2="263" />
+    <circle cx="226" cy="263" r="2" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="200" y2="268" />
+    <circle cx="200" cy="268" r="2.5" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="174" y2="263" />
+    <circle cx="174" cy="263" r="2" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="152" y2="248" />
+    <circle cx="152" cy="248" r="2.5" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="137" y2="226" />
+    <circle cx="137" cy="226" r="2" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="132" y2="200" />
+    <circle cx="132" cy="200" r="2.5" fill="#d97706" />
+    <line x1="138" y1="200" x2="132" y2="194" stroke-width="0.8" />
+    <line x1="138" y1="200" x2="132" y2="206" stroke-width="0.8" />
+
+    <line x1="200" y1="200" x2="137" y2="174" />
+    <circle cx="137" cy="174" r="2" fill="#d97706" />
+
+    <line x1="200" y1="200" x2="152" y2="152" />
+    <circle cx="152" cy="152" r="2.5" fill="#d97706" />
+    <line x1="158" y1="158" x2="155" y2="149" stroke-width="0.8" />
+    <line x1="158" y1="158" x2="148" y2="157" stroke-width="0.8" />
+
+    <line x1="200" y1="200" x2="174" y2="137" />
+    <circle cx="174" cy="137" r="2" fill="#d97706" />
+  </g>
+
+  <!-- Golden Heart Core -->
+  <circle cx="200" cy="200" r="14" fill="#faf8f5" stroke="#9a3412" stroke-width="1.8" />
+  <circle cx="200" cy="200" r="10" fill="url(#goldCoreLight)" />
+  <circle cx="200" cy="200" r="4" fill="#ffffff" />
+</svg>

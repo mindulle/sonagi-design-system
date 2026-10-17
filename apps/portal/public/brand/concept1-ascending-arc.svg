@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Concept 1: The Ascending Plume (비상하는 미니멀 곡선) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(200, 210)">
+    <!-- Base Origin Anchor (Single refined gold seed point) -->
+    <circle cx="0" cy="70" r="4.5" fill="#d97706" />
+
+    <!-- Primary Ascending Spine (Graceful 2.5px curve) -->
+    <path d="M 0,70 C -2,20 8,-30 0,-85" stroke="#1c1514" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Left Aerodynamic Wing Arc -->
+    <path d="M 0,0 C -35,-25 -65,-45 -80,-85 C -65,-70 -35,-55 0,-40" 
+          stroke="#1c1514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#1c1514" fill-opacity="0.04" />
+
+    <!-- Right Aerodynamic Wing Arc -->
+    <path d="M 0,0 C 35,-25 65,-45 80,-85 C 65,-70 35,-55 0,-40" 
+          stroke="#1c1514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#1c1514" fill-opacity="0.04" />
+
+    <!-- Higher Lofting Whisper Filament (Gold Accent) -->
+    <path d="M 0,-40 C -15,-60 -25,-80 -30,-105" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 0,-40 C 15,-60 25,-80 30,-105" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 0,-50 C 0,-75 2,-95 0,-115" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" />
+
+    <!-- Floating Spark (Highest point of lift) -->
+    <circle cx="0" cy="-122" r="2.5" fill="#d97706" />
+  </g>
+</svg>

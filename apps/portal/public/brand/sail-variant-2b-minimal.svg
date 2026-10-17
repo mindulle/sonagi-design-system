@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Variant 2-B: The Sleek Minimalist Sail (극도로 절제된 단호한 돛) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(195, 205)">
+    <!-- Seed Droplet at Base -->
+    <path d="M 0,70 C -8,55 -8,42 0,34 C 8,42 8,55 0,70 Z" fill="#d97706" stroke="#9a3412" stroke-width="1.2" />
+    <circle cx="0" cy="48" r="2" fill="#ffffff" />
+
+    <!-- Sweeping Mast (Bowing into the breeze) -->
+    <path d="M 0,34 C 15,5 28,-35 15,-85" stroke="#1c1514" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Single Bold Billowing Sail Vane -->
+    <path d="M 5,20 C -45,0 -85,-25 -95,-70 C -70,-58 -30,-50 12,-52 Z" 
+          stroke="#1c1514" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" fill="#1c1514" fill-opacity="0.04" />
+
+    <!-- Gold Edge Line (Inner Sail Highlight) -->
+    <path d="M -2,12 C -35,-8 -65,-28 -75,-54" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" />
+
+    <!-- Apex Point -->
+    <circle cx="15" cy="-85" r="4.5" fill="#d97706" />
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Variation 1: The Architectural Atelier 'M' (클래식 아치와 황금 코어) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(200, 205)">
+    <!-- Base Ground Guide Line (Subtle) -->
+    <line x1="-80" y1="70" x2="80" y2="70" stroke="#d6cfc7" stroke-width="1.5" stroke-dasharray="3 3" />
+
+    <!-- Left Pillar & Arch of M -->
+    <path d="M -65,70 L -65, -10 C -65,-45 -40,-60 -15,-40 L 0,-15" 
+          stroke="#1c1514" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Left Serif Foot -->
+    <line x1="-76" y1="70" x2="-54" y2="70" stroke="#1c1514" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Right Pillar & Arch of M -->
+    <path d="M 65,70 L 65, -10 C 65,-45 40,-60 15,-40 L 0,-15" 
+          stroke="#1c1514" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Right Serif Foot -->
+    <line x1="54" y1="70" x2="76" y2="70" stroke="#1c1514" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Center Ascending Golden Seed / Flame Core -->
+    <circle cx="0" cy="-15" r="4" fill="#1c1514" />
+    <path d="M 0,-15 L 0,-65" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="0" cy="-72" r="4.5" fill="#d97706" />
+    <circle cx="-1.5" cy="-73.5" r="1.5" fill="#ffffff" />
+  </g>
+</svg>

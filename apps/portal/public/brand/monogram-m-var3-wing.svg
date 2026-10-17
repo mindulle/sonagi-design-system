@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Variation 3: The Lofting Wings 'M' (비상하는 양날개 M 모노그램) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(200, 205)">
+    <!-- Base Origin Teardrop Seed -->
+    <path d="M 0,55 C -6,45 -6,35 0,28 C 6,35 6,45 0,55 Z" fill="#d97706" stroke="#9a3412" stroke-width="1.2" />
+
+    <!-- Upward Vertical Vector Shaft -->
+    <line x1="0" y1="28" x2="0" y2="-60" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" />
+    <circle cx="0" cy="-68" r="4" fill="#d97706" />
+
+    <!-- Left Wing of 'M' (Sweeping upward lofting arc) -->
+    <path d="M -75,45 C -70,-10 -40,-45 0,-15" 
+          stroke="#1c1514" stroke-width="3" stroke-linecap="round" />
+    <path d="M -75,45 C -55,10 -35,-20 0,-15" 
+          stroke="#1c1514" stroke-width="1.5" stroke-linecap="round" opacity="0.35" />
+
+    <!-- Right Wing of 'M' (Symmetrical sweeping arc) -->
+    <path d="M 75,45 C 70,-10 40,-45 0,-15" 
+          stroke="#1c1514" stroke-width="3" stroke-linecap="round" />
+    <path d="M 75,45 C 55,10 35,-20 0,-15" 
+          stroke="#1c1514" stroke-width="1.5" stroke-linecap="round" opacity="0.35" />
+
+    <!-- Wingtip Delicate Accents -->
+    <circle cx="-75" cy="45" r="3" fill="#1c1514" />
+    <circle cx="75" cy="45" r="3" fill="#1c1514" />
+  </g>
+</svg>

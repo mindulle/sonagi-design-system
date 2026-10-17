@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Candidate 1: The Sonic Droplet (표면장력의 기하학 빗방울 & 잠든 씨앗) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(200, 200)">
+    <!-- Outer Raindroplet Contour (Tense 3px True Line) -->
+    <path d="M 0,-95 C 0,-95 65,0 65,45 C 65,82 35,108 0,108 C -35,108 -65,82 -65,45 C -65,0 0,-95 0,-95 Z" 
+          stroke="#1c1514" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" fill="#1c1514" fill-opacity="0.04" />
+
+    <!-- Interior Dynamic Rain Ripple (Sonagi Rain Blue #2563eb) -->
+    <path d="M 0,-45 C 0,-45 42,15 42,45 C 42,68 23,86 0,86 C -23,86 -42,68 -42,45 C -42,15 0,-45 0,-45 Z" 
+          stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.85" />
+
+    <!-- Core Dandelion Seed Sleeping Inside Raindrop -->
+    <circle cx="0" cy="45" r="9" fill="#faf8f5" stroke="#1c1514" stroke-width="2" />
+    <circle cx="0" cy="45" r="6" fill="#d97706" />
+    <circle cx="-1.5" cy="43.5" r="1.8" fill="#ffffff" />
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 160" width="840" height="160" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=JetBrains+Mono:wght@600&amp;display=swap');
+      .lk3-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 42px; letter-spacing: 0.16em; fill: #1c1514; }
+      .lk3-sub { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.24em; fill: #9a3412; }
+    </style>
+    <g id="cleanPetalLockup">
+      <path d="M 8,-2 C 22,-24 48,-22 62,-3 C 50,12 28,15 8,3 Z" 
+            stroke="#1c1514" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" fill="#1c1514" fill-opacity="0.04" />
+      <path d="M 18,-2 C 32,-11 46,-9 53,-2" 
+            stroke="#d97706" stroke-width="1.6" stroke-linecap="round" />
+    </g>
+  </defs>
+
+  <rect width="840" height="160" rx="8" fill="#faf8f5" stroke="#1c1514" stroke-width="2" />
+
+  <!-- Cleaned Seamless Symbol (Scaled at left) -->
+  <g transform="translate(85, 80)">
+    <use href="#cleanPetalLockup" transform="rotate(-30)" />
+    <use href="#cleanPetalLockup" transform="rotate(90)" />
+    <use href="#cleanPetalLockup" transform="rotate(210)" />
+
+    <!-- Central Hub -->
+    <circle cx="0" cy="0" r="10" fill="#faf8f5" stroke="#1c1514" stroke-width="2" />
+    <circle cx="0" cy="0" r="6" fill="#d97706" />
+    <circle cx="-1.5" cy="-1.5" r="1.5" fill="#ffffff" />
+  </g>
+
+  <!-- 2px Divider Line -->
+  <line x1="165" y1="36" x2="165" y2="124" stroke="#1c1514" stroke-width="2" />
+
+  <!-- Wordmark Suite -->
+  <text x="195" y="80" class="lk3-title">
+    MINDULLE <tspan fill="#b45309">STUDIO</tspan>
+  </text>
+  <text x="198" y="110" class="lk3-sub">
+    • SOUL &amp; HARNESS • EST. 2026 •
+  </text>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=JetBrains+Mono:wght@600&amp;display=swap');
+      .opt2-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 22px; letter-spacing: 0.26em; fill: #1c1514; }
+      .opt2-sub { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.24em; fill: #9a3412; }
+    </style>
+    <path id="opt2Upper" d="M 54,200 A 146,146 0 1,1 346,200" fill="none" />
+    <path id="opt2Lower" d="M 64,212 A 140,140 0 0,0 336,212" fill="none" />
+
+    <linearGradient id="opt2Ink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a201c" />
+      <stop offset="100%" stop-color="#140e0c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Heavy Cotton Paper Base (#f5efe6) -->
+  <circle cx="200" cy="200" r="192" fill="#f5efe6" stroke="#1c1514" stroke-width="3" />
+
+  <!-- Woodcut Embossed Rims -->
+  <circle cx="200" cy="200" r="184" stroke="#9a3412" stroke-width="1.2" />
+  <circle cx="200" cy="200" r="126" stroke="#1c1514" stroke-width="2.5" />
+  <circle cx="200" cy="200" r="120" stroke="#9a3412" stroke-width="1" />
+
+  <!-- Arched Letterpress Typography -->
+  <text class="opt2-title">
+    <textPath href="#opt2Upper" startOffset="50%" text-anchor="middle">MINDULLE STUDIO</textPath>
+  </text>
+  <text class="opt2-sub">
+    <textPath href="#opt2Lower" startOffset="50%" text-anchor="middle">• ATELIER • EST. 2026 •</textPath>
+  </text>
+
+  <!-- Side Fleurons (Artisan Leaf Ornaments) -->
+  <path d="M 46,200 C 50,195 56,198 52,204 C 48,206 46,202 46,200 Z" fill="#9a3412" />
+  <path d="M 354,200 C 350,195 344,198 348,204 C 352,206 354,202 354,200 Z" fill="#9a3412" />
+
+  <!-- Inner Architectural Roman Arch (Cathedral/Atelier Window) -->
+  <path
+    d="M 148,260 L 148,170 A 52,52 0 0,1 252,170 L 252,260 Z"
+    fill="#ede4d6"
+    stroke="#1c1514"
+    stroke-width="2"
+  />
+
+  <!-- Dandelion Woodcut Silhouette Blooming Inside Arch -->
+  <!-- Stem -->
+  <path d="M 198,260 C 198,220 200,195 200,180" stroke="url(#opt2Ink)" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Wild Leaves at Base (Subtractive Negative Space) -->
+  <path d="M 198,255 C 185,250 174,235 170,220 C 176,226 186,236 198,242 Z" fill="#9a3412" />
+  <path d="M 202,255 C 215,250 226,235 230,220 C 224,226 214,236 202,242 Z" fill="#9a3412" />
+
+  <!-- Dandelion Seedhead Sphere (Solid Silhouette with Rhythmic Carved Rays) -->
+  <!-- Center Receptacle -->
+  <circle cx="200" cy="178" r="9" fill="url(#opt2Ink)" />
+  <circle cx="200" cy="178" r="4.5" fill="#f5efe6" />
+  <circle cx="200" cy="178" r="2" fill="#9a3412" />
+
+  <!-- Radiating Seed Petals (Carved Woodcut Blades) -->
+  <g fill="url(#opt2Ink)">
+    <!-- Upward Cluster -->
+    <path d="M 197,170 L 200,140 L 203,170 Z" />
+    <path d="M 192,172 L 180,144 L 196,170 Z" />
+    <path d="M 204,170 L 220,144 L 208,172 Z" />
+
+    <!-- Lateral Upper -->
+    <path d="M 189,176 L 164,155 L 193,173 Z" />
+    <path d="M 207,173 L 236,155 L 211,176 Z" />
+
+    <!-- Lateral Mid -->
+    <path d="M 189,180 L 155,172 L 190,183 Z" />
+    <path d="M 210,183 L 245,172 L 211,180 Z" />
+
+    <!-- Lateral Lower -->
+    <path d="M 191,184 L 162,192 L 193,186 Z" />
+    <path d="M 207,186 L 238,192 L 209,184 Z" />
+  </g>
+
+  <!-- Crown Seedlets (Floating Whispers above the Arch) -->
+  <g fill="#9a3412">
+    <circle cx="200" cy="132" r="3" />
+    <circle cx="176" cy="138" r="2.5" />
+    <circle cx="224" cy="138" r="2.5" />
+    <circle cx="158" cy="150" r="2.5" />
+    <circle cx="242" cy="150" r="2.5" />
+  </g>
+</svg>

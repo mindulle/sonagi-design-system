@@ -2,20 +2,20 @@ import React from 'react';
 
 export const TokenSpecimen: React.FC = () => {
   const colors = [
-    { name: 'Burgundy 800', hex: '#47211b', role: 'Brand Core (Light Primary)' },
-    { name: 'Rain 500', hex: '#4A90E2', role: 'Wild Accent (Primary Blue)' },
-    { name: 'Cyan 400', hex: '#00ffcc', role: 'Electric Accent (High-Contrast)' },
-    { name: 'Dandelion 300', hex: '#ffd166', role: 'Thin Warmth (Ambient Glow)' },
-    { name: 'Dark Surface', hex: '#161b22', role: 'Card & Surface Layer' },
-    { name: 'Dark Base', hex: '#060911', role: 'Canvas Background' },
+    { name: 'Warm Paper', hex: '#faf8f5', role: '60% Base (Atelier Canvas)' },
+    { name: 'Deep Ink', hex: '#1c1514', role: '30% Structure (2px Crisp Line)' },
+    { name: 'Dandelion Gold', hex: '#d97706', role: '10% Soul Core (Wing-Sail Accent)' },
+    { name: 'Sonagi Rain', hex: '#2563eb', role: 'Dynamic Ripple (Tooling Blue)' },
+    { name: 'Slate Border', hex: '#30363d', role: 'Card & Divider Frame' },
+    { name: 'Dark Base', hex: '#060911', role: 'Deep Obsidian Dark Canvas' },
   ];
 
   const typography = [
-    { label: 'H1 Display', size: '64px', sample: 'Wild & Thin.' },
-    { label: 'H2 Section', size: '36px', sample: '소나기와 민들레 철학' },
-    { label: 'H3 Card', size: '24px', sample: 'Autonomous Agent Orchestration' },
-    { label: 'Body Base', size: '16px', sample: '얼어붙은 땅을 깨우는 벼락같은 몰입과 방패.' },
-    { label: 'Caption Mono', size: '12px', sample: 'W3C Design Token Specimen • V3.0' },
+    { label: 'H1 Display', size: '64px', sample: 'Mindulle Studio.' },
+    { label: 'H2 Section', size: '36px', sample: '아늑한 공방과 자유로운 생명력' },
+    { label: 'H3 Card', size: '24px', sample: 'The Sonagi Tooling Suite' },
+    { label: 'Body Base', size: '16px', sample: '도구가 완벽할 때, 손길은 비로소 자유로워진다.' },
+    { label: 'Caption Mono', size: '12px', sample: 'SOUL & HARNESS • EST. 2026 • W3C TOKENS' },
   ];
 
   return (
@@ -90,11 +90,17 @@ export const TokenSpecimen: React.FC = () => {
           </h3>
           <div className="bg-[#090d16] border-2 border-sng-border rounded-sm divide-y-2 divide-sng-border">
             {typography.map((t) => (
-              <div key={t.label} className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div
+                key={t.label}
+                className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2"
+              >
                 <div className="flex items-center gap-4">
                   <span className="text-xs font-mono text-sng-rain w-28 shrink-0">{t.label}</span>
                   <span className="text-xs font-mono text-sng-muted w-16 shrink-0">{t.size}</span>
-                  <span className="text-white font-medium truncate" style={{ fontSize: `clamp(14px, 1.5vw, ${t.size})` }}>
+                  <span
+                    className="text-white font-medium truncate"
+                    style={{ fontSize: `clamp(14px, 1.5vw, ${t.size})` }}
+                  >
                     {t.sample}
                   </span>
                 </div>

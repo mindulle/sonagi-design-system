@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Option C: Authentic Bodoni Moda 'M' (Italian Luxury Modern) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(108.4, 255.0) scale(0.105, -0.105)">
+    <path d="M791 -20 235 1500H427L890 249L1323 1500H1365L840 -20ZM255 1500V39H403V0H72V39H214V1461H62V1500ZM1684 1500V1461H1544V39H1684V0H1193V39H1354V1500Z" fill="#1c1514" />
+  </g>
+
+  <!-- Golden Dandelion Seed Apex -->
+  <g transform="translate(200, 160)">
+    <line x1="0" y1="10" x2="0" y2="-24" stroke="#d97706" stroke-width="2" stroke-linecap="round" />
+    <circle cx="0" cy="-30" r="4" fill="#d97706" />
+    <path d="M 0,-15 C -8,-20 -14,-28 -18,-38" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 0,-15 C 8,-20 14,-28 18,-38" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+</svg>

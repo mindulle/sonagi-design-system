@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" fill="none">
+  <defs>
+    <style>
+      .mob-serif { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; fill: #1c1514; }
+      .mob-mono { font-family: 'JetBrains Mono', monospace; font-weight: 600; fill: #9a3412; }
+      .mob-ko { font-family: 'Pretendard', 'Noto Sans CJK KR', sans-serif; fill: #1c1514; }
+    </style>
+  </defs>
+
+  <rect width="390" height="844" fill="#faf8f5" />
+
+  <!-- Top bar -->
+  <text x="32" y="30" font-family="'JetBrains Mono', sans-serif" font-weight="600" font-size="14" fill="#1c1514">9:41</text>
+  <rect x="135" y="10" width="120" height="26" rx="13" fill="#1c1514" />
+
+  <!-- Header -->
+  <line x1="0" y1="100" x2="390" y2="100" stroke="#1c1514" stroke-width="2" />
+  <text x="60" y="80" class="mob-serif" font-size="20">MINDULLE STUDIO</text>
+  <text x="60" y="92" class="mob-mono" font-size="9">ATELIER • EST. 2026</text>
+
+  <!-- Hero Card -->
+  <rect x="20" y="120" width="350" height="250" rx="8" fill="#f5efe6" stroke="#1c1514" stroke-width="2" />
+  <circle cx="195" cy="190" r="30" fill="#ffd166" fill-opacity="0.3" stroke="#d97706" stroke-width="1.5" />
+  <text x="195" y="270" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="700" font-size="22" fill="#1c1514">건축의 성벽과 민들레의 쉼터</text>
+  <text x="195" y="295" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="500" font-size="13" fill="#57534e">"기계가 완벽해야 사람이 쉴 수 있다"</text>
+  <rect x="120" y="315" width="150" height="30" rx="4" fill="#1c1514" />
+  <text x="195" y="335" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="600" font-size="12" fill="#ffffff">스튜디오 작업대 열기 ↗</text>
+
+  <!-- Tools -->
+  <text x="20" y="410" class="mob-mono" font-size="11">02. SONAGI TOOLING SUITE</text>
+  <rect x="20" y="430" width="165" height="70" rx="6" fill="#f5efe6" stroke="#1c1514" stroke-width="2" />
+  <text x="35" y="465" font-family="'Pretendard', sans-serif" font-weight="700" font-size="14" fill="#1c1514">VectorCraft</text>
+  <text x="35" y="482" class="mob-mono" font-size="9" fill="#2563eb">2D 벡터 포지</text>
+
+  <rect x="205" y="430" width="165" height="70" rx="6" fill="#f5efe6" stroke="#1c1514" stroke-width="2" />
+  <text x="220" y="465" font-family="'Pretendard', sans-serif" font-weight="700" font-size="14" fill="#1c1514">PhotoCraft</text>
+  <text x="220" y="482" class="mob-mono" font-size="9" fill="#2563eb">래스터 스튜디오</text>
+
+  <line x1="125" y1="828" x2="265" y2="828" stroke="#1c1514" stroke-width="4" stroke-linecap="round" />
+</svg>

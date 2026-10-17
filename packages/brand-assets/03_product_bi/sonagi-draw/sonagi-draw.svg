@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <radialGradient id="drawGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4A90E2" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#060911" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="20" fill="#0b101d" stroke="#30363d" stroke-width="2" />
+  <circle cx="64" cy="64" r="48" fill="url(#drawGlow)" />
+  <!-- Golden Ratio Blueprint Circles -->
+  <circle cx="64" cy="64" r="40" stroke="#30363d" stroke-width="1" stroke-dasharray="3 3" opacity="0.6" />
+  <circle cx="64" cy="64" r="26" stroke="#4A90E2" stroke-width="1" opacity="0.4" />
+  <!-- Drafting Compass / Pen Silhouette -->
+  <!-- Compass Top Joint -->
+  <circle cx="64" cy="30" r="7" stroke="#ffd166" stroke-width="2" fill="#060911" />
+  <circle cx="64" cy="30" r="2.5" fill="#ffd166" />
+  <!-- Compass Left Leg (Stylus Nib) -->
+  <path d="M 60,36 L 40,88 L 46,96 L 62,48" stroke="#4A90E2" stroke-width="2" fill="#060911" stroke-linejoin="round" />
+  <path d="M 40,88 L 36,102 L 46,96 Z" fill="#ffd166" stroke="#ffd166" stroke-width="1" />
+  <!-- Compass Right Leg (Needle Leg) -->
+  <path d="M 68,36 L 88,88 L 92,102 L 66,48" stroke="#ffffff" stroke-width="2" fill="#060911" stroke-linejoin="round" />
+  <!-- Coordinate Crosshair -->
+  <line x1="36" y1="102" x2="92" y2="102" stroke="#4A90E2" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.7" />
+  <circle cx="36" cy="102" r="2" fill="#ffd166" />
+  <circle cx="92" cy="102" r="2" fill="#4A90E2" />
+</svg>

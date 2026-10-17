@@ -1,0 +1,19 @@
+{
+  "name": "@mindulle/brand-assets",
+  "version": "0.1.0",
+  "description": "Mindulle Studio & Sonagi Tooling Suite Official Brand Asset Pack",
+  "author": "Mindulle Studio <mindullestudio@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindulle/sonagi-design-system.git",
+    "directory": "packages/brand-assets"
+  },
+  "files": [
+    "01_master_seal",
+    "02_lockups",
+    "03_product_bi",
+    "04_touchpoints",
+    "05_guidelines"
+  ]
+}
