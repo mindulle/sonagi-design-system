@@ -10,7 +10,11 @@ export const Navbar: React.FC = () => {
         {/* Brand Group */}
         <div className="flex items-center gap-3">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <MindulleSeal size={32} showText={false} className="transition-transform group-hover:rotate-12 duration-300" />
+            <MindulleSeal
+              size={32}
+              showText={false}
+              className="transition-transform group-hover:rotate-12 duration-300"
+            />
             <div className="flex items-baseline gap-1.5">
               <span className="font-serif text-lg md:text-xl font-bold tracking-[0.08em] text-white group-hover:text-sng-dandelion transition-colors">
                 MINDULLE STUDIO
@@ -42,13 +46,16 @@ export const Navbar: React.FC = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
-          <Link
-            to="/canvas"
+          <a
+            href="https://draw.sonagi.space/vector/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-sng-dandelion border-2 border-sng-dandelion/60 bg-sng-dandelion/10 rounded-sm hover:bg-sng-dandelion/20 transition-all"
+            title="Open VectorCraft Canvas Studio"
           >
             <PenTool className="w-3.5 h-3.5" />
-            <span>Canvas</span>
-          </Link>
+            <span>Canvas ↗</span>
+          </a>
           <Link
             to="/playground"
             className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-purple-300 border-2 border-purple-500/50 bg-purple-500/10 rounded-sm hover:bg-purple-500/20 transition-all"

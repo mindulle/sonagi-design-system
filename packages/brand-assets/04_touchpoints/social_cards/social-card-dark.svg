@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap');
+      .og-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-weight: 700;
+        font-size: 68px;
+        letter-spacing: 0.12em;
+        fill: #ffffff;
+      }
+      .og-badge {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.20em;
+        fill: #ffd166;
+      }
+      .og-quote {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.4;
+        fill: #f0f6fc;
+      }
+      .og-desc {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        fill: #8b949e;
+      }
+      .og-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        fill: #4A90E2;
+      }
+    </style>
+
+    <radialGradient id="ogAura" cx="25%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ffd166" stop-opacity="0.12" />
+      <stop offset="40%" stop-color="#4A90E2" stop-opacity="0.08" />
+      <stop offset="80%" stop-color="#00ffcc" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#060911" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="ogGoldCore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5cc" />
+      <stop offset="50%" stop-color="#ffd166" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <pattern id="ogGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161b26" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Base Canvas (#060911) -->
+  <rect width="1200" height="630" fill="#060911" />
+  <rect width="1200" height="630" fill="url(#ogGrid)" opacity="0.6" />
+  <rect width="1200" height="630" fill="url(#ogAura)" />
+
+  <!-- Outer 2px Architectural Border -->
+  <rect x="2" y="2" width="1196" height="626" rx="16" fill="none" stroke="#30363d" stroke-width="2" />
+
+  <!-- Left: Big Master Seal Emblem (Scaled 380x380 at translate 70, 125) -->
+  <g transform="translate(70, 125)">
+    <!-- Base Disc -->
+    <circle cx="190" cy="190" r="186" fill="#070a12" stroke="#30363d" stroke-width="2" />
+    <circle cx="190" cy="190" r="172" stroke="#4A90E2" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.8" />
+    <circle cx="190" cy="190" r="124" stroke="#30363d" stroke-width="2" />
+
+    <!-- 8-Facet Glass Dome (Octagon) -->
+    <polygon
+      points="190,82 266,114 298,190 266,266 190,298 114,266 82,190 114,114"
+      stroke="#4A90E2"
+      stroke-width="1.5"
+      fill="none"
+      opacity="0.45"
+    />
+
+    <!-- Dandelion Plume Core -->
+    <circle cx="190" cy="190" r="42" fill="#060911" stroke="#ffd166" stroke-width="2" />
+    <ellipse cx="190" cy="190" rx="14" ry="24" fill="url(#ogGoldCore)" />
+    <ellipse cx="190" cy="190" rx="7" ry="14" fill="#ffffff" />
+
+    <!-- Parachute Stems (8 Directions) -->
+    <line x1="190" y1="190" x2="190" y2="60" stroke="url(#ogGoldCore)" stroke-width="2" />
+    <line x1="190" y1="190" x2="190" y2="320" stroke="url(#ogGoldCore)" stroke-width="2" />
+    <line x1="190" y1="190" x2="60" y2="190" stroke="url(#ogGoldCore)" stroke-width="2" />
+    <line x1="190" y1="190" x2="320" y2="190" stroke="url(#ogGoldCore)" stroke-width="2" />
+    <line x1="190" y1="190" x2="98" y2="98" stroke="url(#ogGoldCore)" stroke-width="1.5" />
+    <line x1="190" y1="190" x2="282" y2="98" stroke="url(#ogGoldCore)" stroke-width="1.5" />
+    <line x1="190" y1="190" x2="282" y2="282" stroke="url(#ogGoldCore)" stroke-width="1.5" />
+    <line x1="190" y1="190" x2="98" y2="282" stroke="url(#ogGoldCore)" stroke-width="1.5" />
+
+    <!-- Outer Plume Terminals -->
+    <circle cx="190" cy="60" r="4" fill="#ffd166" />
+    <circle cx="190" cy="320" r="4" fill="#ffd166" />
+    <circle cx="60" cy="190" r="4" fill="#ffd166" />
+    <circle cx="320" cy="190" r="4" fill="#ffd166" />
+  </g>
+
+  <!-- Vertical Divider (2px True Line) -->
+  <line x1="490" y1="100" x2="490" y2="530" stroke="#30363d" stroke-width="2" />
+
+  <!-- Right: Typography & Brand Narrative -->
+  <g transform="translate(540, 0)">
+    <!-- Header Badge -->
+    <rect x="0" y="105" width="280" height="28" rx="4" fill="#ffd166" fill-opacity="0.08" stroke="#ffd166" stroke-opacity="0.4" stroke-width="1" />
+    <text x="14" y="124" class="og-badge">
+      ATELIER OF SOFTWARE • EST. 2026
+    </text>
+
+    <!-- Main Title -->
+    <text x="0" y="200" class="og-title">
+      MINDULLE <tspan fill="#ffd166">STUDIO</tspan>
+    </text>
+
+    <!-- Slogan Quote -->
+    <text x="0" y="260" class="og-quote">
+      "기계가 완벽해야 사람이 쉴 수 있다"
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="310" class="og-desc">
+      차가운 2px 디지털 건축의 성벽 속에 가장 다정한 사용자 경험을 피워냅니다.
+    </text>
+    <text x="0" y="336" class="og-desc">
+      W3C 표준 디자인 토큰과 실무에서 자체 검증하는 도구군 <tspan fill="#4A90E2" font-weight="600">소나기(Sonagi)</tspan>.
+    </text>
+
+    <!-- Bottom Feature Tag Badges -->
+    <g transform="translate(0, 420)">
+      <!-- Badge 1: 2px True Line -->
+      <rect x="0" y="0" width="130" height="32" rx="4" fill="#0b101d" stroke="#30363d" stroke-width="1.5" />
+      <text x="14" y="20" class="og-tag">2px Scaled Line</text>
+
+      <!-- Badge 2: 60-30-10 OKLCH -->
+      <rect x="142" y="0" width="144" height="32" rx="4" fill="#0b101d" stroke="#30363d" stroke-width="1.5" />
+      <text x="156" y="20" class="og-tag">60-30-10 OKLCH</text>
+
+      <!-- Badge 3: ArtCraft AST -->
+      <rect x="298" y="0" width="150" height="32" rx="4" fill="#0b101d" stroke="#30363d" stroke-width="1.5" />
+      <text x="312" y="20" class="og-tag">ArtCraft Vector</text>
+
+      <!-- Badge 4: The Trinity SSOT -->
+      <rect x="460" y="0" width="130" height="32" rx="4" fill="#0b101d" stroke="#ffd166" stroke-width="1.5" stroke-opacity="0.6" />
+      <text x="474" y="20" class="og-tag" fill="#ffd166">The Trinity</text>
+    </g>
+  </g>
+</svg>

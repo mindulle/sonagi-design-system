@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 160" width="840" height="160" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=JetBrains+Mono:wght@600&amp;display=swap');
+      .sail-dark-title { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 42px; letter-spacing: 0.16em; fill: #ffffff; }
+      .sail-dark-sub { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.24em; fill: #ffd166; }
+    </style>
+  </defs>
+
+  <rect width="840" height="160" rx="8" fill="#060911" stroke="#30363d" stroke-width="2" />
+
+  <!-- Left: Asymmetrical Sail Symbol (Scaled Dark) -->
+  <g transform="translate(85, 82) scale(0.62)">
+    <!-- Seed Origin Pod -->
+    <path d="M -16,72 C -24,58 -22,44 -14,38 C -6,44 -2,58 -16,72 Z" fill="#ffd166" stroke="#f59e0b" stroke-width="1.2" />
+    <circle cx="-14" cy="52" r="2" fill="#ffffff" />
+
+    <!-- The Main Mast -->
+    <path d="M -14,38 C -2,12 14,-25 8,-85" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Primary Main Sail -->
+    <path d="M -4,22 C -42,5 -75,-15 -85,-55 C -65,-46 -35,-42 3,-45 Z" 
+          stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="#ffffff" fill-opacity="0.06" />
+    <path d="M -9,12 C -32,-6 -55,-20 -66,-42" stroke="#ffd166" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Top Jib Sail -->
+    <path d="M 3,-24 C -22,-40 -44,-58 -52,-88 C -38,-80 -18,-74 7,-72 Z" 
+          stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" fill="#ffffff" fill-opacity="0.06" />
+
+    <!-- Apex Lift Core -->
+    <circle cx="8" cy="-85" r="4.5" fill="#ffd166" />
+    <circle cx="6" cy="-87" r="1.5" fill="#ffffff" />
+  </g>
+
+  <!-- 2px Divider Line -->
+  <line x1="165" y1="36" x2="165" y2="124" stroke="#30363d" stroke-width="2" />
+
+  <!-- Wordmark Suite -->
+  <text x="195" y="80" class="sail-dark-title">
+    MINDULLE <tspan fill="#ffd166">STUDIO</tspan>
+  </text>
+  <text x="198" y="110" class="sail-dark-sub">
+    • SOUL &amp; HARNESS • EST. 2026 •
+  </text>
+</svg>

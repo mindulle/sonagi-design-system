@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <!-- Concept 3-A: Seamless Closed Petals (완벽하게 닫힌 3중 홑씨 날개) -->
+  <rect width="400" height="400" rx="16" fill="#faf8f5" />
+
+  <g transform="translate(200, 200)">
+    <defs>
+      <g id="cleanPetalA">
+        <!-- 100% Closed Aerodynamic Wing (Zero Protrusions) -->
+        <path d="M 12,-3 C 32,-36 72,-32 92,-4 C 74,18 42,22 12,4 Z" 
+              stroke="#1c1514" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="#1c1514" fill-opacity="0.04" />
+        <!-- Inner Gold Filament (Securely Centered, Round Ends) -->
+        <path d="M 28,-3 C 48,-16 68,-14 78,-3" 
+              stroke="#d97706" stroke-width="2" stroke-linecap="round" />
+      </g>
+    </defs>
+
+    <!-- 3 Symmetrically Rotated Petals -->
+    <use href="#cleanPetalA" transform="rotate(-30)" />
+    <use href="#cleanPetalA" transform="rotate(90)" />
+    <use href="#cleanPetalA" transform="rotate(210)" />
+
+    <!-- Central Seamless Gold Core Hub -->
+    <circle cx="0" cy="0" r="14" fill="#faf8f5" stroke="#1c1514" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="9" fill="#d97706" />
+    <circle cx="-2.5" cy="-2.5" r="2.5" fill="#ffffff" />
+  </g>
+</svg>

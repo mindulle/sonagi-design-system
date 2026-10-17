@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" width="880" height="200" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=JetBrains+Mono:wght@600&amp;family=Inter:wght@500;600&amp;display=swap');
+      .lockup-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-weight: 700;
+        font-size: 46px;
+        letter-spacing: 0.16em;
+        fill: #ffffff;
+      }
+      .lockup-tagline {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.24em;
+        fill: #ffd166;
+      }
+      .lockup-product {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        fill: #8b949e;
+      }
+      .lockup-accent {
+        fill: #ffd166;
+      }
+      .lockup-rain {
+        fill: #4A90E2;
+        font-weight: 600;
+      }
+    </style>
+
+    <radialGradient id="lkGlassAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd166" stop-opacity="0.16" />
+      <stop offset="50%" stop-color="#4A90E2" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#060911" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="lkGoldCore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5cc" />
+      <stop offset="50%" stop-color="#ffd166" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background (Deep Base #060911) -->
+  <rect width="880" height="200" rx="10" fill="#060911" stroke="#30363d" stroke-width="2" />
+
+  <!-- Master Seal (Scaled 140x140 at left anchor) -->
+  <g transform="translate(36, 30)">
+    <!-- Base Disc -->
+    <circle cx="70" cy="70" r="68" fill="#070a12" stroke="#30363d" stroke-width="2" />
+    <circle cx="70" cy="70" r="68" fill="url(#lkGlassAura)" />
+    <!-- Secondary Dashed Rain Ring -->
+    <circle cx="70" cy="70" r="62" stroke="#4A90E2" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8" />
+    <circle cx="70" cy="70" r="44" stroke="#30363d" stroke-width="1.5" />
+
+    <!-- 8-Facet Glass Dome (Octagon) -->
+    <polygon
+      points="70,30 98,42 110,70 98,98 70,110 42,98 30,70 42,42"
+      stroke="#4A90E2"
+      stroke-width="1.2"
+      fill="none"
+      opacity="0.5"
+    />
+
+    <!-- Dandelion Gold Core -->
+    <circle cx="70" cy="70" r="16" fill="#060911" stroke="#ffd166" stroke-width="1.5" />
+    <ellipse cx="70" cy="70" rx="5" ry="9" fill="url(#lkGoldCore)" />
+    <!-- 8 Parachute Plumes -->
+    <line x1="70" y1="70" x2="70" y2="24" stroke="url(#lkGoldCore)" stroke-width="1.5" />
+    <line x1="70" y1="70" x2="70" y2="116" stroke="url(#lkGoldCore)" stroke-width="1.5" />
+    <line x1="70" y1="70" x2="24" y2="70" stroke="url(#lkGoldCore)" stroke-width="1.5" />
+    <line x1="70" y1="70" x2="116" y2="70" stroke="url(#lkGoldCore)" stroke-width="1.5" />
+    <line x1="70" y1="70" x2="38" y2="38" stroke="url(#lkGoldCore)" stroke-width="1.2" />
+    <line x1="70" y1="70" x2="102" y2="38" stroke="url(#lkGoldCore)" stroke-width="1.2" />
+    <line x1="70" y1="70" x2="102" y2="102" stroke="url(#lkGoldCore)" stroke-width="1.2" />
+    <line x1="70" y1="70" x2="38" y2="102" stroke="url(#lkGoldCore)" stroke-width="1.2" />
+    <!-- Little plume stars -->
+    <circle cx="70" cy="24" r="2" fill="#ffd166" />
+    <circle cx="70" cy="116" r="2" fill="#ffd166" />
+    <circle cx="24" cy="70" r="2" fill="#ffd166" />
+    <circle cx="116" cy="70" r="2" fill="#ffd166" />
+    <circle cx="70" cy="70" r="3" fill="#ffffff" />
+  </g>
+
+  <!-- 2px Architectural Divider (The Trinity Anchor) -->
+  <line x1="216" y1="40" x2="216" y2="160" stroke="#30363d" stroke-width="2" />
+
+  <!-- Typography Suite -->
+  <!-- 1. Master Title -->
+  <text x="246" y="86" class="lockup-title">
+    MINDULLE <tspan class="lockup-accent">STUDIO</tspan>
+  </text>
+
+  <!-- 2. Soul & Harness Spec -->
+  <text x="250" y="122" class="lockup-tagline">
+    • SOUL &amp; HARNESS • EST. 2026 •
+  </text>
+
+  <!-- 3. Tooling Ecosystem Reference -->
+  <text x="250" y="150" class="lockup-product">
+    FEATURING <tspan class="lockup-rain">SONAGI TOOLING SUITE</tspan> • 2PX SCALED SYSTEM
+  </text>
+</svg>

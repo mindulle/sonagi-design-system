@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&amp;display=swap');
+      .fav-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #78716c; text-anchor: middle; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect width="600" height="240" rx="8" fill="#faf8f5" stroke="#1c1514" stroke-width="2" />
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'JetBrains Mono', monospace" font-size="12px" font-weight="700" fill="#1c1514" letter-spacing="0.1em">
+    CONCEPT 3: KINETIC SEED VORTEX • SCALABILITY TEST
+  </text>
+
+  <!-- Specimen 1: 128px -->
+  <g transform="translate(100, 125)">
+    <circle cx="0" cy="0" r="4.5" fill="#d97706" />
+    <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="2" fill="#1c1514" fill-opacity="0.04" />
+    <path d="M 15,7 C 28,15 38,6 40,-3" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" />
+    <g transform="rotate(120)">
+      <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="2" fill="#1c1514" fill-opacity="0.04" />
+      <path d="M 15,7 C 28,15 38,6 40,-3" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+    <g transform="rotate(240)">
+      <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="2" fill="#1c1514" fill-opacity="0.04" />
+      <path d="M 15,7 C 28,15 38,6 40,-3" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+  </g>
+  <text x="100" y="200" class="fav-label">128 x 128 px</text>
+
+  <!-- Specimen 2: 64px -->
+  <g transform="translate(240, 125) scale(0.6)">
+    <circle cx="0" cy="0" r="5" fill="#d97706" />
+    <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="2.5" />
+    <path d="M 15,7 C 28,15 38,6 40,-3" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" />
+    <g transform="rotate(120)">
+      <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="2.5" />
+      <path d="M 15,7 C 28,15 38,6 40,-3" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" />
+    </g>
+    <g transform="rotate(240)">
+      <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="2.5" />
+      <path d="M 15,7 C 28,15 38,6 40,-3" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" />
+    </g>
+  </g>
+  <text x="240" y="200" class="fav-label">64 x 64 px</text>
+
+  <!-- Specimen 3: 32px App Icon -->
+  <g transform="translate(360, 125) scale(0.35)">
+    <circle cx="0" cy="0" r="7" fill="#d97706" />
+    <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="3.5" />
+    <g transform="rotate(120)">
+      <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="3.5" />
+    </g>
+    <g transform="rotate(240)">
+      <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="3.5" />
+    </g>
+  </g>
+  <text x="360" y="200" class="fav-label">32 x 32 px (BI)</text>
+
+  <!-- Specimen 4: 16px Favicon in Browser Tab Mockup -->
+  <g transform="translate(470, 95)">
+    <!-- Browser Tab Container -->
+    <rect x="-10" y="0" width="110" height="34" rx="6" fill="#f0ebe3" stroke="#d6cfc7" stroke-width="1" />
+    <!-- 16px Mini Icon -->
+    <g transform="translate(10, 17) scale(0.18)">
+      <circle cx="0" cy="0" r="10" fill="#d97706" />
+      <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="6" />
+      <g transform="rotate(120)">
+        <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="6" />
+      </g>
+      <g transform="rotate(240)">
+        <path d="M 0,-5 C 20,-20 40,-15 50,-3 C 55,10 45,30 25,40 C 15,28 6,12 0,0" stroke="#1c1514" stroke-width="6" />
+      </g>
+    </g>
+    <!-- Tab Text -->
+    <text x="32" y="21" font-family="'Inter', sans-serif" font-size="10px" font-weight="600" fill="#1c1514">Mindulle</text>
+  </g>
+  <text x="515" y="200" class="fav-label">16 x 16 px (Favicon)</text>
+</svg>
