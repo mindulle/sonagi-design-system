@@ -146,7 +146,7 @@ export const LandingV2: React.FC = () => {
       {/* 01. HERO : STICKY PIN & ZOOM THREE.JS (200vh Track) */}
       {/* ───────────────────────────────────────────────────────────── */}
       <section ref={heroRef} className="relative w-full h-[200vh]">
-        <div className="sticky top-0 w-full h-screen flex flex-col justify-between p-6 md:p-12 overflow-hidden border-b-2 border-[#30363d]/60">
+        <div className="sticky top-0 w-full h-screen flex flex-col justify-between p-6 pt-24 md:p-12 md:pt-24 overflow-hidden border-b-2 border-[#30363d]/60">
           {/* 3D WebGL Canvas (스크롤에 따라 스케일 & 페이드아웃) */}
           <motion.div
             style={{ scale: heroScale, opacity: heroCanvasOpacity }}
@@ -183,7 +183,7 @@ export const LandingV2: React.FC = () => {
             <span className="px-3.5 py-1 rounded-full border border-[#ffd166]/60 bg-[#ffd166]/10 text-[#ffd166] font-mono text-xs tracking-widest uppercase mb-4">
               ATELIER CONSTITUTION • ARTICLE I
             </span>
-            <h1 className="font-serif font-bold text-4xl sm:text-6xl md:text-7xl text-white tracking-tight leading-tight">
+            <h1 className="font-serif font-bold text-4xl sm:text-6xl md:text-7xl text-white tracking-tight leading-tight break-keep text-center">
               "도구가 완벽할 때,
               <br />
               손길은 비로소 자유로워진다."
