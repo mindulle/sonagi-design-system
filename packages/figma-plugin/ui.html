@@ -21,7 +21,62 @@
   <button id="push-btn">동기화 시작 (Push to Server)</button>
   <div id="status"></div>
 
+  <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;" />
+  <div style="font-size: 12px; display: flex; align-items: center; justify-content: space-between;">
+    <span style="font-weight: 600;">Agent Bridge (Zero-Click)</span>
+    <span id="bridge-badge" style="font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; background: #fee2e2; color: #b91c1c;">연결 중...</span>
+  </div>
+  <p id="bridge-log" style="font-size: 11px; color: #888; margin-top: 4px; margin-bottom: 0;">Tailscale: ws://100.91.9.83:3050</p>
+
   <script>
+    // --- Agent Bridge WebSocket Connection ---
+    const BRIDGE_WS_URL = 'ws://100.91.9.83:3050';
+    let bridgeWs = null;
+
+    function initBridge() {
+      const badge = document.getElementById('bridge-badge');
+      const log = document.getElementById('bridge-log');
+
+      try {
+        bridgeWs = new WebSocket(BRIDGE_WS_URL);
+
+        bridgeWs.onopen = () => {
+          badge.style.background = '#dcfce7';
+          badge.style.color = '#15803d';
+          badge.innerText = '🟢 Agent Live';
+          log.innerText = 'Connected: ws://100.91.9.83:3050';
+        };
+
+        bridgeWs.onmessage = (event) => {
+          try {
+            const data = JSON.parse(event.data);
+            if (data.type === 'execute-script') {
+              log.innerText = '⚡ 스크립트 실행 중...';
+              parent.postMessage({ pluginMessage: { type: 'execute-script', script: data.script || data.payload } }, '*');
+            }
+          } catch (e) {
+            log.innerText = 'Error: ' + e.message;
+          }
+        };
+
+        bridgeWs.onclose = () => {
+          badge.style.background = '#fee2e2';
+          badge.style.color = '#b91c1c';
+          badge.innerText = '🔴 오프라인';
+          log.innerText = '재연결 시도 중...';
+          setTimeout(initBridge, 3000);
+        };
+
+        bridgeWs.onerror = () => {
+          bridgeWs.close();
+        };
+      } catch (err) {
+        setTimeout(initBridge, 3000);
+      }
+    }
+
+    initBridge();
+
     document.getElementById('push-btn').onclick = () => {
       document.getElementById('status').style.color = "#333";
       document.getElementById('status').innerText = "⏳ 1/2: 피그마에서 변수 추출 중...";

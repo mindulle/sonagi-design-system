@@ -17,3 +17,7 @@ packages/*/vendor/
 
 # VectorCraft Web Canvas static build (auto-downloaded on build)
 apps/portal/public/vectorcraft/
+
+# Local agent & tool runtime artifacts
+.opendevbrowser/
+
