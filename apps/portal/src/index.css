@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply m-0 p-0 font-sans text-gray-100 bg-[#060911] selection:bg-[#4A90E2]/30 selection:text-white antialiased;

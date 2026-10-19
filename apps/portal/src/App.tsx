@@ -1,18 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import * as studioModule from '@theatre/studio';
 import { getProject } from '@theatre/core';
-import { Sparkles, ArrowRight, Layers, Film } from 'lucide-react';
 import HeroScene from './components/HeroScene';
-import { Navbar } from './components/Navbar';
-import { BrandPhilosophy } from './components/BrandPhilosophy';
-import { BentoGrid } from './components/BentoGrid';
-import { ProjectGallery } from './components/ProjectGallery';
-import { TokenSpecimen } from './components/TokenSpecimen';
-import { ContactSection } from './components/ContactSection';
-import { Footer } from './components/Footer';
 import { CanvasPage } from './components/CanvasPage';
+import { Room01GlassPavilion } from './components/exhibition/Room01GlassPavilion';
+import { Room02MonolithOfSolace } from './components/exhibition/Room02MonolithOfSolace';
+import { Room03CabinetOfInstruments } from './components/exhibition/Room03CabinetOfInstruments';
+import { Room04FiveSceneries } from './components/exhibition/Room04FiveSceneries';
+import { Room05ColophonSeal } from './components/exhibition/Room05ColophonSeal';
+import { LandingV2 } from './components/v2/LandingV2';
 
 const getStudio = () => {
   let s: any = studioModule;
@@ -23,119 +20,57 @@ const getStudio = () => {
 };
 
 function Landing() {
+  const [viewMode, setViewMode] = useState<'v1' | 'v2'>('v2');
+
   return (
-    <div className="min-h-screen flex flex-col bg-[#060911] text-gray-100 selection:bg-[#4A90E2]/30 selection:text-white">
-      {/* 00. Top Navigation */}
-      <Navbar />
+    <div className="w-full bg-[#060911] text-gray-100 selection:bg-[#4A90E2]/30 selection:text-white overflow-x-hidden relative">
+      {/* 🌟 Option 1 ↔ Option 2 Live Architecture Switcher */}
+      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center p-1.5 bg-[#090d16]/95 border-2 border-[#30363d] backdrop-blur-md rounded-full shadow-2xl">
+        <button
+          onClick={() => setViewMode('v1')}
+          className={`px-4 py-1.5 rounded-full text-xs font-mono font-bold transition-all ${
+            viewMode === 'v1'
+              ? 'bg-[#4A90E2] text-white shadow-lg'
+              : 'text-[#94a3b8] hover:text-white'
+          }`}
+        >
+          🏛️ Option 1 : 5 Exhibition Rooms
+        </button>
+        <button
+          onClick={() => setViewMode('v2')}
+          className={`px-4 py-1.5 rounded-full text-xs font-mono font-bold transition-all ${
+            viewMode === 'v2'
+              ? 'bg-[#ffd166] text-black shadow-lg'
+              : 'text-[#94a3b8] hover:text-white'
+          }`}
+        >
+          🎬 Option 2 : Cinema Long-Scroll (Active)
+        </button>
+      </div>
 
-      {/* 01. Hero Section (소나기 Wild) with Three.js / Theatre.js HeroScene */}
-      <section className="relative min-h-[92vh] flex flex-col items-center justify-center px-6 md:px-16 pt-8 pb-20 border-b-2 border-sng-border bg-gradient-to-b from-[#070a12] via-[#060911] to-[#090d16] overflow-hidden">
-        {/* Subtle Background Grid */}
-        <div
-          className="absolute inset-0 opacity-[0.03] pointer-events-none -z-10"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }}
-        />
+      {viewMode === 'v1' ? (
+        <div className="w-full">
+          {/* Floating Navigator for V1 */}
+          <nav className="fixed top-6 right-8 z-40 hidden lg:flex items-center gap-2 px-3.5 py-1.5 rounded-full border-2 border-[#30363d] bg-[#090d16]/90 backdrop-blur-md text-[11px] font-mono text-[#94a3b8] shadow-2xl">
+            <span className="text-[#ffd166] font-bold px-1 tracking-wider">ROOMS:</span>
+            <a href="#room-01" className="hover:text-white px-2 py-0.5 rounded hover:bg-white/10 transition-colors">01</a>
+            <a href="#room-02" className="hover:text-white px-2 py-0.5 rounded hover:bg-white/10 transition-colors">02</a>
+            <a href="#room-03" className="hover:text-white px-2 py-0.5 rounded hover:bg-white/10 transition-colors">03</a>
+            <a href="#room-04" className="hover:text-white px-2 py-0.5 rounded hover:bg-white/10 transition-colors">04</a>
+            <a href="#room-05" className="hover:text-white px-2 py-0.5 rounded hover:bg-white/10 transition-colors">05</a>
+          </nav>
 
-        {/* 3D Canvas Scene with Floating Theatre.js Meshes */}
-        <div className="absolute inset-0 pointer-events-none -z-10">
-          <HeroScene />
+          <main className="w-full">
+            <Room01GlassPavilion />
+            <Room02MonolithOfSolace />
+            <Room03CabinetOfInstruments />
+            <Room04FiveSceneries />
+            <Room05ColophonSeal />
+          </main>
         </div>
-
-        <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10 pointer-events-auto">
-          {/* Eyebrow Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border-2 border-sng-dandelion/60 bg-sng-dandelion/10 text-sng-dandelion text-xs font-mono mb-6"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>MINDULLE STUDIO • HANDCRAFTED SOFTWARE ATELIER</span>
-          </motion.div>
-
-          {/* Main Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white mb-6"
-          >
-            Mindulle Studio<span className="text-sng-dandelion">.</span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
-            className="text-lg sm:text-xl md:text-2xl text-sng-muted max-w-3xl leading-relaxed mb-10"
-          >
-            "도구가 완벽할 때, 손길은 비로소 자유로워진다."
-            <br className="hidden sm:inline" />
-            차가운 성벽의 족쇄를 풀고, 태블릿과 펜의 손맛으로 창작자의 자유를 피워내는 소프트웨어
-            아틀리에.
-            <br className="hidden sm:inline" />
-            실무에서 스스로를 검증하는 2px 도구 생태계,{' '}
-            <span className="text-sng-rain font-semibold">소나기(Sonagi)</span>.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4"
-          >
-            <a
-              href="#bento"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-sng-dandelion text-black font-semibold text-sm border-2 border-sng-dandelion rounded-sm hover:bg-sng-dandelion/90 transition-all shadow-lg shadow-sng-dandelion/20"
-            >
-              소나기 도구군 둘러보기
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="/brand/mindulle-master-brandbook-v0.1.0.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent text-white font-semibold text-sm border-2 border-white/60 rounded-sm hover:border-white hover:bg-white/5 transition-all"
-            >
-              <Layers className="w-4 h-4" />
-              마스터 브랜드북 (PDF ↗)
-            </a>
-            <a
-              href="https://draw.sonagi.space/vector/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-purple-500/10 text-purple-300 font-semibold text-sm border-2 border-purple-500/50 rounded-sm hover:bg-purple-500/20 transition-all"
-            >
-              <Film className="w-4 h-4" />
-              스튜디오 캔버스 (draw ↗)
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 02. Philosophy Transition Section (Wild to Thin) */}
-      <BrandPhilosophy />
-
-      {/* 03. Bento Box Showcase (6 Core Disciplines) */}
-      <BentoGrid />
-
-      {/* 04. Featured Projects Showroom (CEO-1001) */}
-      <ProjectGallery />
-
-      {/* 05. Token Specimen */}
-      <TokenSpecimen />
-
-      {/* 06. Get in Touch & Collaborate */}
-      <ContactSection />
-
-      {/* 07. Footer */}
-      <Footer />
+      ) : (
+        <LandingV2 />
+      )}
     </div>
   );
 }

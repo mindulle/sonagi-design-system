@@ -34,5 +34,16 @@ figma.ui.onmessage = async (msg) => {
     } catch (error) {
       figma.ui.postMessage({ type: 'error', payload: error.toString() });
     }
+  } else if (msg.type === 'execute-script') {
+    try {
+      const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+      const fn = new AsyncFunction('figma', msg.script);
+      await fn(figma);
+      figma.notify('⚡ [Agent Bridge] 스크립트 실행 완료!');
+      figma.ui.postMessage({ type: 'script-executed-success' });
+    } catch (e) {
+      figma.notify(`❌ [Agent Bridge] 에러: ${e.message}`);
+      figma.ui.postMessage({ type: 'error', payload: e.toString() });
+    }
   }
 };
