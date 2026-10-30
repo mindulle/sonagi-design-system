@@ -41,50 +41,62 @@ body {
   font-family: var(--sng-font-sans, system-ui, -apple-system, sans-serif);
 }
 
-/* Sidebar Hierarchy & Spacing Polish */
-aside.fd-sidebar {
-  padding-top: 8px;
-}
+/* ==========================================================================
+   MDS Official Spacing & Sidebar Polish (Matching Official Fumadocs Spec)
+   Tokens: --sng-space-gap-xs (4px), --sng-space-gap-sm (8px), --sng-space-gap-group (24px)
+   ========================================================================== */
 
-/* Section Dividers (개요, 디자인 시스템) */
+/* Category Section Titles (개요, 디자인 시스템) */
 aside.fd-sidebar p {
-  margin-top: 20px !important;
-  margin-bottom: 6px !important;
+  margin-top: 24px !important;
+  margin-bottom: 8px !important;
   font-size: 11px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--color-fd-muted-foreground) !important;
-  padding-left: 8px;
+  padding-left: 10px;
 }
 
 aside.fd-sidebar p:first-of-type {
-  margin-top: 8px !important;
+  margin-top: 14px !important;
 }
 
-/* Folder Header Buttons (파운데이션, 컴포넌트) */
-aside.fd-sidebar button[aria-expanded] {
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-  font-weight: 600 !important;
-  color: var(--color-fd-foreground) !important;
-  border-radius: 6px !important;
-}
-
-/* Sidebar Links (Button, Badge, etc.) */
+/* Sidebar List Items & Folder Headers (Clean Sleek Row Style) */
+aside.fd-sidebar button[aria-expanded],
 aside.fd-sidebar a {
   margin-top: 2px !important;
   margin-bottom: 2px !important;
-  font-size: 13px !important;
+  padding: 8px 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  background: transparent !important;
   border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
   transition: all 120ms ease-in-out;
+}
+
+/* Hover State */
+aside.fd-sidebar button[aria-expanded]:hover,
+aside.fd-sidebar a:hover {
+  background-color: rgba(255, 200, 55, 0.08) !important;
+  color: var(--color-fd-foreground) !important;
+}
+
+/* Active Item (Currently Selected Page) */
+aside.fd-sidebar a[data-active='true'] {
+  background-color: rgba(255, 200, 55, 0.14) !important;
+  color: #ffc837 !important;
+  font-weight: 600 !important;
 }
 
 /* Sub-items branch border */
 aside.fd-sidebar div[data-state='open'] {
-  margin-top: 4px;
-  margin-bottom: 8px;
-  margin-left: 12px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  margin-left: 16px;
   padding-left: 8px;
   border-left: 1.5px solid var(--color-fd-border);
 }
