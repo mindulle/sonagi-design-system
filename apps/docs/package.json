@@ -7,7 +7,7 @@
     "dev": "fumadocs-mdx && next dev --port 3010",
     "build": "fumadocs-mdx && next build",
     "start": "next start --port 3010",
-    "lint": "tsc --noEmit"
+    "lint": "fumadocs-mdx && tsc --noEmit"
   },
   "dependencies": {
     "@mindulle/icons": "workspace:*",
