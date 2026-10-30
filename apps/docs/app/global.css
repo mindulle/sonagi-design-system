@@ -42,26 +42,36 @@ body {
 }
 
 /* ==========================================================================
-   MDS Official Spacing & Sidebar Polish (Matching Official Fumadocs Spec)
-   Tokens: --sng-space-gap-xs (4px), --sng-space-gap-sm (8px), --sng-space-gap-group (24px)
+   MDS Official Spacing & Sidebar Section Separation
+   Tokens: --sng-space-gap-group (24px), --sng-space-gap-item (16px)
    ========================================================================== */
 
-/* Category Section Titles (개요, 디자인 시스템) */
+/* Distinct Category Section Dividers (개요, 파운데이션, 컴포넌트) */
 aside.fd-sidebar p {
-  margin-top: 24px !important;
+  margin-top: 28px !important;
   margin-bottom: 8px !important;
+  padding-top: 18px !important;
+  padding-bottom: 4px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  border-top: 1px solid var(--color-fd-border) !important;
   font-size: 11px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.06em;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
   color: var(--color-fd-muted-foreground) !important;
-  padding-left: 10px;
+  opacity: 0.85;
 }
 
-aside.fd-sidebar p:first-of-type {
-  margin-top: 14px !important;
+/* First section title (개요) does NOT need a top border */
+aside.fd-sidebar p:first-of-type,
+aside.fd-sidebar [data-viewport] > p:first-child {
+  margin-top: 10px !important;
+  padding-top: 0 !important;
+  border-top: none !important;
 }
 
-/* Sidebar List Items & Folder Headers (Clean Sleek Row Style) */
+/* Sidebar List Items (Clean Sleek Row Style) */
 aside.fd-sidebar button[aria-expanded],
 aside.fd-sidebar a {
   margin-top: 2px !important;

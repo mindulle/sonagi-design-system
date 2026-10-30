@@ -1,11 +1,11 @@
 {
   "title": "민들레 문서",
   "pages": [
-    "---개요---",
+    "---개요 (OVERVIEW)---",
     "index",
-    "---파운데이션 (Foundations)---",
+    "---파운데이션 (FOUNDATIONS)---",
     "foundations/colors",
-    "---컴포넌트 (Components)---",
+    "---컴포넌트 (COMPONENTS)---",
     "components/button",
     "components/badge",
     "components/card",
