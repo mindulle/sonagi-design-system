@@ -40,3 +40,51 @@ aside.fd-sidebar {
 body {
   font-family: var(--sng-font-sans, system-ui, -apple-system, sans-serif);
 }
+
+/* Sidebar Hierarchy & Spacing Polish */
+aside.fd-sidebar {
+  padding-top: 8px;
+}
+
+/* Section Dividers (개요, 디자인 시스템) */
+aside.fd-sidebar p {
+  margin-top: 20px !important;
+  margin-bottom: 6px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-fd-muted-foreground) !important;
+  padding-left: 8px;
+}
+
+aside.fd-sidebar p:first-of-type {
+  margin-top: 8px !important;
+}
+
+/* Folder Header Buttons (파운데이션, 컴포넌트) */
+aside.fd-sidebar button[aria-expanded] {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+  font-weight: 600 !important;
+  color: var(--color-fd-foreground) !important;
+  border-radius: 6px !important;
+}
+
+/* Sidebar Links (Button, Badge, etc.) */
+aside.fd-sidebar a {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  font-size: 13px !important;
+  border-radius: 6px !important;
+  transition: all 120ms ease-in-out;
+}
+
+/* Sub-items branch border */
+aside.fd-sidebar div[data-state='open'] {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+  padding-left: 8px;
+  border-left: 1.5px solid var(--color-fd-border);
+}
