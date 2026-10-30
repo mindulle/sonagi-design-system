@@ -1,10 +1,10 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "meta": {
-    "name": "Sonagi Design System",
-    "version": "4.0.0",
-    "updated": "2026-08-27",
-    "description": "Semantic tokens — ADR 0001 (light, amended by ADR 0006 §4) + ADR 0006 (dark). OKLCH hue 24-34 derived. WCAG verified against BOTH bg-base and bg-surface."
+    "name": "Mindulle Design System v0.1.0",
+    "version": "0.1.0",
+    "updated": "2026-10-23",
+    "description": "Semantic tokens — Mindulle Design System v0.1.0 (MDS). ADR 0001 (light) + ADR 0006 (dark, OKLCH hue 30) + ADR 0013."
   },
   "semantic": {
     "light": {

@@ -1,15 +1,16 @@
-# Sonagi
+# Mindulle Design System v0.1.0 (MDS)
 
-> Category: Korean Product
+> Category: Korean Product  
+> Slogan: **"겨울 끝, 민들레." (At Winter's End, Dandelion.)**
 
 ## 🎯 Figma SSOT (정본)
 
 |                      |                                                                             |
 | -------------------- | --------------------------------------------------------------------------- |
-| **파일**             | `Sonagi Design System V3`                                                   |
+| **파일**             | `Mindulle Design System v0.1.0`                                             |
 | **키**               | `AEoW19jmlUh3rFgzhhV1vH`                                                    |
 | **URL**              | https://www.figma.com/design/AEoW19jmlUh3rFgzhhV1vH/Sonagi-Design-System-V3 |
-| **Foundations 보드** | node `198:2974` — "Sonagi Foundations (SSOT Live Sync)"                     |
+| **Foundations 보드** | node `198:2974` — "Mindulle Foundations (SSOT Live Sync)"                   |
 
 **이 파일이 유일한 디자인 정본입니다.** 아래 두 파일은 폐기된 이력이므로 참조하지 마십시오.
 

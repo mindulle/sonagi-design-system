@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { addPropertyControls, ControlType } from "framer";
+// @ts-ignore
 import * as THREE from "https://esm.sh/three@0.170.0";
 
 interface SonicDroplet3DProps {
@@ -71,6 +72,7 @@ export default function SonicDroplet3D({
 
     // 3. Central Glass Sonic Droplet (MeshPhysicalMaterial)
     const dropletGroup = new THREE.Group();
+    dropletGroup.position.set(0, 0.45, -0.8);
     scene.add(dropletGroup);
 
     const dropletGeometry = new THREE.IcosahedronGeometry(0.95, 12);
@@ -99,12 +101,12 @@ export default function SonicDroplet3D({
     });
 
     const glassMesh = new THREE.Mesh(dropletGeometry, glassMaterial);
-    glassMesh.position.set(-1.2, 0.3, 0);
+    glassMesh.position.set(-1.05, 0.35, 0);
     dropletGroup.add(glassMesh);
 
-    // 4. Golden Seed Core (Dandelion Glow)
+    // 4. Golden Seed Core (Dandelion Glow - Positioned higher to clear text)
     const seedGroup = new THREE.Group();
-    seedGroup.position.set(1.3, -0.35, -0.6);
+    seedGroup.position.set(1.15, -0.05, -0.5);
     dropletGroup.add(seedGroup);
 
     const seedGeometry = new THREE.SphereGeometry(0.55, 48, 48);
