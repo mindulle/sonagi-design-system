@@ -89,7 +89,7 @@ export default function HomePage() {
             <div className="font-mono text-xs text-amber-500 mb-2">03 / DUAL MATRIX</div>
             <h3 className="text-lg font-bold mb-2">W3C Light &amp; Dark</h3>
             <p className="text-sm text-fd-muted-foreground">
-              옵시디언 다크(#060911)와 골드(#FFC837)를 품은 단일 SSOT 토큰 매트릭스 및 실시간 코드 복사.
+              회색돌 다크(#12151d)와 민들레 골드(#ffc837)를 품은 단일 SSOT 토큰 매트릭스 및 실시간 코드 복사.
             </p>
           </div>
         </div>
