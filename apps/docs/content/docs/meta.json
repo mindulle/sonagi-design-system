@@ -1,4 +1,4 @@
 {
   "title": "민들레 문서",
-  "pages": ["index", "foundations", "components"]
+  "pages": ["---개요---", "index", "---디자인 시스템---", "foundations", "components"]
 }

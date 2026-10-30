@@ -28,7 +28,7 @@ interface ComponentPreviewProps {
 export function ComponentPreview({ name, defaultProps = {} }: ComponentPreviewProps) {
   const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview');
   const [copied, setCopied] = useState(false);
-  const [sandboxTheme, setSandboxTheme] = useState<'light' | 'dark'>('dark');
+  const [sandboxTheme, setSandboxTheme] = useState<'light' | 'dark'>('light');
 
   // Interactive state
   const [variant, setVariant] = useState<any>(defaultProps.variant || 'primary');
@@ -356,9 +356,13 @@ export function ComponentPreview({ name, defaultProps = {} }: ComponentPreviewPr
 
           <button
             onClick={copyCode}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-fd-background border border-fd-border text-fd-foreground hover:bg-fd-muted transition-colors font-mono"
+            className="flex items-center gap-1.5 px-3 py-1 rounded bg-fd-background border border-fd-border text-fd-foreground hover:bg-fd-muted transition-colors text-xs font-medium shrink-0 whitespace-nowrap"
           >
-            {copied ? '✓ 복사완료' : '코드 복사'}
+            <svg className="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" strokeWidth="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" strokeWidth="2" />
+            </svg>
+            <span>{copied ? '완료' : '복사'}</span>
           </button>
         </div>
       </div>
