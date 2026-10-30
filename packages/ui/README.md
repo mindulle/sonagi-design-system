@@ -1,7 +1,7 @@
 # @mindulle/ui
 
-Sonagi 디자인 시스템의 공식 UI 컴포넌트 라이브러리입니다.
-이 패키지는 프레임워크 비종속적인 스타일(Core CSS)과 React 래퍼 컴포넌트들을 제공합니다.
+민들레 디자인 시스템(Mindulle Design System, MDS v0.1.0)의 공식 UI 컴포넌트 라이브러리입니다.
+The True 2px Stem, 4px Weathered Radius, No Soft Shadows 조형 헌법과 `@mindulle/tokens` 기반의 React 컴포넌트를 제공합니다.
 
 ## 설치
 

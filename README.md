@@ -1,27 +1,33 @@
-# Sonagi Design System 🌧️
+# Mindulle Design System (MDS v0.1.0) 🌼
 
 [![Storybook](https://img.shields.io/badge/Storybook-Live_Docs-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://main--6a74ac58510f8ede8dcbbdbd.chromatic.com/)
-![Design System](https://img.shields.io/badge/Design%20System-Sonagi-1c2c4d?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18.3+-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Design System](https://img.shields.io/badge/Design%20System-Mindulle%20MDS-060911?style=for-the-badge)
+![React](https://img.shields.io/badge/React-19.0+-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![pnpm](https://img.shields.io/badge/pnpm-11.x-f69220?style=for-the-badge&logo=pnpm&logoColor=white)
 
-> 🎨 **[온라인 Storybook 바로가기 🔗](https://main--6a74ac58510f8ede8dcbbdbd.chromatic.com/)**
+> **"겨울 끝, 민들레."** (At Winter's End, Dandelion.)  
+> 민들레 스튜디오(Mindulle Studio)와 산하 프로덕트 생태계의 공식 디자인 시스템 모노레포입니다. (인프라/엔진: Sonagi)
 
-한국적 정서가 담긴 다크-네이비 기반, 비오는 날의 푸른빛(Rain-blue) 악센트를 사용하는 **Sonagi(소나기)** 프로덕트 생태계의 공식 디자인 시스템 모노레포입니다.
-
-데이터 분석 대시보드처럼 밀도 높은 화면에서도 가독성을 잃지 않으며, 인간적이고 따뜻한 느낌을 유지하는 것을 목표로 합니다.
+- **The True 2px Stem (줄기선)**: 비바람에도 꺾이지 않는 단단한 줄기와 자아를 지켜내는 선명한 2px 경계선.
+- **4px Weathered Radius**: 인위적이지 않게 자연스럽게 마모된 4px 모듈러 곡률.
+- **No Soft Shadows**: 모호한 안개와 기만을 배제하고 선명한 평면으로 공간을 규정.
+- **W3C Single SSOT**: 옵시디언 다크(`#060911`)와 민들레 골드(`#FFC837`) 기반의 단일 라이트/다크 모드.
 
 <br/>
 
-## 📦 패키지 구성 (Packages)
+## 📦 모노레포 구성 (Monorepo Packages & Apps)
 
 이 저장소는 `pnpm` workspace 및 `Turborepo`를 활용한 모노레포로 구성되어 있습니다.
 
-| 패키지                     | 설명                                                                    | 문서                                      |
-| -------------------------- | ----------------------------------------------------------------------- | ----------------------------------------- |
-| **`@mindulle/tokens`**     | 디자인 토큰 (색상, 타이포그래피, 간격 등) 및 프레임워크 독립적 CSS 변수 | [README](./packages/tokens/README.md)     |
-| **`@mindulle/ui`**         | `@mindulle/tokens` 기반으로 제작된 React UI 컴포넌트 라이브러리         | [README](./packages/ui/README.md)         |
-| **`@mindulle/discord-ui`** | 디스코드 봇 메시지에서 디자인 룰을 강제하는 Embed 래퍼                  | [README](./packages/discord-ui/README.md) |
+| 패키지 / 앱                  | 역할 및 설명                                               | 경로 / 문서                                                  |
+| :--------------------------- | :--------------------------------------------------------- | :----------------------------------------------------------- |
+| **`@mindulle/docs`**         | FumaDocs 기반 컴포넌트 실시간 프리뷰 및 W3C 토큰 공식 문서 | [`apps/docs`](./apps/docs)                                   |
+| **`portal`**                 | 3D 글래스 파빌리온 및 5대 전시실 브랜드 쇼룸               | [`apps/portal`](./apps/portal)                               |
+| **`@mindulle/tokens`**       | W3C 표준 Primitives & Semantics 토큰 (CSS Variables SSOT)  | [`packages/tokens`](./packages/tokens/README.md)             |
+| **`@mindulle/ui`**           | 16종 UI 컴포넌트 라이브러리 및 `MindulleLogo` 심볼         | [`packages/ui`](./packages/ui/README.md)                     |
+| **`@mindulle/icons`**        | 24x24 2px stroke 시스템 벡터 아이콘                        | [`packages/icons`](./packages/icons/README.md)               |
+| **`@mindulle/brand-assets`** | 공식 CI 마스터 인장, 락업, 소셜 카드, 벡터 에셋 킷         | [`packages/brand-assets`](./packages/brand-assets/README.md) |
+| **`@mindulle/discord-ui`**   | 디스코드 봇 메시지 디자인 가이드라인 래퍼                  | [`packages/discord-ui`](./packages/discord-ui/README.md)     |
 
 <br/>
 

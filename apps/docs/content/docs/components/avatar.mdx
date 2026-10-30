@@ -1,0 +1,18 @@
+---
+title: 아바타 (Avatar)
+description: 사용자 프로필 이미지 또는 이니셜 플레이스홀더를 표현하는 컴포넌트
+---
+
+# 아바타 (Avatar)
+
+이미지 URL이 없을 경우 이니셜 텍스트로 자연스럽게 폴백(Fallback) 처리됩니다.
+
+<ComponentPreview name="Avatar" />
+
+## Props 명세
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | 아바타 크기 (32px, 40px, 56px) |
+| `src` | `string` | — | 이미지 리소스 URL |
+| `initials` | `string` | `'?'` | 이미지 부재 시 대체 이니셜 (최대 2자) |

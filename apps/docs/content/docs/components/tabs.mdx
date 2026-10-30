@@ -1,0 +1,31 @@
+---
+title: 탭 (Tabs)
+description: 동일한 컨텍스트 내에서 콘텐츠 영역을 전환하는 내비게이션
+---
+
+# 탭 (Tabs)
+
+가로 스크롤 및 포커스 링을 지원하며, `Tabs.Container`와 `Tabs.Item`의 합성 컴포넌트로 동작합니다.
+
+<ComponentPreview name="Tabs" />
+
+## 사용 예제
+
+```tsx
+import { Tabs } from '@mindulle/ui';
+
+export function TabExample() {
+  const [tab, setTab] = useState('all');
+
+  return (
+    <Tabs.Container>
+      <Tabs.Item isActive={tab === 'all'} onClick={() => setTab('all')}>
+        전체보기
+      </Tabs.Item>
+      <Tabs.Item isActive={tab === 'docs'} onClick={() => setTab('docs')}>
+        문서
+      </Tabs.Item>
+    </Tabs.Container>
+  );
+}
+```

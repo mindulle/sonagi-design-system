@@ -1,0 +1,19 @@
+---
+title: 호버 프리뷰 (HoverPreview)
+description: 링크나 텍스트 위에 마우스를 올렸을 때 위키 노트 미리보기를 팝업으로 노출하는 마이크로 인터랙션
+---
+
+# 호버 프리뷰 (HoverPreview)
+
+문맥을 벗어나지 않고도 외부 링크나 세부 노트의 제목과 요약을 즉시 탐색할 수 있습니다.
+
+<ComponentPreview name="HoverPreview" />
+
+## Props 명세
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `children` | `React.ReactNode` | — | 링크 텍스트 본문 |
+| `slug` | `string` | — | 대상 노트 식별자 (slug) |
+| `fetchNote` | `(slug: string) => Promise<{ title: string; excerpt: string }>` | — | 비동기 요약 페처 함수 |
+| `href` | `string` | — | 클릭 시 이동할 링크 URL |

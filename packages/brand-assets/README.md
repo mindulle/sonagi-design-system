@@ -2,8 +2,8 @@
 
 ## Mindulle Studio & Sonagi Tooling Suite Official Brand Kit
 
-> **"기계가 완벽해야 사람이 쉴 수 있다."**  
-> 민들레 스튜디오(Mindulle Studio)와 산하 사내 도구 생태계 소나기(Sonagi)의 공식 시각 자산 정규 릴리즈 패키지입니다.
+> **"겨울 끝, 민들레."** (At Winter's End, Dandelion.)  
+> 민들레 스튜디오(Mindulle Studio)와 민들레 디자인 시스템(MDS v0.1.0)의 공식 시각 자산 정규 릴리즈 패키지입니다. (엔진/도구: Sonagi)
 
 ---
 

@@ -143,8 +143,8 @@ export const Room04FiveSceneries: React.FC = () => {
       roomSub="POETIC MANIFESTO POSTER GALLERY • TIER 1"
       metaRight="EMOTIONAL GROUNDING • 5 CINEMATIC SCENERIES"
       article="ATELIER CONSTITUTION • ARTICLE IV"
-      quoteKo='"기계가 완벽해야 사람이 쉴 수 있다."'
-      quoteEn="When the machine is flawless, human soul finds its solace."
+      quoteKo='"겨울 끝, 민들레."'
+      quoteEn="At winter's end, dandelion blooms through the stone."
       progress="PROGRESS  04  /  05"
       nextLabel="SCROLL TO ENTER ROOM 05 ↓"
       nextSub="The Colophon & Master Seal"

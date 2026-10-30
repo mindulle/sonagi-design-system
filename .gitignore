@@ -4,6 +4,9 @@ dist/
 *.tgz
 .DS_Store
 .turbo/
+.next/
+.source/
+out/
 
 *storybook.log
 storybook-static

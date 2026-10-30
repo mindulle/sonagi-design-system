@@ -351,7 +351,7 @@ export const LandingV2: React.FC = () => {
               ARTICLE IV • CINEMATIC SCENOGRAPHY
             </span>
             <h2 className="font-serif font-bold text-3xl md:text-5xl text-white tracking-tight">
-              "기계가 완벽해야 사람이 쉴 수 있다."
+              "겨울 끝, 민들레."
             </h2>
             <p className="font-sans text-sm text-[#94a3b8] leading-relaxed pt-1">
               단순한 기능 설명을 넘어, 삶의 감각에 직접 닿는 5가지 시적 정서의 단면들.

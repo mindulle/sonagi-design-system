@@ -1,0 +1,20 @@
+---
+title: 버튼 (Button)
+description: 사용자의 액션을 유도하는 인터랙티브 버튼 컴포넌트
+---
+
+# 버튼 (Button)
+
+버튼 컴포넌트는 The True 2px Stem 경계선과 3단계 사이즈 스케일을 제공합니다.
+
+<ComponentPreview name="Button" defaultProps={{ variant: 'primary', size: 'md' }} />
+
+## Props 명세
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `variant` | `'primary' \| 'secondary' \| 'danger'` | `'primary'` | 버튼의 시각적 중요도 및 역할 |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | 버튼의 패딩 및 폰트 크기 |
+| `state` | `'default' \| 'hover' \| 'active' \| 'disabled'` | `'default'` | 강제 시각 상태 주입 (스토리북용) |
+| `disabled` | `boolean` | `false` | 클릭 비활성화 여부 |
+| `children` | `React.ReactNode` | — | 버튼 내부 라벨 텍스트 |

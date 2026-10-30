@@ -105,13 +105,13 @@ export const Room05ColophonSeal: React.FC = () => {
               MINDULLE ATELIER • SOVEREIGN SOFTWARE FORGE
             </span>
             <h2 className="font-serif font-bold text-3xl md:text-5xl text-white tracking-tight">
-              "기계가 완벽해야 사람이 쉴 수 있다."
+              "겨울 끝, 민들레."
             </h2>
             <p className="font-serif italic text-base md:text-lg text-[#ffd166]/90">
-              When the machine is flawless, the human soul finds its solace.
+              At winter's end, dandelion blooms with unwavering resolve.
             </p>
             <p className="font-sans text-xs md:text-sm text-[#94a3b8] leading-relaxed pt-1">
-              우리는 가장 엄격하고 단단한 2px 건축의 성벽을 짓습니다. 당신이 차가운 화면을 끄고, 삶의 가장 소중한 장면 속으로 걸어 들어갈 수 있도록.
+              비바람에도 꺾이지 않는 단단한 2px 줄기선과 마모된 4px 곡률로 삶의 진실된 쉼터를 짓습니다.
             </p>
           </div>
 

@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+@import '@mindulle/tokens/css';
+@import '@mindulle/ui/css';
+
+@source '../node_modules/fumadocs-ui/dist/**/*.js';
+@source '../../packages/ui/src/**/*.{ts,tsx}';
+
+:root {
+  --color-fd-background: #fbfbfa;
+  --color-fd-foreground: #18181b;
+  --color-fd-primary: #b86a04;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-muted: #f4f4f5;
+  --color-fd-muted-foreground: #71717a;
+  --color-fd-border: #e4e4e7;
+  --color-fd-card: #ffffff;
+  --color-fd-card-foreground: #18181b;
+}
+
+.dark {
+  --color-fd-background: #12151d;
+  --color-fd-foreground: #f1f5f9;
+  --color-fd-primary: #ffc837;
+  --color-fd-primary-foreground: #12151d;
+  --color-fd-muted: #1b202c;
+  --color-fd-muted-foreground: #94a3b8;
+  --color-fd-border: #2c3547;
+  --color-fd-card: #1b202c;
+  --color-fd-card-foreground: #f1f5f9;
+}
+
+/* MDS 2px Stem styling on FumaDocs elements */
+nav.fd-nav,
+aside.fd-sidebar {
+  border-width: 2px !important;
+}
+
+body {
+  font-family: var(--sng-font-sans, system-ui, -apple-system, sans-serif);
+}

@@ -1,0 +1,32 @@
+---
+title: 민들레 로고 (MindulleLogo)
+description: 민들레 디자인 시스템(MDS v0.1.0) 공식 마스터 벡터 심볼
+---
+
+# 민들레 로고 (MindulleLogo)
+
+비바람을 가르는 비대칭 돛(Dynamic Wing-Sail)과 황금 씨앗(Golden Seed) 모티프를 담은 공식 SVG 컴포넌트입니다.
+
+<ComponentPreview name="MindulleLogo" />
+
+## Props 명세
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `size` | `number` | `32` | SVG 심볼 크기(width/height) |
+| `theme` | `'auto' \| 'dark' \| 'light'` | `'auto'` | 렌더링 컬러 테마 |
+| `withBackground` | `boolean` | `false` | 라운드 배경 박스 렌더링 여부 |
+
+## 하위 호환성 (Backward Compatibility)
+
+기존 레거시 코드의 중단을 방지하기 위해 `SonagiLogo`도 동일한 패키지에서 alias로 함께 제공됩니다:
+
+```tsx
+import { MindulleLogo, SonagiLogo } from '@mindulle/ui';
+
+// 권장 (MDS v0.1.0)
+<MindulleLogo size={40} />
+
+// 레거시 호환
+<SonagiLogo height={28} />
+```
