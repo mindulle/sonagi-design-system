@@ -16,10 +16,13 @@ describe('Token Build Output Verification', () => {
     expect(cssContent).toContain('[data-theme="dark"]');
     expect(cssContent).toContain('[data-theme="light"]');
 
-    // 필수 토큰 존재 여부
+    // 필수 토큰 존재 여부 (--sng- 및 --mds- 듀얼 지원)
     expect(cssContent).toContain('--sng-color-brand-primary');
+    expect(cssContent).toContain('--mds-color-brand-primary');
     expect(cssContent).toContain('--sng-font-sans');
+    expect(cssContent).toContain('--mds-font-sans');
     expect(cssContent).toContain('--sng-spacing-4');
+    expect(cssContent).toContain('--mds-spacing-4');
   });
 
   it('should generate a valid CJS export (index.js)', async () => {
@@ -30,7 +33,9 @@ describe('Token Build Output Verification', () => {
     expect(tokens).toBeDefined();
     expect(typeof tokens).toBe('object');
     expect(tokens['--sng-primitive-blue-500']).toBeDefined();
+    expect(tokens['--mds-primitive-blue-500']).toBeDefined();
     expect(tokens['--sng-color-text-primary']).toBeDefined();
+    expect(tokens['--mds-color-text-primary']).toBeDefined();
   });
 
   it('should generate a valid ESM export (index.mjs)', () => {

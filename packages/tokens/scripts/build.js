@@ -84,6 +84,10 @@ function generateCssBlock(selector, tokensDict) {
   let css = `${selector} {\n`;
   for (const [key, val] of Object.entries(tokensDict)) {
     css += `  ${key}: ${val};\n`;
+    if (key.startsWith('--sng-')) {
+      const mdsKey = key.replace('--sng-', '--mds-');
+      css += `  ${mdsKey}: var(${key});\n`;
+    }
   }
   css += `}\n\n`;
   return css;
@@ -120,12 +124,16 @@ function build() {
     cssOutput += `/* --- Core Typography, Layout & Elevation --- */\n`;
     cssOutput += generateCssBlock(':root', typoAndLayoutTokens);
 
-    cssOutput += `/* --- Semantic Tokens (Sonagi Core) --- */\n`;
-    cssOutput += generateCssBlock(':root, [data-theme="light"], [data-theme="sonagi-core"]', lightTokens);
+    cssOutput += `/* --- Semantic Tokens (MDS / Sonagi Core) --- */\n`;
+    cssOutput += generateCssBlock(':root, [data-theme="light"], [data-theme="sonagi-core"], [data-theme="mindulle"], [data-theme="mds"]', lightTokens);
     cssOutput += generateCssBlock('[data-theme="dark"]', darkTokens);
     cssOutput += `@media (prefers-color-scheme: dark) {\n  :root:not([data-theme="light"]) {\n`;
     for (const [key, val] of Object.entries(darkTokens)) {
       cssOutput += `    ${key}: ${val};\n`;
+      if (key.startsWith('--sng-')) {
+        const mdsKey = key.replace('--sng-', '--mds-');
+        cssOutput += `    ${mdsKey}: var(${key});\n`;
+      }
     }
     cssOutput += `  }\n}\n\n`;
   }
@@ -222,7 +230,14 @@ function build() {
   console.log(`✅  Generated index.html (Showcase)`);
 
   
-  const tokenEntries = Object.entries(flatTokens)
+  const allTokens = { ...flatTokens };
+  for (const [k, v] of Object.entries(flatTokens)) {
+    if (k.startsWith('--sng-')) {
+      allTokens[k.replace('--sng-', '--mds-')] = v;
+    }
+  }
+
+  const tokenEntries = Object.entries(allTokens)
     .map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`)
     .join(',\n');
 
