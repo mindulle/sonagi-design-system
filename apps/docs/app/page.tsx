@@ -75,9 +75,8 @@ export default function HomePage() {
         </h1>
 
         {/* Description text with break-keep */}
-        <p className="max-w-2xl text-sm sm:text-base md:text-lg text-fd-muted-foreground mt-5 mb-8 sm:mb-10 leading-relaxed break-keep">
-          The True 2px Stem(줄기선), 4px Weathered Radius, No Soft Shadows 조형 헌법과
-          W3C 표준 토큰으로 완성된 차세대 UI 컴포넌트 라이브러리입니다.
+        <p className="max-w-lg text-sm sm:text-base md:text-lg text-fd-muted-foreground mt-4 mb-7 sm:mb-9 leading-relaxed break-keep font-medium">
+          16종 인터랙티브 컴포넌트와 W3C 시맨틱 토큰 매트릭스.
         </p>
 
         {/* Quick terminal install snippet */}
