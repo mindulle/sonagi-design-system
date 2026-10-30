@@ -1,26 +1,29 @@
 {
   "title": "민들레 문서",
   "pages": [
-    "---개요 (OVERVIEW)---",
+    "---개요---",
     "index",
-    "---파운데이션 (FOUNDATIONS)---",
+    "---파운데이션---",
     "foundations/colors",
-    "---컴포넌트 (COMPONENTS)---",
+    "---기본 컴포넌트---",
     "components/button",
     "components/badge",
     "components/card",
-    "components/modal",
+    "components/mindulle-logo",
+    "---입력 폼---",
     "components/input",
     "components/textarea",
     "components/select",
     "components/checkbox",
     "components/radio",
+    "---내비게이션---",
     "components/tabs",
     "components/accordion",
     "components/pagination",
+    "---오버레이 및 표시---",
+    "components/modal",
     "components/avatar",
     "components/list-item",
-    "components/hover-preview",
-    "components/mindulle-logo"
+    "components/hover-preview"
   ]
 }
