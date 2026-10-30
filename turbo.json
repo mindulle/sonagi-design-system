@@ -3,7 +3,7 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "outputs": ["dist/**", ".next/**"],
+      "outputs": ["dist/**", ".next/**", "out/**"],
       "dependsOn": ["^build"]
     },
     "test": {

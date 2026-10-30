@@ -84,8 +84,6 @@ export default function Layout({ children }: { children: ReactNode }) {
     <DocsLayout
       tree={treeWithIcons}
       {...baseOptions}
-      nav={{ enabled: false }}
-      links={[]}
     >
       {children}
     </DocsLayout>

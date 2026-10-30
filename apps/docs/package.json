@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "fumadocs-mdx && next dev --port 3010",
     "build": "fumadocs-mdx && next build",
-    "start": "next start --port 3010",
+    "start": "npx --yes serve out -p 3010",
     "lint": "fumadocs-mdx && tsc --noEmit"
   },
   "dependencies": {

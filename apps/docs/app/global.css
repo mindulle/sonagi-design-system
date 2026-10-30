@@ -47,8 +47,7 @@ body {
    ========================================================================== */
 
 /* Section Titles (개요, 기본 컴포넌트, 입력 폼, 내비게이션, 오버레이) */
-aside.fd-sidebar p,
-aside#nd-sidebar p {
+:is([id*='sidebar'], aside.fd-sidebar) p {
   margin-top: 48px !important;
   margin-bottom: 10px !important;
   padding-left: 10px !important;
@@ -60,18 +59,15 @@ aside#nd-sidebar p {
 }
 
 /* First section title (개요) top margin — no extra gap above */
-aside.fd-sidebar p:first-of-type,
-aside#nd-sidebar p:first-of-type,
-aside.fd-sidebar [data-viewport] > p:first-child,
-aside#nd-sidebar [data-viewport] > p:first-child {
+:is([id*='sidebar'], aside.fd-sidebar) p:first-of-type,
+:is([id*='sidebar'], aside.fd-sidebar) [data-viewport] > p:first-child,
+:is([id*='sidebar'], aside.fd-sidebar) [data-radix-scroll-area-viewport] > p:first-child {
   margin-top: 12px !important;
 }
 
 /* Sidebar List Items (Clean Sleek Row Style) */
-aside.fd-sidebar button[aria-expanded],
-aside#nd-sidebar button[aria-expanded],
-aside.fd-sidebar a,
-aside#nd-sidebar a {
+:is([id*='sidebar'], aside.fd-sidebar) button[aria-expanded],
+:is([id*='sidebar'], aside.fd-sidebar) a {
   margin-top: 2px !important;
   margin-bottom: 2px !important;
   padding: 8px 10px !important;
@@ -87,18 +83,130 @@ aside#nd-sidebar a {
 }
 
 /* Hover State */
-aside.fd-sidebar button[aria-expanded]:hover,
-aside#nd-sidebar button[aria-expanded]:hover,
-aside.fd-sidebar a:hover,
-aside#nd-sidebar a:hover {
+:is([id*='sidebar'], aside.fd-sidebar) button[aria-expanded]:hover,
+:is([id*='sidebar'], aside.fd-sidebar) a:hover {
   background-color: rgba(255, 200, 55, 0.08) !important;
   color: var(--color-fd-foreground) !important;
 }
 
 /* Active Item (Currently Selected Page) */
-aside.fd-sidebar a[data-active='true'],
-aside#nd-sidebar a[data-active='true'] {
+:is([id*='sidebar'], aside.fd-sidebar) a[data-active='true'] {
   background-color: rgba(255, 200, 55, 0.14) !important;
   color: #ffc837 !important;
   font-weight: 600 !important;
+}
+
+/* ==========================================================================
+   Documentation Content Typography & Vertical Rhythm (Prose)
+   Fix cramped spacing on mobile and desktop
+   ========================================================================== */
+
+/* Anchor offset for headings when navigating via TOC on mobile and desktop */
+.prose :is(h1, h2, h3, h4, h5, h6) {
+  scroll-margin-top: 6rem !important;
+}
+
+/* Headings spacing and visual hierarchy */
+.prose h1 {
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.25rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+.prose h2 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid var(--color-fd-border) !important;
+  letter-spacing: -0.015em !important;
+}
+
+.prose h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 0.875rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+.prose h4 {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Paragraphs & Text */
+.prose p {
+  margin-top: 0.875rem !important;
+  margin-bottom: 1.25rem !important;
+  line-height: 1.8 !important;
+  font-size: 0.95rem !important;
+}
+
+/* Code blocks (pre, figure) - Give generous margin top and bottom */
+.prose
+  :is(figure, pre, div[data-rehype-pretty-code-fragment], div[data-rehype-pretty-code-figure]) {
+  margin-top: 1.25rem !important;
+  margin-bottom: 2.25rem !important;
+}
+
+/* Tables */
+.prose table {
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+/* Lists */
+.prose :is(ul, ol) {
+  margin-top: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.prose li {
+  margin-top: 0.375rem !important;
+  margin-bottom: 0.375rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Mobile specific breathing room */
+@media (max-width: 768px) {
+  /* Ensure page content has top buffer below mobile header */
+  article {
+    padding-top: 1.25rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .prose h2 {
+    margin-top: 3rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.35rem !important;
+  }
+
+  .prose h3 {
+    margin-top: 2.25rem !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 1.15rem !important;
+  }
+
+  .prose p {
+    font-size: 0.925rem !important;
+    line-height: 1.75 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .prose :is(figure, pre, div[data-rehype-pretty-code-fragment]) {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
 }

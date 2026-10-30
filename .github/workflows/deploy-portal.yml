@@ -1,4 +1,4 @@
-name: Deploy Portal & Storybook
+name: Deploy Docs to Cloudflare Pages
 
 on:
   push:
@@ -36,16 +36,13 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Tokens & Portal
+      - name: Build Monorepo (Tokens, UI & Docs)
         run: pnpm run build
 
-      - name: Build Storybook
-        run: pnpm --filter @mindulle/ui build-storybook
-
-      - name: Merge Storybook into Portal
+      - name: Optional Exhibition Showroom Mirror
         run: |
-          mkdir -p apps/portal/dist/storybook
-          cp -R packages/ui/storybook-static/* apps/portal/dist/storybook/
+          mkdir -p apps/docs/out/exhibition
+          cp -R apps/portal/dist/* apps/docs/out/exhibition/ 2>/dev/null || true
 
       - name: Install Wrangler globally
         run: npm install -g wrangler@3.90.0
@@ -55,5 +52,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy apps/portal/dist --project-name sonagi-design-system
+          command: pages deploy apps/docs/out --project-name sonagi-design-system
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
