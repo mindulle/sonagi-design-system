@@ -81,8 +81,8 @@ export default function HomePage() {
         </p>
 
         {/* Quick terminal install snippet */}
-        <div className="mb-8 inline-flex items-center gap-2 px-4 py-2.5 rounded-sm border-2 border-fd-border bg-fd-card/90 backdrop-blur-sm font-mono text-xs sm:text-sm text-fd-foreground shadow-sm max-w-full overflow-x-auto">
-          <Terminal className="size-4 text-amber-500 shrink-0" />
+        <div className="mb-8 inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-sm border-2 border-fd-border bg-fd-card/90 backdrop-blur-sm font-mono text-[11px] sm:text-sm text-fd-foreground shadow-sm max-w-full overflow-x-auto whitespace-nowrap">
+          <Terminal className="size-3.5 sm:size-4 text-amber-500 shrink-0" />
           <span className="select-all tracking-tight font-medium text-amber-500/90">$</span>
           <span className="select-all">pnpm add @mindulle/tokens @mindulle/ui</span>
         </div>
