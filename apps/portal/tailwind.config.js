@@ -8,17 +8,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        sng: {
-          dark: '#060911',
-          card: '#090d16',
-          surface: '#101524',
-          border: '#1e2430',
+        mds: {
+          dark: 'var(--mds-color-background-base, #12151d)',
+          card: 'var(--mds-color-background-surface, #1b202c)',
+          surface: 'var(--mds-color-background-elevated, #242b3b)',
+          border: 'var(--mds-color-border-default, #2c3547)',
+          'border-subtle': 'var(--mds-color-border-subtle, #1f2635)',
+          dandelion: 'var(--mds-color-brand-primary, #ffc837)',
+          gold: 'var(--mds-color-brand-accent, #ffd166)',
           rain: '#4A90E2',
           cyan: '#00ffcc',
-          dandelion: '#ffd166',
+          muted: 'var(--mds-color-text-muted, #64748b)',
+        },
+        sng: {
+          dark: 'var(--sng-color-background-base, #12151d)',
+          card: 'var(--sng-color-background-surface, #1b202c)',
+          surface: 'var(--sng-color-background-elevated, #242b3b)',
+          border: 'var(--sng-color-border-default, #2c3547)',
+          'border-subtle': 'var(--sng-color-border-subtle, #1f2635)',
+          dandelion: 'var(--sng-color-brand-primary, #ffc837)',
+          gold: 'var(--sng-color-brand-accent, #ffd166)',
+          rain: '#4A90E2',
+          cyan: '#00ffcc',
           burgundy: '#47211b',
           rose: '#d2645f',
-          muted: '#8b949e',
+          muted: 'var(--sng-color-text-muted, #64748b)',
         },
       },
       borderRadius: {

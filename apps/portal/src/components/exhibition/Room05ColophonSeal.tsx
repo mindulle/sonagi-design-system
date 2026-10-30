@@ -90,7 +90,7 @@ export const Room05ColophonSeal: React.FC = () => {
               </svg>
             </div>
           </div>
-          <span className="font-mono font-bold text-xs text-[#ffd166] tracking-widest mt-4">
+          <span className="font-mono font-bold text-xs text-mds-gold tracking-widest mt-4">
             MINDULLE ATELIER MASTER SEAL • V0.1.0
           </span>
         </div>
@@ -101,16 +101,16 @@ export const Room05ColophonSeal: React.FC = () => {
         <div className="flex-1 max-w-2xl flex flex-col space-y-6">
           {/* Header */}
           <div className="flex flex-col space-y-2">
-            <span className="font-mono font-bold text-[11px] text-[#ffd166] tracking-widest uppercase">
+            <span className="font-mono font-bold text-[11px] text-mds-gold tracking-widest uppercase">
               MINDULLE ATELIER • SOVEREIGN SOFTWARE FORGE
             </span>
             <h2 className="font-serif font-bold text-3xl md:text-5xl text-white tracking-tight">
               "겨울 끝, 민들레."
             </h2>
-            <p className="font-serif italic text-base md:text-lg text-[#ffd166]/90">
+            <p className="font-serif italic text-base md:text-lg text-mds-gold/90">
               At winter's end, dandelion blooms with unwavering resolve.
             </p>
-            <p className="font-sans text-xs md:text-sm text-[#94a3b8] leading-relaxed pt-1">
+            <p className="font-sans text-xs md:text-sm text-mds-muted leading-relaxed pt-1">
               비바람에도 꺾이지 않는 단단한 2px 줄기선과 마모된 4px 곡률로 삶의 진실된 쉼터를 짓습니다.
             </p>
           </div>
@@ -120,17 +120,17 @@ export const Room05ColophonSeal: React.FC = () => {
             {credits.map((c) => (
               <div
                 key={c.num}
-                className="p-4 rounded-sm bg-[#090d16] border border-[#30363d] flex flex-col justify-between space-y-2 shadow-lg"
+                className="p-4 rounded-sm bg-mds-card border border-mds-border flex flex-col justify-between space-y-2 shadow-lg"
               >
                 <div>
-                  <span className="font-mono font-bold text-[10px] text-[#4A90E2] tracking-wider block mb-1">
+                  <span className="font-mono font-bold text-[10px] text-mds-rain tracking-wider block mb-1">
                     {c.num}
                   </span>
                   <h4 className="font-mono font-bold text-xs text-white">
                     {c.title}
                   </h4>
                 </div>
-                <p className="font-sans text-[11px] text-[#94a3b8] leading-relaxed">
+                <p className="font-sans text-[11px] text-mds-muted leading-relaxed">
                   {c.desc}
                 </p>
               </div>
@@ -143,7 +143,7 @@ export const Room05ColophonSeal: React.FC = () => {
               href="https://github.com/mindulle/sonagi-design-system"
               target="_blank"
               rel="noreferrer"
-              className="px-8 py-3.5 bg-[#ffd166] text-black font-mono font-bold text-xs tracking-wider rounded-sm hover:bg-[#ffd166]/90 transition-all shadow-lg shadow-[#ffd166]/20"
+              className="px-8 py-3.5 bg-mds-gold text-black font-mono font-bold text-xs tracking-wider rounded-sm hover:bg-mds-gold/90 transition-all shadow-lg shadow-mds-gold/20"
             >
               ENTER THE ATELIER ➔
             </a>
@@ -151,7 +151,7 @@ export const Room05ColophonSeal: React.FC = () => {
               href="https://github.com/mindulle"
               target="_blank"
               rel="noreferrer"
-              className="px-8 py-3.5 bg-[#090d16] border-2 border-[#30363d] text-white font-mono font-bold text-xs tracking-wider rounded-sm hover:border-[#ffd166] transition-all"
+              className="px-8 py-3.5 bg-mds-card border-2 border-mds-border text-white font-mono font-bold text-xs tracking-wider rounded-sm hover:border-mds-gold transition-all"
             >
               EXPLORE CODE REPOSITORY
             </a>

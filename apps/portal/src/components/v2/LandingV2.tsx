@@ -146,7 +146,7 @@ export const LandingV2: React.FC = () => {
       {/* 01. HERO : STICKY PIN & ZOOM THREE.JS (200vh Track) */}
       {/* ───────────────────────────────────────────────────────────── */}
       <section ref={heroRef} className="relative w-full h-[200vh]">
-        <div className="sticky top-0 w-full h-screen flex flex-col justify-between p-6 pt-24 md:p-12 md:pt-24 overflow-hidden border-b-2 border-[#30363d]/60">
+        <div className="sticky top-0 w-full h-screen flex flex-col justify-between p-6 pt-24 md:p-12 md:pt-24 overflow-hidden border-b-2 border-mds-border/60">
           {/* 3D WebGL Canvas (스크롤에 따라 스케일 & 페이드아웃) */}
           <motion.div
             style={{ scale: heroScale, opacity: heroCanvasOpacity }}
@@ -156,21 +156,21 @@ export const LandingV2: React.FC = () => {
           </motion.div>
 
           {/* Top Header Bar */}
-          <header className="relative z-10 w-full max-w-[1824px] mx-auto h-[72px] px-8 flex items-center justify-between border-2 border-[#30363d] bg-[#090d16]/90 backdrop-blur-md rounded-sm">
+          <header className="relative z-10 w-full max-w-[1824px] mx-auto h-[72px] px-8 flex items-center justify-between border-2 border-mds-border bg-mds-card/90 backdrop-blur-md rounded-sm">
             <div className="flex flex-col">
               <span className="font-serif font-bold text-base tracking-[0.2em] text-white">
                 M I N D U L L E &nbsp; S T U D I O
               </span>
-              <span className="font-sans text-[10px] text-[#94a3b8] tracking-wider uppercase">
+              <span className="font-sans text-[10px] text-mds-muted tracking-wider uppercase">
                 SCROLL-DRIVEN MOTION EXPERIENCE
               </span>
             </div>
 
-            <div className="px-4 py-1.5 rounded-sm border-2 border-[#ffd166] bg-[#ffd166]/10 text-[#ffd166] text-[11px] font-mono font-bold tracking-wider">
+            <div className="px-4 py-1.5 rounded-sm border-2 border-mds-gold bg-mds-gold/10 text-mds-gold text-[11px] font-mono font-bold tracking-wider">
               V2.0 : ONE-TAKE SCROLL
             </div>
 
-            <div className="hidden md:block font-mono text-[11px] text-[#94a3b8] tracking-wider">
+            <div className="hidden md:block font-mono text-[11px] text-mds-muted tracking-wider">
               PIN &amp; SCRUB ACTIVE
             </div>
           </header>
@@ -180,7 +180,7 @@ export const LandingV2: React.FC = () => {
             style={{ opacity: heroTitleOpacity, y: heroTitleY }}
             className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center my-auto pointer-events-none"
           >
-            <span className="px-3.5 py-1 rounded-full border border-[#ffd166]/60 bg-[#ffd166]/10 text-[#ffd166] font-mono text-xs tracking-widest uppercase mb-4">
+            <span className="px-3.5 py-1 rounded-full border border-mds-gold/60 bg-mds-gold/10 text-mds-gold font-mono text-xs tracking-widest uppercase mb-4">
               ATELIER CONSTITUTION • ARTICLE I
             </span>
             <h1 className="font-serif font-bold text-4xl sm:text-6xl md:text-7xl text-white tracking-tight leading-tight break-keep text-center">
@@ -188,15 +188,15 @@ export const LandingV2: React.FC = () => {
               <br />
               손길은 비로소 자유로워진다."
             </h1>
-            <p className="font-serif italic text-lg sm:text-xl md:text-2xl text-[#ffd166] tracking-wide pt-4 max-w-2xl">
+            <p className="font-serif italic text-lg sm:text-xl md:text-2xl text-mds-gold tracking-wide pt-4 max-w-2xl">
               When the machine is flawless, the human soul finds its solace.
             </p>
           </motion.div>
 
           {/* Bottom Prompt */}
-          <div className="relative z-10 w-full max-w-[1824px] mx-auto flex items-center justify-between px-4 font-mono text-xs text-[#94a3b8] tracking-widest">
-            <span className="text-[#ffd166]">EST. 2026 • HANDCRAFTED SOFTWARE</span>
-            <span className="text-[#4A90E2] font-bold animate-pulse">
+          <div className="relative z-10 w-full max-w-[1824px] mx-auto flex items-center justify-between px-4 font-mono text-xs text-mds-muted tracking-widest">
+            <span className="text-mds-gold">EST. 2026 • HANDCRAFTED SOFTWARE</span>
+            <span className="text-mds-rain font-bold animate-pulse">
               ⬇ 휠을 아래로 굴리면 3D 물방울이 반응하며 서사가 전개됩니다
             </span>
           </div>
@@ -206,10 +206,10 @@ export const LandingV2: React.FC = () => {
       {/* ───────────────────────────────────────────────────────────── */}
       {/* 02. DUAL WORLD METAPHOR BLEND (소나기 ↔ 민들레 대조) */}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section className="relative w-full py-32 px-6 md:px-12 border-b-2 border-[#30363d]/60">
+      <section className="relative w-full py-32 px-6 md:px-12 border-b-2 border-mds-border/60">
         <div className="max-w-[1824px] mx-auto flex flex-col space-y-16">
           <div className="flex flex-col space-y-3 max-w-3xl">
-            <span className="font-mono font-bold text-xs text-[#4A90E2] tracking-widest uppercase">
+            <span className="font-mono font-bold text-xs text-mds-rain tracking-widest uppercase">
               ARTICLE II • DUAL METAPHOR BLEND
             </span>
             <h2 className="font-serif font-bold text-4xl md:text-6xl tracking-tight text-current">
@@ -229,23 +229,23 @@ export const LandingV2: React.FC = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6 }}
-              className="p-8 md:p-12 rounded-sm bg-[#070a12] border-2 border-[#4A90E2] flex flex-col justify-between space-y-8 shadow-2xl relative overflow-hidden group"
+              className="p-8 md:p-12 rounded-sm bg-[#070a12] border-2 border-mds-rain flex flex-col justify-between space-y-8 shadow-2xl relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
-                <span className="font-mono font-bold text-xs text-[#4A90E2] tracking-wider uppercase">
+                <span className="font-mono font-bold text-xs text-mds-rain tracking-wider uppercase">
                   WILD ARCHITECTURE • 소나기
                 </span>
-                <span className="font-mono text-[11px] text-[#94a3b8]">DEEP INK (#060911)</span>
+                <span className="font-mono text-[11px] text-mds-muted">DEEP INK (MDS-DARK)</span>
               </div>
               <div className="flex flex-col space-y-3">
                 <h3 className="font-serif font-bold text-2xl md:text-3xl text-white">
                   "얼어붙은 땅을 깨우는 벼락같은 몰입과 방패."
                 </h3>
-                <p className="font-sans text-xs md:text-sm text-[#94a3b8] leading-relaxed">
+                <p className="font-sans text-xs md:text-sm text-mds-muted leading-relaxed">
                   그림자를 배제하고 2px 솔리드 선화로 구조를 세우는 네오 브루탈리즘 건축 헌법. 외부의 비바람으로부터 창작자의 주권을 지키는 단단한 요새입니다.
                 </p>
               </div>
-              <div className="pt-4 border-t border-[#30363d]/60 font-mono text-[10px] text-[#4A90E2] tracking-wider">
+              <div className="pt-4 border-t border-mds-border/60 font-mono text-[10px] text-mds-rain tracking-wider">
                 RULES: THE TRUE 2PX LAW • ZERO DROP-SHADOW
               </div>
             </motion.div>
@@ -282,19 +282,19 @@ export const LandingV2: React.FC = () => {
       {/* ───────────────────────────────────────────────────────────── */}
       {/* 03. 🌟 PINNED HORIZONTAL SCROLL RUNWAY (300vh Pinned Track) */}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section ref={runwayRef} className="relative w-full h-[300vh] bg-[#060911]">
-        <div className="sticky top-0 w-full h-screen flex flex-col justify-center px-8 md:px-16 overflow-hidden border-b-2 border-[#30363d]/60">
+      <section ref={runwayRef} className="relative w-full h-[300vh] bg-mds-dark">
+        <div className="sticky top-0 w-full h-screen flex flex-col justify-center px-8 md:px-16 overflow-hidden border-b-2 border-mds-border/60">
           {/* Track Header */}
           <div className="w-full max-w-[1824px] mx-auto flex items-end justify-between mb-8 z-10 flex-shrink-0">
             <div className="flex flex-col space-y-2">
-              <span className="font-mono font-bold text-xs text-[#ffd166] tracking-widest uppercase">
+              <span className="font-mono font-bold text-xs text-mds-gold tracking-widest uppercase">
                 ARTICLE III • THE 6-IN-1 TOOLING SUITE
               </span>
               <h2 className="font-serif font-bold text-3xl md:text-5xl text-white tracking-tight">
                 "도구가 완전할 때, 손길은 거침없이 뻗어 나간다."
               </h2>
             </div>
-            <div className="flex items-center space-x-2 font-mono text-xs text-[#4A90E2] font-bold">
+            <div className="flex items-center space-x-2 font-mono text-xs text-mds-rain font-bold">
               <span>◄ 스크롤하면서 좌우로 미끄러지는 도구들을 감상하세요 ►</span>
             </div>
           </div>
@@ -307,30 +307,30 @@ export const LandingV2: React.FC = () => {
             {tools.map((t) => (
               <div
                 key={t.id}
-                className="w-[440px] md:w-[480px] h-[340px] p-8 rounded-sm bg-[#090d16] border-2 border-[#30363d] hover:border-[#ffd166] flex flex-col justify-between shadow-2xl transition-colors duration-300 group flex-shrink-0"
+                className="w-[440px] md:w-[480px] h-[340px] p-8 rounded-sm bg-mds-card border-2 border-mds-border hover:border-mds-gold flex flex-col justify-between shadow-2xl transition-colors duration-300 group flex-shrink-0"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-mono font-bold text-xs text-[#ffd166]">
+                  <span className="font-mono font-bold text-xs text-mds-gold">
                     ARTIFACT • {t.id}
                   </span>
-                  <span className="px-2.5 py-1 rounded-sm border border-[#4A90E2] bg-[#4A90E2]/10 text-[10px] font-mono font-bold text-[#4A90E2]">
+                  <span className="px-2.5 py-1 rounded-sm border border-mds-rain bg-mds-rain/10 text-[10px] font-mono font-bold text-mds-rain">
                     {t.badge}
                   </span>
                 </div>
                 <div className="flex flex-col space-y-2">
-                  <h3 className="font-serif font-bold text-3xl text-white group-hover:text-[#ffd166] transition-colors">
+                  <h3 className="font-serif font-bold text-3xl text-white group-hover:text-mds-gold transition-colors">
                     {t.name}
                   </h3>
-                  <span className="font-mono font-bold text-[11px] text-[#4A90E2] tracking-wider uppercase">
+                  <span className="font-mono font-bold text-[11px] text-mds-rain tracking-wider uppercase">
                     {t.tag}
                   </span>
-                  <p className="font-sans text-xs text-[#94a3b8] leading-relaxed line-clamp-3">
+                  <p className="font-sans text-xs text-mds-muted leading-relaxed line-clamp-3">
                     {t.desc}
                   </p>
                 </div>
-                <div className="flex items-center justify-between pt-4 border-t border-[#30363d]/60 font-mono text-[11px]">
-                  <span className="text-[#64748b]">{t.spec}</span>
-                  <a href={t.href} className="font-bold text-[#ffd166] hover:underline flex items-center space-x-1">
+                <div className="flex items-center justify-between pt-4 border-t border-mds-border/60 font-mono text-[11px]">
+                  <span className="text-mds-muted">{t.spec}</span>
+                  <a href={t.href} className="font-bold text-mds-gold hover:underline flex items-center space-x-1">
                     <span>EXPLORE</span>
                     <span>➔</span>
                   </a>
@@ -344,16 +344,16 @@ export const LandingV2: React.FC = () => {
       {/* ───────────────────────────────────────────────────────────── */}
       {/* 04. FIVE SCENERIES OF SOLACE (감성 포스터 갤러리) */}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section className="relative w-full py-32 px-6 md:px-12 border-b-2 border-[#30363d]/60 bg-[#090d16]">
+      <section className="relative w-full py-32 px-6 md:px-12 border-b-2 border-mds-border/60 bg-mds-card">
         <div className="max-w-[1824px] mx-auto flex flex-col space-y-12">
           <div className="flex flex-col space-y-2 max-w-3xl">
-            <span className="font-mono font-bold text-xs text-[#ffd166] tracking-widest uppercase">
+            <span className="font-mono font-bold text-xs text-mds-gold tracking-widest uppercase">
               ARTICLE IV • CINEMATIC SCENOGRAPHY
             </span>
             <h2 className="font-serif font-bold text-3xl md:text-5xl text-white tracking-tight">
               "겨울 끝, 민들레."
             </h2>
-            <p className="font-sans text-sm text-[#94a3b8] leading-relaxed pt-1">
+            <p className="font-sans text-sm text-mds-muted leading-relaxed pt-1">
               단순한 기능 설명을 넘어, 삶의 감각에 직접 닿는 5가지 시적 정서의 단면들.
             </p>
           </div>
@@ -366,26 +366,26 @@ export const LandingV2: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                whileHover={{ y: -6, borderColor: '#ffd166' }}
-                className="p-6 rounded-sm bg-[#060911] border-2 border-[#30363d] flex flex-col justify-between space-y-6 shadow-xl group transition-colors min-h-[380px]"
+                whileHover={{ y: -6, borderColor: 'var(--mds-color-brand-accent, #ffd166)' }}
+                className="p-6 rounded-sm bg-mds-dark border-2 border-mds-border flex flex-col justify-between space-y-6 shadow-xl group transition-colors min-h-[380px]"
               >
                 <div className="flex flex-col space-y-1">
-                  <span className="font-mono font-bold text-xs text-[#ffd166]">
+                  <span className="font-mono font-bold text-xs text-mds-gold">
                     SCENE • {s.num}
                   </span>
-                  <span className="font-mono text-[10px] text-[#4A90E2] tracking-wider uppercase">
+                  <span className="font-mono text-[10px] text-mds-rain tracking-wider uppercase">
                     {s.sub}
                   </span>
                 </div>
                 <div className="flex flex-col space-y-2 my-auto">
-                  <h3 className="font-serif font-bold text-2xl text-white group-hover:text-[#ffd166] transition-colors">
+                  <h3 className="font-serif font-bold text-2xl text-white group-hover:text-mds-gold transition-colors">
                     {s.title}
                   </h3>
-                  <p className="font-sans text-xs text-[#94a3b8] leading-relaxed">
+                  <p className="font-sans text-xs text-mds-muted leading-relaxed">
                     {s.desc}
                   </p>
                 </div>
-                <div className="pt-3 border-t border-[#30363d]/60 font-mono text-[10px] text-[#64748b]">
+                <div className="pt-3 border-t border-mds-border/60 font-mono text-[10px] text-mds-muted">
                   2PX SOLID EMBODIMENT
                 </div>
               </motion.div>
@@ -397,9 +397,9 @@ export const LandingV2: React.FC = () => {
       {/* ───────────────────────────────────────────────────────────── */}
       {/* 05. FINALE : THE MASTER SEAL & ATELIER ENTRANCE */}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section className="relative w-full py-36 px-6 md:px-12 bg-[#060911] text-center flex flex-col items-center justify-center space-y-12">
+      <section className="relative w-full py-36 px-6 md:px-12 bg-mds-dark text-center flex flex-col items-center justify-center space-y-12">
         <div className="flex flex-col items-center space-y-4 max-w-3xl mx-auto">
-          <span className="font-mono font-bold text-xs text-[#ffd166] tracking-widest uppercase">
+          <span className="font-mono font-bold text-xs text-mds-gold tracking-widest uppercase">
             ATELIER CONSTITUTION • EPILOGUE
           </span>
           <h2 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-tight">
@@ -409,7 +409,7 @@ export const LandingV2: React.FC = () => {
             <br />
             걸어 들어갈 수 있도록."
           </h2>
-          <p className="font-serif italic text-lg md:text-xl text-[#ffd166] pt-2">
+          <p className="font-serif italic text-lg md:text-xl text-mds-gold pt-2">
             So that you may step away from the screen, and walk into the dearest scenes of your life.
           </p>
         </div>
@@ -420,7 +420,7 @@ export const LandingV2: React.FC = () => {
             href="https://github.com/mindulle/sonagi-design-system"
             target="_blank"
             rel="noreferrer"
-            className="px-8 py-4 bg-[#ffd166] text-black font-mono font-bold text-xs tracking-wider rounded-sm hover:bg-[#ffd166]/90 transition-all shadow-xl shadow-[#ffd166]/20"
+            className="px-8 py-4 bg-mds-gold text-black font-mono font-bold text-xs tracking-wider rounded-sm hover:bg-mds-gold/90 transition-all shadow-xl shadow-mds-gold/20"
           >
             ENTER THE ATELIER ➔
           </a>
@@ -428,13 +428,13 @@ export const LandingV2: React.FC = () => {
             href="https://github.com/mindulle"
             target="_blank"
             rel="noreferrer"
-            className="px-8 py-4 bg-[#090d16] border-2 border-[#30363d] text-white font-mono font-bold text-xs tracking-wider rounded-sm hover:border-[#ffd166] transition-all"
+            className="px-8 py-4 bg-mds-card border-2 border-mds-border text-white font-mono font-bold text-xs tracking-wider rounded-sm hover:border-mds-gold transition-all"
           >
             EXPLORE CODE REPOSITORY
           </a>
         </div>
 
-        <div className="pt-16 font-mono text-[11px] text-[#64748b] tracking-widest uppercase">
+        <div className="pt-16 font-mono text-[11px] text-mds-muted tracking-widest uppercase">
           MINDULLE STUDIO • EST. 2026 • THE SOVEREIGN SOFTWARE ATELIER
         </div>
       </section>

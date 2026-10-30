@@ -32,20 +32,20 @@ export const Room02MonolithOfSolace: React.FC = () => {
 
           {/* Header */}
           <div className="flex items-center justify-between">
-            <span className="font-mono font-bold text-xs text-[#4A90E2] tracking-wider uppercase">
+            <span className="font-mono font-bold text-xs text-mds-rain tracking-wider uppercase">
               MONOLITH I • WILD ARCHITECTURE (소나기)
             </span>
-            <span className="font-mono text-[10px] text-[#94a3b8]">
-              DEEP INK (#060911) • 2PX SHIELD
+            <span className="font-mono text-[10px] text-mds-muted">
+              DEEP INK (MDS-DARK) • 2PX SHIELD
             </span>
           </div>
 
           {/* Visual Specimen Reticle */}
-          <div className="w-full h-[220px] rounded-sm bg-[#060911] border-2 border-[#1e2638] flex items-center justify-center relative overflow-hidden">
-            <div className="w-[160px] h-[160px] rounded-full border-2 border-[#4A90E2]/60 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-              <div className="w-[80px] h-[80px] rounded-full border border-[#4A90E2]/30 flex items-center justify-center" />
+          <div className="w-full h-[220px] rounded-sm bg-mds-dark border-2 border-mds-border-subtle flex items-center justify-center relative overflow-hidden">
+            <div className="w-[160px] h-[160px] rounded-full border-2 border-mds-rain/60 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+              <div className="w-[80px] h-[80px] rounded-full border border-mds-rain/30 flex items-center justify-center" />
             </div>
-            <span className="absolute font-mono font-bold text-xs tracking-widest text-[#4A90E2]">
+            <span className="absolute font-mono font-bold text-xs tracking-widest text-mds-rain">
               THE DIGITAL FORTRESS
             </span>
           </div>
@@ -55,7 +55,7 @@ export const Room02MonolithOfSolace: React.FC = () => {
             <h3 className="font-serif font-bold text-xl md:text-2xl text-white">
               "얼어붙은 땅을 깨우는 벼락같은 몰입과 방패."
             </h3>
-            <p className="font-sans text-xs md:text-sm text-[#94a3b8] leading-relaxed">
+            <p className="font-sans text-xs md:text-sm text-mds-muted leading-relaxed">
               거칠고 폭발적인 기술력으로 창작자의 주권을 지켜내는 디지털 방파제. 그림자 없이 굵은 2px 선화로 뼈대를 세우는 네오 브루탈리즘 건축 헌법입니다.
             </p>
           </div>
@@ -70,7 +70,7 @@ export const Room02MonolithOfSolace: React.FC = () => {
           className="flex-1 w-full h-[520px] md:h-[600px] p-8 md:p-10 rounded-sm bg-[#faf8f5] border-2 border-[#d97706] text-[#0a0f1c] flex flex-col justify-between shadow-2xl relative overflow-hidden group"
         >
           {/* Subtle Sunlit Glow */}
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#ffd166]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-mds-gold/20 rounded-full blur-3xl pointer-events-none" />
 
           {/* Header */}
           <div className="flex items-center justify-between">

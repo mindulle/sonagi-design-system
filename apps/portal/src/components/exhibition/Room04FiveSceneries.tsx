@@ -155,31 +155,31 @@ export const Room04FiveSceneries: React.FC = () => {
         {sceneries.map((s) => (
           <motion.div
             key={s.num}
-            whileHover={{ y: -6, borderColor: '#ffd166' }}
+            whileHover={{ y: -6, borderColor: 'var(--mds-color-brand-accent, #ffd166)' }}
             transition={{ duration: 0.25 }}
-            className="flex-1 w-full h-[520px] md:h-[600px] p-5 md:p-6 rounded-sm bg-[#090d16] border-2 border-[#30363d] flex flex-col justify-between shadow-xl relative overflow-hidden group transition-colors"
+            className="flex-1 w-full h-[520px] md:h-[600px] p-5 md:p-6 rounded-sm bg-mds-card border-2 border-mds-border flex flex-col justify-between shadow-xl relative overflow-hidden group transition-colors"
           >
             {/* Header: Roman Numeral & Sub */}
             <div className="flex flex-col space-y-1 mb-2">
-              <span className="font-mono font-bold text-xs text-[#ffd166] tracking-wider">
+              <span className="font-mono font-bold text-xs text-mds-gold tracking-wider">
                 {s.num}
               </span>
-              <span className="font-mono text-[10px] text-[#4A90E2] tracking-wider uppercase">
+              <span className="font-mono text-[10px] text-mds-rain tracking-wider uppercase">
                 {s.sub}
               </span>
             </div>
 
             {/* Mid: Artwork Canvas Frame */}
-            <div className="w-full h-[240px] md:h-[280px] rounded-sm bg-[#060911] border-2 border-[#1e2638] flex items-center justify-center overflow-hidden my-2 group-hover:scale-[1.02] transition-transform duration-500">
+            <div className="w-full h-[240px] md:h-[280px] rounded-sm bg-mds-dark border-2 border-mds-border-subtle flex items-center justify-center overflow-hidden my-2 group-hover:scale-[1.02] transition-transform duration-500">
               {s.svgArtwork}
             </div>
 
             {/* Foot: Title & Evocative Description */}
             <div className="flex flex-col space-y-2 mt-2">
-              <h3 className="font-serif font-bold text-xl md:text-2xl text-white group-hover:text-[#ffd166] transition-colors">
+              <h3 className="font-serif font-bold text-xl md:text-2xl text-white group-hover:text-mds-gold transition-colors">
                 {s.title}
               </h3>
-              <p className="font-sans text-xs text-[#94a3b8] leading-relaxed line-clamp-3">
+              <p className="font-sans text-xs text-mds-muted leading-relaxed line-clamp-3">
                 {s.desc}
               </p>
             </div>
