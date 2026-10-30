@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "fumadocs-mdx && next dev --port 3005",
+    "dev": "fumadocs-mdx && next dev --port 3010",
     "build": "fumadocs-mdx && next build",
-    "start": "next start --port 3005",
+    "start": "next start --port 3010",
     "lint": "next lint"
   },
   "dependencies": {
