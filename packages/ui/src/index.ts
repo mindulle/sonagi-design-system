@@ -1,18 +1,22 @@
-// @sonagi/ui — UI Components
-export { HoverPreview } from './components/HoverPreview';
-export type { HoverPreviewProps } from './components/HoverPreview';
+// @mindulle/ui — Mindulle Design System (MDS) Components
+export { MindulleLogo } from './components/MindulleLogo';
+export type { MindulleLogoProps } from './components/MindulleLogo';
+export { SonagiLogo } from './components/SonagiLogo';
+export type { SonagiLogoProps } from './components/SonagiLogo';
+
+// Core Primitives
 export { Button } from './components/Button';
 export type { ButtonProps } from './components/Button';
+export { Badge } from './components/Badge';
+export type { BadgeProps } from './components/Badge';
 export { Card } from './components/Card';
 export type { CardProps } from './components/Card';
 export { Input } from './components/Input';
 export type { InputProps } from './components/Input';
-export { Badge } from './components/Badge';
-export type { BadgeProps } from './components/Badge';
 export { Modal } from './components/Modal';
 export type { ModalProps } from './components/Modal';
-
-export { SonagiLogo } from './components/SonagiLogo';
+export { HoverPreview } from './components/HoverPreview';
+export type { HoverPreviewProps } from './components/HoverPreview';
 export { Pagination } from './components/Pagination';
 export type { PaginationProps } from './components/Pagination';
 

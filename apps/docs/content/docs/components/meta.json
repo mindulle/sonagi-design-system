@@ -1,0 +1,21 @@
+{
+  "title": "컴포넌트 (Components)",
+  "pages": [
+    "button",
+    "badge",
+    "card",
+    "input",
+    "textarea",
+    "select",
+    "checkbox",
+    "radio",
+    "tabs",
+    "accordion",
+    "modal",
+    "pagination",
+    "avatar",
+    "list-item",
+    "hover-preview",
+    "mindulle-logo"
+  ]
+}

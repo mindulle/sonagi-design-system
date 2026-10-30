@@ -1,0 +1,19 @@
+---
+title: 모달 (Modal)
+description: 화면 최상단에 레이어를 띄워 중요한 상호작용을 처리하는 다이얼로그
+---
+
+# 모달 (Modal)
+
+포커스 트랩(Focus Trap), 백드롭 블러 및 ESC 키 닫기를 기본 지원하는 접근성 표준 모달입니다.
+
+<ComponentPreview name="Modal" />
+
+## Props 명세
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `isOpen` | `boolean` | `false` | 모달 표시 여부 |
+| `onClose` | `() => void` | — | 닫기 이벤트 핸들러 |
+| `title` | `string` | — | 모달 헤더 제목 |
+| `children` | `React.ReactNode` | — | 모달 내부 본문 콘텐츠 |

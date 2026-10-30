@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               <span className="text-xs text-sng-muted font-mono">/ Featuring The Sonagi Tooling Suite</span>
             </div>
             <p className="text-xs text-sng-muted">
-              "기계가 완벽해야 사람이 쉴 수 있다" — Crafted with architectural precision &amp; resilient vitality.
+              "겨울 끝, 민들레." — Crafted with the True 2px Stem &amp; resilient vitality.
             </p>
           </div>
         </div>

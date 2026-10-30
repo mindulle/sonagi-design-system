@@ -21,8 +21,8 @@
   <!-- Hero Card -->
   <rect x="20" y="120" width="350" height="250" rx="8" fill="#f5efe6" stroke="#1c1514" stroke-width="2" />
   <circle cx="195" cy="190" r="30" fill="#ffd166" fill-opacity="0.3" stroke="#d97706" stroke-width="1.5" />
-  <text x="195" y="270" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="700" font-size="22" fill="#1c1514">건축의 성벽과 민들레의 쉼터</text>
-  <text x="195" y="295" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="500" font-size="13" fill="#57534e">"기계가 완벽해야 사람이 쉴 수 있다"</text>
+  <text x="195" y="270" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="700" font-size="22" fill="#1c1514">겨울 끝, 민들레의 쉼터</text>
+  <text x="195" y="295" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="500" font-size="13" fill="#57534e">"겨울 끝, 민들레."</text>
   <rect x="120" y="315" width="150" height="30" rx="4" fill="#1c1514" />
   <text x="195" y="335" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="600" font-size="12" fill="#ffffff">스튜디오 작업대 열기 ↗</text>
 

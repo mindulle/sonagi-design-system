@@ -1,32 +1,32 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "meta": {
-    "name": "Sonagi Design System",
-    "version": "4.0.0",
-    "updated": "2026-08-27",
-    "description": "Semantic tokens — ADR 0001 (light, amended by ADR 0006 §4) + ADR 0006 (dark). OKLCH hue 24-34 derived. WCAG verified against BOTH bg-base and bg-surface."
+    "name": "Mindulle Design System v0.1.0",
+    "version": "0.1.0",
+    "updated": "2026-10-23",
+    "description": "Semantic tokens — Mindulle Design System v0.1.0 (MDS). ADR 0001 (light) + ADR 0006 (dark, OKLCH hue 30) + ADR 0013."
   },
   "semantic": {
     "light": {
       "color": {
         "brand": {
           "primary": {
-            "$value": "{primitive.burgundy.800}",
+            "$value": "#b86a04",
             "$type": "color",
             "$description": "Sonagi 브랜드 핵심 컬러 (메인 버튼, 활성화 요소)"
           },
           "primary-hover": {
-            "$value": "{primitive.burgundy.900}",
+            "$value": "#9e5a03",
             "$type": "color",
             "$description": "메인 브랜드 컬러의 마우스 호버 상태"
           },
           "accent": {
-            "$value": "{primitive.burgundy.400}",
+            "$value": "#eab308",
             "$type": "color",
             "$description": "브랜드 보조 강조 컬러 (포인트 요소)"
           },
           "accent-hover": {
-            "$value": "{primitive.burgundy.500}",
+            "$value": "#ca8a04",
             "$type": "color",
             "$description": "보조 강조 컬러의 마우스 호버 상태"
           },
@@ -35,68 +35,68 @@
             "$type": "color"
           },
           "ink": {
-            "$value": "{primitive.burgundy.800}",
+            "$value": "#b86a04",
             "$type": "color",
             "$description": "가장 짙은 브랜드 컬러 (브랜드 배경 위에서 강한 대비를 주는 텍스트용)"
           }
         },
         "background": {
           "base": {
-            "$value": "{primitive.burgundy.50}",
+            "$value": "#fbfbfa",
             "$type": "color",
             "$description": "가장 바닥에 깔리는 도화지 (전체 화면 기본 배경)"
           },
           "surface": {
-            "$value": "{primitive.burgundy.100}",
+            "$value": "#ffffff",
             "$type": "color",
             "$description": "바닥에서 1단계 돌출된 영역 (Input 폼, 카드, 패널 등)"
           },
           "elevated": {
-            "$value": "{primitive.burgundy.25}",
+            "$value": "#ffffff",
             "$type": "color",
             "$description": "가장 높이 떠 있는 2단계 플로팅 영역 (모달 팝업, 툴팁, 드롭다운 메뉴)"
           }
         },
         "text": {
           "primary": {
-            "$value": "{primitive.brown.900}",
+            "$value": "#18181b",
             "$type": "color",
             "$description": "기본 본문 텍스트 (가장 높은 가독성)"
           },
           "secondary": {
-            "$value": "{primitive.brown.600}",
+            "$value": "#52525b",
             "$type": "color",
             "$description": "보조 텍스트 (설명, 서브타이틀, 부가 정보)"
           },
           "muted": {
-            "$value": "{primitive.brown.500}",
+            "$value": "#71717a",
             "$type": "color",
             "$description": "덜 중요한 텍스트 (Placeholder, 힌트, 비활성 느낌)"
           },
           "disabled": {
-            "$value": "{primitive.brown.400}",
+            "$value": "#a1a1aa",
             "$type": "color",
             "$description": "비활성화(Disabled) 상태의 텍스트 및 아이콘 색상"
           },
           "inverse": {
-            "$value": "{primitive.burgundy.50}",
+            "$value": "#ffffff",
             "$type": "color",
             "$description": "어두운 배경이나 칠해진 브랜드 컬러 위에 올라가는 반전 텍스트"
           }
         },
         "border": {
           "default": {
-            "$value": "{primitive.brown.450}",
+            "$value": "#e4e4e7",
             "$type": "color",
             "$description": "컴포넌트의 기본 테두리"
           },
           "subtle": {
-            "$value": "{primitive.brown.200}",
+            "$value": "#f4f4f5",
             "$type": "color",
             "$description": "그림자를 대신하는 아주 얇고 연한 테두리 (구분선 등)"
           },
           "strong": {
-            "$value": "{primitive.burgundy.800}",
+            "$value": "#b86a04",
             "$type": "color",
             "$description": "강조된 테두리 (Hover, Focus 등 상호작용 시)"
           }
@@ -157,22 +157,22 @@
       "color": {
         "brand": {
           "primary": {
-            "$value": "{primitive.burgundy.200}",
+            "$value": "#ffc837",
             "$type": "color",
             "$description": "Sonagi 브랜드 핵심 컬러 (메인 버튼, 활성화 요소)"
           },
           "primary-hover": {
-            "$value": "{primitive.burgundy.150}",
+            "$value": "#e6b432",
             "$type": "color",
             "$description": "메인 브랜드 컬러의 마우스 호버 상태"
           },
           "accent": {
-            "$value": "{primitive.burgundy.300}",
+            "$value": "#ffd166",
             "$type": "color",
             "$description": "브랜드 보조 강조 컬러 (포인트 요소)"
           },
           "accent-hover": {
-            "$value": "{primitive.burgundy.250}",
+            "$value": "#ffc837",
             "$type": "color",
             "$description": "보조 강조 컬러의 마우스 호버 상태"
           },
@@ -181,68 +181,68 @@
             "$type": "color"
           },
           "ink": {
-            "$value": "{primitive.burgundy.200}",
+            "$value": "#ffc837",
             "$type": "color",
             "$description": "가장 짙은 브랜드 컬러 (브랜드 배경 위에서 강한 대비를 주는 텍스트용)"
           }
         },
         "background": {
           "base": {
-            "$value": "{primitive.brown.950}",
+            "$value": "#12151d",
             "$type": "color",
             "$description": "가장 바닥에 깔리는 도화지 (전체 화면 기본 배경)"
           },
           "surface": {
-            "$value": "{primitive.brown.850}",
+            "$value": "#1b202c",
             "$type": "color",
             "$description": "바닥에서 1단계 돌출된 영역 (Input 폼, 카드, 패널 등)"
           },
           "elevated": {
-            "$value": "{primitive.brown.800}",
+            "$value": "#242b3b",
             "$type": "color",
             "$description": "가장 높이 떠 있는 2단계 플로팅 영역 (모달 팝업, 툴팁, 드롭다운 메뉴)"
           }
         },
         "text": {
           "primary": {
-            "$value": "{primitive.brown.50}",
+            "$value": "#f1f5f9",
             "$type": "color",
             "$description": "기본 본문 텍스트 (가장 높은 가독성)"
           },
           "secondary": {
-            "$value": "{primitive.brown.300}",
+            "$value": "#94a3b8",
             "$type": "color",
             "$description": "보조 텍스트 (설명, 서브타이틀, 부가 정보)"
           },
           "muted": {
-            "$value": "{primitive.brown.410}",
+            "$value": "#64748b",
             "$type": "color",
             "$description": "덜 중요한 텍스트 (Placeholder, 힌트, 비활성 느낌)"
           },
           "disabled": {
-            "$value": "{primitive.brown.650}",
+            "$value": "#475569",
             "$type": "color",
             "$description": "비활성화(Disabled) 상태의 텍스트 및 아이콘 색상"
           },
           "inverse": {
-            "$value": "{primitive.brown.950}",
+            "$value": "#12151d",
             "$type": "color",
             "$description": "어두운 배경이나 칠해진 브랜드 컬러 위에 올라가는 반전 텍스트"
           }
         },
         "border": {
           "default": {
-            "$value": "{primitive.brown.550}",
+            "$value": "#2c3547",
             "$type": "color",
             "$description": "컴포넌트의 기본 테두리"
           },
           "subtle": {
-            "$value": "{primitive.brown.820}",
+            "$value": "#1f2635",
             "$type": "color",
             "$description": "그림자를 대신하는 아주 얇고 연한 테두리 (구분선 등)"
           },
           "strong": {
-            "$value": "{primitive.burgundy.200}",
+            "$value": "#ffc837",
             "$type": "color",
             "$description": "강조된 테두리 (Hover, Focus 등 상호작용 시)"
           }
@@ -315,7 +315,7 @@
         "$type": "shadow"
       },
       "focus": {
-        "$value": "0 0 0 3px rgba(180,66,64,0.3)",
+        "$value": "0 0 0 3px rgba(184, 106, 4, 0.25)",
         "$type": "shadow"
       }
     },
@@ -333,7 +333,7 @@
         "$type": "shadow"
       },
       "focus": {
-        "$value": "0 0 0 3px rgba(238,180,169,0.35)",
+        "$value": "0 0 0 3px rgba(255, 200, 55, 0.35)",
         "$type": "shadow"
       }
     }

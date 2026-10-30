@@ -1,0 +1,26 @@
+---
+title: 색상 (Colors & Tokens)
+description: W3C 표준 시맨틱 색상 토큰 및 Light/Dark 듀얼 매트릭스
+---
+
+# 색상 토큰 (Color Tokens)
+
+민들레 디자인 시스템은 OKLCH 기반으로 정밀 조율된 2-Tier W3C 표준 토큰 구조를 채택합니다.
+
+- **Tier 1 (Primitives)**: 원시 색상 팔레트. UI에서 직접 참조하지 않습니다.
+- **Tier 2 (Semantics)**: 의미 기반 시맨틱 토큰. 컴포넌트는 오직 이 토큰만을 참조합니다.
+
+<ColorMatrix />
+
+## CSS 변수 직접 사용법
+
+CSS 모듈이나 인라인 스타일에서 `--sng-*` 접두사의 변수를 직접 호출할 수 있습니다:
+
+```css
+.my-card {
+  background-color: var(--sng-color-bg-surface);
+  color: var(--sng-color-text-primary);
+  border: 2px solid var(--sng-color-border-default);
+  border-radius: var(--sng-radius-md);
+}
+```

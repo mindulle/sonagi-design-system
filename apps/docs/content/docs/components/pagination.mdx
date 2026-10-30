@@ -1,0 +1,19 @@
+---
+title: 페이지네이션 (Pagination)
+description: 긴 목록 데이터를 분할하여 페이지 단위로 탐색하는 내비게이터
+---
+
+# 페이지네이션 (Pagination)
+
+현재 페이지, 총 페이지 수, 표시할 페이지 버튼 수를 기반으로 번호 목록을 자동 계산합니다.
+
+<ComponentPreview name="Pagination" />
+
+## Props 명세
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `currentPage` | `number` | — | 현재 활성 페이지 번호 |
+| `totalPages` | `number` | — | 전체 페이지 개수 |
+| `onPageChange` | `(page: number) => void` | — | 페이지 클릭 콜백 |
+| `maxVisiblePages` | `number` | `5` | 한 번에 노출할 최대 페이지 번호 수 |

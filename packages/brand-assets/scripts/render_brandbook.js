@@ -678,7 +678,7 @@ const htmlContent = `<!DOCTYPE html>
       MINDULLE STUDIO
     </div>
     <div style="font-family:'Noto Sans KR',sans-serif; font-size:10pt; color:#57534e; margin-bottom:8mm;">
-      "기계가 완벽해야 사람이 쉴 수 있다"
+      "겨울 끝, 민들레."
     </div>
     <div style="font-family:'JetBrains Mono',monospace; font-size:8pt; line-height:1.8; color:#78716c;">
       PUBLISHED BY MINDULLE BRAND GOVERNANCE COMMITTEE<br>

@@ -1,6 +1,11 @@
+@import '@mindulle/tokens/css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
 
 @layer base {
   body {

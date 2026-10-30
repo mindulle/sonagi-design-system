@@ -1,7 +1,7 @@
 # @mindulle/tokens
 
-Sonagi 디자인 시스템의 공식 디자인 토큰 패키지입니다.
-CSS Custom Properties와 W3C Design Tokens JSON 포맷을 제공합니다.
+민들레 디자인 시스템(Mindulle Design System, MDS v0.1.0)의 단일 진실 소스(SSOT) 디자인 토큰 패키지입니다. (엔진: Sonagi)
+W3C Design Tokens Community Group 규격과 CSS Custom Properties (`--sng-*`)를 제공합니다.
 
 ## 설치
 

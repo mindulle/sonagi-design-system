@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+@import '@mindulle/tokens/css';
+@import '@mindulle/ui/css';
+
+@source '../node_modules/fumadocs-ui/dist/**/*.js';
+@source '../../packages/ui/src/**/*.{ts,tsx}';
+
+:root {
+  --color-fd-background: #fbfbfa;
+  --color-fd-foreground: #18181b;
+  --color-fd-primary: #b86a04;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-muted: #f4f4f5;
+  --color-fd-muted-foreground: #71717a;
+  --color-fd-border: #e4e4e7;
+  --color-fd-card: #ffffff;
+  --color-fd-card-foreground: #18181b;
+}
+
+.dark {
+  --color-fd-background: #12151d;
+  --color-fd-foreground: #f1f5f9;
+  --color-fd-primary: #ffc837;
+  --color-fd-primary-foreground: #12151d;
+  --color-fd-muted: #1b202c;
+  --color-fd-muted-foreground: #94a3b8;
+  --color-fd-border: #2c3547;
+  --color-fd-card: #1b202c;
+  --color-fd-card-foreground: #f1f5f9;
+}
+
+/* MDS 2px Stem styling on FumaDocs elements */
+nav.fd-nav,
+aside.fd-sidebar {
+  border-width: 2px !important;
+}
+
+body {
+  font-family: var(--sng-font-sans, system-ui, -apple-system, sans-serif);
+}
+
+/* ==========================================================================
+   Fumadocs Official Spacing & Section Breaks
+   Clean negative space between sections without artificial borders
+   ========================================================================== */
+
+/* Section Titles (개요, 기본 컴포넌트, 입력 폼, 내비게이션, 오버레이) */
+aside.fd-sidebar p,
+aside#nd-sidebar p {
+  margin-top: 48px !important;
+  margin-bottom: 10px !important;
+  padding-left: 10px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  color: var(--color-fd-muted-foreground) !important;
+  border-top: none !important;
+}
+
+/* First section title (개요) top margin — no extra gap above */
+aside.fd-sidebar p:first-of-type,
+aside#nd-sidebar p:first-of-type,
+aside.fd-sidebar [data-viewport] > p:first-child,
+aside#nd-sidebar [data-viewport] > p:first-child {
+  margin-top: 12px !important;
+}
+
+/* Sidebar List Items (Clean Sleek Row Style) */
+aside.fd-sidebar button[aria-expanded],
+aside#nd-sidebar button[aria-expanded],
+aside.fd-sidebar a,
+aside#nd-sidebar a {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  padding: 8px 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  background: transparent !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 120ms ease-in-out;
+}
+
+/* Hover State */
+aside.fd-sidebar button[aria-expanded]:hover,
+aside#nd-sidebar button[aria-expanded]:hover,
+aside.fd-sidebar a:hover,
+aside#nd-sidebar a:hover {
+  background-color: rgba(255, 200, 55, 0.08) !important;
+  color: var(--color-fd-foreground) !important;
+}
+
+/* Active Item (Currently Selected Page) */
+aside.fd-sidebar a[data-active='true'],
+aside#nd-sidebar a[data-active='true'] {
+  background-color: rgba(255, 200, 55, 0.14) !important;
+  color: #ffc837 !important;
+  font-weight: 600 !important;
+}

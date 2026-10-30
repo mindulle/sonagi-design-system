@@ -119,15 +119,15 @@
 
     <!-- Slogan Quote -->
     <text x="0" y="260" class="og-quote">
-      "기계가 완벽해야 사람이 쉴 수 있다"
+      "겨울 끝, 민들레."
     </text>
 
     <!-- Description -->
     <text x="0" y="310" class="og-desc">
-      차가운 2px 디지털 건축의 성벽 속에 가장 다정한 사용자 경험을 피워냅니다.
+      비바람에도 꺾이지 않는 단단한 2px 줄기선 위에 정갈한 사용자 경험을 피워냅니다.
     </text>
     <text x="0" y="336" class="og-desc">
-      W3C 표준 디자인 토큰과 실무에서 자체 검증하는 도구군 <tspan fill="#4A90E2" font-weight="600">소나기(Sonagi)</tspan>.
+      W3C 표준 디자인 토큰과 실무에서 자체 검증하는 도구군 <tspan fill="#ffd166" font-weight="600">민들레 디자인 시스템 (MDS)</tspan>.
     </text>
 
     <!-- Bottom Feature Tag Badges -->

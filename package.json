@@ -1,7 +1,7 @@
 {
   "name": "sonagi-design-system",
   "private": true,
-  "description": "Sonagi Design System — monorepo",
+  "description": "Mindulle Design System (MDS v0.1.0) — Core UI & Tokens (powered by Sonagi Engine)",
   "packageManager": "pnpm@11.1.2",
   "engines": {
     "node": ">=20",
