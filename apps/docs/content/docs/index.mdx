@@ -20,7 +20,7 @@ pnpm add @mindulle/tokens @mindulle/ui @mindulle/icons
 앱의 진입점(`layout.tsx` 또는 `main.tsx`)에 디자인 토큰 CSS와 컴포넌트 스타일을 불러옵니다:
 
 ```tsx
-// 토큰 CSS Custom Properties (--sng-*)
+// 토큰 CSS Custom Properties (--mds-* / --sng-*)
 import '@mindulle/tokens/css';
 
 // MDS 컴포넌트 기본 스타일
@@ -60,9 +60,9 @@ export default function MyPage() {
 MDS는 HTML 엘리먼트의 `data-theme` 속성을 통해 모드를 제어합니다:
 
 ```html
-<!-- 라이트 모드 (웜 화이트) -->
+<!-- 라이트 모드 (웜 스톤 & 앰버 골드) -->
 <html data-theme="light">
 
-<!-- 다크 모드 (옵시디언 다크 #060911) -->
+<!-- 다크 모드 (회색돌 다크 #12151d & 민들레 골드 #ffc837) -->
 <html data-theme="dark">
 ```
